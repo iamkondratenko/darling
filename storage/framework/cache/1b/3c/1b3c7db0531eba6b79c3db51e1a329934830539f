@@ -1,0 +1,6 @@
+1613128132a:1:{s:8:"home.htm";a:8:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:101:"title = "Demonstration"
+url = "/"
+layout = "default"
+==
+        {% partial "site/main-banner.htm" %}
+";s:5:"mtime";i:1613120470;s:6:"markup";s:36:"{% partial "site/main-banner.htm" %}";s:4:"code";N;s:5:"title";s:13:"Demonstration";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";}}

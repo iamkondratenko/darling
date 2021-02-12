@@ -1,0 +1,12 @@
+list: $/iamk/mainbanner/models/mainbanner/columns.yaml
+modelClass: Iamk\Mainbanner\Models\MainBanner
+title: MainBanner
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'iamk/mainbanner/mainbanner/update/:id'

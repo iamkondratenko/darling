@@ -1,0 +1,7 @@
+columns:
+    first_slider_title:
+        label: first_slider_title
+        type: text
+    second_slider_title:
+        label: second_slider_title
+        type: text

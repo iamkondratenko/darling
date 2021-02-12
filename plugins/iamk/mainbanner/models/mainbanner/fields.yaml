@@ -1,0 +1,23 @@
+fields:
+    first_slider_title:
+        label: 'Текст слева'
+        span: auto
+        type: text
+    second_slider_title:
+        label: 'Текст справа'
+        span: auto
+        type: text
+    first_slider_picture:
+        label: 'Картинка слева'
+        mode: file
+        span: auto
+        type: mediafinder
+    second_slider_picture:
+        label: 'Картинка справа'
+        mode: file
+        span: auto
+        type: mediafinder
+    id:
+        label: Number
+        span: auto
+        type: number

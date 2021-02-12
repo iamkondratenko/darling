@@ -1,0 +1,90 @@
+1613128177a:1:{s:20:"site/main-banner.htm";a:6:{s:8:"fileName";s:20:"site/main-banner.htm";s:7:"content";s:956:"[builderDetails]
+modelClass = "Iamk\Mainbanner\Models\MainBanner"
+identifierValue = "{{ 2 }}"
+modelKeyColumn = "id"
+displayColumn = "id"
+notFoundMessage = "Record not found"
+==
+<div class="MainHomeBanner">
+	<div class="MainHomeBanner-Content">
+		<div class="MainHomeBanner-Content-item">
+	{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    {{ attribute(record, displayColumn) }}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
+		</div>
+		<div class="MainHomeBanner-Content-item">
+			
+		</div>
+	</div>
+</div>
+
+
+
+<style>
+
+	.MainHomeBanner {
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+	}
+
+	.MainHomeBanner-Content {
+		display: flex;
+		width: 100%;
+		height: 100%;
+	}
+
+	.MainHomeBanner-Content-item {
+		width: 50%;
+		background-color: #0b3f5a;
+	}
+
+</style>";s:5:"mtime";i:1613127573;s:6:"markup";s:772:"<div class="MainHomeBanner">
+	<div class="MainHomeBanner-Content">
+		<div class="MainHomeBanner-Content-item">
+	{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    {{ attribute(record, displayColumn) }}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
+		</div>
+		<div class="MainHomeBanner-Content-item">
+			
+		</div>
+	</div>
+</div>
+
+
+
+<style>
+
+	.MainHomeBanner {
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+	}
+
+	.MainHomeBanner-Content {
+		display: flex;
+		width: 100%;
+		height: 100%;
+	}
+
+	.MainHomeBanner-Content-item {
+		width: 50%;
+		background-color: #0b3f5a;
+	}
+
+</style>";s:4:"code";N;s:14:"builderDetails";a:5:{s:10:"modelClass";s:33:"Iamk\Mainbanner\Models\MainBanner";s:15:"identifierValue";s:7:"{{ 2 }}";s:14:"modelKeyColumn";s:2:"id";s:13:"displayColumn";s:2:"id";s:15:"notFoundMessage";s:16:"Record not found";}}}

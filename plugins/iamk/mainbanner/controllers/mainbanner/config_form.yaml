@@ -1,0 +1,10 @@
+name: MainBanner
+form: $/iamk/mainbanner/models/mainbanner/fields.yaml
+modelClass: Iamk\Mainbanner\Models\MainBanner
+defaultRedirect: iamk/mainbanner/mainbanner
+create:
+    redirect: 'iamk/mainbanner/mainbanner/update/:id'
+    redirectClose: iamk/mainbanner/mainbanner
+update:
+    redirect: iamk/mainbanner/mainbanner
+    redirectClose: iamk/mainbanner/mainbanner
