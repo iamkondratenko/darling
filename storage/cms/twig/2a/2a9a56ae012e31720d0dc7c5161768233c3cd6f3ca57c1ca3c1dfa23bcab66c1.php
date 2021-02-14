@@ -70,28 +70,51 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
                 <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Pads</a>
             </div>
         </div>
+        <div class=\"MainMenuDrawer-Item\">
+            <div class=\"MainMenuDrawer-Item-Category\">Skin Care</div>
+            <div class=\"MainMenuDrawer-Item-Subcategories\">
+                <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">All products</a>
+                <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Masks</a>
+                <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Patches</a>
+            </div>
+        </div>
     </div>
 </div>
 
 <style>
+    .MainMenuDrawer-Item-Category {
+        font-size: 70px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
     a.MainMenuDrawer-Item-Subcategory {
         text-decoration: none;
         color: black;
         font-size: 40px;
+        font-weight: 500;
+        text-transform: uppercase;
 
     }
     .MainMenuDrawer-Item-Subcategories{
         display: flex;
         flex-direction: column;
+        height: 0;
+        overflow: hidden;
+        transition-duration: 500ms;
     }
     .MainMenuDrawer-Items{
         width: 100%;
         height: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
         color: black;
+    }
+    
+    .MainMenuDrawer-Item {
+        cursor: pointer;
     }
 
     .MainMenuDrawer {
@@ -108,7 +131,39 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         opacity: 1;
         transition-duration: 400ms;
     }
-</style>";
+</style>
+
+
+<script>
+    let menuCategoryList = document.querySelectorAll('.MainMenuDrawer-Item');
+
+
+    function clearActiveSubmenu() {
+        for (let i = 0; i < menuCategoryList.length; i++) {
+            menuCategoryList[i].querySelector('.MainMenuDrawer-Item-Subcategories').style.height = '0px'
+            menuCategoryList[i].classList.remove('subCategoryIsActive')
+        }
+    }
+
+
+    for (let i = 0; i < menuCategoryList.length; i++) {
+        menuCategoryList[i].addEventListener(\"click\",
+            function (e){
+
+                clearActiveSubmenu()
+
+                e.toElement.parentNode.classList.toggle('subCategoryIsActive')
+
+                let subCategoriesMenu =  document.querySelector('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories')
+
+                let subCategoryMenu = document.querySelectorAll('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories > .MainMenuDrawer-Item-Subcategory')
+
+                let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length
+                subCategoriesMenu.style.height = subCategoryHeight + 'px'
+            }
+        )
+    }
+</script>";
     }
 
     public function getTemplateName()
@@ -134,28 +189,51 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
                 <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Pads</a>
             </div>
         </div>
+        <div class=\"MainMenuDrawer-Item\">
+            <div class=\"MainMenuDrawer-Item-Category\">Skin Care</div>
+            <div class=\"MainMenuDrawer-Item-Subcategories\">
+                <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">All products</a>
+                <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Masks</a>
+                <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Patches</a>
+            </div>
+        </div>
     </div>
 </div>
 
 <style>
+    .MainMenuDrawer-Item-Category {
+        font-size: 70px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
     a.MainMenuDrawer-Item-Subcategory {
         text-decoration: none;
         color: black;
         font-size: 40px;
+        font-weight: 500;
+        text-transform: uppercase;
 
     }
     .MainMenuDrawer-Item-Subcategories{
         display: flex;
         flex-direction: column;
+        height: 0;
+        overflow: hidden;
+        transition-duration: 500ms;
     }
     .MainMenuDrawer-Items{
         width: 100%;
         height: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
         color: black;
+    }
+    
+    .MainMenuDrawer-Item {
+        cursor: pointer;
     }
 
     .MainMenuDrawer {
@@ -172,6 +250,38 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         opacity: 1;
         transition-duration: 400ms;
     }
-</style>", "/Users/iamk/git/darling/themes/demo/partials/site/menu-drawer.htm", "");
+</style>
+
+
+<script>
+    let menuCategoryList = document.querySelectorAll('.MainMenuDrawer-Item');
+
+
+    function clearActiveSubmenu() {
+        for (let i = 0; i < menuCategoryList.length; i++) {
+            menuCategoryList[i].querySelector('.MainMenuDrawer-Item-Subcategories').style.height = '0px'
+            menuCategoryList[i].classList.remove('subCategoryIsActive')
+        }
+    }
+
+
+    for (let i = 0; i < menuCategoryList.length; i++) {
+        menuCategoryList[i].addEventListener(\"click\",
+            function (e){
+
+                clearActiveSubmenu()
+
+                e.toElement.parentNode.classList.toggle('subCategoryIsActive')
+
+                let subCategoriesMenu =  document.querySelector('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories')
+
+                let subCategoryMenu = document.querySelectorAll('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories > .MainMenuDrawer-Item-Subcategory')
+
+                let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length
+                subCategoriesMenu.style.height = subCategoryHeight + 'px'
+            }
+        )
+    }
+</script>", "/Users/iamk/git/darling/themes/demo/partials/site/menu-drawer.htm", "");
     }
 }
