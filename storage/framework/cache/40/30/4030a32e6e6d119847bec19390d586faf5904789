@@ -1,26 +1,39 @@
-1613128177a:1:{s:20:"site/main-banner.htm";a:6:{s:8:"fileName";s:20:"site/main-banner.htm";s:7:"content";s:956:"[builderDetails]
+1613261391a:1:{s:20:"site/main-banner.htm";a:6:{s:8:"fileName";s:20:"site/main-banner.htm";s:7:"content";s:4164:"[builderDetails mainBanner]
 modelClass = "Iamk\Mainbanner\Models\MainBanner"
-identifierValue = "{{ 2 }}"
+identifierValue = 2
 modelKeyColumn = "id"
 displayColumn = "id"
-notFoundMessage = "Record not found"
 ==
+{% set record = mainBanner.record %}
+{% set displayColumn = mainBanner.displayColumn %}
+{% set notFoundMessage = mainBanner.notFoundMessage %}
+
+{% partial "site/menu-drawer.htm" %}
+
 <div class="MainHomeBanner">
 	<div class="MainHomeBanner-Content">
-		<div class="MainHomeBanner-Content-item">
-	{% set record = builderDetails.record %}
-{% set displayColumn = builderDetails.displayColumn %}
-{% set notFoundMessage = builderDetails.notFoundMessage %}
 
-{% if record %}
-    {{ attribute(record, displayColumn) }}
-{% else %}
-    {{ notFoundMessage }}
-{% endif %}
-		</div>
-		<div class="MainHomeBanner-Content-item">
-			
-		</div>
+        <div class="MainHomeBanner-Content-Links">
+            <a href="#" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left">
+                <span class="MainHomeBanner-Content-LinkArrow"><img class="MainHomeBanner-Content-LinkArrowImg" src="{{ 'assets/images/main-banner/arrow-left.png' | theme }}"></span> <div class="MainHomeBanner-Content-LinkItem">makeup</div>
+            </a>
+
+            <div href="#" class="MainHomeBanner-Content-SlashHolder">
+                <div class="MainHomeBanner-Content-Slash">/</div>
+            </div>
+
+
+
+            <a href="#" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right">
+                <div class="MainHomeBanner-Content-LinkItem">Skin care</div><span class="MainHomeBanner-Content-LinkArrow"><img class="MainHomeBanner-Content-LinkArrowImg" src="{{ 'assets/images/main-banner/arrow-right.png' | theme }}"></span>
+            </a>
+        </div>
+	    
+        <div class="MainHomeBanner-Content-Background" style="background: url({{ record.first_slider_picture|media}}); background-size: cover; background-repeat: no-repeat; background-position: center">
+
+        </div>
+
+		
 	</div>
 </div>
 
@@ -33,6 +46,7 @@ notFoundMessage = "Record not found"
 		width: 100vw;
 		height: 100vh;
 		position: absolute;
+        z-index: 99;
 	}
 
 	.MainHomeBanner-Content {
@@ -41,27 +55,137 @@ notFoundMessage = "Record not found"
 		height: 100%;
 	}
 
-	.MainHomeBanner-Content-item {
-		width: 50%;
-		background-color: #0b3f5a;
+    .MainHomeBanner-Content-Links {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 999;
+        display: flex;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .MainHomeBanner-Content-LinkArrow {
+        display: none;
+    }
+
+    .MainHomeBanner-Content-LinkArrowImg {
+        width: 65px;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--left:hover {
+        color: #EA028A;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--left:hover > .MainHomeBanner-Content-LinkArrow {
+        display: block;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--right:hover > .MainHomeBanner-Content-LinkArrow {
+        display: block;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--right:hover {
+        color: #EA028A;
+    }
+
+    .MainHomeBanner-Content-LinkItem {
+        font-weight: 500;
+        font-size: 80px;
+        padding: 50px;
+    }
+
+    .MainHomeBanner-Content-Slash {
+        font-weight: 500;
+        font-size: 80px;
+    }
+
+    .MainHomeBanner-Content-SlashHolder {
+        color: #fff;
+        display: flex;
+        align-items: center;
+    }
+
+    .MainHomeBanner-Content-LinkHolder--left {
+        justify-content: flex-end;
+    }
+
+    .MainHomeBanner-Content-LinkHolder--right {
+        justify-content: flex-start;
+    }
+
+	.MainHomeBanner-Content-Background {
+		width: 100%;
 	}
 
-</style>";s:5:"mtime";i:1613127573;s:6:"markup";s:772:"<div class="MainHomeBanner">
+    @media screen and (max-width: 1200px){
+
+        .MainHomeBanner-Content-Links {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .MainHomeBanner-Content-Slash {
+            display: none;
+        }
+
+        a.MainHomeBanner-Content-LinkHolder {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .MainHomeBanner-Content-LinkItem {
+            padding: 0 32px;
+            font-size: 40px;
+        }
+
+        .MainHomeBanner-Content-LinkHolder--right {
+            padding-bottom: 50px;
+        }
+
+        .MainHomeBanner-Content-LinkArrowImg {
+            width: 36px;
+        }
+    }
+
+</style>";s:5:"mtime";i:1613260789;s:6:"markup";s:4015:"{% set record = mainBanner.record %}
+{% set displayColumn = mainBanner.displayColumn %}
+{% set notFoundMessage = mainBanner.notFoundMessage %}
+
+{% partial "site/menu-drawer.htm" %}
+
+<div class="MainHomeBanner">
 	<div class="MainHomeBanner-Content">
-		<div class="MainHomeBanner-Content-item">
-	{% set record = builderDetails.record %}
-{% set displayColumn = builderDetails.displayColumn %}
-{% set notFoundMessage = builderDetails.notFoundMessage %}
 
-{% if record %}
-    {{ attribute(record, displayColumn) }}
-{% else %}
-    {{ notFoundMessage }}
-{% endif %}
-		</div>
-		<div class="MainHomeBanner-Content-item">
-			
-		</div>
+        <div class="MainHomeBanner-Content-Links">
+            <a href="#" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left">
+                <span class="MainHomeBanner-Content-LinkArrow"><img class="MainHomeBanner-Content-LinkArrowImg" src="{{ 'assets/images/main-banner/arrow-left.png' | theme }}"></span> <div class="MainHomeBanner-Content-LinkItem">makeup</div>
+            </a>
+
+            <div href="#" class="MainHomeBanner-Content-SlashHolder">
+                <div class="MainHomeBanner-Content-Slash">/</div>
+            </div>
+
+
+
+            <a href="#" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right">
+                <div class="MainHomeBanner-Content-LinkItem">Skin care</div><span class="MainHomeBanner-Content-LinkArrow"><img class="MainHomeBanner-Content-LinkArrowImg" src="{{ 'assets/images/main-banner/arrow-right.png' | theme }}"></span>
+            </a>
+        </div>
+	    
+        <div class="MainHomeBanner-Content-Background" style="background: url({{ record.first_slider_picture|media}}); background-size: cover; background-repeat: no-repeat; background-position: center">
+
+        </div>
+
+		
 	</div>
 </div>
 
@@ -74,6 +198,7 @@ notFoundMessage = "Record not found"
 		width: 100vw;
 		height: 100vh;
 		position: absolute;
+        z-index: 99;
 	}
 
 	.MainHomeBanner-Content {
@@ -82,9 +207,105 @@ notFoundMessage = "Record not found"
 		height: 100%;
 	}
 
-	.MainHomeBanner-Content-item {
-		width: 50%;
-		background-color: #0b3f5a;
+    .MainHomeBanner-Content-Links {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 999;
+        display: flex;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .MainHomeBanner-Content-LinkArrow {
+        display: none;
+    }
+
+    .MainHomeBanner-Content-LinkArrowImg {
+        width: 65px;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--left:hover {
+        color: #EA028A;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--left:hover > .MainHomeBanner-Content-LinkArrow {
+        display: block;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--right:hover > .MainHomeBanner-Content-LinkArrow {
+        display: block;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--right:hover {
+        color: #EA028A;
+    }
+
+    .MainHomeBanner-Content-LinkItem {
+        font-weight: 500;
+        font-size: 80px;
+        padding: 50px;
+    }
+
+    .MainHomeBanner-Content-Slash {
+        font-weight: 500;
+        font-size: 80px;
+    }
+
+    .MainHomeBanner-Content-SlashHolder {
+        color: #fff;
+        display: flex;
+        align-items: center;
+    }
+
+    .MainHomeBanner-Content-LinkHolder--left {
+        justify-content: flex-end;
+    }
+
+    .MainHomeBanner-Content-LinkHolder--right {
+        justify-content: flex-start;
+    }
+
+	.MainHomeBanner-Content-Background {
+		width: 100%;
 	}
 
-</style>";s:4:"code";N;s:14:"builderDetails";a:5:{s:10:"modelClass";s:33:"Iamk\Mainbanner\Models\MainBanner";s:15:"identifierValue";s:7:"{{ 2 }}";s:14:"modelKeyColumn";s:2:"id";s:13:"displayColumn";s:2:"id";s:15:"notFoundMessage";s:16:"Record not found";}}}
+    @media screen and (max-width: 1200px){
+
+        .MainHomeBanner-Content-Links {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .MainHomeBanner-Content-Slash {
+            display: none;
+        }
+
+        a.MainHomeBanner-Content-LinkHolder {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .MainHomeBanner-Content-LinkItem {
+            padding: 0 32px;
+            font-size: 40px;
+        }
+
+        .MainHomeBanner-Content-LinkHolder--right {
+            padding-bottom: 50px;
+        }
+
+        .MainHomeBanner-Content-LinkArrowImg {
+            width: 36px;
+        }
+    }
+
+</style>";s:4:"code";N;s:25:"builderDetails mainBanner";a:4:{s:10:"modelClass";s:33:"Iamk\Mainbanner\Models\MainBanner";s:15:"identifierValue";s:1:"2";s:14:"modelKeyColumn";s:2:"id";s:13:"displayColumn";s:2:"id";}}}

@@ -1,12 +1,39 @@
+[builderDetails mainBanner]
+modelClass = "Iamk\Mainbanner\Models\MainBanner"
+identifierValue = 2
+modelKeyColumn = "id"
+displayColumn = "id"
+==
+{% set record = mainBanner.record %}
+{% set displayColumn = mainBanner.displayColumn %}
+{% set notFoundMessage = mainBanner.notFoundMessage %}
+
+{% partial "site/menu-drawer.htm" %}
 
 <div class="MainHomeBanner">
 	<div class="MainHomeBanner-Content">
-		<div class="MainHomeBanner-Content-item">
 
-		</div>
-		<div class="MainHomeBanner-Content-item">
-			
-		</div>
+        <div class="MainHomeBanner-Content-Links">
+            <a href="#" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left">
+                <span class="MainHomeBanner-Content-LinkArrow"><img class="MainHomeBanner-Content-LinkArrowImg" src="{{ 'assets/images/main-banner/arrow-left.png' | theme }}"></span> <div class="MainHomeBanner-Content-LinkItem">makeup</div>
+            </a>
+
+            <div href="#" class="MainHomeBanner-Content-SlashHolder">
+                <div class="MainHomeBanner-Content-Slash">/</div>
+            </div>
+
+
+
+            <a href="#" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right">
+                <div class="MainHomeBanner-Content-LinkItem">Skin care</div><span class="MainHomeBanner-Content-LinkArrow"><img class="MainHomeBanner-Content-LinkArrowImg" src="{{ 'assets/images/main-banner/arrow-right.png' | theme }}"></span>
+            </a>
+        </div>
+	    
+        <div class="MainHomeBanner-Content-Background" style="background: url({{ record.first_slider_picture|media}}); background-size: cover; background-repeat: no-repeat; background-position: center">
+
+        </div>
+
+		
 	</div>
 </div>
 
@@ -19,6 +46,7 @@
 		width: 100vw;
 		height: 100vh;
 		position: absolute;
+        z-index: 99;
 	}
 
 	.MainHomeBanner-Content {
@@ -27,9 +55,105 @@
 		height: 100%;
 	}
 
-	.MainHomeBanner-Content-item {
-		width: 50%;
-		background-color: #0b3f5a;
+    .MainHomeBanner-Content-Links {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 999;
+        display: flex;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .MainHomeBanner-Content-LinkArrow {
+        display: none;
+    }
+
+    .MainHomeBanner-Content-LinkArrowImg {
+        width: 65px;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--left:hover {
+        color: #EA028A;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--left:hover > .MainHomeBanner-Content-LinkArrow {
+        display: block;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--right:hover > .MainHomeBanner-Content-LinkArrow {
+        display: block;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--right:hover {
+        color: #EA028A;
+    }
+
+    .MainHomeBanner-Content-LinkItem {
+        font-weight: 500;
+        font-size: 80px;
+        padding: 50px;
+    }
+
+    .MainHomeBanner-Content-Slash {
+        font-weight: 500;
+        font-size: 80px;
+    }
+
+    .MainHomeBanner-Content-SlashHolder {
+        color: #fff;
+        display: flex;
+        align-items: center;
+    }
+
+    .MainHomeBanner-Content-LinkHolder--left {
+        justify-content: flex-end;
+    }
+
+    .MainHomeBanner-Content-LinkHolder--right {
+        justify-content: flex-start;
+    }
+
+	.MainHomeBanner-Content-Background {
+		width: 100%;
 	}
+
+    @media screen and (max-width: 1200px){
+
+        .MainHomeBanner-Content-Links {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .MainHomeBanner-Content-Slash {
+            display: none;
+        }
+
+        a.MainHomeBanner-Content-LinkHolder {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .MainHomeBanner-Content-LinkItem {
+            padding: 0 32px;
+            font-size: 40px;
+        }
+
+        .MainHomeBanner-Content-LinkHolder--right {
+            padding-bottom: 50px;
+        }
+
+        .MainHomeBanner-Content-LinkArrowImg {
+            width: 36px;
+        }
+    }
 
 </style>

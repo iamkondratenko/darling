@@ -1,0 +1,36 @@
+1613261547a:1:{s:20:"site/menu-drawer.htm";a:5:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:387:"<div class="MainMenuDrawer"></div>
+
+<style>
+    .MainMenuDrawer {
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        opacity: 0;
+        z-index: -555;
+        transition-duration: 400ms;
+        position: absolute;
+    }
+    .MainMenuDrawer.js-menuIsOpened {
+        z-index: 990;
+        opacity: 1;
+        transition-duration: 400ms;
+    }
+</style>
+";s:5:"mtime";i:1613260943;s:6:"markup";s:386:"<div class="MainMenuDrawer"></div>
+
+<style>
+    .MainMenuDrawer {
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        opacity: 0;
+        z-index: -555;
+        transition-duration: 400ms;
+        position: absolute;
+    }
+    .MainMenuDrawer.js-menuIsOpened {
+        z-index: 990;
+        opacity: 1;
+        transition-duration: 400ms;
+    }
+</style>";s:4:"code";N;}}

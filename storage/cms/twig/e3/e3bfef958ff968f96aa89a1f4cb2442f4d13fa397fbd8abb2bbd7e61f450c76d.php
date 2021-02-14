@@ -29,13 +29,13 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("styles" => 14, "page" => 22, "partial" => 27, "framework" => 34, "scripts" => 35);
+        $tags = array("styles" => 14, "partial" => 19, "page" => 23, "framework" => 35, "scripts" => 36);
         $filters = array("escape" => 5, "theme" => 11);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                ['styles', 'page', 'partial', 'framework', 'scripts'],
+                ['styles', 'partial', 'page', 'framework', 'scripts'],
                 ['escape', 'theme'],
                 []
             );
@@ -99,40 +99,46 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
     <body>
 
 
-
+        ";
+        // line 19
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header.htm"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 20
+        echo "
         <!-- Content -->
         <section id=\"layout-content\">
             ";
-        // line 22
-        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
         // line 23
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+        // line 24
         echo "        </section>
 
         <!-- Footer -->
         <footer id=\"layout-footer\">
             ";
-        // line 27
+        // line 28
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 28
+        // line 29
         echo "        </footer>
 
         <!-- Scripts -->
         <script src=\"";
-        // line 31
+        // line 32
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery.js");
         echo "\"></script>
         <script src=\"";
-        // line 32
+        // line 33
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap.js");
         echo "\"></script>
         <script src=\"";
-        // line 33
+        // line 34
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js");
         echo "\"></script>
         ";
-        // line 34
+        // line 35
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -143,11 +149,11 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 35
+        // line 36
         echo "        ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 36
+        // line 37
         echo "
     </body>
 </html>";
@@ -165,7 +171,7 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
 
     public function getDebugInfo()
     {
-        return array (  151 => 36,  147 => 35,  136 => 34,  132 => 33,  128 => 32,  124 => 31,  119 => 28,  115 => 27,  109 => 23,  107 => 22,  98 => 15,  95 => 14,  91 => 13,  87 => 12,  83 => 11,  76 => 7,  72 => 6,  68 => 5,  62 => 1,);
+        return array (  157 => 37,  153 => 36,  142 => 35,  138 => 34,  134 => 33,  130 => 32,  125 => 29,  121 => 28,  115 => 24,  113 => 23,  108 => 20,  104 => 19,  98 => 15,  95 => 14,  91 => 13,  87 => 12,  83 => 11,  76 => 7,  72 => 6,  68 => 5,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -188,6 +194,7 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
     <body>
 
 
+        {% partial 'site/header.htm' %}
 
         <!-- Content -->
         <section id=\"layout-content\">

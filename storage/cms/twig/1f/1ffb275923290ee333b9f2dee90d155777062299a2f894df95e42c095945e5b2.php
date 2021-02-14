@@ -29,14 +29,14 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("set" => 4, "if" => 8);
-        $filters = array("escape" => 9);
+        $tags = array("set" => 1, "partial" => 5);
+        $filters = array("theme" => 12, "media" => 26);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                ['set', 'if'],
-                ['escape'],
+                ['set', 'partial'],
+                ['theme', 'media'],
                 []
             );
         } catch (SecurityError $e) {
@@ -59,38 +59,53 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
     {
         $macros = $this->macros;
         // line 1
-        echo "<div class=\"MainHomeBanner\">
-\t<div class=\"MainHomeBanner-Content\">
-\t\t<div class=\"MainHomeBanner-Content-item\">
-\t";
+        $context["record"] = twig_get_attribute($this->env, $this->source, ($context["mainBanner"] ?? null), "record", [], "any", false, false, true, 1);
+        // line 2
+        $context["displayColumn"] = twig_get_attribute($this->env, $this->source, ($context["mainBanner"] ?? null), "displayColumn", [], "any", false, false, true, 2);
+        // line 3
+        $context["notFoundMessage"] = twig_get_attribute($this->env, $this->source, ($context["mainBanner"] ?? null), "notFoundMessage", [], "any", false, false, true, 3);
         // line 4
-        $context["record"] = twig_get_attribute($this->env, $this->source, ($context["builderDetails"] ?? null), "record", [], "any", false, false, true, 4);
-        // line 5
-        $context["displayColumn"] = twig_get_attribute($this->env, $this->source, ($context["builderDetails"] ?? null), "displayColumn", [], "any", false, false, true, 5);
-        // line 6
-        $context["notFoundMessage"] = twig_get_attribute($this->env, $this->source, ($context["builderDetails"] ?? null), "notFoundMessage", [], "any", false, false, true, 6);
-        // line 7
         echo "
 ";
-        // line 8
-        if (($context["record"] ?? null)) {
-            // line 9
-            echo "    ";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), ($context["displayColumn"] ?? null), [], "any", false, false, true, 9), 9, $this->source), "html", null, true);
-            echo "
-";
-        } else {
-            // line 11
-            echo "    ";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["notFoundMessage"] ?? null), 11, $this->source), "html", null, true);
-            echo "
-";
-        }
-        // line 13
-        echo "\t\t</div>
-\t\t<div class=\"MainHomeBanner-Content-item\">
-\t\t\t
-\t\t</div>
+        // line 5
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/menu-drawer.htm"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 6
+        echo "
+<div class=\"MainHomeBanner\">
+\t<div class=\"MainHomeBanner-Content\">
+
+        <div class=\"MainHomeBanner-Content-Links\">
+            <a href=\"#\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left\">
+                <span class=\"MainHomeBanner-Content-LinkArrow\"><img class=\"MainHomeBanner-Content-LinkArrowImg\" src=\"";
+        // line 12
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/main-banner/arrow-left.png");
+        echo "\"></span> <div class=\"MainHomeBanner-Content-LinkItem\">makeup</div>
+            </a>
+
+            <div href=\"#\" class=\"MainHomeBanner-Content-SlashHolder\">
+                <div class=\"MainHomeBanner-Content-Slash\">/</div>
+            </div>
+
+
+
+            <a href=\"#\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right\">
+                <div class=\"MainHomeBanner-Content-LinkItem\">Skin care</div><span class=\"MainHomeBanner-Content-LinkArrow\"><img class=\"MainHomeBanner-Content-LinkArrowImg\" src=\"";
+        // line 22
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/main-banner/arrow-right.png");
+        echo "\"></span>
+            </a>
+        </div>
+\t    
+        <div class=\"MainHomeBanner-Content-Background\" style=\"background: url(";
+        // line 26
+        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "first_slider_picture", [], "any", false, false, true, 26), 26, $this->source));
+        echo "); background-size: cover; background-repeat: no-repeat; background-position: center\">
+
+        </div>
+
+\t\t
 \t</div>
 </div>
 
@@ -103,6 +118,7 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
 \t\twidth: 100vw;
 \t\theight: 100vh;
 \t\tposition: absolute;
+        z-index: 99;
 \t}
 
 \t.MainHomeBanner-Content {
@@ -111,10 +127,106 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
 \t\theight: 100%;
 \t}
 
-\t.MainHomeBanner-Content-item {
-\t\twidth: 50%;
-\t\tbackground-color: #0b3f5a;
+    .MainHomeBanner-Content-Links {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 999;
+        display: flex;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .MainHomeBanner-Content-LinkArrow {
+        display: none;
+    }
+
+    .MainHomeBanner-Content-LinkArrowImg {
+        width: 65px;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--left:hover {
+        color: #EA028A;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--left:hover > .MainHomeBanner-Content-LinkArrow {
+        display: block;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--right:hover > .MainHomeBanner-Content-LinkArrow {
+        display: block;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--right:hover {
+        color: #EA028A;
+    }
+
+    .MainHomeBanner-Content-LinkItem {
+        font-weight: 500;
+        font-size: 80px;
+        padding: 50px;
+    }
+
+    .MainHomeBanner-Content-Slash {
+        font-weight: 500;
+        font-size: 80px;
+    }
+
+    .MainHomeBanner-Content-SlashHolder {
+        color: #fff;
+        display: flex;
+        align-items: center;
+    }
+
+    .MainHomeBanner-Content-LinkHolder--left {
+        justify-content: flex-end;
+    }
+
+    .MainHomeBanner-Content-LinkHolder--right {
+        justify-content: flex-start;
+    }
+
+\t.MainHomeBanner-Content-Background {
+\t\twidth: 100%;
 \t}
+
+    @media screen and (max-width: 1200px){
+
+        .MainHomeBanner-Content-Links {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .MainHomeBanner-Content-Slash {
+            display: none;
+        }
+
+        a.MainHomeBanner-Content-LinkHolder {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .MainHomeBanner-Content-LinkItem {
+            padding: 0 32px;
+            font-size: 40px;
+        }
+
+        .MainHomeBanner-Content-LinkHolder--right {
+            padding-bottom: 50px;
+        }
+
+        .MainHomeBanner-Content-LinkArrowImg {
+            width: 36px;
+        }
+    }
 
 </style>";
     }
@@ -131,27 +243,41 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
 
     public function getDebugInfo()
     {
-        return array (  90 => 13,  84 => 11,  78 => 9,  76 => 8,  73 => 7,  71 => 6,  69 => 5,  67 => 4,  62 => 1,);
+        return array (  103 => 26,  96 => 22,  83 => 12,  75 => 6,  71 => 5,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"MainHomeBanner\">
-\t<div class=\"MainHomeBanner-Content\">
-\t\t<div class=\"MainHomeBanner-Content-item\">
-\t{% set record = builderDetails.record %}
-{% set displayColumn = builderDetails.displayColumn %}
-{% set notFoundMessage = builderDetails.notFoundMessage %}
+        return new Source("{% set record = mainBanner.record %}
+{% set displayColumn = mainBanner.displayColumn %}
+{% set notFoundMessage = mainBanner.notFoundMessage %}
 
-{% if record %}
-    {{ attribute(record, displayColumn) }}
-{% else %}
-    {{ notFoundMessage }}
-{% endif %}
-\t\t</div>
-\t\t<div class=\"MainHomeBanner-Content-item\">
-\t\t\t
-\t\t</div>
+{% partial \"site/menu-drawer.htm\" %}
+
+<div class=\"MainHomeBanner\">
+\t<div class=\"MainHomeBanner-Content\">
+
+        <div class=\"MainHomeBanner-Content-Links\">
+            <a href=\"#\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left\">
+                <span class=\"MainHomeBanner-Content-LinkArrow\"><img class=\"MainHomeBanner-Content-LinkArrowImg\" src=\"{{ 'assets/images/main-banner/arrow-left.png' | theme }}\"></span> <div class=\"MainHomeBanner-Content-LinkItem\">makeup</div>
+            </a>
+
+            <div href=\"#\" class=\"MainHomeBanner-Content-SlashHolder\">
+                <div class=\"MainHomeBanner-Content-Slash\">/</div>
+            </div>
+
+
+
+            <a href=\"#\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right\">
+                <div class=\"MainHomeBanner-Content-LinkItem\">Skin care</div><span class=\"MainHomeBanner-Content-LinkArrow\"><img class=\"MainHomeBanner-Content-LinkArrowImg\" src=\"{{ 'assets/images/main-banner/arrow-right.png' | theme }}\"></span>
+            </a>
+        </div>
+\t    
+        <div class=\"MainHomeBanner-Content-Background\" style=\"background: url({{ record.first_slider_picture|media}}); background-size: cover; background-repeat: no-repeat; background-position: center\">
+
+        </div>
+
+\t\t
 \t</div>
 </div>
 
@@ -164,6 +290,7 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
 \t\twidth: 100vw;
 \t\theight: 100vh;
 \t\tposition: absolute;
+        z-index: 99;
 \t}
 
 \t.MainHomeBanner-Content {
@@ -172,10 +299,106 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
 \t\theight: 100%;
 \t}
 
-\t.MainHomeBanner-Content-item {
-\t\twidth: 50%;
-\t\tbackground-color: #0b3f5a;
+    .MainHomeBanner-Content-Links {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 999;
+        display: flex;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .MainHomeBanner-Content-LinkArrow {
+        display: none;
+    }
+
+    .MainHomeBanner-Content-LinkArrowImg {
+        width: 65px;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--left:hover {
+        color: #EA028A;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--left:hover > .MainHomeBanner-Content-LinkArrow {
+        display: block;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--right:hover > .MainHomeBanner-Content-LinkArrow {
+        display: block;
+    }
+
+    a.MainHomeBanner-Content-LinkHolder--right:hover {
+        color: #EA028A;
+    }
+
+    .MainHomeBanner-Content-LinkItem {
+        font-weight: 500;
+        font-size: 80px;
+        padding: 50px;
+    }
+
+    .MainHomeBanner-Content-Slash {
+        font-weight: 500;
+        font-size: 80px;
+    }
+
+    .MainHomeBanner-Content-SlashHolder {
+        color: #fff;
+        display: flex;
+        align-items: center;
+    }
+
+    .MainHomeBanner-Content-LinkHolder--left {
+        justify-content: flex-end;
+    }
+
+    .MainHomeBanner-Content-LinkHolder--right {
+        justify-content: flex-start;
+    }
+
+\t.MainHomeBanner-Content-Background {
+\t\twidth: 100%;
 \t}
+
+    @media screen and (max-width: 1200px){
+
+        .MainHomeBanner-Content-Links {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .MainHomeBanner-Content-Slash {
+            display: none;
+        }
+
+        a.MainHomeBanner-Content-LinkHolder {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .MainHomeBanner-Content-LinkItem {
+            padding: 0 32px;
+            font-size: 40px;
+        }
+
+        .MainHomeBanner-Content-LinkHolder--right {
+            padding-bottom: 50px;
+        }
+
+        .MainHomeBanner-Content-LinkArrowImg {
+            width: 36px;
+        }
+    }
 
 </style>", "/Users/iamk/git/darling/themes/demo/partials/site/main-banner.htm", "");
     }

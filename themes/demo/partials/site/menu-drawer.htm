@@ -1,0 +1,18 @@
+<div class="MainMenuDrawer"></div>
+
+<style>
+    .MainMenuDrawer {
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        opacity: 0;
+        z-index: -555;
+        transition-duration: 400ms;
+        position: absolute;
+    }
+    .MainMenuDrawer.js-menuIsOpened {
+        z-index: 990;
+        opacity: 1;
+        transition-duration: 400ms;
+    }
+</style>
