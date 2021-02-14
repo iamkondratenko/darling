@@ -87,6 +87,11 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         font-weight: 500;
         text-transform: uppercase;
     }
+
+    .MainMenuDrawer-Item-Category:hover {
+        color: #EA028A;
+    }
+
     a.MainMenuDrawer-Item-Subcategory {
         text-decoration: none;
         color: black;
@@ -206,6 +211,11 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         font-weight: 500;
         text-transform: uppercase;
     }
+
+    .MainMenuDrawer-Item-Category:hover {
+        color: #EA028A;
+    }
+
     a.MainMenuDrawer-Item-Subcategory {
         text-decoration: none;
         color: black;

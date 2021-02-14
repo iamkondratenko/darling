@@ -29,13 +29,13 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("set" => 1, "partial" => 5);
-        $filters = array("theme" => 12, "media" => 26);
+        $tags = array("set" => 1);
+        $filters = array("theme" => 11, "media" => 25);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                ['set', 'partial'],
+                ['set'],
                 ['theme', 'media'],
                 []
             );
@@ -66,20 +66,14 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
         $context["notFoundMessage"] = twig_get_attribute($this->env, $this->source, ($context["mainBanner"] ?? null), "notFoundMessage", [], "any", false, false, true, 3);
         // line 4
         echo "
-";
-        // line 5
-        $context['__cms_partial_params'] = [];
-        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/menu-drawer.htm"        , $context['__cms_partial_params']        , true        );
-        unset($context['__cms_partial_params']);
-        // line 6
-        echo "
+
 <div class=\"MainHomeBanner\">
 \t<div class=\"MainHomeBanner-Content\">
 
         <div class=\"MainHomeBanner-Content-Links\">
             <a href=\"#\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left\">
                 <span class=\"MainHomeBanner-Content-LinkArrow\"><img class=\"MainHomeBanner-Content-LinkArrowImg\" src=\"";
-        // line 12
+        // line 11
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/main-banner/arrow-left.png");
         echo "\"></span> <div class=\"MainHomeBanner-Content-LinkItem\">makeup</div>
             </a>
@@ -92,15 +86,15 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
 
             <a href=\"#\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right\">
                 <div class=\"MainHomeBanner-Content-LinkItem\">Skin care</div><span class=\"MainHomeBanner-Content-LinkArrow\"><img class=\"MainHomeBanner-Content-LinkArrowImg\" src=\"";
-        // line 22
+        // line 21
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/main-banner/arrow-right.png");
         echo "\"></span>
             </a>
         </div>
 \t    
         <div class=\"MainHomeBanner-Content-Background\" style=\"background: url(";
-        // line 26
-        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "first_slider_picture", [], "any", false, false, true, 26), 26, $this->source));
+        // line 25
+        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "first_slider_picture", [], "any", false, false, true, 25), 25, $this->source));
         echo "); background-size: cover; background-repeat: no-repeat; background-position: center\">
 
         </div>
@@ -243,7 +237,7 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
 
     public function getDebugInfo()
     {
-        return array (  103 => 26,  96 => 22,  83 => 12,  75 => 6,  71 => 5,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
+        return array (  97 => 25,  90 => 21,  77 => 11,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -252,7 +246,6 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
 {% set displayColumn = mainBanner.displayColumn %}
 {% set notFoundMessage = mainBanner.notFoundMessage %}
 
-{% partial \"site/menu-drawer.htm\" %}
 
 <div class=\"MainHomeBanner\">
 \t<div class=\"MainHomeBanner-Content\">

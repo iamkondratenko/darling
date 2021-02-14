@@ -1,4 +1,4 @@
-1613320109a:1:{s:20:"site/main-banner.htm";a:6:{s:8:"fileName";s:20:"site/main-banner.htm";s:7:"content";s:4164:"[builderDetails mainBanner]
+1613329180a:1:{s:20:"site/main-banner.htm";a:6:{s:8:"fileName";s:20:"site/main-banner.htm";s:7:"content";s:4126:"[builderDetails mainBanner]
 modelClass = "Iamk\Mainbanner\Models\MainBanner"
 identifierValue = 2
 modelKeyColumn = "id"
@@ -8,7 +8,6 @@ displayColumn = "id"
 {% set displayColumn = mainBanner.displayColumn %}
 {% set notFoundMessage = mainBanner.notFoundMessage %}
 
-{% partial "site/menu-drawer.htm" %}
 
 <div class="MainHomeBanner">
 	<div class="MainHomeBanner-Content">
@@ -156,11 +155,10 @@ displayColumn = "id"
         }
     }
 
-</style>";s:5:"mtime";i:1613260789;s:6:"markup";s:4015:"{% set record = mainBanner.record %}
+</style>";s:5:"mtime";i:1613324002;s:6:"markup";s:3977:"{% set record = mainBanner.record %}
 {% set displayColumn = mainBanner.displayColumn %}
 {% set notFoundMessage = mainBanner.notFoundMessage %}
 
-{% partial "site/menu-drawer.htm" %}
 
 <div class="MainHomeBanner">
 	<div class="MainHomeBanner-Content">

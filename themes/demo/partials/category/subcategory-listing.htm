@@ -1,0 +1,32 @@
+<div class="SubcategoryListing">
+    <div class="SubcategoryListing-Title">Pads<span class="SubcategoryListing-Title-Asterisk">*</span></div>
+    <div class="SubcategoryListing-Items">
+        {% partial "category/card-wiget" %}
+        {% partial "category/card-wiget" %}
+        {% partial "category/card-wiget" %}
+    </div>
+</div>
+
+<style>
+    .SubcategoryListing {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .SubcategoryListing-Items {
+        display: flex;
+        justify-content: space-between;
+    }
+    .SubcategoryListing-Title {
+        font-size: 100px;
+        color: black;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 80px 0 60px;
+    }
+
+    .SubcategoryListing-Title-Asterisk {
+        color: #EA028A;
+    }
+
+</style>

@@ -1,0 +1,121 @@
+1613336489a:1:{s:23:"category/card-wiget.htm";a:5:{s:8:"fileName";s:23:"category/card-wiget.htm";s:7:"content";s:1608:"<div class="SubcategoryListing-ItemCard">
+    <a class="SubcategoryListing-ItemCard-Link" href="#">
+        <div class="SubcategoryListing-ItemCard-Holder">
+            <div class="SubcategoryListing-ItemCard-ImageHolder">
+                <img class="SubcategoryListing-ItemCard-Image" src="http://darling:8888/storage/app/media/mask.png">
+            </div>
+
+            <div class="SubcategoryListing-ItemCard-Info">
+                <h2 class="SubcategoryListing-ItemCard-Title">power nap</h2>
+                <p class="SubcategoryListing-ItemCard-Description">Super moisture embo hydrogel face mask with immediate 8-hour sleep effect</p>
+                <div class="SubcategoryListing-ItemCard-Price">$ 8.5</div>
+            </div>
+        </div>
+
+
+    </a>
+</div>
+
+<style>
+
+    .SubcategoryListing-ItemCard {
+        width: 23%;
+        text-align: center;
+        color: #222;
+        text-transform: uppercase;
+    }
+
+    h2.SubcategoryListing-ItemCard-Title {
+        color: inherit;
+        font-size: 25px;
+        font-weight: 500;
+        color: #222;
+    }
+
+    p.SubcategoryListing-ItemCard-Description {
+        color: #222;
+        text-transform: none;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .SubcategoryListing-ItemCard-Price {
+        color: #222;
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    .SubcategoryListing-ItemCard-ImageHolder {
+        width: 100%;
+    }
+
+    img.SubcategoryListing-ItemCard-Image {
+        width: 100%;
+    }
+
+    a.SubcategoryListing-ItemCard-Link {
+        text-decoration: none;
+    }
+
+</style>";s:5:"mtime";i:1613335885;s:6:"markup";s:1608:"<div class="SubcategoryListing-ItemCard">
+    <a class="SubcategoryListing-ItemCard-Link" href="#">
+        <div class="SubcategoryListing-ItemCard-Holder">
+            <div class="SubcategoryListing-ItemCard-ImageHolder">
+                <img class="SubcategoryListing-ItemCard-Image" src="http://darling:8888/storage/app/media/mask.png">
+            </div>
+
+            <div class="SubcategoryListing-ItemCard-Info">
+                <h2 class="SubcategoryListing-ItemCard-Title">power nap</h2>
+                <p class="SubcategoryListing-ItemCard-Description">Super moisture embo hydrogel face mask with immediate 8-hour sleep effect</p>
+                <div class="SubcategoryListing-ItemCard-Price">$ 8.5</div>
+            </div>
+        </div>
+
+
+    </a>
+</div>
+
+<style>
+
+    .SubcategoryListing-ItemCard {
+        width: 23%;
+        text-align: center;
+        color: #222;
+        text-transform: uppercase;
+    }
+
+    h2.SubcategoryListing-ItemCard-Title {
+        color: inherit;
+        font-size: 25px;
+        font-weight: 500;
+        color: #222;
+    }
+
+    p.SubcategoryListing-ItemCard-Description {
+        color: #222;
+        text-transform: none;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .SubcategoryListing-ItemCard-Price {
+        color: #222;
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    .SubcategoryListing-ItemCard-ImageHolder {
+        width: 100%;
+    }
+
+    img.SubcategoryListing-ItemCard-Image {
+        width: 100%;
+    }
+
+    a.SubcategoryListing-ItemCard-Link {
+        text-decoration: none;
+    }
+
+</style>";s:4:"code";N;}}

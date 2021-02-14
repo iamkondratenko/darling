@@ -1,0 +1,115 @@
+1613336489a:1:{s:33:"category/category-main-banner.htm";a:5:{s:8:"fileName";s:33:"category/category-main-banner.htm";s:7:"content";s:1525:"<div class="CategoryMainBanner">
+    <div class="CategoryMainBanner-Content" style="background: url({{ mainCategoryBackground }}); background-size: 100%; background-repeat: no-repeat; background-size: cover">
+        <div class="CategoryMainBanner-Content-Container" >
+            <h1 class="CategoryMainBanner-Title">{{ categoryTitle }}</h1>
+            <p class="CategoryMainBanner-SubTitle">{{ categorySubtitle }}</p>
+        </div>
+        <div class="CategoryMainBanner-Content-Background" ></div>
+    </div>
+</div>
+
+<style>
+
+    h1.CategoryMainBanner-Title {
+        color: #fff;
+        font-size: 50px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    p.CategoryMainBanner-SubTitle {
+        font-size: 80px;
+        line-height: 105px;
+        font-weight: 500;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    .CategoryMainBanner {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .CategoryMainBanner-Content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .CategoryMainBanner-Content-Container {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        z-index: 99;
+        position: absolute;
+        padding: 0 60px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .CategoryMainBanner-Content-Background {
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        background-repeat: no-repeat;
+    }
+</style>";s:5:"mtime";i:1613328804;s:6:"markup";s:1525:"<div class="CategoryMainBanner">
+    <div class="CategoryMainBanner-Content" style="background: url({{ mainCategoryBackground }}); background-size: 100%; background-repeat: no-repeat; background-size: cover">
+        <div class="CategoryMainBanner-Content-Container" >
+            <h1 class="CategoryMainBanner-Title">{{ categoryTitle }}</h1>
+            <p class="CategoryMainBanner-SubTitle">{{ categorySubtitle }}</p>
+        </div>
+        <div class="CategoryMainBanner-Content-Background" ></div>
+    </div>
+</div>
+
+<style>
+
+    h1.CategoryMainBanner-Title {
+        color: #fff;
+        font-size: 50px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    p.CategoryMainBanner-SubTitle {
+        font-size: 80px;
+        line-height: 105px;
+        font-weight: 500;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    .CategoryMainBanner {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .CategoryMainBanner-Content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .CategoryMainBanner-Content-Container {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        z-index: 99;
+        position: absolute;
+        padding: 0 60px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .CategoryMainBanner-Content-Background {
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        background-repeat: no-repeat;
+    }
+</style>";s:4:"code";N;}}

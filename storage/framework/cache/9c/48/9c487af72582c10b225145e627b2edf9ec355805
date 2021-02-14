@@ -1,4 +1,4 @@
-1613320109a:1:{s:20:"site/menu-drawer.htm";a:5:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:3347:"<div class="MainMenuDrawer">
+1613336490a:1:{s:20:"site/menu-drawer.htm";a:5:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:3421:"<div class="MainMenuDrawer">
     <div class="MainMenuDrawer-Items">
         <div class="MainMenuDrawer-Item">
             <div class="MainMenuDrawer-Item-Category">MakeUp</div>
@@ -26,6 +26,11 @@
         font-weight: 500;
         text-transform: uppercase;
     }
+
+    .MainMenuDrawer-Item-Category:hover {
+        color: #EA028A;
+    }
+
     a.MainMenuDrawer-Item-Subcategory {
         text-decoration: none;
         color: black;
@@ -102,7 +107,7 @@
             }
         )
     }
-</script>";s:5:"mtime";i:1613319506;s:6:"markup";s:3347:"<div class="MainMenuDrawer">
+</script>";s:5:"mtime";i:1613320256;s:6:"markup";s:3421:"<div class="MainMenuDrawer">
     <div class="MainMenuDrawer-Items">
         <div class="MainMenuDrawer-Item">
             <div class="MainMenuDrawer-Item-Category">MakeUp</div>
@@ -130,6 +135,11 @@
         font-weight: 500;
         text-transform: uppercase;
     }
+
+    .MainMenuDrawer-Item-Category:hover {
+        color: #EA028A;
+    }
+
     a.MainMenuDrawer-Item-Subcategory {
         text-decoration: none;
         color: black;

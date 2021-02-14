@@ -1,0 +1,63 @@
+1613336489a:1:{s:32:"category/subcategory-listing.htm";a:5:{s:8:"fileName";s:32:"category/subcategory-listing.htm";s:7:"content";s:803:"<div class="SubcategoryListing">
+    <div class="SubcategoryListing-Title">Pads<span class="SubcategoryListing-Title-Asterisk">*</span></div>
+    <div class="SubcategoryListing-Items">
+        {% partial "category/card-wiget" %}
+        {% partial "category/card-wiget" %}
+        {% partial "category/card-wiget" %}
+    </div>
+</div>
+
+<style>
+    .SubcategoryListing {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .SubcategoryListing-Items {
+        display: flex;
+        justify-content: space-between;
+    }
+    .SubcategoryListing-Title {
+        font-size: 100px;
+        color: black;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 80px 0 60px;
+    }
+
+    .SubcategoryListing-Title-Asterisk {
+        color: #EA028A;
+    }
+
+</style>";s:5:"mtime";i:1613332741;s:6:"markup";s:803:"<div class="SubcategoryListing">
+    <div class="SubcategoryListing-Title">Pads<span class="SubcategoryListing-Title-Asterisk">*</span></div>
+    <div class="SubcategoryListing-Items">
+        {% partial "category/card-wiget" %}
+        {% partial "category/card-wiget" %}
+        {% partial "category/card-wiget" %}
+    </div>
+</div>
+
+<style>
+    .SubcategoryListing {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .SubcategoryListing-Items {
+        display: flex;
+        justify-content: space-between;
+    }
+    .SubcategoryListing-Title {
+        font-size: 100px;
+        color: black;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 80px 0 60px;
+    }
+
+    .SubcategoryListing-Title-Asterisk {
+        color: #EA028A;
+    }
+
+</style>";s:4:"code";N;}}

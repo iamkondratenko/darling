@@ -1,0 +1,11 @@
+1613336489a:1:{s:12:"category.htm";a:9:{s:8:"fileName";s:12:"category.htm";s:7:"content";s:468:"title = "Категория"
+url = "/category"
+layout = "default"
+is_hidden = 0
+==
+
+{% partial "category/category-main-banner" categoryTitle='Skin care' categorySubtitle='pads / patches / masks' mainCategoryBackground='http://darling:8888/storage/app/media/categoryBanner.jpg' %}
+
+{% partial "category/category" categorySubtitle='yes. but no. but yes. ' categorySubtitleMarked='#youaredarling' mainCategoryBackground='http://darling:8888/storage/app/media/pads.jpg' %}";s:5:"mtime";i:1613333308;s:6:"markup";s:384:"{% partial "category/category-main-banner" categoryTitle='Skin care' categorySubtitle='pads / patches / masks' mainCategoryBackground='http://darling:8888/storage/app/media/categoryBanner.jpg' %}
+
+{% partial "category/category" categorySubtitle='yes. but no. but yes. ' categorySubtitleMarked='#youaredarling' mainCategoryBackground='http://darling:8888/storage/app/media/pads.jpg' %}";s:4:"code";N;s:5:"title";s:18:"Категория";s:3:"url";s:9:"/category";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}
