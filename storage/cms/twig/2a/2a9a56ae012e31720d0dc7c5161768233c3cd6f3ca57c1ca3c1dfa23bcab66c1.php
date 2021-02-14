@@ -59,9 +59,41 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
     {
         $macros = $this->macros;
         // line 1
-        echo "<div class=\"MainMenuDrawer\"></div>
+        echo "<div class=\"MainMenuDrawer\">
+    <div class=\"MainMenuDrawer-Items\">
+        <div class=\"MainMenuDrawer-Item\">
+            <div class=\"MainMenuDrawer-Item-Category\">MakeUp</div>
+            <div class=\"MainMenuDrawer-Item-Subcategories\">
+                <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">All products</a>
+                <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Masks</a>
+                <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Patches</a>
+                <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Pads</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <style>
+    a.MainMenuDrawer-Item-Subcategory {
+        text-decoration: none;
+        color: black;
+        font-size: 40px;
+
+    }
+    .MainMenuDrawer-Item-Subcategories{
+        display: flex;
+        flex-direction: column;
+    }
+    .MainMenuDrawer-Items{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: black;
+    }
+
     .MainMenuDrawer {
         width: 100vw;
         height: 100vh;
@@ -91,9 +123,41 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"MainMenuDrawer\"></div>
+        return new Source("<div class=\"MainMenuDrawer\">
+    <div class=\"MainMenuDrawer-Items\">
+        <div class=\"MainMenuDrawer-Item\">
+            <div class=\"MainMenuDrawer-Item-Category\">MakeUp</div>
+            <div class=\"MainMenuDrawer-Item-Subcategories\">
+                <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">All products</a>
+                <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Masks</a>
+                <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Patches</a>
+                <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Pads</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <style>
+    a.MainMenuDrawer-Item-Subcategory {
+        text-decoration: none;
+        color: black;
+        font-size: 40px;
+
+    }
+    .MainMenuDrawer-Item-Subcategories{
+        display: flex;
+        flex-direction: column;
+    }
+    .MainMenuDrawer-Items{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: black;
+    }
+
     .MainMenuDrawer {
         width: 100vw;
         height: 100vh;

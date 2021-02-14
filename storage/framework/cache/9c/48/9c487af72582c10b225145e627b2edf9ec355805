@@ -1,6 +1,38 @@
-1613261547a:1:{s:20:"site/menu-drawer.htm";a:5:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:387:"<div class="MainMenuDrawer"></div>
+1613267617a:1:{s:20:"site/menu-drawer.htm";a:5:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:1399:"<div class="MainMenuDrawer">
+    <div class="MainMenuDrawer-Items">
+        <div class="MainMenuDrawer-Item">
+            <div class="MainMenuDrawer-Item-Category">MakeUp</div>
+            <div class="MainMenuDrawer-Item-Subcategories">
+                <a href="#" class="MainMenuDrawer-Item-Subcategory">All products</a>
+                <a href="#" class="MainMenuDrawer-Item-Subcategory">Masks</a>
+                <a href="#" class="MainMenuDrawer-Item-Subcategory">Patches</a>
+                <a href="#" class="MainMenuDrawer-Item-Subcategory">Pads</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <style>
+    a.MainMenuDrawer-Item-Subcategory {
+        text-decoration: none;
+        color: black;
+        font-size: 40px;
+
+    }
+    .MainMenuDrawer-Item-Subcategories{
+        display: flex;
+        flex-direction: column;
+    }
+    .MainMenuDrawer-Items{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: black;
+    }
+
     .MainMenuDrawer {
         width: 100vw;
         height: 100vh;
@@ -16,9 +48,41 @@
         transition-duration: 400ms;
     }
 </style>
-";s:5:"mtime";i:1613260943;s:6:"markup";s:386:"<div class="MainMenuDrawer"></div>
+";s:5:"mtime";i:1613267015;s:6:"markup";s:1398:"<div class="MainMenuDrawer">
+    <div class="MainMenuDrawer-Items">
+        <div class="MainMenuDrawer-Item">
+            <div class="MainMenuDrawer-Item-Category">MakeUp</div>
+            <div class="MainMenuDrawer-Item-Subcategories">
+                <a href="#" class="MainMenuDrawer-Item-Subcategory">All products</a>
+                <a href="#" class="MainMenuDrawer-Item-Subcategory">Masks</a>
+                <a href="#" class="MainMenuDrawer-Item-Subcategory">Patches</a>
+                <a href="#" class="MainMenuDrawer-Item-Subcategory">Pads</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <style>
+    a.MainMenuDrawer-Item-Subcategory {
+        text-decoration: none;
+        color: black;
+        font-size: 40px;
+
+    }
+    .MainMenuDrawer-Item-Subcategories{
+        display: flex;
+        flex-direction: column;
+    }
+    .MainMenuDrawer-Items{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: black;
+    }
+
     .MainMenuDrawer {
         width: 100vw;
         height: 100vh;
