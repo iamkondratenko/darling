@@ -30,7 +30,7 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
         $tags = array("set" => 1);
-        $filters = array("theme" => 11, "media" => 25);
+        $filters = array("theme" => 13, "media" => 26);
         $functions = array();
 
         try {
@@ -68,12 +68,14 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
         echo "
 
 <div class=\"MainHomeBanner\">
+
 \t<div class=\"MainHomeBanner-Content\">
 
         <div class=\"MainHomeBanner-Content-Links\">
-            <a href=\"#\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left\">
+
+            <a href=\"/category\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left\">
                 <span class=\"MainHomeBanner-Content-LinkArrow\"><img class=\"MainHomeBanner-Content-LinkArrowImg\" src=\"";
-        // line 11
+        // line 13
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/main-banner/arrow-left.png");
         echo "\"></span> <div class=\"MainHomeBanner-Content-LinkItem\">makeup</div>
             </a>
@@ -82,25 +84,25 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
                 <div class=\"MainHomeBanner-Content-Slash\">/</div>
             </div>
 
-
-
-            <a href=\"#\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right\">
+            <a href=\"/category\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right\">
                 <div class=\"MainHomeBanner-Content-LinkItem\">Skin care</div><span class=\"MainHomeBanner-Content-LinkArrow\"><img class=\"MainHomeBanner-Content-LinkArrowImg\" src=\"";
         // line 21
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/main-banner/arrow-right.png");
         echo "\"></span>
             </a>
+
         </div>
 \t    
         <div class=\"MainHomeBanner-Content-Background\" style=\"background: url(";
-        // line 25
-        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "first_slider_picture", [], "any", false, false, true, 25), 25, $this->source));
+        // line 26
+        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "first_slider_picture", [], "any", false, false, true, 26), 26, $this->source));
         echo "); background-size: cover; background-repeat: no-repeat; background-position: center\">
 
         </div>
 
 \t\t
 \t</div>
+
 </div>
 
 
@@ -237,7 +239,7 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
 
     public function getDebugInfo()
     {
-        return array (  97 => 25,  90 => 21,  77 => 11,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
+        return array (  98 => 26,  90 => 21,  79 => 13,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -248,10 +250,12 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
 
 
 <div class=\"MainHomeBanner\">
+
 \t<div class=\"MainHomeBanner-Content\">
 
         <div class=\"MainHomeBanner-Content-Links\">
-            <a href=\"#\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left\">
+
+            <a href=\"/category\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left\">
                 <span class=\"MainHomeBanner-Content-LinkArrow\"><img class=\"MainHomeBanner-Content-LinkArrowImg\" src=\"{{ 'assets/images/main-banner/arrow-left.png' | theme }}\"></span> <div class=\"MainHomeBanner-Content-LinkItem\">makeup</div>
             </a>
 
@@ -259,11 +263,10 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
                 <div class=\"MainHomeBanner-Content-Slash\">/</div>
             </div>
 
-
-
-            <a href=\"#\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right\">
+            <a href=\"/category\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right\">
                 <div class=\"MainHomeBanner-Content-LinkItem\">Skin care</div><span class=\"MainHomeBanner-Content-LinkArrow\"><img class=\"MainHomeBanner-Content-LinkArrowImg\" src=\"{{ 'assets/images/main-banner/arrow-right.png' | theme }}\"></span>
             </a>
+
         </div>
 \t    
         <div class=\"MainHomeBanner-Content-Background\" style=\"background: url({{ record.first_slider_picture|media}}); background-size: cover; background-repeat: no-repeat; background-position: center\">
@@ -272,6 +275,7 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
 
 \t\t
 \t</div>
+
 </div>
 
 

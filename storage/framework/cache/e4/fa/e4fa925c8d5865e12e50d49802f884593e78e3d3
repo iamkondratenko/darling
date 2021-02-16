@@ -1,8 +1,8 @@
-1613336490a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:5231:"<header class="MainHeader">
+1613467145a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:5367:"<header class="MainHeader">
     <div class="MainHeader-Content">
         <div class="MainLogo">
 <!--            <img src="{{ 'assets/images/logo.svg' | theme }}">-->
-
+        <a class="LogoLink" href="/">
             <svg width="187" class="LogoSvg" height="30" viewBox="0 0 187 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5781 23.3445C14.0901 23.3445 15.8653 21.2676 15.8653 18.9165V10.0613C15.8653 7.71016 14.0901 5.63324 10.5781 5.63324H6.25503V23.3445H10.5781ZM0.774414 0.773438H10.5779C17.1775 0.773438 21.3458 4.14328 21.3458 10.217V18.7589C21.3458 24.8322 17.1775 28.202 10.5779 28.202H0.774414V0.773438Z" fill="white"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M65.3227 13.196C67.7114 13.196 69.0982 12.1768 69.0982 9.39486C69.0982 6.65195 67.7114 5.63324 65.3227 5.63324H60.1222V13.196H65.3227ZM54.6523 0.773438H66.3246C71.8335 0.773438 74.6842 3.98665 74.6842 9.31584C74.6842 13.195 72.9123 15.8984 70.254 17.2309L75.2238 26.3607V28.202H69.9072L64.2831 17.8968H60.1225V28.202H54.6523V0.773438Z" fill="white"/>
@@ -13,7 +13,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M40.3758 17.1517L37.3928 8.218L34.3312 17.1517H40.3758ZM25.2646 26.361L34.7618 0.773438H40.2169L49.7544 26.361V28.202H44.2593L42.0622 21.7764H32.6815L30.4061 28.202H25.2646V26.361Z" fill="white"/>
                 <path fill-rule="evenodd" class="LogoAsterisk" clip-rule="evenodd" d="M186.897 5.91835L185.166 2.97546L181.281 5.17749V0.773438H177.819V5.17749L173.934 2.97546L172.203 5.91835L176.089 8.12038L172.203 10.3224L173.934 13.2649L177.819 11.0628V15.4673H181.281V11.0628L185.166 13.2649L186.897 10.3224L183.012 8.12038L186.897 5.91835Z"/>
             </svg>
-
+        </a>
         </div>
         <div class="MainMenu">
             <div class="MainMenu-Icon" data-openMenu="menu-icon" onclick="openMenuHandler()"></div>
@@ -23,6 +23,12 @@
 
 
 <style>
+
+    a.LogoLink {
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+    }
 
     header.MainHeader {
         position: absolute;
@@ -133,11 +139,11 @@
         menuDrawer.classList.toggle('js-menuIsOpened')
     }
 
-</script>";s:5:"mtime";i:1613261138;s:6:"markup";s:5231:"<header class="MainHeader">
+</script>";s:5:"mtime";i:1613343709;s:6:"markup";s:5367:"<header class="MainHeader">
     <div class="MainHeader-Content">
         <div class="MainLogo">
 <!--            <img src="{{ 'assets/images/logo.svg' | theme }}">-->
-
+        <a class="LogoLink" href="/">
             <svg width="187" class="LogoSvg" height="30" viewBox="0 0 187 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5781 23.3445C14.0901 23.3445 15.8653 21.2676 15.8653 18.9165V10.0613C15.8653 7.71016 14.0901 5.63324 10.5781 5.63324H6.25503V23.3445H10.5781ZM0.774414 0.773438H10.5779C17.1775 0.773438 21.3458 4.14328 21.3458 10.217V18.7589C21.3458 24.8322 17.1775 28.202 10.5779 28.202H0.774414V0.773438Z" fill="white"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M65.3227 13.196C67.7114 13.196 69.0982 12.1768 69.0982 9.39486C69.0982 6.65195 67.7114 5.63324 65.3227 5.63324H60.1222V13.196H65.3227ZM54.6523 0.773438H66.3246C71.8335 0.773438 74.6842 3.98665 74.6842 9.31584C74.6842 13.195 72.9123 15.8984 70.254 17.2309L75.2238 26.3607V28.202H69.9072L64.2831 17.8968H60.1225V28.202H54.6523V0.773438Z" fill="white"/>
@@ -148,7 +154,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M40.3758 17.1517L37.3928 8.218L34.3312 17.1517H40.3758ZM25.2646 26.361L34.7618 0.773438H40.2169L49.7544 26.361V28.202H44.2593L42.0622 21.7764H32.6815L30.4061 28.202H25.2646V26.361Z" fill="white"/>
                 <path fill-rule="evenodd" class="LogoAsterisk" clip-rule="evenodd" d="M186.897 5.91835L185.166 2.97546L181.281 5.17749V0.773438H177.819V5.17749L173.934 2.97546L172.203 5.91835L176.089 8.12038L172.203 10.3224L173.934 13.2649L177.819 11.0628V15.4673H181.281V11.0628L185.166 13.2649L186.897 10.3224L183.012 8.12038L186.897 5.91835Z"/>
             </svg>
-
+        </a>
         </div>
         <div class="MainMenu">
             <div class="MainMenu-Icon" data-openMenu="menu-icon" onclick="openMenuHandler()"></div>
@@ -158,6 +164,12 @@
 
 
 <style>
+
+    a.LogoLink {
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+    }
 
     header.MainHeader {
         position: absolute;

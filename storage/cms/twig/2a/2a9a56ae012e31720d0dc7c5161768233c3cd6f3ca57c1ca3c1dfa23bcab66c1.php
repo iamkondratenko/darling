@@ -64,7 +64,7 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         <div class=\"MainMenuDrawer-Item\">
             <div class=\"MainMenuDrawer-Item-Category\">MakeUp</div>
             <div class=\"MainMenuDrawer-Item-Subcategories\">
-                <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">All products</a>
+                <a href=\"/category\" class=\"MainMenuDrawer-Item-Subcategory\">All products</a>
                 <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Masks</a>
                 <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Patches</a>
                 <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Pads</a>
@@ -188,7 +188,7 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         <div class=\"MainMenuDrawer-Item\">
             <div class=\"MainMenuDrawer-Item-Category\">MakeUp</div>
             <div class=\"MainMenuDrawer-Item-Subcategories\">
-                <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">All products</a>
+                <a href=\"/category\" class=\"MainMenuDrawer-Item-Subcategory\">All products</a>
                 <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Masks</a>
                 <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Patches</a>
                 <a href=\"#\" class=\"MainMenuDrawer-Item-Subcategory\">Pads</a>

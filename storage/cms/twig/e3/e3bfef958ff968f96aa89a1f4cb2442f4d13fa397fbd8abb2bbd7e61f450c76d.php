@@ -84,11 +84,11 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         echo "\">
         <link href=\"";
         // line 12
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/vendor.css?2");
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/vendor.css?22");
         echo "\" rel=\"stylesheet\">
         <link href=\"";
         // line 13
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/theme.css?21");
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/theme.css?213f3");
         echo "\" rel=\"stylesheet\">
         ";
         // line 14
@@ -194,8 +194,8 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
         <meta name=\"generator\" content=\"OctoberCMS\">
         <link rel=\"icon\" type=\"image/png\" href=\"{{ 'assets/images/october.png'|theme }}\">
-        <link href=\"{{ 'assets/css/vendor.css?2'|theme }}\" rel=\"stylesheet\">
-        <link href=\"{{ 'assets/css/theme.css?21'|theme }}\" rel=\"stylesheet\">
+        <link href=\"{{ 'assets/css/vendor.css?22'|theme }}\" rel=\"stylesheet\">
+        <link href=\"{{ 'assets/css/theme.css?213f3'|theme }}\" rel=\"stylesheet\">
         {% styles %}
     </head>
     <body>

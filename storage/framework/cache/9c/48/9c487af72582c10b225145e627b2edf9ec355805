@@ -1,9 +1,9 @@
-1613336490a:1:{s:20:"site/menu-drawer.htm";a:5:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:3421:"<div class="MainMenuDrawer">
+1613467145a:1:{s:20:"site/menu-drawer.htm";a:5:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:3429:"<div class="MainMenuDrawer">
     <div class="MainMenuDrawer-Items">
         <div class="MainMenuDrawer-Item">
             <div class="MainMenuDrawer-Item-Category">MakeUp</div>
             <div class="MainMenuDrawer-Item-Subcategories">
-                <a href="#" class="MainMenuDrawer-Item-Subcategory">All products</a>
+                <a href="/category" class="MainMenuDrawer-Item-Subcategory">All products</a>
                 <a href="#" class="MainMenuDrawer-Item-Subcategory">Masks</a>
                 <a href="#" class="MainMenuDrawer-Item-Subcategory">Patches</a>
                 <a href="#" class="MainMenuDrawer-Item-Subcategory">Pads</a>
@@ -107,12 +107,12 @@
             }
         )
     }
-</script>";s:5:"mtime";i:1613320256;s:6:"markup";s:3421:"<div class="MainMenuDrawer">
+</script>";s:5:"mtime";i:1613343763;s:6:"markup";s:3429:"<div class="MainMenuDrawer">
     <div class="MainMenuDrawer-Items">
         <div class="MainMenuDrawer-Item">
             <div class="MainMenuDrawer-Item-Category">MakeUp</div>
             <div class="MainMenuDrawer-Item-Subcategories">
-                <a href="#" class="MainMenuDrawer-Item-Subcategory">All products</a>
+                <a href="/category" class="MainMenuDrawer-Item-Subcategory">All products</a>
                 <a href="#" class="MainMenuDrawer-Item-Subcategory">Masks</a>
                 <a href="#" class="MainMenuDrawer-Item-Subcategory">Patches</a>
                 <a href="#" class="MainMenuDrawer-Item-Subcategory">Pads</a>
