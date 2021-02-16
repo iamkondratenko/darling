@@ -29,14 +29,14 @@ class __TwigTemplate_55f48d30a52cb0dcc0659d820641a974123cd92ee0d5f2dfa489f226b4a
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array();
-        $filters = array();
+        $tags = array("set" => 1, "for" => 12, "if" => 13);
+        $filters = array("escape" => 13, "media" => 15, "raw" => 62);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                [],
-                [],
+                ['set', 'for', 'if'],
+                ['escape', 'media', 'raw'],
                 []
             );
         } catch (SecurityError $e) {
@@ -59,57 +59,214 @@ class __TwigTemplate_55f48d30a52cb0dcc0659d820641a974123cd92ee0d5f2dfa489f226b4a
     {
         $macros = $this->macros;
         // line 1
-        echo "<div class=\"product-section\" data-productid=\"6\">
+        $context["record"] = twig_get_attribute($this->env, $this->source, ($context["productDetails"] ?? null), "record", [], "any", false, false, true, 1);
+        // line 2
+        $context["displayColumn"] = twig_get_attribute($this->env, $this->source, ($context["productDetails"] ?? null), "displayColumn", [], "any", false, false, true, 2);
+        // line 3
+        $context["notFoundMessage"] = twig_get_attribute($this->env, $this->source, ($context["productDetails"] ?? null), "notFoundMessage", [], "any", false, false, true, 3);
+        // line 4
+        echo "
+<div class=\"product-section\">
+
+
+
 
     <div class=\"product-section__photo-block float-scroll\">
-        <div class=\"photo-block__product-holder \">
-            <img src=\"http://darling:8888/storage/app/media/Rectangle%2089.jpg\" alt=\"\" class=\"photo-block__product\">
-            <img src=\"http://darling:8888/storage/app/media/Rectangle%2089.jpg\" alt=\"\" class=\"photo-block__product\">
-            <img src=\"http://darling:8888/storage/app/media/Rectangle%2089.jpg\" alt=\"\" class=\"photo-block__product\">
-            <img src=\"http://darling:8888/storage/app/media/Rectangle%2089.jpg\" alt=\"\" class=\"photo-block__product\">
-        </div>
+
+        ";
+        // line 12
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "color_slider", [], "any", false, false, true, 12));
+        $context['loop'] = [
+          'parent' => $context['_parent'],
+          'index0' => 0,
+          'index'  => 1,
+          'first'  => true,
+        ];
+        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof \Countable)) {
+            $length = count($context['_seq']);
+            $context['loop']['revindex0'] = $length - 1;
+            $context['loop']['revindex'] = $length;
+            $context['loop']['length'] = $length;
+            $context['loop']['last'] = 1 === $length;
+        }
+        foreach ($context['_seq'] as $context["_key"] => $context["slider"]) {
+            // line 13
+            echo "            <div class=\"photo-block__product-holder ";
+            if ((twig_get_attribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, true, 13) == true)) {
+                echo " activedColorSlider";
+            }
+            echo "\" id=\"";
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["slider"], "product_color", [], "any", false, false, true, 13), 13, $this->source), "html", null, true);
+            echo "\">
+                ";
+            // line 14
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["slider"], "gallery", [], "any", false, false, true, 14));
+            foreach ($context['_seq'] as $context["_key"] => $context["sliderPicture"]) {
+                // line 15
+                echo "                    <img src=\"";
+                echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["sliderPicture"], "picture", [], "any", false, false, true, 15), 15, $this->source));
+                echo "\" alt=\"";
+                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["sliderPicture"], "alt_text", [], "any", false, false, true, 15), 15, $this->source), "html", null, true);
+                echo "\" class=\"photo-block__product\">
+                ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['sliderPicture'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 17
+            echo "            </div>
+        ";
+            ++$context['loop']['index0'];
+            ++$context['loop']['index'];
+            $context['loop']['first'] = false;
+            if (isset($context['loop']['length'])) {
+                --$context['loop']['revindex0'];
+                --$context['loop']['revindex'];
+                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['slider'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 19
+        echo "
     </div>
 
     <div class=\"product-section__text-block\">
             <div class=\"product-section__text-block-holder\">
                 <div class=\"text-block__title-section\">
-                    <h1 class=\"title-section__title\"><span class=\"title-section__title_marked\">DARLING*</span>  3-D CURE</h1>
+                    <h1 class=\"title-section__title\">
+                        ";
+        // line 26
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "product_title", [], "any", false, false, true, 26));
+        foreach ($context['_seq'] as $context["_key"] => $context["title"]) {
+            // line 27
+            echo "                        <span class=\"";
+            if ((twig_get_attribute($this->env, $this->source, $context["title"], "product_title_marked", [], "any", false, false, true, 27) == true)) {
+                echo "title-section__title_marked";
+            }
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["title"], "product_title_construct", [], "any", false, false, true, 27), 27, $this->source), "html", null, true);
+            echo "</span>
+                        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['title'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 29
+        echo "                    </h1>
                     <p class=\"title-section__description\">
                         </p><div title=\"Page 1\">
 
-\t<p>Upgraded fermentation Bio-Cellulose face mask for restorative deep skin health</p>
+\t<p>";
+        // line 33
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "description", [], "any", false, false, true, 33), 33, $this->source), "html", null, true);
+        echo "</p>
 </div>
                     <p></p>
                 </div>
                 <div class=\"text-block__basket-section\">
-                    <div class=\"basket-section__price\">170</div>
+                    <div class=\"basket-section__price\">";
+        // line 38
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "price", [], "any", false, false, true, 38), 38, $this->source), "html", null, true);
+        echo "</div>
                 </div>
+
+
+
+                <div class=\"text-block__color-section\">
+                    ";
+        // line 44
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "color_slider", [], "any", false, false, true, 44));
+        $context['loop'] = [
+          'parent' => $context['_parent'],
+          'index0' => 0,
+          'index'  => 1,
+          'first'  => true,
+        ];
+        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof \Countable)) {
+            $length = count($context['_seq']);
+            $context['loop']['revindex0'] = $length - 1;
+            $context['loop']['revindex'] = $length;
+            $context['loop']['length'] = $length;
+            $context['loop']['last'] = 1 === $length;
+        }
+        foreach ($context['_seq'] as $context["_key"] => $context["slider"]) {
+            // line 45
+            echo "                    <div class=\"text-block__color-section__holder\" >
+                        <input class=\"radio-color-picker\" type=\"radio\" id=\"color-picker-";
+            // line 46
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["slider"], "product_color", [], "any", false, false, true, 46), 46, $this->source), "html", null, true);
+            echo "\"
+                               name=\"contact\" value=\"email\" ";
+            // line 47
+            if ((twig_get_attribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, true, 47) == true)) {
+                echo " checked";
+            }
+            echo "  data-colorPicker=\"";
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["slider"], "product_color", [], "any", false, false, true, 47), 47, $this->source), "html", null, true);
+            echo "\">
+                        <label for=\"color-picker-";
+            // line 48
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["slider"], "product_color", [], "any", false, false, true, 48), 48, $this->source), "html", null, true);
+            echo "\">
+                            <div class=\"text-block__color-section_item\" style=\"background-color: ";
+            // line 49
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["slider"], "product_color", [], "any", false, false, true, 49), 49, $this->source), "html", null, true);
+            echo "\">
+                                <span class=\"text-block__color-section_number\">";
+            // line 50
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, true, 50), 50, $this->source), "html", null, true);
+            echo "</span>
+                            </div>
+                        </label>
+                    </div>
+                    ";
+            ++$context['loop']['index0'];
+            ++$context['loop']['index'];
+            $context['loop']['first'] = false;
+            if (isset($context['loop']['length'])) {
+                --$context['loop']['revindex0'];
+                --$context['loop']['revindex'];
+                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['slider'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 55
+        echo "                </div>
+
                 <div class=\"text-block__info-section\">
                     <div class=\"info-section__product-info-block\">
-                        <div class=\"product-info-block__description\">
-                            <h2 class=\"product-info-block__description__title\"></h2>
-                            <p>I’m your 3-D second skin FERMENTATION mask of nourishing actives with HYALURONIC ACID, ALOE LEAF, CAFFEINE and ALLANTOIN for preventive and restorative effect in the deeper skin layers
+                        ";
+        // line 59
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "additional_info", [], "any", false, false, true, 59));
+        foreach ($context['_seq'] as $context["_key"] => $context["addittionalInfo"]) {
+            // line 60
+            echo "                        <div class=\"product-info-block__description\">
+                            <h2 class=\"product-info-block__description__title\">";
+            // line 61
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["addittionalInfo"], "additional_info_title", [], "any", false, false, true, 61), 61, $this->source), "html", null, true);
+            echo "</h2>
+                            <p>";
+            // line 62
+            echo $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["addittionalInfo"], "additional_info_text", [], "any", false, false, true, 62), 62, $this->source);
+            echo "
                             </p>
                         </div>
-                        <div class=\"product-info-block__description\">
-                            <h2 class=\"product-info-block__description__title\">THE FEATURES</h2>
-                            <p>Advanced Bio Cellulose 3-D sheet mask with grid pattern holding more actives for advanced delivery deep into skin layers. Bio Cellulose sheet is infused with most current probiotic + fermentation technology. The creamy Hyaluronic Acid, Aloe Leaf polysaccharides, Caffeine and Allantoin formula intensively nourishes and calms the skin.
-                            </p>
-                        </div>
-                        <div class=\"product-info-block__description\">
-                            <h2 class=\"product-info-block__description__title\">THE TIPS
-                            </h2>
-                            <p>Remove one tulle-like net and apply gel side with the other net than discard it. Super thin layer of gel will meld to your face. Relax for 10-20 min then remove mask and gently tap to fully absorb the essence. Your skin is calm and restored. Ideal for all skin types including dry and sensitive skin.
-                            </p>
-                        </div>
-                        <div class=\"product-info-block__description\">
-                            <h2 class=\"product-info-block__description__title\">INGRIDIENTS
-                            </h2>
-                            <p>Water, Glycerin, Methylpropanediol, Dipropylene Glycol, Hydroxyacetophenone, Carbomer, Allantoin, Caffeine, PEG-40 Hydrogenated Castor Oil, Xanthan Gum, Tromethamine, Caprylyl Glycol, 1,2-Hexanediol, Ethylhexylglycerin, Butylene Glycol, Glyceryl Acrylate/Acrylic Acid Copolymer, Fragrance (Parfum), Disodium EDTA, Sodium Hyaluronate, PVM/MA Copolymer, Althaea Rosea Flower Extract, Aloe Barbadensis Leaf Polysaccharides.
-                            </p>
-                        </div>
-
-
+                        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['addittionalInfo'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 66
+        echo "
                         <a href=\"#\" class=\"buy_now_link\">buy now</a>
 
 
@@ -126,6 +283,63 @@ class __TwigTemplate_55f48d30a52cb0dcc0659d820641a974123cd92ee0d5f2dfa489f226b4a
     
     
 /* PRODUCT CARD */
+
+
+
+.text-block__color-section {
+    display: flex;
+}
+
+.text-block__color-section__holder {
+    width: 85px;
+    height: 85px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-block__color-section_item {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition-duration: 400ms;
+    cursor: pointer;
+}
+
+.text-block__color-section_number {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-block__color-section__holder.active-color > .text-block__color-section_item > .text-block__color-section_number {
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.text-block__color-section__holder.active-color > .text-block__color-section_item {
+    width: 85px;
+    height: 85px;
+}
+
+.text-block__color-section_item:hover {
+    width: 85px;
+    height: 85px;
+    transition-duration: 400ms;
+}
+
+.text-block__color-section_item:hover > .text-block__color-section_number {
+    width: 85px;
+    height: 85px;
+}
 
 a.buy_now_link {
     font-size: 20px;
@@ -185,10 +399,6 @@ h1.title-section__title {
     position: absolute;
 }
 
-.basket-section__basket-button {
-    width: 70%;
-}
-
 .text-block__title-section {
     margin-bottom: 5%;
 }
@@ -222,6 +432,12 @@ h2.product-info-block__description__title {
 
 .photo-block__product-holder {
     width: 100%;
+    display: none;
+}
+
+.photo-block__product-holder.activedColorSlider {
+    width: 100%;
+    display: block;
 }
 
 .photo-block__product {
@@ -237,8 +453,51 @@ h2.product-info-block__description__title {
     position: sticky;
     bottom: 0;
 }
+
+input.radio-color-picker {
+    display: none;
+}
+
+input.radio-color-picker:checked+label > .text-block__color-section_item {
+    width: 85px;
+    height: 85px;
+}
+
+input.radio-color-picker:checked+label > .text-block__color-section_item > .text-block__color-section_number {
+    border: 3px solid #fff;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
     
-    </style>";
+    </style>
+
+<script>
+    var colorVariantNodes = document.querySelectorAll('.radio-color-picker')
+    var colorSliderProducts = document.querySelectorAll('.photo-block__product-holder')
+
+
+    for (let i = 0; i < colorVariantNodes.length; i++) {
+        colorVariantNodes[i].addEventListener('change', function(e) {
+            var currentPickerColorNode = e.target
+            var currentPickedColor = currentPickerColorNode.dataset.colorpicker
+            selectSliderProduct(currentPickedColor)
+        })
+    }
+
+    function selectSliderProduct(hex) {
+        for (let i = 0; i < colorSliderProducts.length; i++) {
+            var currentNodeId = colorSliderProducts[i].id
+            if (hex == currentNodeId) {
+                colorSliderProducts[i].classList.add('activedColorSlider')
+            } else {
+                colorSliderProducts[i].classList.remove('activedColorSlider')
+            }
+        }
+    }
+
+
+</script>";
     }
 
     public function getTemplateName()
@@ -246,63 +505,83 @@ h2.product-info-block__description__title {
         return "/Users/iamk/git/darling/themes/demo/pages/product.htm";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  62 => 1,);
+        return array (  269 => 66,  259 => 62,  255 => 61,  252 => 60,  248 => 59,  242 => 55,  223 => 50,  219 => 49,  215 => 48,  207 => 47,  203 => 46,  200 => 45,  183 => 44,  174 => 38,  166 => 33,  160 => 29,  147 => 27,  143 => 26,  134 => 19,  119 => 17,  108 => 15,  104 => 14,  95 => 13,  78 => 12,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"product-section\" data-productid=\"6\">
+        return new Source("{% set record = productDetails.record %}
+{% set displayColumn = productDetails.displayColumn %}
+{% set notFoundMessage = productDetails.notFoundMessage %}
+
+<div class=\"product-section\">
+
+
+
 
     <div class=\"product-section__photo-block float-scroll\">
-        <div class=\"photo-block__product-holder \">
-            <img src=\"http://darling:8888/storage/app/media/Rectangle%2089.jpg\" alt=\"\" class=\"photo-block__product\">
-            <img src=\"http://darling:8888/storage/app/media/Rectangle%2089.jpg\" alt=\"\" class=\"photo-block__product\">
-            <img src=\"http://darling:8888/storage/app/media/Rectangle%2089.jpg\" alt=\"\" class=\"photo-block__product\">
-            <img src=\"http://darling:8888/storage/app/media/Rectangle%2089.jpg\" alt=\"\" class=\"photo-block__product\">
-        </div>
+
+        {% for slider in record.color_slider %}
+            <div class=\"photo-block__product-holder {% if loop.first == true %} activedColorSlider{% endif %}\" id=\"{{slider.product_color}}\">
+                {% for sliderPicture in slider.gallery %}
+                    <img src=\"{{sliderPicture.picture | media}}\" alt=\"{{sliderPicture.alt_text }}\" class=\"photo-block__product\">
+                {% endfor %}
+            </div>
+        {% endfor %}
+
     </div>
 
     <div class=\"product-section__text-block\">
             <div class=\"product-section__text-block-holder\">
                 <div class=\"text-block__title-section\">
-                    <h1 class=\"title-section__title\"><span class=\"title-section__title_marked\">DARLING*</span>  3-D CURE</h1>
+                    <h1 class=\"title-section__title\">
+                        {% for title in record.product_title %}
+                        <span class=\"{% if title.product_title_marked == true %}title-section__title_marked{% endif %}\">{{title.product_title_construct}}</span>
+                        {% endfor %}
+                    </h1>
                     <p class=\"title-section__description\">
                         </p><div title=\"Page 1\">
 
-\t<p>Upgraded fermentation Bio-Cellulose face mask for restorative deep skin health</p>
+\t<p>{{record.description}}</p>
 </div>
                     <p></p>
                 </div>
                 <div class=\"text-block__basket-section\">
-                    <div class=\"basket-section__price\">170</div>
+                    <div class=\"basket-section__price\">{{ record.price }}</div>
                 </div>
+
+
+
+                <div class=\"text-block__color-section\">
+                    {% for slider in record.color_slider %}
+                    <div class=\"text-block__color-section__holder\" >
+                        <input class=\"radio-color-picker\" type=\"radio\" id=\"color-picker-{{slider.product_color}}\"
+                               name=\"contact\" value=\"email\" {% if loop.first == true %} checked{% endif %}  data-colorPicker=\"{{slider.product_color}}\">
+                        <label for=\"color-picker-{{slider.product_color}}\">
+                            <div class=\"text-block__color-section_item\" style=\"background-color: {{slider.product_color}}\">
+                                <span class=\"text-block__color-section_number\">{{loop.index}}</span>
+                            </div>
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+
                 <div class=\"text-block__info-section\">
                     <div class=\"info-section__product-info-block\">
+                        {% for addittionalInfo in record.additional_info %}
                         <div class=\"product-info-block__description\">
-                            <h2 class=\"product-info-block__description__title\"></h2>
-                            <p>I’m your 3-D second skin FERMENTATION mask of nourishing actives with HYALURONIC ACID, ALOE LEAF, CAFFEINE and ALLANTOIN for preventive and restorative effect in the deeper skin layers
+                            <h2 class=\"product-info-block__description__title\">{{addittionalInfo.additional_info_title}}</h2>
+                            <p>{{addittionalInfo.additional_info_text | raw}}
                             </p>
                         </div>
-                        <div class=\"product-info-block__description\">
-                            <h2 class=\"product-info-block__description__title\">THE FEATURES</h2>
-                            <p>Advanced Bio Cellulose 3-D sheet mask with grid pattern holding more actives for advanced delivery deep into skin layers. Bio Cellulose sheet is infused with most current probiotic + fermentation technology. The creamy Hyaluronic Acid, Aloe Leaf polysaccharides, Caffeine and Allantoin formula intensively nourishes and calms the skin.
-                            </p>
-                        </div>
-                        <div class=\"product-info-block__description\">
-                            <h2 class=\"product-info-block__description__title\">THE TIPS
-                            </h2>
-                            <p>Remove one tulle-like net and apply gel side with the other net than discard it. Super thin layer of gel will meld to your face. Relax for 10-20 min then remove mask and gently tap to fully absorb the essence. Your skin is calm and restored. Ideal for all skin types including dry and sensitive skin.
-                            </p>
-                        </div>
-                        <div class=\"product-info-block__description\">
-                            <h2 class=\"product-info-block__description__title\">INGRIDIENTS
-                            </h2>
-                            <p>Water, Glycerin, Methylpropanediol, Dipropylene Glycol, Hydroxyacetophenone, Carbomer, Allantoin, Caffeine, PEG-40 Hydrogenated Castor Oil, Xanthan Gum, Tromethamine, Caprylyl Glycol, 1,2-Hexanediol, Ethylhexylglycerin, Butylene Glycol, Glyceryl Acrylate/Acrylic Acid Copolymer, Fragrance (Parfum), Disodium EDTA, Sodium Hyaluronate, PVM/MA Copolymer, Althaea Rosea Flower Extract, Aloe Barbadensis Leaf Polysaccharides.
-                            </p>
-                        </div>
-
+                        {% endfor %}
 
                         <a href=\"#\" class=\"buy_now_link\">buy now</a>
 
@@ -320,6 +599,63 @@ h2.product-info-block__description__title {
     
     
 /* PRODUCT CARD */
+
+
+
+.text-block__color-section {
+    display: flex;
+}
+
+.text-block__color-section__holder {
+    width: 85px;
+    height: 85px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-block__color-section_item {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition-duration: 400ms;
+    cursor: pointer;
+}
+
+.text-block__color-section_number {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-block__color-section__holder.active-color > .text-block__color-section_item > .text-block__color-section_number {
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.text-block__color-section__holder.active-color > .text-block__color-section_item {
+    width: 85px;
+    height: 85px;
+}
+
+.text-block__color-section_item:hover {
+    width: 85px;
+    height: 85px;
+    transition-duration: 400ms;
+}
+
+.text-block__color-section_item:hover > .text-block__color-section_number {
+    width: 85px;
+    height: 85px;
+}
 
 a.buy_now_link {
     font-size: 20px;
@@ -379,10 +715,6 @@ h1.title-section__title {
     position: absolute;
 }
 
-.basket-section__basket-button {
-    width: 70%;
-}
-
 .text-block__title-section {
     margin-bottom: 5%;
 }
@@ -416,6 +748,12 @@ h2.product-info-block__description__title {
 
 .photo-block__product-holder {
     width: 100%;
+    display: none;
+}
+
+.photo-block__product-holder.activedColorSlider {
+    width: 100%;
+    display: block;
 }
 
 .photo-block__product {
@@ -431,7 +769,50 @@ h2.product-info-block__description__title {
     position: sticky;
     bottom: 0;
 }
+
+input.radio-color-picker {
+    display: none;
+}
+
+input.radio-color-picker:checked+label > .text-block__color-section_item {
+    width: 85px;
+    height: 85px;
+}
+
+input.radio-color-picker:checked+label > .text-block__color-section_item > .text-block__color-section_number {
+    border: 3px solid #fff;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
     
-    </style>", "/Users/iamk/git/darling/themes/demo/pages/product.htm", "");
+    </style>
+
+<script>
+    var colorVariantNodes = document.querySelectorAll('.radio-color-picker')
+    var colorSliderProducts = document.querySelectorAll('.photo-block__product-holder')
+
+
+    for (let i = 0; i < colorVariantNodes.length; i++) {
+        colorVariantNodes[i].addEventListener('change', function(e) {
+            var currentPickerColorNode = e.target
+            var currentPickedColor = currentPickerColorNode.dataset.colorpicker
+            selectSliderProduct(currentPickedColor)
+        })
+    }
+
+    function selectSliderProduct(hex) {
+        for (let i = 0; i < colorSliderProducts.length; i++) {
+            var currentNodeId = colorSliderProducts[i].id
+            if (hex == currentNodeId) {
+                colorSliderProducts[i].classList.add('activedColorSlider')
+            } else {
+                colorSliderProducts[i].classList.remove('activedColorSlider')
+            }
+        }
+    }
+
+
+</script>", "/Users/iamk/git/darling/themes/demo/pages/product.htm", "");
     }
 }

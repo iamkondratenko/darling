@@ -1,4 +1,4 @@
-1613455667a:1:{s:33:"category/category-main-banner.htm";a:5:{s:8:"fileName";s:33:"category/category-main-banner.htm";s:7:"content";s:1525:"<div class="CategoryMainBanner">
+1613514645a:1:{s:33:"category/category-main-banner.htm";a:5:{s:8:"fileName";s:33:"category/category-main-banner.htm";s:7:"content";s:1525:"<div class="CategoryMainBanner">
     <div class="CategoryMainBanner-Content" style="background: url({{ mainCategoryBackground }}); background-size: 100%; background-repeat: no-repeat; background-size: cover">
         <div class="CategoryMainBanner-Content-Container" >
             <h1 class="CategoryMainBanner-Title">{{ categoryTitle }}</h1>

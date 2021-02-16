@@ -1,0 +1,12 @@
+list: $/iamk/productinfo/models/productinfo/columns.yaml
+modelClass: Iamk\Productinfo\Models\ProductInfo
+title: ProductInfo
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'iamk/productinfo/productinfo/update/:id'

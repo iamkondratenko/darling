@@ -1,0 +1,13 @@
+columns:
+    id:
+        label: id
+        type: number
+    category:
+        label: category
+        type: text
+    title:
+        label: title
+        type: text
+    price:
+        label: price
+        type: number

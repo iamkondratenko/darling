@@ -73,4 +73,7 @@
   'RainLab\\Builder\\Components\\RecordDetails' => 'plugins/rainlab/builder/components/RecordDetails.php',
   'RainLab\\Builder\\Classes\\ComponentHelper' => 'plugins/rainlab/builder/classes/ComponentHelper.php',
   'backend\\Controllers\\media' => 'modules/backend/controllers/media.php',
+  'iamk\\productinfo\\Plugin' => 'plugins/iamk/productinfo/Plugin.php',
+  'iamk\\productinfo\\Controllers\\productinfo' => 'plugins/iamk/productinfo/controllers/productinfo.php',
+  'Iamk\\Productinfo\\Models\\ProductInfo' => 'plugins/iamk/productinfo/models/ProductInfo.php',
 );

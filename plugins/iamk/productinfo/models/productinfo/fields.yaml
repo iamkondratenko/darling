@@ -1,0 +1,78 @@
+fields:
+    color_slider:
+        label: Галерея
+        prompt: 'Добавить новый цвет'
+        span: left
+        type: repeater
+        form:
+            fields:
+                product_color:
+                    label: 'Выбор цвета'
+                    span: full
+                    type: colorpicker
+                gallery:
+                    label: 'Добавление фото'
+                    prompt: 'Добавить фото'
+                    span: full
+                    type: repeater
+                    form:
+                        fields:
+                            picture:
+                                label: Картинка
+                                mode: file
+                                span: full
+                                type: mediafinder
+                            alt_text:
+                                label: 'Текст для картинки'
+                                span: full
+                                type: text
+    title:
+        label: 'Заголовок товара в каталоге'
+        span: auto
+        type: text
+    product_title:
+        label: 'Заголовок продукта'
+        prompt: Добавить
+        span: right
+        type: repeater
+        form:
+            fields:
+                product_title_construct:
+                    label: 'Заголовок продукта'
+                    span: auto
+                    type: text
+                product_title_marked:
+                    label: 'Выделить текст'
+                    span: auto
+                    type: switch
+    slug:
+        label: 'Символьный код'
+        span: right
+        preset:
+            field: title
+            type: slug
+        type: text
+    description:
+        label: Описание
+        span: right
+        type: text
+    price:
+        label: Цена
+        span: right
+        type: text
+    additional_info:
+        label: Описание
+        prompt: 'Добавить описание'
+        span: right
+        type: repeater
+        form:
+            fields:
+                additional_info_title:
+                    label: Заголовок
+                    span: full
+                    type: text
+                additional_info_text:
+                    label: Описание
+                    size: large
+                    span: full
+                    type: richeditor

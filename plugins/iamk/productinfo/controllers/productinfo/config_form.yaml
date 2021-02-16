@@ -1,0 +1,10 @@
+name: ProductInfo
+form: $/iamk/productinfo/models/productinfo/fields.yaml
+modelClass: Iamk\Productinfo\Models\ProductInfo
+defaultRedirect: iamk/productinfo/productinfo
+create:
+    redirect: 'iamk/productinfo/productinfo/update/:id'
+    redirectClose: iamk/productinfo/productinfo
+update:
+    redirect: iamk/productinfo/productinfo
+    redirectClose: iamk/productinfo/productinfo

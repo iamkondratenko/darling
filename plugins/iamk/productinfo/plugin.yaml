@@ -1,0 +1,11 @@
+plugin:
+    name: 'iamk.productinfo::lang.plugin.name'
+    description: 'iamk.productinfo::lang.plugin.description'
+    author: iamk
+    icon: oc-icon-codepen
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Продукция
+        url: iamk/productinfo/productinfo
+        icon: icon-align-justify
