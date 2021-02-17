@@ -30,13 +30,13 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
         $tags = array();
-        $filters = array();
+        $filters = array("escape" => 2, "media" => 5);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
                 [],
-                [],
+                ['escape', 'media'],
                 []
             );
         } catch (SecurityError $e) {
@@ -60,16 +60,32 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
         $macros = $this->macros;
         // line 1
         echo "<div class=\"SubcategoryListing-ItemCard\">
-    <a class=\"SubcategoryListing-ItemCard-Link\" href=\"#\">
+    <a class=\"SubcategoryListing-ItemCard-Link\" href=\"/product/";
+        // line 2
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "slug", [], "any", false, false, true, 2), 2, $this->source), "html", null, true);
+        echo "\">
         <div class=\"SubcategoryListing-ItemCard-Holder\">
             <div class=\"SubcategoryListing-ItemCard-ImageHolder\">
-                <img class=\"SubcategoryListing-ItemCard-Image\" src=\"http://darling:8888/storage/app/media/mask.png\">
+                <img class=\"SubcategoryListing-ItemCard-Image\" src=\"";
+        // line 5
+        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "picture", [], "any", false, false, true, 5), 5, $this->source));
+        echo "\">
             </div>
 
+
             <div class=\"SubcategoryListing-ItemCard-Info\">
-                <h2 class=\"SubcategoryListing-ItemCard-Title\">power nap</h2>
-                <p class=\"SubcategoryListing-ItemCard-Description\">Super moisture embo hydrogel face mask with immediate 8-hour sleep effect</p>
-                <div class=\"SubcategoryListing-ItemCard-Price\">\$ 8.5</div>
+                <h2 class=\"SubcategoryListing-ItemCard-Title\">";
+        // line 10
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "title", [], "any", false, false, true, 10), 10, $this->source), "html", null, true);
+        echo "</h2>
+                <p class=\"SubcategoryListing-ItemCard-Description\">";
+        // line 11
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "description", [], "any", false, false, true, 11), 11, $this->source), "html", null, true);
+        echo "</p>
+                <div class=\"SubcategoryListing-ItemCard-Price rus-currency\">";
+        // line 12
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "price", [], "any", false, false, true, 12), 12, $this->source), "html", null, true);
+        echo "</div>
             </div>
         </div>
 
@@ -78,6 +94,13 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
 </div>
 
 <style>
+
+    .rus-currency::after {
+        content: ' ₽';
+        white-space: pre;
+        position: absolute;
+    }
+
 
     .SubcategoryListing-ItemCard {
         width: 23%;
@@ -118,6 +141,25 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
     a.SubcategoryListing-ItemCard-Link {
         text-decoration: none;
     }
+
+    @media screen and (max-width: 768px) {
+        .SubcategoryListing-ItemCard {
+            width: 42%;
+            text-align: center;
+            color: #222;
+            text-transform: uppercase;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .SubcategoryListing-ItemCard {
+            width: 100%;
+            text-align: center;
+            color: #222;
+            text-transform: uppercase;
+        }
+    }
+
 
 </style>";
     }
@@ -127,24 +169,30 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
         return "/Users/iamk/git/darling/themes/demo/partials/category/card-wiget.htm";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  62 => 1,);
+        return array (  87 => 12,  83 => 11,  79 => 10,  71 => 5,  65 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<div class=\"SubcategoryListing-ItemCard\">
-    <a class=\"SubcategoryListing-ItemCard-Link\" href=\"#\">
+    <a class=\"SubcategoryListing-ItemCard-Link\" href=\"/product/{{data.slug}}\">
         <div class=\"SubcategoryListing-ItemCard-Holder\">
             <div class=\"SubcategoryListing-ItemCard-ImageHolder\">
-                <img class=\"SubcategoryListing-ItemCard-Image\" src=\"http://darling:8888/storage/app/media/mask.png\">
+                <img class=\"SubcategoryListing-ItemCard-Image\" src=\"{{data.picture | media}}\">
             </div>
 
+
             <div class=\"SubcategoryListing-ItemCard-Info\">
-                <h2 class=\"SubcategoryListing-ItemCard-Title\">power nap</h2>
-                <p class=\"SubcategoryListing-ItemCard-Description\">Super moisture embo hydrogel face mask with immediate 8-hour sleep effect</p>
-                <div class=\"SubcategoryListing-ItemCard-Price\">\$ 8.5</div>
+                <h2 class=\"SubcategoryListing-ItemCard-Title\">{{data.title}}</h2>
+                <p class=\"SubcategoryListing-ItemCard-Description\">{{data.description}}</p>
+                <div class=\"SubcategoryListing-ItemCard-Price rus-currency\">{{data.price}}</div>
             </div>
         </div>
 
@@ -153,6 +201,13 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
 </div>
 
 <style>
+
+    .rus-currency::after {
+        content: ' ₽';
+        white-space: pre;
+        position: absolute;
+    }
+
 
     .SubcategoryListing-ItemCard {
         width: 23%;
@@ -193,6 +248,25 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
     a.SubcategoryListing-ItemCard-Link {
         text-decoration: none;
     }
+
+    @media screen and (max-width: 768px) {
+        .SubcategoryListing-ItemCard {
+            width: 42%;
+            text-align: center;
+            color: #222;
+            text-transform: uppercase;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .SubcategoryListing-ItemCard {
+            width: 100%;
+            text-align: center;
+            color: #222;
+            text-transform: uppercase;
+        }
+    }
+
 
 </style>", "/Users/iamk/git/darling/themes/demo/partials/category/card-wiget.htm", "");
     }

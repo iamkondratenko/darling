@@ -1,4 +1,4 @@
-1613514640a:1:{s:20:"site/main-banner.htm";a:6:{s:8:"fileName";s:20:"site/main-banner.htm";s:7:"content";s:4146:"[builderDetails mainBanner]
+1613553987a:1:{s:20:"site/main-banner.htm";a:6:{s:8:"fileName";s:20:"site/main-banner.htm";s:7:"content";s:4165:"[builderDetails mainBanner]
 modelClass = "Iamk\Mainbanner\Models\MainBanner"
 identifierValue = 2
 modelKeyColumn = "id"
@@ -15,7 +15,7 @@ displayColumn = "id"
 
         <div class="MainHomeBanner-Content-Links">
 
-            <a href="/category" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left">
+            <a href="/category/makeup/" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left">
                 <span class="MainHomeBanner-Content-LinkArrow"><img class="MainHomeBanner-Content-LinkArrowImg" src="{{ 'assets/images/main-banner/arrow-left.png' | theme }}"></span> <div class="MainHomeBanner-Content-LinkItem">makeup</div>
             </a>
 
@@ -23,7 +23,7 @@ displayColumn = "id"
                 <div class="MainHomeBanner-Content-Slash">/</div>
             </div>
 
-            <a href="/category" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right">
+            <a href="/category/skin-care/" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right">
                 <div class="MainHomeBanner-Content-LinkItem">Skin care</div><span class="MainHomeBanner-Content-LinkArrow"><img class="MainHomeBanner-Content-LinkArrowImg" src="{{ 'assets/images/main-banner/arrow-right.png' | theme }}"></span>
             </a>
 
@@ -157,7 +157,7 @@ displayColumn = "id"
         }
     }
 
-</style>";s:5:"mtime";i:1613371926;s:6:"markup";s:3997:"{% set record = mainBanner.record %}
+</style>";s:5:"mtime";i:1613550954;s:6:"markup";s:4016:"{% set record = mainBanner.record %}
 {% set displayColumn = mainBanner.displayColumn %}
 {% set notFoundMessage = mainBanner.notFoundMessage %}
 
@@ -168,7 +168,7 @@ displayColumn = "id"
 
         <div class="MainHomeBanner-Content-Links">
 
-            <a href="/category" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left">
+            <a href="/category/makeup/" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left">
                 <span class="MainHomeBanner-Content-LinkArrow"><img class="MainHomeBanner-Content-LinkArrowImg" src="{{ 'assets/images/main-banner/arrow-left.png' | theme }}"></span> <div class="MainHomeBanner-Content-LinkItem">makeup</div>
             </a>
 
@@ -176,7 +176,7 @@ displayColumn = "id"
                 <div class="MainHomeBanner-Content-Slash">/</div>
             </div>
 
-            <a href="/category" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right">
+            <a href="/category/skin-care/" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right">
                 <div class="MainHomeBanner-Content-LinkItem">Skin care</div><span class="MainHomeBanner-Content-LinkArrow"><img class="MainHomeBanner-Content-LinkArrowImg" src="{{ 'assets/images/main-banner/arrow-right.png' | theme }}"></span>
             </a>
 

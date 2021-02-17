@@ -34,6 +34,15 @@ notFoundMessage = "Record not found"
 
     <div class="product-section__text-block">
             <div class="product-section__text-block-holder">
+                <div class="close_icon">
+                    <a href="/category/{{record.category}}">
+                        <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.39355 2.39355L25.6068 23.6068" stroke="#EA028A" stroke-width="4"/>
+                            <path d="M4.39355 23.6064L25.6068 2.39324" stroke="#EA028A" stroke-width="4"/>
+                        </svg>
+                    </a>
+                </div>
+
                 <div class="text-block__title-section">
                     <h1 class="title-section__title">
                         {% for title in record.product_title %}
@@ -55,15 +64,17 @@ notFoundMessage = "Record not found"
 
                 <div class="text-block__color-section">
                     {% for slider in record.color_slider %}
+                    {% if loop.length > 1 %}
                     <div class="text-block__color-section__holder" >
                         <input class="radio-color-picker" type="radio" id="color-picker-{{slider.product_color}}"
                                name="contact" value="email" {% if loop.first == true %} checked{% endif %}  data-colorPicker="{{slider.product_color}}">
                         <label for="color-picker-{{slider.product_color}}">
                             <div class="text-block__color-section_item" style="background-color: {{slider.product_color}}">
-                                <span class="text-block__color-section_number">{{loop.index}}</span>
+                                <span class="text-block__color-section_number">0{{loop.index}}</span>
                             </div>
                         </label>
                     </div>
+                    {% endif %}
                     {% endfor %}
                 </div>
 
@@ -94,6 +105,40 @@ notFoundMessage = "Record not found"
     
 /* PRODUCT CARD */
 
+.close_icon {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.MainMenu-Icon {
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.MainMenu-Icon::before {
+    width: 30px;
+    height: 4px;
+    content: '';
+    background-color: black;
+    transform: rotate(
+            45deg
+    ) translate(4px, 10px);
+    position: absolute;
+}
+
+.MainMenu-Icon::after {
+    width: 30px;
+    height: 4px;
+    content: '';
+    background-color: black;
+    transform: rotate(
+            -45deg
+    ) translate(3px, -9px);
+    position: absolute;
+    top: 82px;
+}
 
 
 .text-block__color-section {
@@ -278,6 +323,21 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     border-radius: 50%;
     width: 70px;
     height: 70px;
+}
+
+@media screen and (max-width: 700px) {
+    .product-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-section__photo-block {
+        width: 100%;
+    }
+
+    .product-section__text-block {
+        width: 100%;
+    }
 }
     
     </style>

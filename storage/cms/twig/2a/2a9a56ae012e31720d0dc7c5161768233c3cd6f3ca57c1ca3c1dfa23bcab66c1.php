@@ -136,6 +136,33 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         opacity: 1;
         transition-duration: 400ms;
     }
+
+    @media screen and (max-width: 375px) {
+        .MainMenuDrawer-Item-Category {
+            font-size: 50px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        a.MainMenuDrawer-Item-Subcategory {
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+            font-weight: 500;
+            text-transform: uppercase;
+
+        }
+        .MainMenuDrawer-Items{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: black;
+        }
+    }
+
 </style>
 
 
@@ -260,6 +287,33 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         opacity: 1;
         transition-duration: 400ms;
     }
+
+    @media screen and (max-width: 375px) {
+        .MainMenuDrawer-Item-Category {
+            font-size: 50px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        a.MainMenuDrawer-Item-Subcategory {
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+            font-weight: 500;
+            text-transform: uppercase;
+
+        }
+        .MainMenuDrawer-Items{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: black;
+        }
+    }
+
 </style>
 
 

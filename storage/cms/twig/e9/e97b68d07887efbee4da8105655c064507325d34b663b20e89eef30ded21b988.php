@@ -30,13 +30,13 @@ class __TwigTemplate_7469baec3f1fd5f9f1836e4f2d75feb6299cc04852433dfa9c7e33c6897
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
         $tags = array();
-        $filters = array("escape" => 4, "date" => 4);
+        $filters = array();
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
                 [],
-                ['escape', 'date'],
+                [],
                 []
             );
         } catch (SecurityError $e) {
@@ -60,13 +60,7 @@ class __TwigTemplate_7469baec3f1fd5f9f1836e4f2d75feb6299cc04852433dfa9c7e33c6897
         $macros = $this->macros;
         // line 1
         echo "<div id=\"footer\">
-    <div class=\"container\">
-        <hr />
-        <p class=\"muted credit\">&copy; 2013 - ";
-        // line 4
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
-        echo " Alexey Bobkov &amp; Samuel Georges.</p>
-    </div>
+
 </div>";
     }
 
@@ -75,23 +69,15 @@ class __TwigTemplate_7469baec3f1fd5f9f1836e4f2d75feb6299cc04852433dfa9c7e33c6897
         return "/Users/iamk/git/darling/themes/demo/partials/site/footer.htm";
     }
 
-    public function isTraitable()
-    {
-        return false;
-    }
-
     public function getDebugInfo()
     {
-        return array (  67 => 4,  62 => 1,);
+        return array (  62 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<div id=\"footer\">
-    <div class=\"container\">
-        <hr />
-        <p class=\"muted credit\">&copy; 2013 - {{ \"now\"|date(\"Y\") }} Alexey Bobkov &amp; Samuel Georges.</p>
-    </div>
+
 </div>", "/Users/iamk/git/darling/themes/demo/partials/site/footer.htm", "");
     }
 }

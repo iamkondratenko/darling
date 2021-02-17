@@ -1,5 +1,12 @@
 <div class="CategoryMainBanner">
-    <div class="CategoryMainBanner-Content" style="background: url({{ mainCategoryBackground }}); background-size: 100%; background-repeat: no-repeat; background-size: cover">
+    <div class="CategoryMainBanner-Content desktop" style="background: url({{ mainCategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover">
+        <div class="CategoryMainBanner-Content-Container" >
+            <h1 class="CategoryMainBanner-Title">{{ categoryTitle }}</h1>
+            <p class="CategoryMainBanner-SubTitle">{{ categorySubtitle }}</p>
+        </div>
+        <div class="CategoryMainBanner-Content-Background" ></div>
+    </div>
+    <div class="CategoryMainBanner-Content mobile" style="background: url({{ mainCategoryBackgroundMobile | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover">
         <div class="CategoryMainBanner-Content-Container" >
             <h1 class="CategoryMainBanner-Title">{{ categoryTitle }}</h1>
             <p class="CategoryMainBanner-SubTitle">{{ categorySubtitle }}</p>
@@ -9,6 +16,14 @@
 </div>
 
 <style>
+
+    .CategoryMainBanner-Content.mobile {
+        display: none;
+    }
+
+    .CategoryMainBanner-Content.desktop {
+        display: block;
+    }
 
     h1.CategoryMainBanner-Title {
         color: #fff;
@@ -55,4 +70,36 @@
         top: 0;
         background-repeat: no-repeat;
     }
+
+    @media screen and (max-width: 768px) {
+
+        .CategoryMainBanner-Content.mobile {
+            display: block;
+        }
+
+        .CategoryMainBanner-Content.desktop {
+            display: none;
+        }
+
+
+        p.CategoryMainBanner-SubTitle {
+            font-size: 40px;
+            line-height: 60px;
+        }
+
+        h1.CategoryMainBanner-Title {
+            font-size: 40px;
+            writing-mode: vertical-rl;
+            transform: rotateZ(
+                    180deg
+            );
+            color: #EA028A;
+            margin: 48px 0;
+        }
+
+        .CategoryMainBanner-Content-Container {
+            padding: 0 30px;
+        }
+    }
+
 </style>

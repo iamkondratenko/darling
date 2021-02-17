@@ -1,11 +1,45 @@
-1613514640a:1:{s:12:"category.htm";a:9:{s:8:"fileName";s:12:"category.htm";s:7:"content";s:468:"title = "Категория"
-url = "/category"
+1613556552a:1:{s:12:"category.htm";a:10:{s:8:"fileName";s:12:"category.htm";s:7:"content";s:952:"title = "Категория"
+url = "/category/:slug"
 layout = "default"
 is_hidden = 0
+
+[builderDetails Category]
+modelClass = "Iamk\Category\Models\Category"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "slug"
+notFoundMessage = "Record not found"
 ==
+{% set record = Category.record %}
+{% set displayColumn = Category.displayColumn %}
+{% set notFoundMessage = Category.notFoundMessage %}
 
-{% partial "category/category-main-banner" categoryTitle='Skin care' categorySubtitle='pads / patches / masks' mainCategoryBackground='http://darling:8888/storage/app/media/categoryBanner.jpg' %}
+{% if record %}
 
-{% partial "category/category" categorySubtitle='yes. but no. but yes. ' categorySubtitleMarked='#youaredarling' mainCategoryBackground='http://darling:8888/storage/app/media/pads.jpg' %}";s:5:"mtime";i:1613333308;s:6:"markup";s:384:"{% partial "category/category-main-banner" categoryTitle='Skin care' categorySubtitle='pads / patches / masks' mainCategoryBackground='http://darling:8888/storage/app/media/categoryBanner.jpg' %}
 
-{% partial "category/category" categorySubtitle='yes. but no. but yes. ' categorySubtitleMarked='#youaredarling' mainCategoryBackground='http://darling:8888/storage/app/media/pads.jpg' %}";s:4:"code";N;s:5:"title";s:18:"Категория";s:3:"url";s:9:"/category";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}
+
+    {% partial "category/category-main-banner" categoryTitle=record.title categorySubtitle='pads / patches / masks' mainCategoryBackground=record.main_banner
+mainCategoryBackgroundMobile=record.main_banner_mobile%}
+
+
+{% endif %}
+
+{% for subcategory in record.subcategory %}
+    {% partial "category/category" subcategoryTitle=subcategory.subcategory_title categorySubtitle=subcategory.subcategory_description categorySubtitleMarked='#youaredarling' mainCategoryBackground=subcategory.subcategory_banner %}
+{% endfor %}";s:5:"mtime";i:1613548295;s:6:"markup";s:675:"{% set record = Category.record %}
+{% set displayColumn = Category.displayColumn %}
+{% set notFoundMessage = Category.notFoundMessage %}
+
+{% if record %}
+
+
+
+    {% partial "category/category-main-banner" categoryTitle=record.title categorySubtitle='pads / patches / masks' mainCategoryBackground=record.main_banner
+mainCategoryBackgroundMobile=record.main_banner_mobile%}
+
+
+{% endif %}
+
+{% for subcategory in record.subcategory %}
+    {% partial "category/category" subcategoryTitle=subcategory.subcategory_title categorySubtitle=subcategory.subcategory_description categorySubtitleMarked='#youaredarling' mainCategoryBackground=subcategory.subcategory_banner %}
+{% endfor %}";s:4:"code";N;s:5:"title";s:18:"Категория";s:3:"url";s:15:"/category/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:23:"builderDetails Category";a:5:{s:10:"modelClass";s:29:"Iamk\Category\Models\Category";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:4:"slug";s:15:"notFoundMessage";s:16:"Record not found";}}}

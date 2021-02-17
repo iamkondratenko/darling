@@ -1,6 +1,10 @@
 <div class="SubcategoryBanner">
-        <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainCategoryBackground }}); background-size: 100%; background-repeat: no-repeat;">
-            <p class="SubcategoryBanner-SubTitle">{{ categorySubtitle }}<span class="SubcategoryBanner-SubTitle-Marked">{{ categorySubtitleMarked }}</span></p>
+        <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainCategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat;">
+            <p class="SubcategoryBanner-SubTitle">
+                {% for description in categorySubtitle %}
+                <span class="{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}">{{ description.subcategory_description_text }}</span>
+                {% endfor %}
+            </p>
         </div>
 </div>
 
@@ -30,7 +34,7 @@
         text-transform: uppercase;
         color: #fff;
         font-weight: bold;
-        width: 60%;
+        width: 50%;
     }
 
 </style>

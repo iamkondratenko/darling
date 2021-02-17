@@ -1,12 +1,6 @@
-1613514640a:1:{s:15:"site/footer.htm";a:5:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:187:"<div id="footer">
-    <div class="container">
-        <hr />
-        <p class="muted credit">&copy; 2013 - {{ "now"|date("Y") }} Alexey Bobkov &amp; Samuel Georges.</p>
-    </div>
+1613556554a:1:{s:15:"site/footer.htm";a:5:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:26:"<div id="footer">
+
 </div>
-";s:5:"mtime";i:1613072638;s:6:"markup";s:186:"<div id="footer">
-    <div class="container">
-        <hr />
-        <p class="muted credit">&copy; 2013 - {{ "now"|date("Y") }} Alexey Bobkov &amp; Samuel Georges.</p>
-    </div>
+";s:5:"mtime";i:1613542917;s:6:"markup";s:25:"<div id="footer">
+
 </div>";s:4:"code";N;}}

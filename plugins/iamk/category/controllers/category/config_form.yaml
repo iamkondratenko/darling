@@ -1,0 +1,10 @@
+name: Category
+form: $/iamk/category/models/category/fields.yaml
+modelClass: Iamk\Category\Models\Category
+defaultRedirect: iamk/category/category
+create:
+    redirect: 'iamk/category/category/update/:id'
+    redirectClose: iamk/category/category
+update:
+    redirect: iamk/category/category
+    redirectClose: iamk/category/category

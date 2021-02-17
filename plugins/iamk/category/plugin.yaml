@@ -1,0 +1,11 @@
+plugin:
+    name: 'iamk.category::lang.plugin.name'
+    description: 'iamk.category::lang.plugin.description'
+    author: iamk
+    icon: oc-icon-list
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Категории
+        url: iamk/category/category
+        icon: icon-list-alt

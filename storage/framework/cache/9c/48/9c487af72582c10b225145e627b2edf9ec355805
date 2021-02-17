@@ -1,4 +1,4 @@
-1613514640a:1:{s:20:"site/menu-drawer.htm";a:5:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:3429:"<div class="MainMenuDrawer">
+1613556554a:1:{s:20:"site/menu-drawer.htm";a:5:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:4125:"<div class="MainMenuDrawer">
     <div class="MainMenuDrawer-Items">
         <div class="MainMenuDrawer-Item">
             <div class="MainMenuDrawer-Item-Category">MakeUp</div>
@@ -75,6 +75,33 @@
         opacity: 1;
         transition-duration: 400ms;
     }
+
+    @media screen and (max-width: 375px) {
+        .MainMenuDrawer-Item-Category {
+            font-size: 50px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        a.MainMenuDrawer-Item-Subcategory {
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+            font-weight: 500;
+            text-transform: uppercase;
+
+        }
+        .MainMenuDrawer-Items{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: black;
+        }
+    }
+
 </style>
 
 
@@ -107,7 +134,7 @@
             }
         )
     }
-</script>";s:5:"mtime";i:1613343763;s:6:"markup";s:3429:"<div class="MainMenuDrawer">
+</script>";s:5:"mtime";i:1613544781;s:6:"markup";s:4125:"<div class="MainMenuDrawer">
     <div class="MainMenuDrawer-Items">
         <div class="MainMenuDrawer-Item">
             <div class="MainMenuDrawer-Item-Category">MakeUp</div>
@@ -184,6 +211,33 @@
         opacity: 1;
         transition-duration: 400ms;
     }
+
+    @media screen and (max-width: 375px) {
+        .MainMenuDrawer-Item-Category {
+            font-size: 50px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        a.MainMenuDrawer-Item-Subcategory {
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+            font-weight: 500;
+            text-transform: uppercase;
+
+        }
+        .MainMenuDrawer-Items{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: black;
+        }
+    }
+
 </style>
 
 

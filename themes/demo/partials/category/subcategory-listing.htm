@@ -1,9 +1,36 @@
+[builderList subcategoryListing]
+modelClass = "Iamk\Productinfo\Models\ProductInfo"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+
+{% set records = subcategoryListing.records %}
+{% set displayColumn = subcategoryListing.displayColumn %}
+{% set noRecordsMessage = subcategoryListing.noRecordsMessage %}
+{% set detailsPage = subcategoryListing.detailsPage %}
+{% set detailsKeyColumn = subcategoryListing.detailsKeyColumn %}
+{% set detailsUrlParameter = subcategoryListing.detailsUrlParameter %}
+
 <div class="SubcategoryListing">
-    <div class="SubcategoryListing-Title">Pads<span class="SubcategoryListing-Title-Asterisk">*</span></div>
+    <div class="SubcategoryListing-Title">{{subcategoryTitle}}<span class="SubcategoryListing-Title-Asterisk">*</span></div>
     <div class="SubcategoryListing-Items">
-        {% partial "category/card-wiget" %}
-        {% partial "category/card-wiget" %}
-        {% partial "category/card-wiget" %}
+
+
+    {% for record in records %}
+        {% if record.subcategory == 'pads' %}
+        {% partial "category/card-wiget" data=record %}
+        {% endif %}
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+
+
+
     </div>
 </div>
 
@@ -15,7 +42,9 @@
     .SubcategoryListing-Items {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
+
     .SubcategoryListing-Title {
         font-size: 100px;
         color: black;

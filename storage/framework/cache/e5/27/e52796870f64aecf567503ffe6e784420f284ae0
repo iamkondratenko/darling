@@ -1,5 +1,5 @@
-1613514645a:1:{s:21:"category/category.htm";a:5:{s:8:"fileName";s:21:"category/category.htm";s:7:"content";s:217:"{% partial "category/subcategory-banner" categorySubtitle=categorySubtitle categorySubtitleMarked=categorySubtitleMarked mainCategoryBackgrounds=mainCategoryBackgrounds %}
+1613556554a:1:{s:21:"category/category.htm";a:5:{s:8:"fileName";s:21:"category/category.htm";s:7:"content";s:251:"{% partial "category/subcategory-banner" categorySubtitle=categorySubtitle categorySubtitleMarked=categorySubtitleMarked mainCategoryBackgrounds=mainCategoryBackgrounds %}
 
-{% partial "category/subcategory-listing" %}";s:5:"mtime";i:1613333348;s:6:"markup";s:217:"{% partial "category/subcategory-banner" categorySubtitle=categorySubtitle categorySubtitleMarked=categorySubtitleMarked mainCategoryBackgrounds=mainCategoryBackgrounds %}
+{% partial "category/subcategory-listing" subcategoryTitle=subcategoryTitle %}";s:5:"mtime";i:1613542007;s:6:"markup";s:251:"{% partial "category/subcategory-banner" categorySubtitle=categorySubtitle categorySubtitleMarked=categorySubtitleMarked mainCategoryBackgrounds=mainCategoryBackgrounds %}
 
-{% partial "category/subcategory-listing" %}";s:4:"code";N;}}
+{% partial "category/subcategory-listing" subcategoryTitle=subcategoryTitle %}";s:4:"code";N;}}

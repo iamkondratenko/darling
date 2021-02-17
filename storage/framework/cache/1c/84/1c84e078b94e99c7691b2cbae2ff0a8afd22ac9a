@@ -1,9 +1,36 @@
-1613514645a:1:{s:32:"category/subcategory-listing.htm";a:5:{s:8:"fileName";s:32:"category/subcategory-listing.htm";s:7:"content";s:803:"<div class="SubcategoryListing">
-    <div class="SubcategoryListing-Title">Pads<span class="SubcategoryListing-Title-Asterisk">*</span></div>
+1613556315a:1:{s:32:"category/subcategory-listing.htm";a:6:{s:8:"fileName";s:32:"category/subcategory-listing.htm";s:7:"content";s:1642:"[builderList subcategoryListing]
+modelClass = "Iamk\Productinfo\Models\ProductInfo"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+
+{% set records = subcategoryListing.records %}
+{% set displayColumn = subcategoryListing.displayColumn %}
+{% set noRecordsMessage = subcategoryListing.noRecordsMessage %}
+{% set detailsPage = subcategoryListing.detailsPage %}
+{% set detailsKeyColumn = subcategoryListing.detailsKeyColumn %}
+{% set detailsUrlParameter = subcategoryListing.detailsUrlParameter %}
+
+<div class="SubcategoryListing">
+    <div class="SubcategoryListing-Title">{{subcategoryTitle}}<span class="SubcategoryListing-Title-Asterisk">*</span></div>
     <div class="SubcategoryListing-Items">
-        {% partial "category/card-wiget" %}
-        {% partial "category/card-wiget" %}
-        {% partial "category/card-wiget" %}
+
+
+    {% for record in records %}
+        {% if record.subcategory == 'pads' %}
+        {% partial "category/card-wiget" data=record %}
+        {% endif %}
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+
+
+
     </div>
 </div>
 
@@ -15,7 +42,9 @@
     .SubcategoryListing-Items {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
+
     .SubcategoryListing-Title {
         font-size: 100px;
         color: black;
@@ -29,12 +58,28 @@
         color: #EA028A;
     }
 
-</style>";s:5:"mtime";i:1613332741;s:6:"markup";s:803:"<div class="SubcategoryListing">
-    <div class="SubcategoryListing-Title">Pads<span class="SubcategoryListing-Title-Asterisk">*</span></div>
+</style>";s:5:"mtime";i:1613555051;s:6:"markup";s:1372:"{% set records = subcategoryListing.records %}
+{% set displayColumn = subcategoryListing.displayColumn %}
+{% set noRecordsMessage = subcategoryListing.noRecordsMessage %}
+{% set detailsPage = subcategoryListing.detailsPage %}
+{% set detailsKeyColumn = subcategoryListing.detailsKeyColumn %}
+{% set detailsUrlParameter = subcategoryListing.detailsUrlParameter %}
+
+<div class="SubcategoryListing">
+    <div class="SubcategoryListing-Title">{{subcategoryTitle}}<span class="SubcategoryListing-Title-Asterisk">*</span></div>
     <div class="SubcategoryListing-Items">
-        {% partial "category/card-wiget" %}
-        {% partial "category/card-wiget" %}
-        {% partial "category/card-wiget" %}
+
+
+    {% for record in records %}
+        {% if record.subcategory == 'pads' %}
+        {% partial "category/card-wiget" data=record %}
+        {% endif %}
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+
+
+
     </div>
 </div>
 
@@ -46,7 +91,9 @@
     .SubcategoryListing-Items {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
+
     .SubcategoryListing-Title {
         font-size: 100px;
         color: black;
@@ -60,4 +107,4 @@
         color: #EA028A;
     }
 
-</style>";s:4:"code";N;}}
+</style>";s:4:"code";N;s:30:"builderList subcategoryListing";a:8:{s:10:"modelClass";s:35:"Iamk\Productinfo\Models\ProductInfo";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

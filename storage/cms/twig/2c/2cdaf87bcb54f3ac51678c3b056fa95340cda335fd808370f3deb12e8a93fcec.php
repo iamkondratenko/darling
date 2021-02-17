@@ -30,7 +30,7 @@ class __TwigTemplate_55f48d30a52cb0dcc0659d820641a974123cd92ee0d5f2dfa489f226b4a
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
         $tags = array("set" => 1, "for" => 12, "if" => 13);
-        $filters = array("escape" => 13, "media" => 15, "raw" => 62);
+        $filters = array("escape" => 13, "media" => 15, "raw" => 73);
         $functions = array();
 
         try {
@@ -136,42 +136,54 @@ class __TwigTemplate_55f48d30a52cb0dcc0659d820641a974123cd92ee0d5f2dfa489f226b4a
 
     <div class=\"product-section__text-block\">
             <div class=\"product-section__text-block-holder\">
+                <div class=\"close_icon\">
+                    <a href=\"/category/";
+        // line 25
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, true, 25), 25, $this->source), "html", null, true);
+        echo "\">
+                        <svg width=\"30\" height=\"26\" viewBox=\"0 0 30 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+                            <path d=\"M4.39355 2.39355L25.6068 23.6068\" stroke=\"#EA028A\" stroke-width=\"4\"/>
+                            <path d=\"M4.39355 23.6064L25.6068 2.39324\" stroke=\"#EA028A\" stroke-width=\"4\"/>
+                        </svg>
+                    </a>
+                </div>
+
                 <div class=\"text-block__title-section\">
                     <h1 class=\"title-section__title\">
                         ";
-        // line 26
+        // line 35
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "product_title", [], "any", false, false, true, 26));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "product_title", [], "any", false, false, true, 35));
         foreach ($context['_seq'] as $context["_key"] => $context["title"]) {
-            // line 27
+            // line 36
             echo "                        <span class=\"";
-            if ((twig_get_attribute($this->env, $this->source, $context["title"], "product_title_marked", [], "any", false, false, true, 27) == true)) {
+            if ((twig_get_attribute($this->env, $this->source, $context["title"], "product_title_marked", [], "any", false, false, true, 36) == true)) {
                 echo "title-section__title_marked";
             }
             echo "\">";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["title"], "product_title_construct", [], "any", false, false, true, 27), 27, $this->source), "html", null, true);
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["title"], "product_title_construct", [], "any", false, false, true, 36), 36, $this->source), "html", null, true);
             echo "</span>
                         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['title'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 38
         echo "                    </h1>
                     <p class=\"title-section__description\">
                         </p><div title=\"Page 1\">
 
 \t<p>";
-        // line 33
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "description", [], "any", false, false, true, 33), 33, $this->source), "html", null, true);
+        // line 42
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "description", [], "any", false, false, true, 42), 42, $this->source), "html", null, true);
         echo "</p>
 </div>
                     <p></p>
                 </div>
                 <div class=\"text-block__basket-section\">
                     <div class=\"basket-section__price\">";
-        // line 38
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "price", [], "any", false, false, true, 38), 38, $this->source), "html", null, true);
+        // line 47
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "price", [], "any", false, false, true, 47), 47, $this->source), "html", null, true);
         echo "</div>
                 </div>
 
@@ -179,9 +191,9 @@ class __TwigTemplate_55f48d30a52cb0dcc0659d820641a974123cd92ee0d5f2dfa489f226b4a
 
                 <div class=\"text-block__color-section\">
                     ";
-        // line 44
+        // line 53
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "color_slider", [], "any", false, false, true, 44));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "color_slider", [], "any", false, false, true, 53));
         $context['loop'] = [
           'parent' => $context['_parent'],
           'index0' => 0,
@@ -196,36 +208,42 @@ class __TwigTemplate_55f48d30a52cb0dcc0659d820641a974123cd92ee0d5f2dfa489f226b4a
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["slider"]) {
-            // line 45
-            echo "                    <div class=\"text-block__color-section__holder\" >
+            // line 54
+            echo "                    ";
+            if ((twig_get_attribute($this->env, $this->source, $context["loop"], "length", [], "any", false, false, true, 54) > 1)) {
+                // line 55
+                echo "                    <div class=\"text-block__color-section__holder\" >
                         <input class=\"radio-color-picker\" type=\"radio\" id=\"color-picker-";
-            // line 46
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["slider"], "product_color", [], "any", false, false, true, 46), 46, $this->source), "html", null, true);
-            echo "\"
+                // line 56
+                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["slider"], "product_color", [], "any", false, false, true, 56), 56, $this->source), "html", null, true);
+                echo "\"
                                name=\"contact\" value=\"email\" ";
-            // line 47
-            if ((twig_get_attribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, true, 47) == true)) {
-                echo " checked";
-            }
-            echo "  data-colorPicker=\"";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["slider"], "product_color", [], "any", false, false, true, 47), 47, $this->source), "html", null, true);
-            echo "\">
+                // line 57
+                if ((twig_get_attribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, true, 57) == true)) {
+                    echo " checked";
+                }
+                echo "  data-colorPicker=\"";
+                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["slider"], "product_color", [], "any", false, false, true, 57), 57, $this->source), "html", null, true);
+                echo "\">
                         <label for=\"color-picker-";
-            // line 48
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["slider"], "product_color", [], "any", false, false, true, 48), 48, $this->source), "html", null, true);
-            echo "\">
+                // line 58
+                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["slider"], "product_color", [], "any", false, false, true, 58), 58, $this->source), "html", null, true);
+                echo "\">
                             <div class=\"text-block__color-section_item\" style=\"background-color: ";
-            // line 49
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["slider"], "product_color", [], "any", false, false, true, 49), 49, $this->source), "html", null, true);
-            echo "\">
-                                <span class=\"text-block__color-section_number\">";
-            // line 50
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, true, 50), 50, $this->source), "html", null, true);
-            echo "</span>
+                // line 59
+                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["slider"], "product_color", [], "any", false, false, true, 59), 59, $this->source), "html", null, true);
+                echo "\">
+                                <span class=\"text-block__color-section_number\">0";
+                // line 60
+                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, true, 60), 60, $this->source), "html", null, true);
+                echo "</span>
                             </div>
                         </label>
                     </div>
                     ";
+            }
+            // line 65
+            echo "                    ";
             ++$context['loop']['index0'];
             ++$context['loop']['index'];
             $context['loop']['first'] = false;
@@ -238,25 +256,25 @@ class __TwigTemplate_55f48d30a52cb0dcc0659d820641a974123cd92ee0d5f2dfa489f226b4a
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['slider'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 55
+        // line 66
         echo "                </div>
 
                 <div class=\"text-block__info-section\">
                     <div class=\"info-section__product-info-block\">
                         ";
-        // line 59
+        // line 70
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "additional_info", [], "any", false, false, true, 59));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "additional_info", [], "any", false, false, true, 70));
         foreach ($context['_seq'] as $context["_key"] => $context["addittionalInfo"]) {
-            // line 60
+            // line 71
             echo "                        <div class=\"product-info-block__description\">
                             <h2 class=\"product-info-block__description__title\">";
-            // line 61
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["addittionalInfo"], "additional_info_title", [], "any", false, false, true, 61), 61, $this->source), "html", null, true);
+            // line 72
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["addittionalInfo"], "additional_info_title", [], "any", false, false, true, 72), 72, $this->source), "html", null, true);
             echo "</h2>
                             <p>";
-            // line 62
-            echo $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["addittionalInfo"], "additional_info_text", [], "any", false, false, true, 62), 62, $this->source);
+            // line 73
+            echo $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["addittionalInfo"], "additional_info_text", [], "any", false, false, true, 73), 73, $this->source);
             echo "
                             </p>
                         </div>
@@ -265,7 +283,7 @@ class __TwigTemplate_55f48d30a52cb0dcc0659d820641a974123cd92ee0d5f2dfa489f226b4a
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['addittionalInfo'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 66
+        // line 77
         echo "
                         <a href=\"#\" class=\"buy_now_link\">buy now</a>
 
@@ -284,6 +302,40 @@ class __TwigTemplate_55f48d30a52cb0dcc0659d820641a974123cd92ee0d5f2dfa489f226b4a
     
 /* PRODUCT CARD */
 
+.close_icon {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.MainMenu-Icon {
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.MainMenu-Icon::before {
+    width: 30px;
+    height: 4px;
+    content: '';
+    background-color: black;
+    transform: rotate(
+            45deg
+    ) translate(4px, 10px);
+    position: absolute;
+}
+
+.MainMenu-Icon::after {
+    width: 30px;
+    height: 4px;
+    content: '';
+    background-color: black;
+    transform: rotate(
+            -45deg
+    ) translate(3px, -9px);
+    position: absolute;
+    top: 82px;
+}
 
 
 .text-block__color-section {
@@ -468,6 +520,21 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     border-radius: 50%;
     width: 70px;
     height: 70px;
+}
+
+@media screen and (max-width: 700px) {
+    .product-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-section__photo-block {
+        width: 100%;
+    }
+
+    .product-section__text-block {
+        width: 100%;
+    }
 }
     
     </style>
@@ -512,7 +579,7 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
 
     public function getDebugInfo()
     {
-        return array (  269 => 66,  259 => 62,  255 => 61,  252 => 60,  248 => 59,  242 => 55,  223 => 50,  219 => 49,  215 => 48,  207 => 47,  203 => 46,  200 => 45,  183 => 44,  174 => 38,  166 => 33,  160 => 29,  147 => 27,  143 => 26,  134 => 19,  119 => 17,  108 => 15,  104 => 14,  95 => 13,  78 => 12,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
+        return array (  287 => 77,  277 => 73,  273 => 72,  270 => 71,  266 => 70,  260 => 66,  246 => 65,  238 => 60,  234 => 59,  230 => 58,  222 => 57,  218 => 56,  215 => 55,  212 => 54,  195 => 53,  186 => 47,  178 => 42,  172 => 38,  159 => 36,  155 => 35,  142 => 25,  134 => 19,  119 => 17,  108 => 15,  104 => 14,  95 => 13,  78 => 12,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -540,6 +607,15 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
 
     <div class=\"product-section__text-block\">
             <div class=\"product-section__text-block-holder\">
+                <div class=\"close_icon\">
+                    <a href=\"/category/{{record.category}}\">
+                        <svg width=\"30\" height=\"26\" viewBox=\"0 0 30 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+                            <path d=\"M4.39355 2.39355L25.6068 23.6068\" stroke=\"#EA028A\" stroke-width=\"4\"/>
+                            <path d=\"M4.39355 23.6064L25.6068 2.39324\" stroke=\"#EA028A\" stroke-width=\"4\"/>
+                        </svg>
+                    </a>
+                </div>
+
                 <div class=\"text-block__title-section\">
                     <h1 class=\"title-section__title\">
                         {% for title in record.product_title %}
@@ -561,15 +637,17 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
 
                 <div class=\"text-block__color-section\">
                     {% for slider in record.color_slider %}
+                    {% if loop.length > 1 %}
                     <div class=\"text-block__color-section__holder\" >
                         <input class=\"radio-color-picker\" type=\"radio\" id=\"color-picker-{{slider.product_color}}\"
                                name=\"contact\" value=\"email\" {% if loop.first == true %} checked{% endif %}  data-colorPicker=\"{{slider.product_color}}\">
                         <label for=\"color-picker-{{slider.product_color}}\">
                             <div class=\"text-block__color-section_item\" style=\"background-color: {{slider.product_color}}\">
-                                <span class=\"text-block__color-section_number\">{{loop.index}}</span>
+                                <span class=\"text-block__color-section_number\">0{{loop.index}}</span>
                             </div>
                         </label>
                     </div>
+                    {% endif %}
                     {% endfor %}
                 </div>
 
@@ -600,6 +678,40 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     
 /* PRODUCT CARD */
 
+.close_icon {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.MainMenu-Icon {
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.MainMenu-Icon::before {
+    width: 30px;
+    height: 4px;
+    content: '';
+    background-color: black;
+    transform: rotate(
+            45deg
+    ) translate(4px, 10px);
+    position: absolute;
+}
+
+.MainMenu-Icon::after {
+    width: 30px;
+    height: 4px;
+    content: '';
+    background-color: black;
+    transform: rotate(
+            -45deg
+    ) translate(3px, -9px);
+    position: absolute;
+    top: 82px;
+}
 
 
 .text-block__color-section {
@@ -784,6 +896,21 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     border-radius: 50%;
     width: 70px;
     height: 70px;
+}
+
+@media screen and (max-width: 700px) {
+    .product-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-section__photo-block {
+        width: 100%;
+    }
+
+    .product-section__text-block {
+        width: 100%;
+    }
 }
     
     </style>

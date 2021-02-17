@@ -76,3 +76,25 @@ fields:
                     size: large
                     span: full
                     type: richeditor
+    category:
+        label: Категория
+        options:
+            skin-care: 'Skin care'
+            makeup: Makeup
+        showSearch: true
+        span: auto
+        type: dropdown
+    subcategory:
+        label: Подкатегория
+        options:
+            masks: Masks
+            patches: Patches
+            pads: Pads
+        showSearch: true
+        span: auto
+        type: dropdown
+    picture:
+        label: 'Картинка для листинга'
+        mode: image
+        span: auto
+        type: mediafinder

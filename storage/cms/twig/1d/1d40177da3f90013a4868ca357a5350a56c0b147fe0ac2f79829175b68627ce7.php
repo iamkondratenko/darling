@@ -30,13 +30,13 @@ class __TwigTemplate_037814f32d65e4244f11ea9f338274eb48cef7c5277ecd794ab84aa1b38
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
         $tags = array();
-        $filters = array("escape" => 2);
+        $filters = array("media" => 2, "escape" => 4);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
                 [],
-                ['escape'],
+                ['media', 'escape'],
                 []
             );
         } catch (SecurityError $e) {
@@ -60,9 +60,9 @@ class __TwigTemplate_037814f32d65e4244f11ea9f338274eb48cef7c5277ecd794ab84aa1b38
         $macros = $this->macros;
         // line 1
         echo "<div class=\"CategoryMainBanner\">
-    <div class=\"CategoryMainBanner-Content\" style=\"background: url(";
+    <div class=\"CategoryMainBanner-Content desktop\" style=\"background: url(";
         // line 2
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["mainCategoryBackground"] ?? null), 2, $this->source), "html", null, true);
+        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(($context["mainCategoryBackground"] ?? null), 2, $this->source));
         echo "); background-size: 100%; background-repeat: no-repeat; background-size: cover\">
         <div class=\"CategoryMainBanner-Content-Container\" >
             <h1 class=\"CategoryMainBanner-Title\">";
@@ -76,9 +76,33 @@ class __TwigTemplate_037814f32d65e4244f11ea9f338274eb48cef7c5277ecd794ab84aa1b38
         </div>
         <div class=\"CategoryMainBanner-Content-Background\" ></div>
     </div>
+    <div class=\"CategoryMainBanner-Content mobile\" style=\"background: url(";
+        // line 9
+        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(($context["mainCategoryBackgroundMobile"] ?? null), 9, $this->source));
+        echo "); background-size: 100%; background-repeat: no-repeat; background-size: cover\">
+        <div class=\"CategoryMainBanner-Content-Container\" >
+            <h1 class=\"CategoryMainBanner-Title\">";
+        // line 11
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["categoryTitle"] ?? null), 11, $this->source), "html", null, true);
+        echo "</h1>
+            <p class=\"CategoryMainBanner-SubTitle\">";
+        // line 12
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["categorySubtitle"] ?? null), 12, $this->source), "html", null, true);
+        echo "</p>
+        </div>
+        <div class=\"CategoryMainBanner-Content-Background\" ></div>
+    </div>
 </div>
 
 <style>
+
+    .CategoryMainBanner-Content.mobile {
+        display: none;
+    }
+
+    .CategoryMainBanner-Content.desktop {
+        display: block;
+    }
 
     h1.CategoryMainBanner-Title {
         color: #fff;
@@ -125,6 +149,38 @@ class __TwigTemplate_037814f32d65e4244f11ea9f338274eb48cef7c5277ecd794ab84aa1b38
         top: 0;
         background-repeat: no-repeat;
     }
+
+    @media screen and (max-width: 768px) {
+
+        .CategoryMainBanner-Content.mobile {
+            display: block;
+        }
+
+        .CategoryMainBanner-Content.desktop {
+            display: none;
+        }
+
+
+        p.CategoryMainBanner-SubTitle {
+            font-size: 40px;
+            line-height: 60px;
+        }
+
+        h1.CategoryMainBanner-Title {
+            font-size: 40px;
+            writing-mode: vertical-rl;
+            transform: rotateZ(
+                    180deg
+            );
+            color: #EA028A;
+            margin: 48px 0;
+        }
+
+        .CategoryMainBanner-Content-Container {
+            padding: 0 30px;
+        }
+    }
+
 </style>";
     }
 
@@ -140,13 +196,20 @@ class __TwigTemplate_037814f32d65e4244f11ea9f338274eb48cef7c5277ecd794ab84aa1b38
 
     public function getDebugInfo()
     {
-        return array (  74 => 5,  70 => 4,  65 => 2,  62 => 1,);
+        return array (  90 => 12,  86 => 11,  81 => 9,  74 => 5,  70 => 4,  65 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<div class=\"CategoryMainBanner\">
-    <div class=\"CategoryMainBanner-Content\" style=\"background: url({{ mainCategoryBackground }}); background-size: 100%; background-repeat: no-repeat; background-size: cover\">
+    <div class=\"CategoryMainBanner-Content desktop\" style=\"background: url({{ mainCategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover\">
+        <div class=\"CategoryMainBanner-Content-Container\" >
+            <h1 class=\"CategoryMainBanner-Title\">{{ categoryTitle }}</h1>
+            <p class=\"CategoryMainBanner-SubTitle\">{{ categorySubtitle }}</p>
+        </div>
+        <div class=\"CategoryMainBanner-Content-Background\" ></div>
+    </div>
+    <div class=\"CategoryMainBanner-Content mobile\" style=\"background: url({{ mainCategoryBackgroundMobile | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover\">
         <div class=\"CategoryMainBanner-Content-Container\" >
             <h1 class=\"CategoryMainBanner-Title\">{{ categoryTitle }}</h1>
             <p class=\"CategoryMainBanner-SubTitle\">{{ categorySubtitle }}</p>
@@ -156,6 +219,14 @@ class __TwigTemplate_037814f32d65e4244f11ea9f338274eb48cef7c5277ecd794ab84aa1b38
 </div>
 
 <style>
+
+    .CategoryMainBanner-Content.mobile {
+        display: none;
+    }
+
+    .CategoryMainBanner-Content.desktop {
+        display: block;
+    }
 
     h1.CategoryMainBanner-Title {
         color: #fff;
@@ -202,6 +273,38 @@ class __TwigTemplate_037814f32d65e4244f11ea9f338274eb48cef7c5277ecd794ab84aa1b38
         top: 0;
         background-repeat: no-repeat;
     }
+
+    @media screen and (max-width: 768px) {
+
+        .CategoryMainBanner-Content.mobile {
+            display: block;
+        }
+
+        .CategoryMainBanner-Content.desktop {
+            display: none;
+        }
+
+
+        p.CategoryMainBanner-SubTitle {
+            font-size: 40px;
+            line-height: 60px;
+        }
+
+        h1.CategoryMainBanner-Title {
+            font-size: 40px;
+            writing-mode: vertical-rl;
+            transform: rotateZ(
+                    180deg
+            );
+            color: #EA028A;
+            margin: 48px 0;
+        }
+
+        .CategoryMainBanner-Content-Container {
+            padding: 0 30px;
+        }
+    }
+
 </style>", "/Users/iamk/git/darling/themes/demo/partials/category/category-main-banner.htm", "");
     }
 }

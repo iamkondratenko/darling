@@ -76,4 +76,8 @@
   'iamk\\productinfo\\Plugin' => 'plugins/iamk/productinfo/Plugin.php',
   'iamk\\productinfo\\Controllers\\productinfo' => 'plugins/iamk/productinfo/controllers/productinfo.php',
   'Iamk\\Productinfo\\Models\\ProductInfo' => 'plugins/iamk/productinfo/models/ProductInfo.php',
+  'iamk\\category\\Plugin' => 'plugins/iamk/category/Plugin.php',
+  'iamk\\category\\Controllers\\category' => 'plugins/iamk/category/controllers/category.php',
+  'Iamk\\Category\\Models\\Category' => 'plugins/iamk/category/models/Category.php',
+  'iamk\\productinfo\\Models\\ProductInfo' => 'plugins/iamk/productinfo/models/ProductInfo.php',
 );
