@@ -157,7 +157,9 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
             text-align: center;
             color: #222;
             text-transform: uppercase;
+            margin-bottom: 50px;
         }
+
     }
 
 
@@ -264,7 +266,9 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
             text-align: center;
             color: #222;
             text-transform: uppercase;
+            margin-bottom: 50px;
         }
+
     }
 
 

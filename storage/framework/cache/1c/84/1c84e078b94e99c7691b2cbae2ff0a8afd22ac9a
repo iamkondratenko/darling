@@ -1,4 +1,4 @@
-1613556315a:1:{s:32:"category/subcategory-listing.htm";a:6:{s:8:"fileName";s:32:"category/subcategory-listing.htm";s:7:"content";s:1642:"[builderList subcategoryListing]
+1614089841a:1:{s:32:"category/subcategory-listing.htm";a:6:{s:8:"fileName";s:32:"category/subcategory-listing.htm";s:7:"content";s:2111:"[builderList subcategoryListing]
 modelClass = "Iamk\Productinfo\Models\ProductInfo"
 scope = "-"
 scopeValue = "{{ :scope }}"
@@ -16,13 +16,16 @@ pageNumber = "{{ :page }}"
 {% set detailsKeyColumn = subcategoryListing.detailsKeyColumn %}
 {% set detailsUrlParameter = subcategoryListing.detailsUrlParameter %}
 
-<div class="SubcategoryListing">
+
+<div class="SubcategoryListing" id="{{subcategorySlug}}">
     <div class="SubcategoryListing-Title">{{subcategoryTitle}}<span class="SubcategoryListing-Title-Asterisk">*</span></div>
     <div class="SubcategoryListing-Items">
 
 
-    {% for record in records %}
-        {% if record.subcategory == 'pads' %}
+
+
+        {% for record in records %}
+        {% if record.subcategory == subcategorySlug %}
         {% partial "category/card-wiget" data=record %}
         {% endif %}
     {% else %}
@@ -35,14 +38,21 @@ pageNumber = "{{ :page }}"
 </div>
 
 <style>
+
+    section#layout-content {
+        overflow-x: hidden;
+    }
+
     .SubcategoryListing {
         width: 80%;
         margin: 0 auto;
     }
+
     .SubcategoryListing-Items {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        padding: 20px 0 120px;
     }
 
     .SubcategoryListing-Title {
@@ -58,20 +68,39 @@ pageNumber = "{{ :page }}"
         color: #EA028A;
     }
 
-</style>";s:5:"mtime";i:1613555051;s:6:"markup";s:1372:"{% set records = subcategoryListing.records %}
+
+    @media screen and (max-width: 375px) {
+
+        .SubcategoryListing {
+            width: 72%;
+            margin: 0 auto;
+        }
+
+        .SubcategoryListing-Items {
+            padding: 20px 0 40px;
+        }
+        .SubcategoryListing-Items {
+            padding: 60px 0 40px;
+        }
+    }
+
+</style>";s:5:"mtime";i:1614079857;s:6:"markup";s:1841:"{% set records = subcategoryListing.records %}
 {% set displayColumn = subcategoryListing.displayColumn %}
 {% set noRecordsMessage = subcategoryListing.noRecordsMessage %}
 {% set detailsPage = subcategoryListing.detailsPage %}
 {% set detailsKeyColumn = subcategoryListing.detailsKeyColumn %}
 {% set detailsUrlParameter = subcategoryListing.detailsUrlParameter %}
 
-<div class="SubcategoryListing">
+
+<div class="SubcategoryListing" id="{{subcategorySlug}}">
     <div class="SubcategoryListing-Title">{{subcategoryTitle}}<span class="SubcategoryListing-Title-Asterisk">*</span></div>
     <div class="SubcategoryListing-Items">
 
 
-    {% for record in records %}
-        {% if record.subcategory == 'pads' %}
+
+
+        {% for record in records %}
+        {% if record.subcategory == subcategorySlug %}
         {% partial "category/card-wiget" data=record %}
         {% endif %}
     {% else %}
@@ -84,14 +113,21 @@ pageNumber = "{{ :page }}"
 </div>
 
 <style>
+
+    section#layout-content {
+        overflow-x: hidden;
+    }
+
     .SubcategoryListing {
         width: 80%;
         margin: 0 auto;
     }
+
     .SubcategoryListing-Items {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        padding: 20px 0 120px;
     }
 
     .SubcategoryListing-Title {
@@ -105,6 +141,22 @@ pageNumber = "{{ :page }}"
 
     .SubcategoryListing-Title-Asterisk {
         color: #EA028A;
+    }
+
+
+    @media screen and (max-width: 375px) {
+
+        .SubcategoryListing {
+            width: 72%;
+            margin: 0 auto;
+        }
+
+        .SubcategoryListing-Items {
+            padding: 20px 0 40px;
+        }
+        .SubcategoryListing-Items {
+            padding: 60px 0 40px;
+        }
     }
 
 </style>";s:4:"code";N;s:30:"builderList subcategoryListing";a:8:{s:10:"modelClass";s:35:"Iamk\Productinfo\Models\ProductInfo";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

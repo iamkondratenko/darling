@@ -1,26 +1,107 @@
+[builderList mainMenuItem]
+modelClass = "Iamk\Category\Models\Category"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "id"
+sortDirection = "desc"
+==
 <div class="MainMenuDrawer">
+    <div class="SubNavigationMenu SubNavigationMenu-Fixed">
+        <div class="SubNavigationMenu-ChangeLanguage">
+            <a class="SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active" href="#">ENG</a>
+            <a class="SubNavigationMenu-LanguageItem LanguageItem-dark" href="#">RUS</a>
+        </div>
+        <div class="SubNavigationMenu-ScrollDown">
+            <svg width="27" height="14" viewBox="0 0 27 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z" fill="white"/>
+            </svg>
+
+        </div>
+        <div class="SubNavigationMenu-ChangeLanguage">
+            <a class="SubNavigationMenu-LanguageItem LanguageItem-active" href="#"></a>
+            <a class="SubNavigationMenu-LanguageItem" href="#"></a>
+        </div>
+    </div>
     <div class="MainMenuDrawer-Items">
+    {% set records = mainMenuItem.records %}
+{% set displayColumn = mainMenuItem.displayColumn %}
+{% set noRecordsMessage = mainMenuItem.noRecordsMessage %}
+{% set detailsPage = mainMenuItem.detailsPage %}
+{% set detailsKeyColumn = mainMenuItem.detailsKeyColumn %}
+{% set detailsUrlParameter = mainMenuItem.detailsUrlParameter %}
+
+    {% for record in records %}
         <div class="MainMenuDrawer-Item">
-            <div class="MainMenuDrawer-Item-Category">MakeUp</div>
+            <div class="MainMenuDrawer-Item-Category">{{record.title}}</div>
             <div class="MainMenuDrawer-Item-Subcategories">
-                <a href="/category" class="MainMenuDrawer-Item-Subcategory">All products</a>
-                <a href="#" class="MainMenuDrawer-Item-Subcategory">Masks</a>
-                <a href="#" class="MainMenuDrawer-Item-Subcategory">Patches</a>
-                <a href="#" class="MainMenuDrawer-Item-Subcategory">Pads</a>
+                <a  onclick="goTo('/category/{{record.slug}}')" class="MainMenuDrawer-Item-Subcategory">All products</a>
+                {% for menuItem in record.subcategory %} 
+                <a  onclick="goTo('/category/{{record.slug}}/#{{menuItem.slug}}')" class="MainMenuDrawer-Item-Subcategory">{{menuItem.subcategory_title}}</a>
+                {% endfor %}
             </div>
         </div>
-        <div class="MainMenuDrawer-Item">
-            <div class="MainMenuDrawer-Item-Category">Skin Care</div>
-            <div class="MainMenuDrawer-Item-Subcategories">
-                <a href="#" class="MainMenuDrawer-Item-Subcategory">All products</a>
-                <a href="#" class="MainMenuDrawer-Item-Subcategory">Masks</a>
-                <a href="#" class="MainMenuDrawer-Item-Subcategory">Patches</a>
-            </div>
-        </div>
+   
+    {% endfor %}
+
+        
     </div>
 </div>
 
 <style>
+
+
+    .SubNavigationMenu {
+        width: 100vw;
+        padding: 0 50px;
+        height: 60px;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        z-index: 950;
+    }
+
+    .SubNavigationMenu.SubNavigationMenu-Fixed {
+        position: fixed;
+        z-index: 1300;
+    }
+
+
+    .SubNavigationMenu-ChangeLanguage {
+        min-width: 75px;
+        display: flex;
+        justify-content: space-around;
+        cursor: pointer;
+    }
+
+    a.SubNavigationMenu-LanguageItem {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+
+    a.SubNavigationMenu-LanguageItem.LanguageItem-active {
+        color: #ffffff82;
+        text-decoration: none;
+    }
+
+    a.SubNavigationMenu-LanguageItem.LanguageItem-dark {
+        color: #000;
+        text-decoration: none;
+    }
+
+    a.SubNavigationMenu-LanguageItem.LanguageItem-dark.LanguageItem-active {
+        color: #00000082;
+        text-decoration: none;
+    }
+
+
     .MainMenuDrawer-Item-Category {
         font-size: 70px;
         font-weight: 500;
@@ -68,7 +149,7 @@
         opacity: 0;
         z-index: -555;
         transition-duration: 400ms;
-        position: absolute;
+        position: fixed;
     }
     .MainMenuDrawer.js-menuIsOpened {
         z-index: 990;
@@ -76,7 +157,12 @@
         transition-duration: 400ms;
     }
 
+
     @media screen and (max-width: 375px) {
+        .jsDesktop {
+            display: none;
+        }
+
         .MainMenuDrawer-Item-Category {
             font-size: 50px;
             font-weight: 500;
@@ -92,12 +178,13 @@
         }
         .MainMenuDrawer-Items{
             width: 100%;
+            padding: 30px;
             height: 100%;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
-            text-align: center;
+            text-align: left;
             color: black;
         }
     }
@@ -106,8 +193,16 @@
 
 
 <script>
+
+
+
     let menuCategoryList = document.querySelectorAll('.MainMenuDrawer-Item');
 
+
+    function goTo(link) {
+        window.location = link
+        openMenuHandler()
+    }
 
     function clearActiveSubmenu() {
         for (let i = 0; i < menuCategoryList.length; i++) {

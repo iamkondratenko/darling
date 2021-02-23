@@ -29,7 +29,7 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("set" => 1, "for" => 13, "if" => 14, "partial" => 15);
+        $tags = array("set" => 1, "for" => 16, "if" => 17, "partial" => 18);
         $filters = array("escape" => 9);
         $functions = array();
 
@@ -72,47 +72,53 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
         $context["detailsUrlParameter"] = twig_get_attribute($this->env, $this->source, ($context["subcategoryListing"] ?? null), "detailsUrlParameter", [], "any", false, false, true, 6);
         // line 7
         echo "
-<div class=\"SubcategoryListing\">
-    <div class=\"SubcategoryListing-Title\">";
+
+<div class=\"SubcategoryListing\" id=\"";
         // line 9
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["subcategoryTitle"] ?? null), 9, $this->source), "html", null, true);
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["subcategorySlug"] ?? null), 9, $this->source), "html", null, true);
+        echo "\">
+    <div class=\"SubcategoryListing-Title\">";
+        // line 10
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["subcategoryTitle"] ?? null), 10, $this->source), "html", null, true);
         echo "<span class=\"SubcategoryListing-Title-Asterisk\">*</span></div>
     <div class=\"SubcategoryListing-Items\">
 
 
-    ";
-        // line 13
+
+
+        ";
+        // line 16
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["records"] ?? null));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["record"]) {
-            // line 14
+            // line 17
             echo "        ";
-            if ((twig_get_attribute($this->env, $this->source, $context["record"], "subcategory", [], "any", false, false, true, 14) == "pads")) {
-                // line 15
+            if ((twig_get_attribute($this->env, $this->source, $context["record"], "subcategory", [], "any", false, false, true, 17) == ($context["subcategorySlug"] ?? null))) {
+                // line 18
                 echo "        ";
                 $context['__cms_partial_params'] = [];
                 $context['__cms_partial_params']['data'] = $context["record"]                ;
                 echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("category/card-wiget"                , $context['__cms_partial_params']                , true                );
                 unset($context['__cms_partial_params']);
-                // line 16
+                // line 19
                 echo "        ";
             }
-            // line 17
+            // line 20
             echo "    ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 18
+            // line 21
             echo "        <li class=\"no-data\">";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["noRecordsMessage"] ?? null), 18, $this->source), "html", null, true);
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["noRecordsMessage"] ?? null), 21, $this->source), "html", null, true);
             echo "</li>
     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['record'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 20
+        // line 23
         echo "
 
 
@@ -120,14 +126,21 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
 </div>
 
 <style>
+
+    section#layout-content {
+        overflow-x: hidden;
+    }
+
     .SubcategoryListing {
         width: 80%;
         margin: 0 auto;
     }
+
     .SubcategoryListing-Items {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        padding: 20px 0 120px;
     }
 
     .SubcategoryListing-Title {
@@ -141,6 +154,22 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
 
     .SubcategoryListing-Title-Asterisk {
         color: #EA028A;
+    }
+
+
+    @media screen and (max-width: 375px) {
+
+        .SubcategoryListing {
+            width: 72%;
+            margin: 0 auto;
+        }
+
+        .SubcategoryListing-Items {
+            padding: 20px 0 40px;
+        }
+        .SubcategoryListing-Items {
+            padding: 60px 0 40px;
+        }
     }
 
 </style>";
@@ -158,7 +187,7 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
 
     public function getDebugInfo()
     {
-        return array (  116 => 20,  107 => 18,  102 => 17,  99 => 16,  93 => 15,  90 => 14,  85 => 13,  78 => 9,  74 => 7,  72 => 6,  70 => 5,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
+        return array (  122 => 23,  113 => 21,  108 => 20,  105 => 19,  99 => 18,  96 => 17,  91 => 16,  82 => 10,  78 => 9,  74 => 7,  72 => 6,  70 => 5,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -170,13 +199,16 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
 {% set detailsKeyColumn = subcategoryListing.detailsKeyColumn %}
 {% set detailsUrlParameter = subcategoryListing.detailsUrlParameter %}
 
-<div class=\"SubcategoryListing\">
+
+<div class=\"SubcategoryListing\" id=\"{{subcategorySlug}}\">
     <div class=\"SubcategoryListing-Title\">{{subcategoryTitle}}<span class=\"SubcategoryListing-Title-Asterisk\">*</span></div>
     <div class=\"SubcategoryListing-Items\">
 
 
-    {% for record in records %}
-        {% if record.subcategory == 'pads' %}
+
+
+        {% for record in records %}
+        {% if record.subcategory == subcategorySlug %}
         {% partial \"category/card-wiget\" data=record %}
         {% endif %}
     {% else %}
@@ -189,14 +221,21 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
 </div>
 
 <style>
+
+    section#layout-content {
+        overflow-x: hidden;
+    }
+
     .SubcategoryListing {
         width: 80%;
         margin: 0 auto;
     }
+
     .SubcategoryListing-Items {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        padding: 20px 0 120px;
     }
 
     .SubcategoryListing-Title {
@@ -210,6 +249,22 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
 
     .SubcategoryListing-Title-Asterisk {
         color: #EA028A;
+    }
+
+
+    @media screen and (max-width: 375px) {
+
+        .SubcategoryListing {
+            width: 72%;
+            margin: 0 auto;
+        }
+
+        .SubcategoryListing-Items {
+            padding: 20px 0 40px;
+        }
+        .SubcategoryListing-Items {
+            padding: 60px 0 40px;
+        }
     }
 
 </style>", "/Users/iamk/git/darling/themes/demo/partials/category/subcategory-listing.htm", "");

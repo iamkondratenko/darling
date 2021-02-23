@@ -16,13 +16,16 @@ pageNumber = "{{ :page }}"
 {% set detailsKeyColumn = subcategoryListing.detailsKeyColumn %}
 {% set detailsUrlParameter = subcategoryListing.detailsUrlParameter %}
 
-<div class="SubcategoryListing">
+
+<div class="SubcategoryListing" id="{{subcategorySlug}}">
     <div class="SubcategoryListing-Title">{{subcategoryTitle}}<span class="SubcategoryListing-Title-Asterisk">*</span></div>
     <div class="SubcategoryListing-Items">
 
 
-    {% for record in records %}
-        {% if record.subcategory == 'pads' %}
+
+
+        {% for record in records %}
+        {% if record.subcategory == subcategorySlug %}
         {% partial "category/card-wiget" data=record %}
         {% endif %}
     {% else %}
@@ -35,14 +38,21 @@ pageNumber = "{{ :page }}"
 </div>
 
 <style>
+
+    section#layout-content {
+        overflow-x: hidden;
+    }
+
     .SubcategoryListing {
         width: 80%;
         margin: 0 auto;
     }
+
     .SubcategoryListing-Items {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        padding: 20px 0 120px;
     }
 
     .SubcategoryListing-Title {
@@ -56,6 +66,22 @@ pageNumber = "{{ :page }}"
 
     .SubcategoryListing-Title-Asterisk {
         color: #EA028A;
+    }
+
+
+    @media screen and (max-width: 375px) {
+
+        .SubcategoryListing {
+            width: 72%;
+            margin: 0 auto;
+        }
+
+        .SubcategoryListing-Items {
+            padding: 20px 0 40px;
+        }
+        .SubcategoryListing-Items {
+            padding: 60px 0 40px;
+        }
     }
 
 </style>

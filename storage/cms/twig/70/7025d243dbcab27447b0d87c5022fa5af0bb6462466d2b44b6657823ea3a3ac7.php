@@ -60,35 +60,94 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
         $macros = $this->macros;
         // line 1
         echo "<div class=\"SubcategoryBanner\">
-        <div class=\"SubcategoryBanner-Content-Container\" style=\"background: url(";
+    <div class=\"SubcategoryBanner-Content-Container\" style=\"background: url(";
         // line 2
-        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(($context["mainCategoryBackground"] ?? null), 2, $this->source));
+        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(($context["mainSubcategoryBackground"] ?? null), 2, $this->source));
         echo "); background-size: 100%; background-repeat: no-repeat;\">
-            <p class=\"SubcategoryBanner-SubTitle\">
-                ";
+        <p class=\"SubcategoryBanner-SubTitle\">
+            ";
         // line 4
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["categorySubtitle"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["description"]) {
             // line 5
-            echo "                <span class=\"";
+            echo "            <span class=\"";
             if ((twig_get_attribute($this->env, $this->source, $context["description"], "subcategory_description_marked", [], "any", false, false, true, 5) == true)) {
                 echo " SubcategoryBanner-SubTitle-Marked ";
             }
             echo "\">";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["description"], "subcategory_description_text", [], "any", false, false, true, 5), 5, $this->source), "html", null, true);
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["description"], "subcategory_description", [], "any", false, false, true, 5), 5, $this->source), "html", null, true);
             echo "</span>
-                ";
+            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['description'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 7
-        echo "            </p>
-        </div>
+        echo "        </p>
+    </div>
+    <div class=\"SubcategoryBanner-Content-ContainerTablet\" style=\"background: url(";
+        // line 9
+        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(($context["mainSubcategoryBackgroundTablet"] ?? null), 9, $this->source));
+        echo "); background-size: 100%; background-repeat: no-repeat;\">
+        <p class=\"SubcategoryBanner-SubTitle\">
+            ";
+        // line 11
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["categorySubtitle"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["description"]) {
+            // line 12
+            echo "            <span class=\"";
+            if ((twig_get_attribute($this->env, $this->source, $context["description"], "subcategory_description_marked", [], "any", false, false, true, 12) == true)) {
+                echo " SubcategoryBanner-SubTitle-Marked ";
+            }
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["description"], "subcategory_description", [], "any", false, false, true, 12), 12, $this->source), "html", null, true);
+            echo "</span>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['description'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 14
+        echo "        </p>
+    </div>
+    <div class=\"SubcategoryBanner-Content-ContainerMobile\" style=\"background: url(";
+        // line 16
+        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(($context["mainSubcategoryBackgroundMobile"] ?? null), 16, $this->source));
+        echo "); background-size: 100%; background-repeat: no-repeat;\">
+        <h3 class=\"SubcategoryBanner-Title\">";
+        // line 17
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["subcategoryTitle"] ?? null), 17, $this->source), "html", null, true);
+        echo "</h3>
+        <p class=\"SubcategoryBanner-SubTitle\">
+            ";
+        // line 19
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["categorySubtitle"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["description"]) {
+            // line 20
+            echo "            <span>";
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["description"], "subcategory_description", [], "any", false, false, true, 20), 20, $this->source), "html", null, true);
+            echo "</span>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['description'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 22
+        echo "        </p>
+    </div>
 </div>
 
+
+
 <style>
+
+    .SubcategoryBanner-Content-ContainerTablet,
+    .SubcategoryBanner-Content-ContainerMobile {
+        display: none;
+    }
 
     .SubcategoryBanner-SubTitle-Marked {
         color: #EA028A;
@@ -96,7 +155,7 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
 
     .SubcategoryBanner {
         width: 100%;
-        height: 420px;
+        min-height: 30vw;
     }
 
     .SubcategoryBanner-Content-Container {
@@ -105,6 +164,7 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
+        min-height: 30vw;
     }
 
     .SubcategoryBanner-SubTitle {
@@ -114,7 +174,80 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
         text-transform: uppercase;
         color: #fff;
         font-weight: bold;
-        width: 50%;
+        width: 60%;
+        max-width: 900px;
+        display: inline-block;
+    }
+
+    @media screen and (max-width: 1080px) and (min-width: 376px) {
+
+        .SubcategoryBanner {
+            width: 100%;
+            /* height: 420px; */
+            min-height: 65vw;
+        }
+
+
+        .SubcategoryBanner-Content-Container {
+            display: none;
+        }
+
+        .SubcategoryBanner-Content-ContainerTablet {
+            display: block;
+            min-height: 65vw;
+            align-items: flex-end;
+            display: flex;
+        }
+
+        .SubcategoryBanner-SubTitle {
+            font-size: 35px;
+            line-height: 45px;
+            width: 65%;
+            display: inline-block;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .SubcategoryBanner-Content-Container,
+        .SubcategoryBanner-Content-ContainerTablet{
+            display: none !important;
+        }
+
+        .SubcategoryListing-Title {
+            display: none;
+        }
+
+        h3.SubcategoryBanner-Title {
+            font-size: 55px;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .SubcategoryBanner-Title::after {
+            content: '*';
+            position: absolute;
+            color: #EA028A;
+        }
+
+        .SubcategoryBanner-SubTitle {
+            font-size: 20px;
+            line-height: 26px;
+            width: 100%;
+            padding: 0 30px 30px;
+            text-align: center;
+            min-height: auto;
+            display: inline-block;
+        }
+
+        .SubcategoryBanner-Content-ContainerMobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 120vw;
+
+        }
     }
 
 </style>";
@@ -132,22 +265,44 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
 
     public function getDebugInfo()
     {
-        return array (  87 => 7,  74 => 5,  70 => 4,  65 => 2,  62 => 1,);
+        return array (  139 => 22,  130 => 20,  126 => 19,  121 => 17,  117 => 16,  113 => 14,  100 => 12,  96 => 11,  91 => 9,  87 => 7,  74 => 5,  70 => 4,  65 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<div class=\"SubcategoryBanner\">
-        <div class=\"SubcategoryBanner-Content-Container\" style=\"background: url({{ mainCategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat;\">
-            <p class=\"SubcategoryBanner-SubTitle\">
-                {% for description in categorySubtitle %}
-                <span class=\"{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}\">{{ description.subcategory_description_text }}</span>
-                {% endfor %}
-            </p>
-        </div>
+    <div class=\"SubcategoryBanner-Content-Container\" style=\"background: url({{ mainSubcategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat;\">
+        <p class=\"SubcategoryBanner-SubTitle\">
+            {% for description in categorySubtitle %}
+            <span class=\"{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}\">{{ description.subcategory_description }}</span>
+            {% endfor %}
+        </p>
+    </div>
+    <div class=\"SubcategoryBanner-Content-ContainerTablet\" style=\"background: url({{ mainSubcategoryBackgroundTablet | media }}); background-size: 100%; background-repeat: no-repeat;\">
+        <p class=\"SubcategoryBanner-SubTitle\">
+            {% for description in categorySubtitle %}
+            <span class=\"{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}\">{{ description.subcategory_description }}</span>
+            {% endfor %}
+        </p>
+    </div>
+    <div class=\"SubcategoryBanner-Content-ContainerMobile\" style=\"background: url({{ mainSubcategoryBackgroundMobile | media }}); background-size: 100%; background-repeat: no-repeat;\">
+        <h3 class=\"SubcategoryBanner-Title\">{{subcategoryTitle}}</h3>
+        <p class=\"SubcategoryBanner-SubTitle\">
+            {% for description in categorySubtitle %}
+            <span>{{ description.subcategory_description }}</span>
+            {% endfor %}
+        </p>
+    </div>
 </div>
 
+
+
 <style>
+
+    .SubcategoryBanner-Content-ContainerTablet,
+    .SubcategoryBanner-Content-ContainerMobile {
+        display: none;
+    }
 
     .SubcategoryBanner-SubTitle-Marked {
         color: #EA028A;
@@ -155,7 +310,7 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
 
     .SubcategoryBanner {
         width: 100%;
-        height: 420px;
+        min-height: 30vw;
     }
 
     .SubcategoryBanner-Content-Container {
@@ -164,6 +319,7 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
+        min-height: 30vw;
     }
 
     .SubcategoryBanner-SubTitle {
@@ -173,7 +329,80 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
         text-transform: uppercase;
         color: #fff;
         font-weight: bold;
-        width: 50%;
+        width: 60%;
+        max-width: 900px;
+        display: inline-block;
+    }
+
+    @media screen and (max-width: 1080px) and (min-width: 376px) {
+
+        .SubcategoryBanner {
+            width: 100%;
+            /* height: 420px; */
+            min-height: 65vw;
+        }
+
+
+        .SubcategoryBanner-Content-Container {
+            display: none;
+        }
+
+        .SubcategoryBanner-Content-ContainerTablet {
+            display: block;
+            min-height: 65vw;
+            align-items: flex-end;
+            display: flex;
+        }
+
+        .SubcategoryBanner-SubTitle {
+            font-size: 35px;
+            line-height: 45px;
+            width: 65%;
+            display: inline-block;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .SubcategoryBanner-Content-Container,
+        .SubcategoryBanner-Content-ContainerTablet{
+            display: none !important;
+        }
+
+        .SubcategoryListing-Title {
+            display: none;
+        }
+
+        h3.SubcategoryBanner-Title {
+            font-size: 55px;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .SubcategoryBanner-Title::after {
+            content: '*';
+            position: absolute;
+            color: #EA028A;
+        }
+
+        .SubcategoryBanner-SubTitle {
+            font-size: 20px;
+            line-height: 26px;
+            width: 100%;
+            padding: 0 30px 30px;
+            text-align: center;
+            min-height: auto;
+            display: inline-block;
+        }
+
+        .SubcategoryBanner-Content-ContainerMobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 120vw;
+
+        }
     }
 
 </style>", "/Users/iamk/git/darling/themes/demo/partials/category/subcategory-banner.htm", "");

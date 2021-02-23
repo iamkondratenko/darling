@@ -1,14 +1,37 @@
+
 <div class="SubcategoryBanner">
-        <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainCategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat;">
-            <p class="SubcategoryBanner-SubTitle">
-                {% for description in categorySubtitle %}
-                <span class="{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}">{{ description.subcategory_description_text }}</span>
-                {% endfor %}
-            </p>
-        </div>
+    <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainSubcategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat;">
+        <p class="SubcategoryBanner-SubTitle">
+            {% for description in categorySubtitle %}
+            <span class="{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}">{{ description.subcategory_description }}</span>
+            {% endfor %}
+        </p>
+    </div>
+    <div class="SubcategoryBanner-Content-ContainerTablet" style="background: url({{ mainSubcategoryBackgroundTablet | media }}); background-size: 100%; background-repeat: no-repeat;">
+        <p class="SubcategoryBanner-SubTitle">
+            {% for description in categorySubtitle %}
+            <span class="{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}">{{ description.subcategory_description }}</span>
+            {% endfor %}
+        </p>
+    </div>
+    <div class="SubcategoryBanner-Content-ContainerMobile" style="background: url({{ mainSubcategoryBackgroundMobile | media }}); background-size: 100%; background-repeat: no-repeat;">
+        <h3 class="SubcategoryBanner-Title">{{subcategoryTitle}}</h3>
+        <p class="SubcategoryBanner-SubTitle">
+            {% for description in categorySubtitle %}
+            <span>{{ description.subcategory_description }}</span>
+            {% endfor %}
+        </p>
+    </div>
 </div>
 
+
+
 <style>
+
+    .SubcategoryBanner-Content-ContainerTablet,
+    .SubcategoryBanner-Content-ContainerMobile {
+        display: none;
+    }
 
     .SubcategoryBanner-SubTitle-Marked {
         color: #EA028A;
@@ -16,7 +39,7 @@
 
     .SubcategoryBanner {
         width: 100%;
-        height: 420px;
+        min-height: 30vw;
     }
 
     .SubcategoryBanner-Content-Container {
@@ -25,6 +48,7 @@
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
+        min-height: 30vw;
     }
 
     .SubcategoryBanner-SubTitle {
@@ -34,7 +58,80 @@
         text-transform: uppercase;
         color: #fff;
         font-weight: bold;
-        width: 50%;
+        width: 60%;
+        max-width: 900px;
+        display: inline-block;
+    }
+
+    @media screen and (max-width: 1080px) and (min-width: 376px) {
+
+        .SubcategoryBanner {
+            width: 100%;
+            /* height: 420px; */
+            min-height: 65vw;
+        }
+
+
+        .SubcategoryBanner-Content-Container {
+            display: none;
+        }
+
+        .SubcategoryBanner-Content-ContainerTablet {
+            display: block;
+            min-height: 65vw;
+            align-items: flex-end;
+            display: flex;
+        }
+
+        .SubcategoryBanner-SubTitle {
+            font-size: 35px;
+            line-height: 45px;
+            width: 65%;
+            display: inline-block;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .SubcategoryBanner-Content-Container,
+        .SubcategoryBanner-Content-ContainerTablet{
+            display: none !important;
+        }
+
+        .SubcategoryListing-Title {
+            display: none;
+        }
+
+        h3.SubcategoryBanner-Title {
+            font-size: 55px;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .SubcategoryBanner-Title::after {
+            content: '*';
+            position: absolute;
+            color: #EA028A;
+        }
+
+        .SubcategoryBanner-SubTitle {
+            font-size: 20px;
+            line-height: 26px;
+            width: 100%;
+            padding: 0 30px 30px;
+            text-align: center;
+            min-height: auto;
+            display: inline-block;
+        }
+
+        .SubcategoryBanner-Content-ContainerMobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 120vw;
+
+        }
     }
 
 </style>

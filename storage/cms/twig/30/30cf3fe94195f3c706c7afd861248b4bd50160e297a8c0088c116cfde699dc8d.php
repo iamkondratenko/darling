@@ -62,6 +62,10 @@ class __TwigTemplate_9fe354c22b8057b1dce1d14bd501f7c86996719a63996941d58f211dd21
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/main-banner.htm"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
+        // line 2
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header-fixed.htm"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
     }
 
     public function getTemplateName()
@@ -76,11 +80,12 @@ class __TwigTemplate_9fe354c22b8057b1dce1d14bd501f7c86996719a63996941d58f211dd21
 
     public function getDebugInfo()
     {
-        return array (  62 => 1,);
+        return array (  66 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% partial \"site/main-banner.htm\" %}", "/Users/iamk/git/darling/themes/demo/pages/home.htm", "");
+        return new Source("{% partial \"site/main-banner.htm\" %}
+{% partial 'site/header-fixed.htm' %}", "/Users/iamk/git/darling/themes/demo/pages/home.htm", "");
     }
 }

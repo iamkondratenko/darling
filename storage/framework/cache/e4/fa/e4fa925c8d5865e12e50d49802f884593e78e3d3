@@ -1,4 +1,4 @@
-1613556554a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:5367:"<header class="MainHeader">
+1614090065a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:8010:"<header class="MainHeader">
     <div class="MainHeader-Content">
         <div class="MainLogo">
 <!--            <img src="{{ 'assets/images/logo.svg' | theme }}">-->
@@ -19,7 +19,26 @@
             <div class="MainMenu-Icon" data-openMenu="menu-icon" onclick="openMenuHandler()"></div>
         </div>
     </div>
+
 </header>
+<div class="SubNavigationMenu">
+    <div class="SubNavigationMenu-ChangeLanguage jsDesktop">
+        <a class="SubNavigationMenu-LanguageItem LanguageItem-active" href="#">ENG</a>
+        <a class="SubNavigationMenu-LanguageItem" href="#">RUS</a>
+    </div>
+    <div class="SubNavigationMenu-ScrollDown" onclick="scrollDown()">
+        <svg width="27" height="14" viewBox="0 0 27 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z" fill="white"/>
+        </svg>
+
+    </div>
+    <div class="SubNavigationMenu-ChangeLanguage">
+        <a class="SubNavigationMenu-LanguageItem LanguageItem-active" href="#"></a>
+        <a class="SubNavigationMenu-LanguageItem" href="#"></a>
+    </div>
+</div>
+
+
 
 
 <style>
@@ -35,6 +54,21 @@
         width: 100%;
         height: 150px;
         z-index: 999;
+    }
+
+    header.MainHeaderFixed {
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        top: -70px;
+        z-index: 999;
+        background-color: white;
+        transition-duration: 400ms;
+    }
+
+    header.MainHeaderFixed.jsScrolled {
+        top: 0;
+        transition-duration: 400ms;
     }
 
     .MainHeader-Content {
@@ -58,7 +92,48 @@
         background: none;
         border: none;
         z-index: 999;
+        padding-left: 157px;
+    }
 
+    .MainMenu-Icon.MainMenu-Icon-Fixed {
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+    }
+
+    .MainMenu-Icon.MainMenu-Icon-Fixed::before {
+        width: 30px;
+        height: 4px;
+        content: '';
+        background-color: #222;
+        position: absolute;
+        transition-duration: 400ms;
+    }
+
+    .MainMenu-Icon.MainMenu-Icon-Fixed::after {
+        width: 30px;
+        height: 4px;
+        content: '';
+        background-color: #222;
+        position: absolute;
+        top: 43px;
+        transition-duration: 400ms;
+    }
+
+    .MainMenu-Icon.MainMenu-Icon-Fixed.js-menuIsOpened::before {
+        background-color: black;
+        transform: rotate(
+                45deg
+        ) translate(4px, 10px);
+        transition-duration: 400ms;
+
+    }
+    .MainMenu-Icon.MainMenu-Icon-Fixed.js-menuIsOpened::after {
+        background-color: black;
+        transform: rotate(
+                -45deg
+        ) translate(3px, -9px);
+        transition-duration: 400ms;
     }
 
     .MainMenu-Icon {
@@ -108,6 +183,11 @@
         transition-duration: 400ms;
     }
 
+    .LogoSvgFixed > path {
+        fill: #222;
+        transition-duration: 400ms;
+    }
+
 
 
     .LogoSvg.js-menuIsOpened > path {
@@ -119,27 +199,52 @@
         fill: #EA028A !important;
     }
 
-    @media screen and (max-width: 1200px){
+
+    @media screen and (max-width: 375px){
+        .MainMenu {
+            padding: 0;
+        }
         .MainHeader-Content {
             padding: 0 30px;
         }
     }
 
+
+
+
+
 </style>
 
 <script>
 
+
+    function scrollDown() {
+        window.scroll({
+            top: window.innerHeight,
+            behavior: "smooth"
+        })
+    }
+
+
     function openMenuHandler() {
-        let menuButton = document.querySelector('[data-openMenu="menu-icon"]');
+        let menuButton = document.querySelectorAll('[data-openMenu="menu-icon"]')[0];
+        let menuButtonFixed = document.querySelectorAll('[data-openMenu="menu-icon"]')[1];
+
         let logo = document.querySelector('.LogoSvg')
         let menuDrawer = document.querySelector('.MainMenuDrawer')
 
         menuButton.classList.toggle('js-menuIsOpened')
+        menuButtonFixed.classList.toggle('js-menuIsOpened')
         logo.classList.toggle('js-menuIsOpened')
         menuDrawer.classList.toggle('js-menuIsOpened')
     }
 
-</script>";s:5:"mtime";i:1613343709;s:6:"markup";s:5367:"<header class="MainHeader">
+
+
+
+
+
+</script>";s:5:"mtime";i:1614089462;s:6:"markup";s:8010:"<header class="MainHeader">
     <div class="MainHeader-Content">
         <div class="MainLogo">
 <!--            <img src="{{ 'assets/images/logo.svg' | theme }}">-->
@@ -160,7 +265,26 @@
             <div class="MainMenu-Icon" data-openMenu="menu-icon" onclick="openMenuHandler()"></div>
         </div>
     </div>
+
 </header>
+<div class="SubNavigationMenu">
+    <div class="SubNavigationMenu-ChangeLanguage jsDesktop">
+        <a class="SubNavigationMenu-LanguageItem LanguageItem-active" href="#">ENG</a>
+        <a class="SubNavigationMenu-LanguageItem" href="#">RUS</a>
+    </div>
+    <div class="SubNavigationMenu-ScrollDown" onclick="scrollDown()">
+        <svg width="27" height="14" viewBox="0 0 27 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z" fill="white"/>
+        </svg>
+
+    </div>
+    <div class="SubNavigationMenu-ChangeLanguage">
+        <a class="SubNavigationMenu-LanguageItem LanguageItem-active" href="#"></a>
+        <a class="SubNavigationMenu-LanguageItem" href="#"></a>
+    </div>
+</div>
+
+
 
 
 <style>
@@ -176,6 +300,21 @@
         width: 100%;
         height: 150px;
         z-index: 999;
+    }
+
+    header.MainHeaderFixed {
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        top: -70px;
+        z-index: 999;
+        background-color: white;
+        transition-duration: 400ms;
+    }
+
+    header.MainHeaderFixed.jsScrolled {
+        top: 0;
+        transition-duration: 400ms;
     }
 
     .MainHeader-Content {
@@ -199,7 +338,48 @@
         background: none;
         border: none;
         z-index: 999;
+        padding-left: 157px;
+    }
 
+    .MainMenu-Icon.MainMenu-Icon-Fixed {
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+    }
+
+    .MainMenu-Icon.MainMenu-Icon-Fixed::before {
+        width: 30px;
+        height: 4px;
+        content: '';
+        background-color: #222;
+        position: absolute;
+        transition-duration: 400ms;
+    }
+
+    .MainMenu-Icon.MainMenu-Icon-Fixed::after {
+        width: 30px;
+        height: 4px;
+        content: '';
+        background-color: #222;
+        position: absolute;
+        top: 43px;
+        transition-duration: 400ms;
+    }
+
+    .MainMenu-Icon.MainMenu-Icon-Fixed.js-menuIsOpened::before {
+        background-color: black;
+        transform: rotate(
+                45deg
+        ) translate(4px, 10px);
+        transition-duration: 400ms;
+
+    }
+    .MainMenu-Icon.MainMenu-Icon-Fixed.js-menuIsOpened::after {
+        background-color: black;
+        transform: rotate(
+                -45deg
+        ) translate(3px, -9px);
+        transition-duration: 400ms;
     }
 
     .MainMenu-Icon {
@@ -249,6 +429,11 @@
         transition-duration: 400ms;
     }
 
+    .LogoSvgFixed > path {
+        fill: #222;
+        transition-duration: 400ms;
+    }
+
 
 
     .LogoSvg.js-menuIsOpened > path {
@@ -260,24 +445,49 @@
         fill: #EA028A !important;
     }
 
-    @media screen and (max-width: 1200px){
+
+    @media screen and (max-width: 375px){
+        .MainMenu {
+            padding: 0;
+        }
         .MainHeader-Content {
             padding: 0 30px;
         }
     }
 
+
+
+
+
 </style>
 
 <script>
 
+
+    function scrollDown() {
+        window.scroll({
+            top: window.innerHeight,
+            behavior: "smooth"
+        })
+    }
+
+
     function openMenuHandler() {
-        let menuButton = document.querySelector('[data-openMenu="menu-icon"]');
+        let menuButton = document.querySelectorAll('[data-openMenu="menu-icon"]')[0];
+        let menuButtonFixed = document.querySelectorAll('[data-openMenu="menu-icon"]')[1];
+
         let logo = document.querySelector('.LogoSvg')
         let menuDrawer = document.querySelector('.MainMenuDrawer')
 
         menuButton.classList.toggle('js-menuIsOpened')
+        menuButtonFixed.classList.toggle('js-menuIsOpened')
         logo.classList.toggle('js-menuIsOpened')
         menuDrawer.classList.toggle('js-menuIsOpened')
     }
+
+
+
+
+
 
 </script>";s:4:"code";N;}}

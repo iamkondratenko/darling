@@ -84,7 +84,7 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         echo "\">
         <link href=\"";
         // line 12
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/vendor.css?22");
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/vendor.css?2d2");
         echo "\" rel=\"stylesheet\">
         <link href=\"";
         // line 13
@@ -142,7 +142,7 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         echo "\"></script>
         <script src=\"";
         // line 36
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js");
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js?23");
         echo "\"></script>
         ";
         // line 37
@@ -194,7 +194,7 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
         <meta name=\"generator\" content=\"OctoberCMS\">
         <link rel=\"icon\" type=\"image/png\" href=\"{{ 'assets/images/october.png'|theme }}\">
-        <link href=\"{{ 'assets/css/vendor.css?22'|theme }}\" rel=\"stylesheet\">
+        <link href=\"{{ 'assets/css/vendor.css?2d2'|theme }}\" rel=\"stylesheet\">
         <link href=\"{{ 'assets/css/theme.css?213f3'|theme }}\" rel=\"stylesheet\">
         {% styles %}
     </head>
@@ -218,7 +218,7 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         <!-- Scripts -->
         <script src=\"{{ 'assets/vendor/jquery.js'|theme }}\"></script>
         <script src=\"{{ 'assets/vendor/bootstrap.js'|theme }}\"></script>
-        <script src=\"{{ 'assets/javascript/app.js'|theme }}\"></script>
+        <script src=\"{{ 'assets/javascript/app.js?23'|theme }}\"></script>
         {% framework extras %}
         {% scripts %}
 

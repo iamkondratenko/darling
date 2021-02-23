@@ -21,6 +21,7 @@ nav,
 section,
 summary {
   display: block;
+  overflow-x: hidden;
 }
 audio,
 canvas,

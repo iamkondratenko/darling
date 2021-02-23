@@ -83,7 +83,26 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
             <div class=\"MainMenu-Icon\" data-openMenu=\"menu-icon\" onclick=\"openMenuHandler()\"></div>
         </div>
     </div>
+
 </header>
+<div class=\"SubNavigationMenu\">
+    <div class=\"SubNavigationMenu-ChangeLanguage jsDesktop\">
+        <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\">ENG</a>
+        <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\">RUS</a>
+    </div>
+    <div class=\"SubNavigationMenu-ScrollDown\" onclick=\"scrollDown()\">
+        <svg width=\"27\" height=\"14\" viewBox=\"0 0 27 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z\" fill=\"white\"/>
+        </svg>
+
+    </div>
+    <div class=\"SubNavigationMenu-ChangeLanguage\">
+        <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\"></a>
+        <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\"></a>
+    </div>
+</div>
+
+
 
 
 <style>
@@ -99,6 +118,21 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         width: 100%;
         height: 150px;
         z-index: 999;
+    }
+
+    header.MainHeaderFixed {
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        top: -70px;
+        z-index: 999;
+        background-color: white;
+        transition-duration: 400ms;
+    }
+
+    header.MainHeaderFixed.jsScrolled {
+        top: 0;
+        transition-duration: 400ms;
     }
 
     .MainHeader-Content {
@@ -122,7 +156,48 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         background: none;
         border: none;
         z-index: 999;
+        padding-left: 157px;
+    }
 
+    .MainMenu-Icon.MainMenu-Icon-Fixed {
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+    }
+
+    .MainMenu-Icon.MainMenu-Icon-Fixed::before {
+        width: 30px;
+        height: 4px;
+        content: '';
+        background-color: #222;
+        position: absolute;
+        transition-duration: 400ms;
+    }
+
+    .MainMenu-Icon.MainMenu-Icon-Fixed::after {
+        width: 30px;
+        height: 4px;
+        content: '';
+        background-color: #222;
+        position: absolute;
+        top: 43px;
+        transition-duration: 400ms;
+    }
+
+    .MainMenu-Icon.MainMenu-Icon-Fixed.js-menuIsOpened::before {
+        background-color: black;
+        transform: rotate(
+                45deg
+        ) translate(4px, 10px);
+        transition-duration: 400ms;
+
+    }
+    .MainMenu-Icon.MainMenu-Icon-Fixed.js-menuIsOpened::after {
+        background-color: black;
+        transform: rotate(
+                -45deg
+        ) translate(3px, -9px);
+        transition-duration: 400ms;
     }
 
     .MainMenu-Icon {
@@ -172,6 +247,11 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         transition-duration: 400ms;
     }
 
+    .LogoSvgFixed > path {
+        fill: #222;
+        transition-duration: 400ms;
+    }
+
 
 
     .LogoSvg.js-menuIsOpened > path {
@@ -183,25 +263,50 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         fill: #EA028A !important;
     }
 
-    @media screen and (max-width: 1200px){
+
+    @media screen and (max-width: 375px){
+        .MainMenu {
+            padding: 0;
+        }
         .MainHeader-Content {
             padding: 0 30px;
         }
     }
 
+
+
+
+
 </style>
 
 <script>
 
+
+    function scrollDown() {
+        window.scroll({
+            top: window.innerHeight,
+            behavior: \"smooth\"
+        })
+    }
+
+
     function openMenuHandler() {
-        let menuButton = document.querySelector('[data-openMenu=\"menu-icon\"]');
+        let menuButton = document.querySelectorAll('[data-openMenu=\"menu-icon\"]')[0];
+        let menuButtonFixed = document.querySelectorAll('[data-openMenu=\"menu-icon\"]')[1];
+
         let logo = document.querySelector('.LogoSvg')
         let menuDrawer = document.querySelector('.MainMenuDrawer')
 
         menuButton.classList.toggle('js-menuIsOpened')
+        menuButtonFixed.classList.toggle('js-menuIsOpened')
         logo.classList.toggle('js-menuIsOpened')
         menuDrawer.classList.toggle('js-menuIsOpened')
     }
+
+
+
+
+
 
 </script>";
     }
@@ -244,7 +349,26 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
             <div class=\"MainMenu-Icon\" data-openMenu=\"menu-icon\" onclick=\"openMenuHandler()\"></div>
         </div>
     </div>
+
 </header>
+<div class=\"SubNavigationMenu\">
+    <div class=\"SubNavigationMenu-ChangeLanguage jsDesktop\">
+        <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\">ENG</a>
+        <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\">RUS</a>
+    </div>
+    <div class=\"SubNavigationMenu-ScrollDown\" onclick=\"scrollDown()\">
+        <svg width=\"27\" height=\"14\" viewBox=\"0 0 27 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z\" fill=\"white\"/>
+        </svg>
+
+    </div>
+    <div class=\"SubNavigationMenu-ChangeLanguage\">
+        <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\"></a>
+        <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\"></a>
+    </div>
+</div>
+
+
 
 
 <style>
@@ -260,6 +384,21 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         width: 100%;
         height: 150px;
         z-index: 999;
+    }
+
+    header.MainHeaderFixed {
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        top: -70px;
+        z-index: 999;
+        background-color: white;
+        transition-duration: 400ms;
+    }
+
+    header.MainHeaderFixed.jsScrolled {
+        top: 0;
+        transition-duration: 400ms;
     }
 
     .MainHeader-Content {
@@ -283,7 +422,48 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         background: none;
         border: none;
         z-index: 999;
+        padding-left: 157px;
+    }
 
+    .MainMenu-Icon.MainMenu-Icon-Fixed {
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+    }
+
+    .MainMenu-Icon.MainMenu-Icon-Fixed::before {
+        width: 30px;
+        height: 4px;
+        content: '';
+        background-color: #222;
+        position: absolute;
+        transition-duration: 400ms;
+    }
+
+    .MainMenu-Icon.MainMenu-Icon-Fixed::after {
+        width: 30px;
+        height: 4px;
+        content: '';
+        background-color: #222;
+        position: absolute;
+        top: 43px;
+        transition-duration: 400ms;
+    }
+
+    .MainMenu-Icon.MainMenu-Icon-Fixed.js-menuIsOpened::before {
+        background-color: black;
+        transform: rotate(
+                45deg
+        ) translate(4px, 10px);
+        transition-duration: 400ms;
+
+    }
+    .MainMenu-Icon.MainMenu-Icon-Fixed.js-menuIsOpened::after {
+        background-color: black;
+        transform: rotate(
+                -45deg
+        ) translate(3px, -9px);
+        transition-duration: 400ms;
     }
 
     .MainMenu-Icon {
@@ -333,6 +513,11 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         transition-duration: 400ms;
     }
 
+    .LogoSvgFixed > path {
+        fill: #222;
+        transition-duration: 400ms;
+    }
+
 
 
     .LogoSvg.js-menuIsOpened > path {
@@ -344,25 +529,50 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         fill: #EA028A !important;
     }
 
-    @media screen and (max-width: 1200px){
+
+    @media screen and (max-width: 375px){
+        .MainMenu {
+            padding: 0;
+        }
         .MainHeader-Content {
             padding: 0 30px;
         }
     }
 
+
+
+
+
 </style>
 
 <script>
 
+
+    function scrollDown() {
+        window.scroll({
+            top: window.innerHeight,
+            behavior: \"smooth\"
+        })
+    }
+
+
     function openMenuHandler() {
-        let menuButton = document.querySelector('[data-openMenu=\"menu-icon\"]');
+        let menuButton = document.querySelectorAll('[data-openMenu=\"menu-icon\"]')[0];
+        let menuButtonFixed = document.querySelectorAll('[data-openMenu=\"menu-icon\"]')[1];
+
         let logo = document.querySelector('.LogoSvg')
         let menuDrawer = document.querySelector('.MainMenuDrawer')
 
         menuButton.classList.toggle('js-menuIsOpened')
+        menuButtonFixed.classList.toggle('js-menuIsOpened')
         logo.classList.toggle('js-menuIsOpened')
         menuDrawer.classList.toggle('js-menuIsOpened')
     }
+
+
+
+
+
 
 </script>", "/Users/iamk/git/darling/themes/demo/partials/site/header.htm", "");
     }

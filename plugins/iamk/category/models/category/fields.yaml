@@ -29,9 +29,35 @@ fields:
             fields:
                 subcategory_banner:
                     label: 'Баннер подкатегории'
-                    mode: file
-                    span: full
+                    mode: image
+                    span: left
                     type: mediafinder
+                subcategory_banner_tabet:
+                    label: 'Баннер подкатегории (планшет)'
+                    mode: image
+                    span: auto
+                    type: mediafinder
+                subcategory_banner_mobile:
+                    label: 'Баннер подкатегории (мобильный)'
+                    mode: image
+                    span: auto
+                    type: mediafinder
+                subcategory_description:
+                    label: 'Описание подкатегории'
+                    prompt: 'Добавить описание'
+                    span: auto
+                    type: repeater
+                    form:
+                        fields:
+                            subcategory_description:
+                                label: 'Описание подкатегории'
+                                prompt: 'Добавить описание'
+                                span: auto
+                                type: text
+                            subcategory_description_marked:
+                                label: 'Выделить текст'
+                                span: auto
+                                type: checkbox
                 subcategory_title:
                     label: 'Заголовок подкатегории'
                     span: auto
@@ -43,18 +69,7 @@ fields:
                         field: subcategory_title
                         type: slug
                     type: text
-                subcategory_description:
-                    label: 'Описание подкатегории'
-                    prompt: 'Добавить описание'
-                    span: auto
-                    type: repeater
-                    form:
-                        fields:
-                            subcategory_description_text:
-                                label: Текст
-                                span: auto
-                                type: text
-                            subcategory_description_marked:
-                                label: 'Выделить текст'
-                                span: auto
-                                type: checkbox
+    id:
+        label: id
+        span: auto
+        type: number

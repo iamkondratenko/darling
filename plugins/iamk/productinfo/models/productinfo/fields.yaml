@@ -39,10 +39,14 @@ fields:
             fields:
                 product_title_construct:
                     label: 'Заголовок продукта'
-                    span: auto
+                    span: full
                     type: text
                 product_title_marked:
                     label: 'Выделить текст'
+                    span: auto
+                    type: switch
+                break_subcategory_title:
+                    label: Перенос
                     span: auto
                     type: switch
     slug:

@@ -80,4 +80,7 @@
   'iamk\\category\\Controllers\\category' => 'plugins/iamk/category/controllers/category.php',
   'Iamk\\Category\\Models\\Category' => 'plugins/iamk/category/models/Category.php',
   'iamk\\productinfo\\Models\\ProductInfo' => 'plugins/iamk/productinfo/models/ProductInfo.php',
+  'backend\\Controllers\\users' => 'modules/backend/controllers/users.php',
+  'cms\\Controllers\\themes' => 'modules/cms/controllers/themes.php',
+  'backend\\Controllers\\preferences' => 'modules/backend/controllers/preferences.php',
 );

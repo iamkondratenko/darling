@@ -60,17 +60,17 @@ class __TwigTemplate_13a139569fca4b715834fa368b811a2db4e48b6f3071f7e5af6c86a51da
         $macros = $this->macros;
         // line 1
         $context['__cms_partial_params'] = [];
-        $context['__cms_partial_params']['categorySubtitle'] = ($context["categorySubtitle"] ?? null)        ;
-        $context['__cms_partial_params']['categorySubtitleMarked'] = ($context["categorySubtitleMarked"] ?? null)        ;
-        $context['__cms_partial_params']['mainCategoryBackgrounds'] = ($context["mainCategoryBackgrounds"] ?? null)        ;
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("category/subcategory-banner"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         // line 2
         echo "
+
+
 ";
-        // line 3
+        // line 5
         $context['__cms_partial_params'] = [];
         $context['__cms_partial_params']['subcategoryTitle'] = ($context["subcategoryTitle"] ?? null)        ;
+        $context['__cms_partial_params']['subcategorySlug'] = ($context["subcategorySlug"] ?? null)        ;
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("category/subcategory-listing"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
     }
@@ -87,13 +87,15 @@ class __TwigTemplate_13a139569fca4b715834fa368b811a2db4e48b6f3071f7e5af6c86a51da
 
     public function getDebugInfo()
     {
-        return array (  72 => 3,  69 => 2,  62 => 1,);
+        return array (  71 => 5,  66 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% partial \"category/subcategory-banner\" categorySubtitle=categorySubtitle categorySubtitleMarked=categorySubtitleMarked mainCategoryBackgrounds=mainCategoryBackgrounds %}
+        return new Source("{% partial \"category/subcategory-banner\" %}
 
-{% partial \"category/subcategory-listing\" subcategoryTitle=subcategoryTitle %}", "/Users/iamk/git/darling/themes/demo/partials/category/category.htm", "");
+
+
+{% partial \"category/subcategory-listing\" subcategoryTitle=subcategoryTitle subcategorySlug=subcategorySlug %}", "/Users/iamk/git/darling/themes/demo/partials/category/category.htm", "");
     }
 }

@@ -19,11 +19,14 @@ notFoundMessage = "Record not found"
 
 
     {% partial "category/category-main-banner" categoryTitle=record.title categorySubtitle='pads / patches / masks' mainCategoryBackground=record.main_banner
-mainCategoryBackgroundMobile=record.main_banner_mobile%}
-
+mainCategoryBackgroundTablet=record.main_banner_tablet mainCategoryBackgroundMobile=record.main_banner_mobile %}
 
 {% endif %}
 
+
+
+{% partial 'site/header-fixed.htm' subcategoryMenu=record.subcategory %}
+
 {% for subcategory in record.subcategory %}
-    {% partial "category/category" subcategoryTitle=subcategory.subcategory_title categorySubtitle=subcategory.subcategory_description categorySubtitleMarked='#youaredarling' mainCategoryBackground=subcategory.subcategory_banner %}
+    {% partial "category/category" subcategoryTitle=subcategory.subcategory_title subcategorySlug=subcategory.slug categorySubtitle=subcategory.subcategory_description mainSubcategoryBackground=subcategory.subcategory_banner mainSubcategoryBackgroundTablet=subcategory.subcategory_banner_tabet mainSubcategoryBackgroundMobile=subcategory.subcategory_banner_mobile %}
 {% endfor %}
