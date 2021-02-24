@@ -252,9 +252,7 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         .jsDesktop {
             display: none;
         }
-        .SubNavigationMenu-ScrollDown {
-            display: none;
-        }
+
         .MainMenuDrawer-Item-Category {
             font-size: 50px;
             font-weight: 500;
@@ -493,9 +491,7 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         .jsDesktop {
             display: none;
         }
-        .SubNavigationMenu-ScrollDown {
-            display: none;
-        }
+
         .MainMenuDrawer-Item-Category {
             font-size: 50px;
             font-weight: 500;

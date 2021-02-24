@@ -90,12 +90,12 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\">ENG</a>
         <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\">RUS</a>
     </div>
-    <div class=\"SubNavigationMenu-ScrollDown\" onclick=\"scrollDown()\">
+    <as class=\"SubNavigationMenu-ScrollDown\" onclick=\"scrollDown()\">
         <svg width=\"27\" height=\"14\" viewBox=\"0 0 27 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
             <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z\" fill=\"white\"/>
         </svg>
 
-    </div>
+    </as>
     <div class=\"SubNavigationMenu-ChangeLanguage\">
         <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\"></a>
         <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\"></a>
@@ -106,6 +106,11 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
 
 
 <style>
+
+    .SubNavigationMenu-ScrollDown {
+        display: none;
+        cursor: pointer;
+    }
 
     a.LogoLink {
         margin: 0;
@@ -356,12 +361,12 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\">ENG</a>
         <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\">RUS</a>
     </div>
-    <div class=\"SubNavigationMenu-ScrollDown\" onclick=\"scrollDown()\">
+    <as class=\"SubNavigationMenu-ScrollDown\" onclick=\"scrollDown()\">
         <svg width=\"27\" height=\"14\" viewBox=\"0 0 27 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
             <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z\" fill=\"white\"/>
         </svg>
 
-    </div>
+    </as>
     <div class=\"SubNavigationMenu-ChangeLanguage\">
         <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\"></a>
         <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\"></a>
@@ -372,6 +377,11 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
 
 
 <style>
+
+    .SubNavigationMenu-ScrollDown {
+        display: none;
+        cursor: pointer;
+    }
 
     a.LogoLink {
         margin: 0;

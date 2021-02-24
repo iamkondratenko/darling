@@ -1,4 +1,4 @@
-1614090065a:1:{s:20:"site/menu-drawer.htm";a:6:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:6824:"[builderList mainMenuItem]
+1614153422a:1:{s:20:"site/menu-drawer.htm";a:6:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:6746:"[builderList mainMenuItem]
 modelClass = "Iamk\Category\Models\Category"
 scope = "-"
 scopeValue = "{{ :scope }}"
@@ -162,9 +162,7 @@ sortDirection = "desc"
         .jsDesktop {
             display: none;
         }
-        .SubNavigationMenu-ScrollDown {
-            display: none;
-        }
+
         .MainMenuDrawer-Item-Category {
             font-size: 50px;
             font-weight: 500;
@@ -231,7 +229,7 @@ sortDirection = "desc"
             }
         )
     }
-</script>";s:5:"mtime";i:1614089458;s:6:"markup";s:6525:"<div class="MainMenuDrawer">
+</script>";s:5:"mtime";i:1614089748;s:6:"markup";s:6447:"<div class="MainMenuDrawer">
     <div class="SubNavigationMenu SubNavigationMenu-Fixed">
         <div class="SubNavigationMenu-ChangeLanguage">
             <a class="SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active" href="#">ENG</a>
@@ -383,9 +381,7 @@ sortDirection = "desc"
         .jsDesktop {
             display: none;
         }
-        .SubNavigationMenu-ScrollDown {
-            display: none;
-        }
+
         .MainMenuDrawer-Item-Category {
             font-size: 50px;
             font-weight: 500;
