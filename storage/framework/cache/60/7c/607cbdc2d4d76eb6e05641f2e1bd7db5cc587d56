@@ -1,5 +1,5 @@
-1614089841a:1:{s:31:"category/subcategory-banner.htm";a:5:{s:8:"fileName";s:31:"category/subcategory-banner.htm";s:7:"content";s:4032:"
-<div class="SubcategoryBanner">
+1614214707a:1:{s:31:"category/subcategory-banner.htm";a:5:{s:8:"fileName";s:31:"category/subcategory-banner.htm";s:7:"content";s:4033:"
+<div class="SubcategoryBanner" id="{{subcategorySlug}}">
     <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainSubcategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat;">
         <p class="SubcategoryBanner-SubTitle">
             {% for description in categorySubtitle %}
@@ -62,8 +62,7 @@
         max-width: 900px;
         display: inline-block;
     }
-
-    @media screen and (max-width: 1080px) and (min-width: 376px) {
+    @media screen and (max-width: 1365px) {
 
         .SubcategoryBanner {
             width: 100%;
@@ -91,7 +90,7 @@
         }
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 767px) {
         .SubcategoryBanner-Content-Container,
         .SubcategoryBanner-Content-ContainerTablet{
             display: none !important;
@@ -134,7 +133,7 @@
         }
     }
 
-</style>";s:5:"mtime";i:1614087807;s:6:"markup";s:4031:"<div class="SubcategoryBanner">
+</style>";s:5:"mtime";i:1614203913;s:6:"markup";s:4032:"<div class="SubcategoryBanner" id="{{subcategorySlug}}">
     <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainSubcategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat;">
         <p class="SubcategoryBanner-SubTitle">
             {% for description in categorySubtitle %}
@@ -197,8 +196,7 @@
         max-width: 900px;
         display: inline-block;
     }
-
-    @media screen and (max-width: 1080px) and (min-width: 376px) {
+    @media screen and (max-width: 1365px) {
 
         .SubcategoryBanner {
             width: 100%;
@@ -226,7 +224,7 @@
         }
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 767px) {
         .SubcategoryBanner-Content-Container,
         .SubcategoryBanner-Content-ContainerTablet{
             display: none !important;

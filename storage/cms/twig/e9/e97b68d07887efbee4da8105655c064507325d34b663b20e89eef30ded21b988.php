@@ -118,7 +118,7 @@ class __TwigTemplate_7469baec3f1fd5f9f1836e4f2d75feb6299cc04852433dfa9c7e33c6897
         justify-content: space-between;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1080px) {
 
         #footer {
             flex-direction: column;
@@ -223,7 +223,7 @@ class __TwigTemplate_7469baec3f1fd5f9f1836e4f2d75feb6299cc04852433dfa9c7e33c6897
         justify-content: space-between;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1080px) {
 
         #footer {
             flex-direction: column;

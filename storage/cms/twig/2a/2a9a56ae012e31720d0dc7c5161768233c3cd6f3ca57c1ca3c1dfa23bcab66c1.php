@@ -62,8 +62,8 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         echo "<div class=\"MainMenuDrawer\">
     <div class=\"SubNavigationMenu SubNavigationMenu-Fixed\">
         <div class=\"SubNavigationMenu-ChangeLanguage\">
-            <a class=\"SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active\" href=\"#\">ENG</a>
-            <a class=\"SubNavigationMenu-LanguageItem LanguageItem-dark\" href=\"#\">RUS</a>
+            <a href=\"#\" class=\"SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active\" onclick=\"console.log('sdfsd')\">ENG</a>
+            <a href=\"#\" class=\"SubNavigationMenu-LanguageItem LanguageItem-dark\" onclick=\"console.log('sdfsd')\">RUS</a>
         </div>
         <div class=\"SubNavigationMenu-ScrollDown\">
             <svg width=\"27\" height=\"14\" viewBox=\"0 0 27 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
@@ -72,7 +72,7 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 
         </div>
         <div class=\"SubNavigationMenu-ChangeLanguage\">
-            <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\"></a>
+            <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\"></a>
             <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\"></a>
         </div>
     </div>
@@ -107,7 +107,7 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
                 <a  onclick=\"goTo('/category/";
             // line 30
             echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["record"], "slug", [], "any", false, false, true, 30), 30, $this->source), "html", null, true);
-            echo "')\" class=\"MainMenuDrawer-Item-Subcategory\">All products</a>
+            echo "')\" class=\"MainMenuDrawer-Item-Subcategory\">All products<sup> 10</sup></a>
                 ";
             // line 31
             $context['_parent'] = $context;
@@ -121,7 +121,7 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
                 echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["menuItem"], "slug", [], "any", false, false, true, 32), 32, $this->source), "html", null, true);
                 echo "')\" class=\"MainMenuDrawer-Item-Subcategory\">";
                 echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["menuItem"], "subcategory_title", [], "any", false, false, true, 32), 32, $this->source), "html", null, true);
-                echo "</a>
+                echo "<sup> 3</sup></a>
                 ";
             }
             $_parent = $context['_parent'];
@@ -145,6 +145,13 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 <style>
 
 
+    sup {
+        font-weight: 500;
+        font-size: 22px;
+        top: -1em;
+    }
+
+
     .SubNavigationMenu {
         width: 100vw;
         padding: 0 50px;
@@ -153,7 +160,7 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         bottom: 0;
         display: flex;
         justify-content: space-between;
-        z-index: 950;
+        z-index: 900;
     }
 
     .SubNavigationMenu.SubNavigationMenu-Fixed {
@@ -170,24 +177,35 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
     }
 
     a.SubNavigationMenu-LanguageItem {
-        color: #fff;
+        color: #ffffff82;
         text-decoration: none;
         font-weight: 600;
+        font-size: 20px;
+        margin-right: 10px;
+        transition-duration: 500ms;
+    }
+
+    a.SubNavigationMenu-LanguageItem:hover {
+        color: #ffffff;
     }
 
 
     a.SubNavigationMenu-LanguageItem.LanguageItem-active {
-        color: #ffffff82;
+        color: #ffffff;
         text-decoration: none;
     }
 
     a.SubNavigationMenu-LanguageItem.LanguageItem-dark {
-        color: #000;
+        color: #00000082;
         text-decoration: none;
     }
 
+    a.SubNavigationMenu-LanguageItem.LanguageItem-dark:hover {
+        color: #000000;
+    }
+
     a.SubNavigationMenu-LanguageItem.LanguageItem-dark.LanguageItem-active {
-        color: #00000082;
+        color: #000000;
         text-decoration: none;
     }
 
@@ -208,8 +226,12 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         font-size: 40px;
         font-weight: 500;
         text-transform: uppercase;
-
     }
+
+    a.MainMenuDrawer-Item-Subcategory:hover {
+        color: #EA028A;
+    }
+
     .MainMenuDrawer-Item-Subcategories{
         display: flex;
         flex-direction: column;
@@ -248,7 +270,18 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
     }
 
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 767px) {
+
+        sup {
+            font-size: 18px;
+            top: -0.7em;
+        }
+
+        .SubNavigationMenu {
+            padding: 30px;
+            height: 90px;
+        }
+
         .jsDesktop {
             display: none;
         }
@@ -264,6 +297,7 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
             font-size: 25px;
             font-weight: 500;
             text-transform: uppercase;
+            padding-bottom: 8px;
 
         }
         .MainMenuDrawer-Items{
@@ -306,9 +340,18 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         menuCategoryList[i].addEventListener(\"click\",
             function (e){
 
+            if (e.toElement.parentNode.classList.contains('subCategoryIsActive')) {
+                let subCategoriesMenu =  document.querySelector('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories')
+
+                let subCategoryMenu = document.querySelectorAll('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories > .MainMenuDrawer-Item-Subcategory')
+
+                let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length
+                subCategoriesMenu.style.height = '0'
+                e.toElement.parentNode.classList.remove('subCategoryIsActive')
+            } else {
                 clearActiveSubmenu()
 
-                e.toElement.parentNode.classList.toggle('subCategoryIsActive')
+                e.toElement.parentNode.classList.add('subCategoryIsActive')
 
                 let subCategoriesMenu =  document.querySelector('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories')
 
@@ -316,6 +359,9 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 
                 let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length
                 subCategoriesMenu.style.height = subCategoryHeight + 'px'
+            }
+
+
             }
         )
     }
@@ -342,8 +388,8 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         return new Source("<div class=\"MainMenuDrawer\">
     <div class=\"SubNavigationMenu SubNavigationMenu-Fixed\">
         <div class=\"SubNavigationMenu-ChangeLanguage\">
-            <a class=\"SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active\" href=\"#\">ENG</a>
-            <a class=\"SubNavigationMenu-LanguageItem LanguageItem-dark\" href=\"#\">RUS</a>
+            <a href=\"#\" class=\"SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active\" onclick=\"console.log('sdfsd')\">ENG</a>
+            <a href=\"#\" class=\"SubNavigationMenu-LanguageItem LanguageItem-dark\" onclick=\"console.log('sdfsd')\">RUS</a>
         </div>
         <div class=\"SubNavigationMenu-ScrollDown\">
             <svg width=\"27\" height=\"14\" viewBox=\"0 0 27 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
@@ -352,7 +398,7 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 
         </div>
         <div class=\"SubNavigationMenu-ChangeLanguage\">
-            <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\"></a>
+            <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\"></a>
             <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\"></a>
         </div>
     </div>
@@ -368,9 +414,9 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         <div class=\"MainMenuDrawer-Item\">
             <div class=\"MainMenuDrawer-Item-Category\">{{record.title}}</div>
             <div class=\"MainMenuDrawer-Item-Subcategories\">
-                <a  onclick=\"goTo('/category/{{record.slug}}')\" class=\"MainMenuDrawer-Item-Subcategory\">All products</a>
+                <a  onclick=\"goTo('/category/{{record.slug}}')\" class=\"MainMenuDrawer-Item-Subcategory\">All products<sup> 10</sup></a>
                 {% for menuItem in record.subcategory %} 
-                <a  onclick=\"goTo('/category/{{record.slug}}/#{{menuItem.slug}}')\" class=\"MainMenuDrawer-Item-Subcategory\">{{menuItem.subcategory_title}}</a>
+                <a  onclick=\"goTo('/category/{{record.slug}}/#{{menuItem.slug}}')\" class=\"MainMenuDrawer-Item-Subcategory\">{{menuItem.subcategory_title}}<sup> 3</sup></a>
                 {% endfor %}
             </div>
         </div>
@@ -384,6 +430,13 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 <style>
 
 
+    sup {
+        font-weight: 500;
+        font-size: 22px;
+        top: -1em;
+    }
+
+
     .SubNavigationMenu {
         width: 100vw;
         padding: 0 50px;
@@ -392,7 +445,7 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         bottom: 0;
         display: flex;
         justify-content: space-between;
-        z-index: 950;
+        z-index: 900;
     }
 
     .SubNavigationMenu.SubNavigationMenu-Fixed {
@@ -409,24 +462,35 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
     }
 
     a.SubNavigationMenu-LanguageItem {
-        color: #fff;
+        color: #ffffff82;
         text-decoration: none;
         font-weight: 600;
+        font-size: 20px;
+        margin-right: 10px;
+        transition-duration: 500ms;
+    }
+
+    a.SubNavigationMenu-LanguageItem:hover {
+        color: #ffffff;
     }
 
 
     a.SubNavigationMenu-LanguageItem.LanguageItem-active {
-        color: #ffffff82;
+        color: #ffffff;
         text-decoration: none;
     }
 
     a.SubNavigationMenu-LanguageItem.LanguageItem-dark {
-        color: #000;
+        color: #00000082;
         text-decoration: none;
     }
 
+    a.SubNavigationMenu-LanguageItem.LanguageItem-dark:hover {
+        color: #000000;
+    }
+
     a.SubNavigationMenu-LanguageItem.LanguageItem-dark.LanguageItem-active {
-        color: #00000082;
+        color: #000000;
         text-decoration: none;
     }
 
@@ -447,8 +511,12 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         font-size: 40px;
         font-weight: 500;
         text-transform: uppercase;
-
     }
+
+    a.MainMenuDrawer-Item-Subcategory:hover {
+        color: #EA028A;
+    }
+
     .MainMenuDrawer-Item-Subcategories{
         display: flex;
         flex-direction: column;
@@ -487,7 +555,18 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
     }
 
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 767px) {
+
+        sup {
+            font-size: 18px;
+            top: -0.7em;
+        }
+
+        .SubNavigationMenu {
+            padding: 30px;
+            height: 90px;
+        }
+
         .jsDesktop {
             display: none;
         }
@@ -503,6 +582,7 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
             font-size: 25px;
             font-weight: 500;
             text-transform: uppercase;
+            padding-bottom: 8px;
 
         }
         .MainMenuDrawer-Items{
@@ -545,9 +625,18 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         menuCategoryList[i].addEventListener(\"click\",
             function (e){
 
+            if (e.toElement.parentNode.classList.contains('subCategoryIsActive')) {
+                let subCategoriesMenu =  document.querySelector('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories')
+
+                let subCategoryMenu = document.querySelectorAll('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories > .MainMenuDrawer-Item-Subcategory')
+
+                let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length
+                subCategoriesMenu.style.height = '0'
+                e.toElement.parentNode.classList.remove('subCategoryIsActive')
+            } else {
                 clearActiveSubmenu()
 
-                e.toElement.parentNode.classList.toggle('subCategoryIsActive')
+                e.toElement.parentNode.classList.add('subCategoryIsActive')
 
                 let subCategoriesMenu =  document.querySelector('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories')
 
@@ -555,6 +644,9 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 
                 let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length
                 subCategoriesMenu.style.height = subCategoryHeight + 'px'
+            }
+
+
             }
         )
     }

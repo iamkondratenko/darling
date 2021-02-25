@@ -63,7 +63,7 @@ class __TwigTemplate_9ffff23877adc34d4cd78a75876c86db27c37afcdcf880c8414e1aa17cc
     <div class=\"MainHeader-Content\">
         <div class=\"MainLogo MainLogoFixed\">
             <a class=\"LogoLink\" href=\"/\">
-                <svg width=\"187\" class=\"LogoSvgFixed\" height=\"30\" viewBox=\"0 0 187 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+                <svg width=\"131\" class=\"LogoSvgFixed\" height=\"21\" viewBox=\"0 0 187 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
                     <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.5781 23.3445C14.0901 23.3445 15.8653 21.2676 15.8653 18.9165V10.0613C15.8653 7.71016 14.0901 5.63324 10.5781 5.63324H6.25503V23.3445H10.5781ZM0.774414 0.773438H10.5779C17.1775 0.773438 21.3458 4.14328 21.3458 10.217V18.7589C21.3458 24.8322 17.1775 28.202 10.5779 28.202H0.774414V0.773438Z\" fill=\"#222\"/>
                     <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M65.3227 13.196C67.7114 13.196 69.0982 12.1768 69.0982 9.39486C69.0982 6.65195 67.7114 5.63324 65.3227 5.63324H60.1222V13.196H65.3227ZM54.6523 0.773438H66.3246C71.8335 0.773438 74.6842 3.98665 74.6842 9.31584C74.6842 13.195 72.9123 15.8984 70.254 17.2309L75.2238 26.3607V28.202H69.9072L64.2831 17.8968H60.1225V28.202H54.6523V0.773438Z\" fill=\"#222\"/>
                     <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M81.1016 0.773438H86.8221V23.3436H99.7138V28.202H81.1016V0.773438Z\" fill=\"#222\"/>
@@ -103,16 +103,38 @@ class __TwigTemplate_9ffff23877adc34d4cd78a75876c86db27c37afcdcf880c8414e1aa17cc
 
 
 <script>
+
+
+    var previousScrollState = 0
+
+    function compareScrollStateState(currentScrollState) {
+
+        if (currentScrollState > 0) {
+            if (previousScrollState < currentScrollState) {
+
+                previousScrollState = currentScrollState
+                return 'down'
+            } else {
+                previousScrollState = currentScrollState
+                return 'up'
+            }
+        }
+
+
+    }
+
+
     var fixedMenuNode = document.querySelector('.MainHeaderFixed')
 
-    window.addEventListener('scroll', function (){
-        getBodyScrollTop()
+    window.addEventListener('scroll', function (e){
+        getBodyScrollTop(e)
     })
-    function getBodyScrollTop() {
+    function getBodyScrollTop(e) {
         var scrolled = self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop)
-        if (scrolled > window.innerHeight) {
+        if (scrolled > 100) {
             fixedMenuNode.classList.add('jsScrolled')
-        } else {
+        }
+        else {
             fixedMenuNode.classList.remove('jsScrolled')
         }
     }
@@ -127,15 +149,31 @@ class __TwigTemplate_9ffff23877adc34d4cd78a75876c86db27c37afcdcf880c8414e1aa17cc
         align-items: center;
     }
 
+    .MainHeaderFixed-Subcategory.js-OpenedMenu {
+        display: none;
+    }
+
+    .MainLogo.MainLogoFixed.js-OpenedMenu {
+        display: flex;
+    }
+
     a.MainHeaderFixed-Subcategory-Item {
         font-size: 30px;
+        font-weight: 500;
         color: #222;
         text-transform: uppercase;
         text-decoration: none;
         margin: 0 25px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1919px) {
+        a.MainHeaderFixed-Subcategory-Item {
+            font-size: 25px;
+        }
+    }
+
+
+    @media screen and (max-width: 767px) {
         .MainLogo.MainLogoFixed {
             display: none;
         }
@@ -171,7 +209,7 @@ class __TwigTemplate_9ffff23877adc34d4cd78a75876c86db27c37afcdcf880c8414e1aa17cc
     <div class=\"MainHeader-Content\">
         <div class=\"MainLogo MainLogoFixed\">
             <a class=\"LogoLink\" href=\"/\">
-                <svg width=\"187\" class=\"LogoSvgFixed\" height=\"30\" viewBox=\"0 0 187 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+                <svg width=\"131\" class=\"LogoSvgFixed\" height=\"21\" viewBox=\"0 0 187 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
                     <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.5781 23.3445C14.0901 23.3445 15.8653 21.2676 15.8653 18.9165V10.0613C15.8653 7.71016 14.0901 5.63324 10.5781 5.63324H6.25503V23.3445H10.5781ZM0.774414 0.773438H10.5779C17.1775 0.773438 21.3458 4.14328 21.3458 10.217V18.7589C21.3458 24.8322 17.1775 28.202 10.5779 28.202H0.774414V0.773438Z\" fill=\"#222\"/>
                     <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M65.3227 13.196C67.7114 13.196 69.0982 12.1768 69.0982 9.39486C69.0982 6.65195 67.7114 5.63324 65.3227 5.63324H60.1222V13.196H65.3227ZM54.6523 0.773438H66.3246C71.8335 0.773438 74.6842 3.98665 74.6842 9.31584C74.6842 13.195 72.9123 15.8984 70.254 17.2309L75.2238 26.3607V28.202H69.9072L64.2831 17.8968H60.1225V28.202H54.6523V0.773438Z\" fill=\"#222\"/>
                     <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M81.1016 0.773438H86.8221V23.3436H99.7138V28.202H81.1016V0.773438Z\" fill=\"#222\"/>
@@ -197,16 +235,38 @@ class __TwigTemplate_9ffff23877adc34d4cd78a75876c86db27c37afcdcf880c8414e1aa17cc
 
 
 <script>
+
+
+    var previousScrollState = 0
+
+    function compareScrollStateState(currentScrollState) {
+
+        if (currentScrollState > 0) {
+            if (previousScrollState < currentScrollState) {
+
+                previousScrollState = currentScrollState
+                return 'down'
+            } else {
+                previousScrollState = currentScrollState
+                return 'up'
+            }
+        }
+
+
+    }
+
+
     var fixedMenuNode = document.querySelector('.MainHeaderFixed')
 
-    window.addEventListener('scroll', function (){
-        getBodyScrollTop()
+    window.addEventListener('scroll', function (e){
+        getBodyScrollTop(e)
     })
-    function getBodyScrollTop() {
+    function getBodyScrollTop(e) {
         var scrolled = self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop)
-        if (scrolled > window.innerHeight) {
+        if (scrolled > 100) {
             fixedMenuNode.classList.add('jsScrolled')
-        } else {
+        }
+        else {
             fixedMenuNode.classList.remove('jsScrolled')
         }
     }
@@ -221,15 +281,31 @@ class __TwigTemplate_9ffff23877adc34d4cd78a75876c86db27c37afcdcf880c8414e1aa17cc
         align-items: center;
     }
 
+    .MainHeaderFixed-Subcategory.js-OpenedMenu {
+        display: none;
+    }
+
+    .MainLogo.MainLogoFixed.js-OpenedMenu {
+        display: flex;
+    }
+
     a.MainHeaderFixed-Subcategory-Item {
         font-size: 30px;
+        font-weight: 500;
         color: #222;
         text-transform: uppercase;
         text-decoration: none;
         margin: 0 25px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1919px) {
+        a.MainHeaderFixed-Subcategory-Item {
+            font-size: 25px;
+        }
+    }
+
+
+    @media screen and (max-width: 767px) {
         .MainLogo.MainLogoFixed {
             display: none;
         }

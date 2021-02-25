@@ -67,7 +67,7 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/logo.svg");
         echo "\">-->
         <a class=\"LogoLink\" href=\"/\">
-            <svg width=\"187\" class=\"LogoSvg\" height=\"30\" viewBox=\"0 0 187 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+            <svg class=\"LogoSvg\" viewBox=\"0 0 187 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
                 <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.5781 23.3445C14.0901 23.3445 15.8653 21.2676 15.8653 18.9165V10.0613C15.8653 7.71016 14.0901 5.63324 10.5781 5.63324H6.25503V23.3445H10.5781ZM0.774414 0.773438H10.5779C17.1775 0.773438 21.3458 4.14328 21.3458 10.217V18.7589C21.3458 24.8322 17.1775 28.202 10.5779 28.202H0.774414V0.773438Z\" fill=\"white\"/>
                 <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M65.3227 13.196C67.7114 13.196 69.0982 12.1768 69.0982 9.39486C69.0982 6.65195 67.7114 5.63324 65.3227 5.63324H60.1222V13.196H65.3227ZM54.6523 0.773438H66.3246C71.8335 0.773438 74.6842 3.98665 74.6842 9.31584C74.6842 13.195 72.9123 15.8984 70.254 17.2309L75.2238 26.3607V28.202H69.9072L64.2831 17.8968H60.1225V28.202H54.6523V0.773438Z\" fill=\"white\"/>
                 <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M81.1016 0.773438H86.8221V23.3436H99.7138V28.202H81.1016V0.773438Z\" fill=\"white\"/>
@@ -85,32 +85,25 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
     </div>
 
 </header>
-<div class=\"SubNavigationMenu\">
-    <div class=\"SubNavigationMenu-ChangeLanguage jsDesktop\">
-        <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\">ENG</a>
-        <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\">RUS</a>
-    </div>
-    <as class=\"SubNavigationMenu-ScrollDown\" onclick=\"scrollDown()\">
-        <svg width=\"27\" height=\"14\" viewBox=\"0 0 27 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
-            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z\" fill=\"white\"/>
-        </svg>
 
-    </as>
-    <div class=\"SubNavigationMenu-ChangeLanguage\">
-        <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\"></a>
-        <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\"></a>
-    </div>
-</div>
 
 
 
 
 <style>
 
-    .SubNavigationMenu-ScrollDown {
-        display: none;
-        cursor: pointer;
+
+    .SubNavigationMenu-ScrollDown-mobile {
+        opacity: 0;
     }
+
+
+    .LogoSvg {
+        width: 187px;
+        height: 30px;
+    }
+
+
 
     a.LogoLink {
         margin: 0;
@@ -165,13 +158,18 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
     }
 
     .MainMenu-Icon.MainMenu-Icon-Fixed {
-        width: 30px;
-        height: 22px;
+        height: 16px;
+        width: 25px;
         cursor: pointer;
     }
 
+    .MainMenu-Icon:hover::before,
+    .MainMenu-Icon:hover::after{
+        opacity: 0.5;
+    }
+
     .MainMenu-Icon.MainMenu-Icon-Fixed::before {
-        width: 30px;
+        width: 25px;
         height: 4px;
         content: '';
         background-color: #222;
@@ -180,7 +178,7 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
     }
 
     .MainMenu-Icon.MainMenu-Icon-Fixed::after {
-        width: 30px;
+        width: 25px;
         height: 4px;
         content: '';
         background-color: #222;
@@ -193,7 +191,7 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         background-color: black;
         transform: rotate(
                 45deg
-        ) translate(4px, 10px);
+        ) translate(2px, 9px);
         transition-duration: 400ms;
 
     }
@@ -201,7 +199,7 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         background-color: black;
         transform: rotate(
                 -45deg
-        ) translate(3px, -9px);
+        ) translate(2px, -9px);
         transition-duration: 400ms;
     }
 
@@ -268,8 +266,105 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         fill: #EA028A !important;
     }
 
+    @media screen and (max-width: 767px) {
+        .MainMenu-Icon:hover::before,
+        .MainMenu-Icon:hover::after {
+            opacity: 1;
+        }
+    }
 
-    @media screen and (max-width: 375px){
+    @media screen and (max-width: 1365px){
+        .SubNavigationMenu-ScrollDown-mobile {
+            color: #FFFFFF;
+            opacity: 1;
+            line-height: 26px;
+            text-align: center;
+            letter-spacing: 1.25px;
+            text-transform: uppercase;
+        }
+    }
+
+
+
+
+
+    @media screen and (max-width: 767px){
+
+
+
+        .MainMenu-Icon {
+            width: 24px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .MainMenu-Icon::before {
+            width: 24px;
+            height: 4px;
+            content: '';
+            background-color: #fff;
+            position: absolute;
+            transition-duration: 400ms;
+        }
+
+        .MainMenu-Icon::after {
+            width: 24px;
+            height: 4px;
+            content: '';
+            background-color: #fff;
+            position: absolute;
+            top: 40px;
+            transition-duration: 400ms;
+        }
+
+        .MainMenu-Icon.js-menuIsOpened::before {
+            background-color: black;
+            transform: rotate(
+                    45deg
+            ) translate(2px, 7px);
+            transition-duration: 400ms;
+
+        }
+        .MainMenu-Icon.js-menuIsOpened::after {
+            background-color: black;
+            transform: rotate(
+                    -45deg
+            ) translate(1px, -7px);
+            transition-duration: 400ms;
+        }
+
+
+        header.MainHeader {
+            height: 72px;
+        }
+
+        .LogoSvg {
+            height: 21px;
+            width: 140px;
+
+        }
+
+        .MainMenu-Icon.MainMenu-Icon-Fixed::after {
+            top: 30px;
+        }
+
+        .MainMenu-Icon.MainMenu-Icon-Fixed.js-menuIsOpened::before {
+            background-color: black;
+            transform: rotate(
+                    45deg
+            ) translate(0px, 7px);
+            transition-duration: 400ms;
+        }
+
+        header.MainHeaderFixed {
+            height: 50px;
+            top: -70px;
+        }
+
+        .SubNavigationMenu-ScrollDown {
+            display: none;
+            cursor: pointer;
+        }
         .MainMenu {
             padding: 0;
         }
@@ -287,6 +382,7 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
 <script>
 
 
+
     function scrollDown() {
         window.scroll({
             top: window.innerHeight,
@@ -296,12 +392,22 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
 
 
     function openMenuHandler() {
+
+        let bodyNode = document.querySelector('body')
+
         let menuButton = document.querySelectorAll('[data-openMenu=\"menu-icon\"]')[0];
         let menuButtonFixed = document.querySelectorAll('[data-openMenu=\"menu-icon\"]')[1];
 
         let logo = document.querySelector('.LogoSvg')
         let menuDrawer = document.querySelector('.MainMenuDrawer')
+        let menuItems = document.querySelector('.MainHeaderFixed-Subcategory')
+        let logoHolder = document.querySelector('.MainLogo.MainLogoFixed')
 
+
+
+        logoHolder.classList.toggle('js-OpenedMenu')
+        menuItems.classList.toggle('js-OpenedMenu')
+        bodyNode.classList.toggle('js-bodyMenuIsOpened')
         menuButton.classList.toggle('js-menuIsOpened')
         menuButtonFixed.classList.toggle('js-menuIsOpened')
         logo.classList.toggle('js-menuIsOpened')
@@ -338,7 +444,7 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         <div class=\"MainLogo\">
 <!--            <img src=\"{{ 'assets/images/logo.svg' | theme }}\">-->
         <a class=\"LogoLink\" href=\"/\">
-            <svg width=\"187\" class=\"LogoSvg\" height=\"30\" viewBox=\"0 0 187 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+            <svg class=\"LogoSvg\" viewBox=\"0 0 187 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
                 <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.5781 23.3445C14.0901 23.3445 15.8653 21.2676 15.8653 18.9165V10.0613C15.8653 7.71016 14.0901 5.63324 10.5781 5.63324H6.25503V23.3445H10.5781ZM0.774414 0.773438H10.5779C17.1775 0.773438 21.3458 4.14328 21.3458 10.217V18.7589C21.3458 24.8322 17.1775 28.202 10.5779 28.202H0.774414V0.773438Z\" fill=\"white\"/>
                 <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M65.3227 13.196C67.7114 13.196 69.0982 12.1768 69.0982 9.39486C69.0982 6.65195 67.7114 5.63324 65.3227 5.63324H60.1222V13.196H65.3227ZM54.6523 0.773438H66.3246C71.8335 0.773438 74.6842 3.98665 74.6842 9.31584C74.6842 13.195 72.9123 15.8984 70.254 17.2309L75.2238 26.3607V28.202H69.9072L64.2831 17.8968H60.1225V28.202H54.6523V0.773438Z\" fill=\"white\"/>
                 <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M81.1016 0.773438H86.8221V23.3436H99.7138V28.202H81.1016V0.773438Z\" fill=\"white\"/>
@@ -356,32 +462,25 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
     </div>
 
 </header>
-<div class=\"SubNavigationMenu\">
-    <div class=\"SubNavigationMenu-ChangeLanguage jsDesktop\">
-        <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\">ENG</a>
-        <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\">RUS</a>
-    </div>
-    <as class=\"SubNavigationMenu-ScrollDown\" onclick=\"scrollDown()\">
-        <svg width=\"27\" height=\"14\" viewBox=\"0 0 27 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
-            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z\" fill=\"white\"/>
-        </svg>
 
-    </as>
-    <div class=\"SubNavigationMenu-ChangeLanguage\">
-        <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\"></a>
-        <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\"></a>
-    </div>
-</div>
 
 
 
 
 <style>
 
-    .SubNavigationMenu-ScrollDown {
-        display: none;
-        cursor: pointer;
+
+    .SubNavigationMenu-ScrollDown-mobile {
+        opacity: 0;
     }
+
+
+    .LogoSvg {
+        width: 187px;
+        height: 30px;
+    }
+
+
 
     a.LogoLink {
         margin: 0;
@@ -436,13 +535,18 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
     }
 
     .MainMenu-Icon.MainMenu-Icon-Fixed {
-        width: 30px;
-        height: 22px;
+        height: 16px;
+        width: 25px;
         cursor: pointer;
     }
 
+    .MainMenu-Icon:hover::before,
+    .MainMenu-Icon:hover::after{
+        opacity: 0.5;
+    }
+
     .MainMenu-Icon.MainMenu-Icon-Fixed::before {
-        width: 30px;
+        width: 25px;
         height: 4px;
         content: '';
         background-color: #222;
@@ -451,7 +555,7 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
     }
 
     .MainMenu-Icon.MainMenu-Icon-Fixed::after {
-        width: 30px;
+        width: 25px;
         height: 4px;
         content: '';
         background-color: #222;
@@ -464,7 +568,7 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         background-color: black;
         transform: rotate(
                 45deg
-        ) translate(4px, 10px);
+        ) translate(2px, 9px);
         transition-duration: 400ms;
 
     }
@@ -472,7 +576,7 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         background-color: black;
         transform: rotate(
                 -45deg
-        ) translate(3px, -9px);
+        ) translate(2px, -9px);
         transition-duration: 400ms;
     }
 
@@ -539,8 +643,105 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         fill: #EA028A !important;
     }
 
+    @media screen and (max-width: 767px) {
+        .MainMenu-Icon:hover::before,
+        .MainMenu-Icon:hover::after {
+            opacity: 1;
+        }
+    }
 
-    @media screen and (max-width: 375px){
+    @media screen and (max-width: 1365px){
+        .SubNavigationMenu-ScrollDown-mobile {
+            color: #FFFFFF;
+            opacity: 1;
+            line-height: 26px;
+            text-align: center;
+            letter-spacing: 1.25px;
+            text-transform: uppercase;
+        }
+    }
+
+
+
+
+
+    @media screen and (max-width: 767px){
+
+
+
+        .MainMenu-Icon {
+            width: 24px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .MainMenu-Icon::before {
+            width: 24px;
+            height: 4px;
+            content: '';
+            background-color: #fff;
+            position: absolute;
+            transition-duration: 400ms;
+        }
+
+        .MainMenu-Icon::after {
+            width: 24px;
+            height: 4px;
+            content: '';
+            background-color: #fff;
+            position: absolute;
+            top: 40px;
+            transition-duration: 400ms;
+        }
+
+        .MainMenu-Icon.js-menuIsOpened::before {
+            background-color: black;
+            transform: rotate(
+                    45deg
+            ) translate(2px, 7px);
+            transition-duration: 400ms;
+
+        }
+        .MainMenu-Icon.js-menuIsOpened::after {
+            background-color: black;
+            transform: rotate(
+                    -45deg
+            ) translate(1px, -7px);
+            transition-duration: 400ms;
+        }
+
+
+        header.MainHeader {
+            height: 72px;
+        }
+
+        .LogoSvg {
+            height: 21px;
+            width: 140px;
+
+        }
+
+        .MainMenu-Icon.MainMenu-Icon-Fixed::after {
+            top: 30px;
+        }
+
+        .MainMenu-Icon.MainMenu-Icon-Fixed.js-menuIsOpened::before {
+            background-color: black;
+            transform: rotate(
+                    45deg
+            ) translate(0px, 7px);
+            transition-duration: 400ms;
+        }
+
+        header.MainHeaderFixed {
+            height: 50px;
+            top: -70px;
+        }
+
+        .SubNavigationMenu-ScrollDown {
+            display: none;
+            cursor: pointer;
+        }
         .MainMenu {
             padding: 0;
         }
@@ -558,6 +759,7 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
 <script>
 
 
+
     function scrollDown() {
         window.scroll({
             top: window.innerHeight,
@@ -567,12 +769,22 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
 
 
     function openMenuHandler() {
+
+        let bodyNode = document.querySelector('body')
+
         let menuButton = document.querySelectorAll('[data-openMenu=\"menu-icon\"]')[0];
         let menuButtonFixed = document.querySelectorAll('[data-openMenu=\"menu-icon\"]')[1];
 
         let logo = document.querySelector('.LogoSvg')
         let menuDrawer = document.querySelector('.MainMenuDrawer')
+        let menuItems = document.querySelector('.MainHeaderFixed-Subcategory')
+        let logoHolder = document.querySelector('.MainLogo.MainLogoFixed')
 
+
+
+        logoHolder.classList.toggle('js-OpenedMenu')
+        menuItems.classList.toggle('js-OpenedMenu')
+        bodyNode.classList.toggle('js-bodyMenuIsOpened')
         menuButton.classList.toggle('js-menuIsOpened')
         menuButtonFixed.classList.toggle('js-menuIsOpened')
         logo.classList.toggle('js-menuIsOpened')

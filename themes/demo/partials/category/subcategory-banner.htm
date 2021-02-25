@@ -1,5 +1,5 @@
 
-<div class="SubcategoryBanner">
+<div class="SubcategoryBanner" id="{{subcategorySlug}}">
     <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainSubcategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat;">
         <p class="SubcategoryBanner-SubTitle">
             {% for description in categorySubtitle %}
@@ -62,8 +62,7 @@
         max-width: 900px;
         display: inline-block;
     }
-
-    @media screen and (max-width: 1080px) and (min-width: 376px) {
+    @media screen and (max-width: 1365px) {
 
         .SubcategoryBanner {
             width: 100%;
@@ -91,7 +90,7 @@
         }
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 767px) {
         .SubcategoryBanner-Content-Container,
         .SubcategoryBanner-Content-ContainerTablet{
             display: none !important;

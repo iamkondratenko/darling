@@ -30,13 +30,13 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
         $tags = array("for" => 4, "if" => 5);
-        $filters = array("media" => 2, "escape" => 5);
+        $filters = array("escape" => 1, "media" => 2);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
                 ['for', 'if'],
-                ['media', 'escape'],
+                ['escape', 'media'],
                 []
             );
         } catch (SecurityError $e) {
@@ -59,7 +59,9 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
     {
         $macros = $this->macros;
         // line 1
-        echo "<div class=\"SubcategoryBanner\">
+        echo "<div class=\"SubcategoryBanner\" id=\"";
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["subcategorySlug"] ?? null), 1, $this->source), "html", null, true);
+        echo "\">
     <div class=\"SubcategoryBanner-Content-Container\" style=\"background: url(";
         // line 2
         echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(($context["mainSubcategoryBackground"] ?? null), 2, $this->source));
@@ -178,8 +180,7 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
         max-width: 900px;
         display: inline-block;
     }
-
-    @media screen and (max-width: 1080px) and (min-width: 376px) {
+    @media screen and (max-width: 1365px) {
 
         .SubcategoryBanner {
             width: 100%;
@@ -207,7 +208,7 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
         }
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 767px) {
         .SubcategoryBanner-Content-Container,
         .SubcategoryBanner-Content-ContainerTablet{
             display: none !important;
@@ -265,12 +266,12 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
 
     public function getDebugInfo()
     {
-        return array (  139 => 22,  130 => 20,  126 => 19,  121 => 17,  117 => 16,  113 => 14,  100 => 12,  96 => 11,  91 => 9,  87 => 7,  74 => 5,  70 => 4,  65 => 2,  62 => 1,);
+        return array (  141 => 22,  132 => 20,  128 => 19,  123 => 17,  119 => 16,  115 => 14,  102 => 12,  98 => 11,  93 => 9,  89 => 7,  76 => 5,  72 => 4,  67 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"SubcategoryBanner\">
+        return new Source("<div class=\"SubcategoryBanner\" id=\"{{subcategorySlug}}\">
     <div class=\"SubcategoryBanner-Content-Container\" style=\"background: url({{ mainSubcategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat;\">
         <p class=\"SubcategoryBanner-SubTitle\">
             {% for description in categorySubtitle %}
@@ -333,8 +334,7 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
         max-width: 900px;
         display: inline-block;
     }
-
-    @media screen and (max-width: 1080px) and (min-width: 376px) {
+    @media screen and (max-width: 1365px) {
 
         .SubcategoryBanner {
             width: 100%;
@@ -362,7 +362,7 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
         }
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 767px) {
         .SubcategoryBanner-Content-Container,
         .SubcategoryBanner-Content-ContainerTablet{
             display: none !important;

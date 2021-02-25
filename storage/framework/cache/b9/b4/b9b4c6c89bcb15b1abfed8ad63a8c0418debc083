@@ -1,4 +1,4 @@
-1614153422a:1:{s:15:"site/footer.htm";a:5:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:2150:"<div id="footer">
+1614214708a:1:{s:15:"site/footer.htm";a:5:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:2151:"<div id="footer">
     <div class="social_networks">
         <div class="social_networks_title">let’s be friends</div>
         <div class="social_networks_links">
@@ -57,7 +57,7 @@
         justify-content: space-between;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1080px) {
 
         #footer {
             flex-direction: column;
@@ -88,7 +88,7 @@
         }
 
     }
-</style>";s:5:"mtime";i:1614080367;s:6:"markup";s:2150:"<div id="footer">
+</style>";s:5:"mtime";i:1614208855;s:6:"markup";s:2151:"<div id="footer">
     <div class="social_networks">
         <div class="social_networks_title">let’s be friends</div>
         <div class="social_networks_links">
@@ -147,7 +147,7 @@
         justify-content: space-between;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1080px) {
 
         #footer {
             flex-direction: column;
