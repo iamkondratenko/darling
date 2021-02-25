@@ -1,4 +1,4 @@
-1614153422a:1:{s:20:"site/menu-drawer.htm";a:6:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:6746:"[builderList mainMenuItem]
+1614214708a:1:{s:20:"site/menu-drawer.htm";a:6:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:8131:"[builderList mainMenuItem]
 modelClass = "Iamk\Category\Models\Category"
 scope = "-"
 scopeValue = "{{ :scope }}"
@@ -13,8 +13,8 @@ sortDirection = "desc"
 <div class="MainMenuDrawer">
     <div class="SubNavigationMenu SubNavigationMenu-Fixed">
         <div class="SubNavigationMenu-ChangeLanguage">
-            <a class="SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active" href="#">ENG</a>
-            <a class="SubNavigationMenu-LanguageItem LanguageItem-dark" href="#">RUS</a>
+            <a href="#" class="SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active" onclick="console.log('sdfsd')">ENG</a>
+            <a href="#" class="SubNavigationMenu-LanguageItem LanguageItem-dark" onclick="console.log('sdfsd')">RUS</a>
         </div>
         <div class="SubNavigationMenu-ScrollDown">
             <svg width="27" height="14" viewBox="0 0 27 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +23,7 @@ sortDirection = "desc"
 
         </div>
         <div class="SubNavigationMenu-ChangeLanguage">
-            <a class="SubNavigationMenu-LanguageItem LanguageItem-active" href="#"></a>
+            <a class="SubNavigationMenu-LanguageItem" href="#"></a>
             <a class="SubNavigationMenu-LanguageItem" href="#"></a>
         </div>
     </div>
@@ -39,9 +39,9 @@ sortDirection = "desc"
         <div class="MainMenuDrawer-Item">
             <div class="MainMenuDrawer-Item-Category">{{record.title}}</div>
             <div class="MainMenuDrawer-Item-Subcategories">
-                <a  onclick="goTo('/category/{{record.slug}}')" class="MainMenuDrawer-Item-Subcategory">All products</a>
+                <a  onclick="goTo('/category/{{record.slug}}')" class="MainMenuDrawer-Item-Subcategory">All products<sup> 10</sup></a>
                 {% for menuItem in record.subcategory %} 
-                <a  onclick="goTo('/category/{{record.slug}}/#{{menuItem.slug}}')" class="MainMenuDrawer-Item-Subcategory">{{menuItem.subcategory_title}}</a>
+                <a  onclick="goTo('/category/{{record.slug}}/#{{menuItem.slug}}')" class="MainMenuDrawer-Item-Subcategory">{{menuItem.subcategory_title}}<sup> 3</sup></a>
                 {% endfor %}
             </div>
         </div>
@@ -55,6 +55,13 @@ sortDirection = "desc"
 <style>
 
 
+    sup {
+        font-weight: 500;
+        font-size: 22px;
+        top: -1em;
+    }
+
+
     .SubNavigationMenu {
         width: 100vw;
         padding: 0 50px;
@@ -63,7 +70,7 @@ sortDirection = "desc"
         bottom: 0;
         display: flex;
         justify-content: space-between;
-        z-index: 950;
+        z-index: 900;
     }
 
     .SubNavigationMenu.SubNavigationMenu-Fixed {
@@ -80,24 +87,35 @@ sortDirection = "desc"
     }
 
     a.SubNavigationMenu-LanguageItem {
-        color: #fff;
+        color: #ffffff82;
         text-decoration: none;
         font-weight: 600;
+        font-size: 20px;
+        margin-right: 10px;
+        transition-duration: 500ms;
+    }
+
+    a.SubNavigationMenu-LanguageItem:hover {
+        color: #ffffff;
     }
 
 
     a.SubNavigationMenu-LanguageItem.LanguageItem-active {
-        color: #ffffff82;
+        color: #ffffff;
         text-decoration: none;
     }
 
     a.SubNavigationMenu-LanguageItem.LanguageItem-dark {
-        color: #000;
+        color: #00000082;
         text-decoration: none;
     }
 
+    a.SubNavigationMenu-LanguageItem.LanguageItem-dark:hover {
+        color: #000000;
+    }
+
     a.SubNavigationMenu-LanguageItem.LanguageItem-dark.LanguageItem-active {
-        color: #00000082;
+        color: #000000;
         text-decoration: none;
     }
 
@@ -118,8 +136,12 @@ sortDirection = "desc"
         font-size: 40px;
         font-weight: 500;
         text-transform: uppercase;
-
     }
+
+    a.MainMenuDrawer-Item-Subcategory:hover {
+        color: #EA028A;
+    }
+
     .MainMenuDrawer-Item-Subcategories{
         display: flex;
         flex-direction: column;
@@ -158,7 +180,18 @@ sortDirection = "desc"
     }
 
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 767px) {
+
+        sup {
+            font-size: 18px;
+            top: -0.7em;
+        }
+
+        .SubNavigationMenu {
+            padding: 30px;
+            height: 90px;
+        }
+
         .jsDesktop {
             display: none;
         }
@@ -174,6 +207,7 @@ sortDirection = "desc"
             font-size: 25px;
             font-weight: 500;
             text-transform: uppercase;
+            padding-bottom: 8px;
 
         }
         .MainMenuDrawer-Items{
@@ -216,9 +250,18 @@ sortDirection = "desc"
         menuCategoryList[i].addEventListener("click",
             function (e){
 
+            if (e.toElement.parentNode.classList.contains('subCategoryIsActive')) {
+                let subCategoriesMenu =  document.querySelector('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories')
+
+                let subCategoryMenu = document.querySelectorAll('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories > .MainMenuDrawer-Item-Subcategory')
+
+                let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length
+                subCategoriesMenu.style.height = '0'
+                e.toElement.parentNode.classList.remove('subCategoryIsActive')
+            } else {
                 clearActiveSubmenu()
 
-                e.toElement.parentNode.classList.toggle('subCategoryIsActive')
+                e.toElement.parentNode.classList.add('subCategoryIsActive')
 
                 let subCategoriesMenu =  document.querySelector('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories')
 
@@ -227,13 +270,16 @@ sortDirection = "desc"
                 let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length
                 subCategoriesMenu.style.height = subCategoryHeight + 'px'
             }
+
+
+            }
         )
     }
-</script>";s:5:"mtime";i:1614089748;s:6:"markup";s:6447:"<div class="MainMenuDrawer">
+</script>";s:5:"mtime";i:1614208661;s:6:"markup";s:7832:"<div class="MainMenuDrawer">
     <div class="SubNavigationMenu SubNavigationMenu-Fixed">
         <div class="SubNavigationMenu-ChangeLanguage">
-            <a class="SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active" href="#">ENG</a>
-            <a class="SubNavigationMenu-LanguageItem LanguageItem-dark" href="#">RUS</a>
+            <a href="#" class="SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active" onclick="console.log('sdfsd')">ENG</a>
+            <a href="#" class="SubNavigationMenu-LanguageItem LanguageItem-dark" onclick="console.log('sdfsd')">RUS</a>
         </div>
         <div class="SubNavigationMenu-ScrollDown">
             <svg width="27" height="14" viewBox="0 0 27 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -242,7 +288,7 @@ sortDirection = "desc"
 
         </div>
         <div class="SubNavigationMenu-ChangeLanguage">
-            <a class="SubNavigationMenu-LanguageItem LanguageItem-active" href="#"></a>
+            <a class="SubNavigationMenu-LanguageItem" href="#"></a>
             <a class="SubNavigationMenu-LanguageItem" href="#"></a>
         </div>
     </div>
@@ -258,9 +304,9 @@ sortDirection = "desc"
         <div class="MainMenuDrawer-Item">
             <div class="MainMenuDrawer-Item-Category">{{record.title}}</div>
             <div class="MainMenuDrawer-Item-Subcategories">
-                <a  onclick="goTo('/category/{{record.slug}}')" class="MainMenuDrawer-Item-Subcategory">All products</a>
+                <a  onclick="goTo('/category/{{record.slug}}')" class="MainMenuDrawer-Item-Subcategory">All products<sup> 10</sup></a>
                 {% for menuItem in record.subcategory %} 
-                <a  onclick="goTo('/category/{{record.slug}}/#{{menuItem.slug}}')" class="MainMenuDrawer-Item-Subcategory">{{menuItem.subcategory_title}}</a>
+                <a  onclick="goTo('/category/{{record.slug}}/#{{menuItem.slug}}')" class="MainMenuDrawer-Item-Subcategory">{{menuItem.subcategory_title}}<sup> 3</sup></a>
                 {% endfor %}
             </div>
         </div>
@@ -274,6 +320,13 @@ sortDirection = "desc"
 <style>
 
 
+    sup {
+        font-weight: 500;
+        font-size: 22px;
+        top: -1em;
+    }
+
+
     .SubNavigationMenu {
         width: 100vw;
         padding: 0 50px;
@@ -282,7 +335,7 @@ sortDirection = "desc"
         bottom: 0;
         display: flex;
         justify-content: space-between;
-        z-index: 950;
+        z-index: 900;
     }
 
     .SubNavigationMenu.SubNavigationMenu-Fixed {
@@ -299,24 +352,35 @@ sortDirection = "desc"
     }
 
     a.SubNavigationMenu-LanguageItem {
-        color: #fff;
+        color: #ffffff82;
         text-decoration: none;
         font-weight: 600;
+        font-size: 20px;
+        margin-right: 10px;
+        transition-duration: 500ms;
+    }
+
+    a.SubNavigationMenu-LanguageItem:hover {
+        color: #ffffff;
     }
 
 
     a.SubNavigationMenu-LanguageItem.LanguageItem-active {
-        color: #ffffff82;
+        color: #ffffff;
         text-decoration: none;
     }
 
     a.SubNavigationMenu-LanguageItem.LanguageItem-dark {
-        color: #000;
+        color: #00000082;
         text-decoration: none;
     }
 
+    a.SubNavigationMenu-LanguageItem.LanguageItem-dark:hover {
+        color: #000000;
+    }
+
     a.SubNavigationMenu-LanguageItem.LanguageItem-dark.LanguageItem-active {
-        color: #00000082;
+        color: #000000;
         text-decoration: none;
     }
 
@@ -337,8 +401,12 @@ sortDirection = "desc"
         font-size: 40px;
         font-weight: 500;
         text-transform: uppercase;
-
     }
+
+    a.MainMenuDrawer-Item-Subcategory:hover {
+        color: #EA028A;
+    }
+
     .MainMenuDrawer-Item-Subcategories{
         display: flex;
         flex-direction: column;
@@ -377,7 +445,18 @@ sortDirection = "desc"
     }
 
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 767px) {
+
+        sup {
+            font-size: 18px;
+            top: -0.7em;
+        }
+
+        .SubNavigationMenu {
+            padding: 30px;
+            height: 90px;
+        }
+
         .jsDesktop {
             display: none;
         }
@@ -393,6 +472,7 @@ sortDirection = "desc"
             font-size: 25px;
             font-weight: 500;
             text-transform: uppercase;
+            padding-bottom: 8px;
 
         }
         .MainMenuDrawer-Items{
@@ -435,9 +515,18 @@ sortDirection = "desc"
         menuCategoryList[i].addEventListener("click",
             function (e){
 
+            if (e.toElement.parentNode.classList.contains('subCategoryIsActive')) {
+                let subCategoriesMenu =  document.querySelector('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories')
+
+                let subCategoryMenu = document.querySelectorAll('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories > .MainMenuDrawer-Item-Subcategory')
+
+                let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length
+                subCategoriesMenu.style.height = '0'
+                e.toElement.parentNode.classList.remove('subCategoryIsActive')
+            } else {
                 clearActiveSubmenu()
 
-                e.toElement.parentNode.classList.toggle('subCategoryIsActive')
+                e.toElement.parentNode.classList.add('subCategoryIsActive')
 
                 let subCategoriesMenu =  document.querySelector('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories')
 
@@ -445,6 +534,9 @@ sortDirection = "desc"
 
                 let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length
                 subCategoriesMenu.style.height = subCategoryHeight + 'px'
+            }
+
+
             }
         )
     }

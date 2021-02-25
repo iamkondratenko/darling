@@ -127,7 +127,7 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
     .SubcategoryListing-ItemCard-Price {
         color: #222;
         font-size: 25px;
-        font-weight: 400;
+        font-weight: 500;
     }
 
     .SubcategoryListing-ItemCard-ImageHolder {
@@ -142,7 +142,7 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
         text-decoration: none;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1365px) {
         .SubcategoryListing-ItemCard {
             width: 42%;
             text-align: center;
@@ -151,7 +151,7 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
         }
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 767px) {
         .SubcategoryListing-ItemCard {
             width: 100%;
             text-align: center;
@@ -236,7 +236,7 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
     .SubcategoryListing-ItemCard-Price {
         color: #222;
         font-size: 25px;
-        font-weight: 400;
+        font-weight: 500;
     }
 
     .SubcategoryListing-ItemCard-ImageHolder {
@@ -251,7 +251,7 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
         text-decoration: none;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1365px) {
         .SubcategoryListing-ItemCard {
             width: 42%;
             text-align: center;
@@ -260,7 +260,7 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
         }
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 767px) {
         .SubcategoryListing-ItemCard {
             width: 100%;
             text-align: center;

@@ -1,4 +1,4 @@
-1614089841a:1:{s:32:"category/subcategory-listing.htm";a:6:{s:8:"fileName";s:32:"category/subcategory-listing.htm";s:7:"content";s:2111:"[builderList subcategoryListing]
+1614214707a:1:{s:32:"category/subcategory-listing.htm";a:6:{s:8:"fileName";s:32:"category/subcategory-listing.htm";s:7:"content";s:2352:"[builderList subcategoryListing]
 modelClass = "Iamk\Productinfo\Models\ProductInfo"
 scope = "-"
 scopeValue = "{{ :scope }}"
@@ -17,7 +17,7 @@ pageNumber = "{{ :page }}"
 {% set detailsUrlParameter = subcategoryListing.detailsUrlParameter %}
 
 
-<div class="SubcategoryListing" id="{{subcategorySlug}}">
+<div class="SubcategoryListing">
     <div class="SubcategoryListing-Title">{{subcategoryTitle}}<span class="SubcategoryListing-Title-Asterisk">*</span></div>
     <div class="SubcategoryListing-Items">
 
@@ -69,7 +69,20 @@ pageNumber = "{{ :page }}"
     }
 
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1919px) {
+        .SubcategoryListing-Title {
+            font-size: 90px;
+        }
+    }
+
+    @media screen and (max-width: 1365px) {
+        .SubcategoryListing-Title {
+            font-size: 80px;
+        }
+    }
+
+
+    @media screen and (max-width: 767px) {
 
         .SubcategoryListing {
             width: 72%;
@@ -84,7 +97,7 @@ pageNumber = "{{ :page }}"
         }
     }
 
-</style>";s:5:"mtime";i:1614079857;s:6:"markup";s:1841:"{% set records = subcategoryListing.records %}
+</style>";s:5:"mtime";i:1614205472;s:6:"markup";s:2082:"{% set records = subcategoryListing.records %}
 {% set displayColumn = subcategoryListing.displayColumn %}
 {% set noRecordsMessage = subcategoryListing.noRecordsMessage %}
 {% set detailsPage = subcategoryListing.detailsPage %}
@@ -92,7 +105,7 @@ pageNumber = "{{ :page }}"
 {% set detailsUrlParameter = subcategoryListing.detailsUrlParameter %}
 
 
-<div class="SubcategoryListing" id="{{subcategorySlug}}">
+<div class="SubcategoryListing">
     <div class="SubcategoryListing-Title">{{subcategoryTitle}}<span class="SubcategoryListing-Title-Asterisk">*</span></div>
     <div class="SubcategoryListing-Items">
 
@@ -144,7 +157,20 @@ pageNumber = "{{ :page }}"
     }
 
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1919px) {
+        .SubcategoryListing-Title {
+            font-size: 90px;
+        }
+    }
+
+    @media screen and (max-width: 1365px) {
+        .SubcategoryListing-Title {
+            font-size: 80px;
+        }
+    }
+
+
+    @media screen and (max-width: 767px) {
 
         .SubcategoryListing {
             width: 72%;

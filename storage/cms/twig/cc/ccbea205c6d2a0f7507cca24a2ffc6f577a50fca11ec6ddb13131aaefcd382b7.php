@@ -30,7 +30,7 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
         $tags = array("set" => 1, "for" => 16, "if" => 17, "partial" => 18);
-        $filters = array("escape" => 9);
+        $filters = array("escape" => 10);
         $functions = array();
 
         try {
@@ -73,10 +73,7 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
         // line 7
         echo "
 
-<div class=\"SubcategoryListing\" id=\"";
-        // line 9
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["subcategorySlug"] ?? null), 9, $this->source), "html", null, true);
-        echo "\">
+<div class=\"SubcategoryListing\">
     <div class=\"SubcategoryListing-Title\">";
         // line 10
         echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["subcategoryTitle"] ?? null), 10, $this->source), "html", null, true);
@@ -157,7 +154,20 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
     }
 
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1919px) {
+        .SubcategoryListing-Title {
+            font-size: 90px;
+        }
+    }
+
+    @media screen and (max-width: 1365px) {
+        .SubcategoryListing-Title {
+            font-size: 80px;
+        }
+    }
+
+
+    @media screen and (max-width: 767px) {
 
         .SubcategoryListing {
             width: 72%;
@@ -187,7 +197,7 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
 
     public function getDebugInfo()
     {
-        return array (  122 => 23,  113 => 21,  108 => 20,  105 => 19,  99 => 18,  96 => 17,  91 => 16,  82 => 10,  78 => 9,  74 => 7,  72 => 6,  70 => 5,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
+        return array (  119 => 23,  110 => 21,  105 => 20,  102 => 19,  96 => 18,  93 => 17,  88 => 16,  79 => 10,  74 => 7,  72 => 6,  70 => 5,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -200,7 +210,7 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
 {% set detailsUrlParameter = subcategoryListing.detailsUrlParameter %}
 
 
-<div class=\"SubcategoryListing\" id=\"{{subcategorySlug}}\">
+<div class=\"SubcategoryListing\">
     <div class=\"SubcategoryListing-Title\">{{subcategoryTitle}}<span class=\"SubcategoryListing-Title-Asterisk\">*</span></div>
     <div class=\"SubcategoryListing-Items\">
 
@@ -252,7 +262,20 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
     }
 
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1919px) {
+        .SubcategoryListing-Title {
+            font-size: 90px;
+        }
+    }
+
+    @media screen and (max-width: 1365px) {
+        .SubcategoryListing-Title {
+            font-size: 80px;
+        }
+    }
+
+
+    @media screen and (max-width: 767px) {
 
         .SubcategoryListing {
             width: 72%;

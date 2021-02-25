@@ -16,6 +16,19 @@ notFoundMessage = "Record not found"
 
 {% if record %}
 
+<div class="SubNavigationMenu">
+    <div class="SubNavigationMenu-ChangeLanguage jsDesktop">
+        <a class="SubNavigationMenu-LanguageItem LanguageItem-active" href="#">ENG</a>
+        <a class="SubNavigationMenu-LanguageItem" href="#">RUS</a>
+    </div>
+    <div class="SubNavigationMenu-ScrollDown t-cover__arrow-wrapper_animated" onclick="scrollDown()">
+        <svg width="27" height="14" viewBox="0 0 27 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z" fill="white"/>
+        </svg>
+
+    </div>
+    <div class="SubNavigationMenu-ScrollDown-mobile t-cover__arrow-wrapper_animated">Scroll down</div>
+</div>
 
 
     {% partial "category/category-main-banner" categoryTitle=record.title categorySubtitle='pads / patches / masks' mainCategoryBackground=record.main_banner
@@ -30,3 +43,80 @@ mainCategoryBackgroundTablet=record.main_banner_tablet mainCategoryBackgroundMob
 {% for subcategory in record.subcategory %}
     {% partial "category/category" subcategoryTitle=subcategory.subcategory_title subcategorySlug=subcategory.slug categorySubtitle=subcategory.subcategory_description mainSubcategoryBackground=subcategory.subcategory_banner mainSubcategoryBackgroundTablet=subcategory.subcategory_banner_tabet mainSubcategoryBackgroundMobile=subcategory.subcategory_banner_mobile %}
 {% endfor %}
+
+
+<style>
+
+
+    .t-cover__arrow-wrapper_animated {
+        animation:t-arrow-bottom 1.7s infinite ease
+    }
+
+    @-webkit-keyframes t-arrow-bottom {
+        0% {
+            -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -webkit-transform: translateY(0);
+            -o-transform: translateY(0);
+            transform:translateY(0)
+        }
+
+        50% {
+            -moz-transform: translateY(-7px);
+            -ms-transform: translateY(-7px);
+            -webkit-transform: translateY(-7px);
+            -o-transform: translateY(-7px);
+            transform:translateY(-7px)
+        }
+
+        55% {
+            -moz-transform: translateY(-7px);
+            -ms-transform: translateY(-7px);
+            -webkit-transform: translateY(-7px);
+            -o-transform: translateY(-7px);
+            transform:translateY(-7px)
+        }
+
+        100% {
+            -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -webkit-transform: translateY(0);
+            -o-transform: translateY(0);
+            transform:translateY(0)
+        }
+    }
+
+    @keyframes t-arrow-bottom {
+        0% {
+            -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -webkit-transform: translateY(0);
+            -o-transform: translateY(0);
+            transform:translateY(0)
+        }
+
+        50% {
+            -moz-transform: translateY(-7px);
+            -ms-transform: translateY(-7px);
+            -webkit-transform: translateY(-7px);
+            -o-transform: translateY(-7px);
+            transform:translateY(-7px)
+        }
+
+        55% {
+            -moz-transform: translateY(-7px);
+            -ms-transform: translateY(-7px);
+            -webkit-transform: translateY(-7px);
+            -o-transform: translateY(-7px);
+            transform:translateY(-7px)
+        }
+
+        100% {
+            -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -webkit-transform: translateY(0);
+            -o-transform: translateY(0);
+            transform:translateY(0)
+        }
+    }
+</style>

@@ -543,7 +543,7 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     height: 70px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
     .dots-pic {
         height: 8px;
@@ -595,6 +595,7 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
 
     .product-section__text-block {
         width: 100%;
+        padding: 30px;
     }
     .close_icon {
         display: flex;
@@ -609,7 +610,6 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     
     </style>
 
-<script defer src=\"https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js\"></script>
 <script>
     var colorVariantNodes = document.querySelectorAll('.radio-color-picker')
     var colorSliderProducts = document.querySelectorAll('.photo-block__product-holder')
@@ -1114,7 +1114,7 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     height: 70px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
     .dots-pic {
         height: 8px;
@@ -1166,6 +1166,7 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
 
     .product-section__text-block {
         width: 100%;
+        padding: 30px;
     }
     .close_icon {
         display: flex;
@@ -1180,7 +1181,6 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     
     </style>
 
-<script defer src=\"https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js\"></script>
 <script>
     var colorVariantNodes = document.querySelectorAll('.radio-color-picker')
     var colorSliderProducts = document.querySelectorAll('.photo-block__product-holder')

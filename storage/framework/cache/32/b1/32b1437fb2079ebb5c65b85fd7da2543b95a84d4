@@ -1,4 +1,4 @@
-1614153422a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1397:"description = "Default layout"
+1614214707a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1510:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
@@ -11,8 +11,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content="OctoberCMS">
         <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
-        <link href="{{ 'assets/css/vendor.css?2d2'|theme }}" rel="stylesheet">
-        <link href="{{ 'assets/css/theme.css?213f3'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/vendor.css?25d22'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css?213325f3'|theme }}" rel="stylesheet">
         {% styles %}
     </head>
     <body>
@@ -33,15 +33,17 @@
         </footer>
 
         <!-- Scripts -->
-        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+
+    <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
         <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
-        <script src="{{ 'assets/javascript/app.js?23'|theme }}"></script>
+        <script src="{{ 'assets/javascript/app.js?15276563'|theme }}"></script>
         {% framework extras %}
         {% scripts %}
 
     </body>
 </html>
-";s:5:"mtime";i:1613725838;s:6:"markup";s:1362:"<!DOCTYPE html>
+";s:5:"mtime";i:1614213016;s:6:"markup";s:1475:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -52,8 +54,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content="OctoberCMS">
         <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
-        <link href="{{ 'assets/css/vendor.css?2d2'|theme }}" rel="stylesheet">
-        <link href="{{ 'assets/css/theme.css?213f3'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/vendor.css?25d22'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css?213325f3'|theme }}" rel="stylesheet">
         {% styles %}
     </head>
     <body>
@@ -74,9 +76,11 @@
         </footer>
 
         <!-- Scripts -->
-        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+
+    <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
         <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
-        <script src="{{ 'assets/javascript/app.js?23'|theme }}"></script>
+        <script src="{{ 'assets/javascript/app.js?15276563'|theme }}"></script>
         {% framework extras %}
         {% scripts %}
 

@@ -69,32 +69,69 @@ class __TwigTemplate_037814f32d65e4244f11ea9f338274eb48cef7c5277ecd794ab84aa1b38
         // line 4
         echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["categoryTitle"] ?? null), 4, $this->source), "html", null, true);
         echo "</h1>
-            <p class=\"CategoryMainBanner-SubTitle\">";
-        // line 5
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["categorySubtitle"] ?? null), 5, $this->source), "html", null, true);
-        echo "</p>
+            <div class=\"CategoryMainBanner-SubTitle\">
+                <a href=\"#pads\" class=\"CategoryMainBanner-SubTitle-Item\">
+                    pads
+                </a>
+                <span class=\"js-desktop\"> /</span>
+                <span class=\"js-mobile\">
+                </span>
+
+                <a href=\"#patches\" class=\"CategoryMainBanner-SubTitle-Item\">patches</a><span class=\"js-desktop\"> /</span>
+                <a href=\"#masks\" class=\"CategoryMainBanner-SubTitle-Item\">masks</a>
+            </div>
         </div>
         <div class=\"CategoryMainBanner-Content-Background\" ></div>
     </div>
     <div class=\"CategoryMainBanner-Content mobile\" style=\"background: url(";
-        // line 9
-        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(($context["mainCategoryBackgroundMobile"] ?? null), 9, $this->source));
+        // line 19
+        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(($context["mainCategoryBackgroundMobile"] ?? null), 19, $this->source));
         echo "); background-size: 100%; background-repeat: no-repeat; background-size: cover\">
         <div class=\"CategoryMainBanner-Content-Container\" >
             <h1 class=\"CategoryMainBanner-Title\">";
-        // line 11
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["categoryTitle"] ?? null), 11, $this->source), "html", null, true);
+        // line 21
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["categoryTitle"] ?? null), 21, $this->source), "html", null, true);
         echo "</h1>
-            <p class=\"CategoryMainBanner-SubTitle\">";
-        // line 12
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["categorySubtitle"] ?? null), 12, $this->source), "html", null, true);
-        echo "</p>
+            <div class=\"CategoryMainBanner-SubTitle\">
+                <a href=\"#pads\" class=\"CategoryMainBanner-SubTitle-Item\">
+                    pads
+                    <span class=\"js-mobile\">
+                    <svg width=\"30\" height=\"26\" viewBox=\"0 0 30 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+                        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23.0673 11.2018L14.7857 3.1106L17.2795 0.558068L30 12.9861L17.2795 25.4142L14.7857 22.8617L23.0673 14.7704L0.682477 14.7704L0.682477 11.2018L23.0673 11.2018Z\" fill=\"white\"/>
+                    </svg>
+                </span>
+                </a>
+                <a href=\"#patches\" class=\"CategoryMainBanner-SubTitle-Item\">
+                    patches
+                    <span class=\"js-mobile\">
+                    <svg width=\"30\" height=\"26\" viewBox=\"0 0 30 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+                        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23.0673 11.2018L14.7857 3.1106L17.2795 0.558068L30 12.9861L17.2795 25.4142L14.7857 22.8617L23.0673 14.7704L0.682477 14.7704L0.682477 11.2018L23.0673 11.2018Z\" fill=\"white\"/>
+                    </svg>
+                </span>
+                </a>
+                <a href=\"#masks\" class=\"CategoryMainBanner-SubTitle-Item\">
+                    masks
+                    <span class=\"js-mobile\">
+                    <svg width=\"30\" height=\"26\" viewBox=\"0 0 30 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+                        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23.0673 11.2018L14.7857 3.1106L17.2795 0.558068L30 12.9861L17.2795 25.4142L14.7857 22.8617L23.0673 14.7704L0.682477 14.7704L0.682477 11.2018L23.0673 11.2018Z\" fill=\"white\"/>
+                    </svg>
+                </span>
+                </a>
+
+
+            </div>
         </div>
         <div class=\"CategoryMainBanner-Content-Background\" ></div>
     </div>
+
+
 </div>
 
 <style>
+
+    .SubNavigationMenu-ScrollDown {
+        cursor: pointer;
+    }
 
     .CategoryMainBanner-Content.mobile {
         display: none;
@@ -111,12 +148,24 @@ class __TwigTemplate_037814f32d65e4244f11ea9f338274eb48cef7c5277ecd794ab84aa1b38
         text-transform: uppercase;
     }
 
-    p.CategoryMainBanner-SubTitle {
+    .CategoryMainBanner-SubTitle {
         font-size: 80px;
         line-height: 105px;
         font-weight: 500;
         color: #fff;
         text-transform: uppercase;
+    }
+
+    .CategoryMainBanner-SubTitle-Item {
+        color: #fff;
+        text-decoration: none;
+        transition-duration: 500ms;
+    }
+
+    .CategoryMainBanner-SubTitle-Item:hover {
+        color: #fff;
+        opacity: 0.5;
+        text-decoration: none;
     }
 
     .CategoryMainBanner {
@@ -161,9 +210,11 @@ class __TwigTemplate_037814f32d65e4244f11ea9f338274eb48cef7c5277ecd794ab84aa1b38
         }
 
 
-        p.CategoryMainBanner-SubTitle {
+        .CategoryMainBanner-SubTitle {
             font-size: 40px;
             line-height: 60px;
+            display: flex;
+            flex-direction: column;
         }
 
         h1.CategoryMainBanner-Title {
@@ -178,10 +229,27 @@ class __TwigTemplate_037814f32d65e4244f11ea9f338274eb48cef7c5277ecd794ab84aa1b38
 
         .CategoryMainBanner-Content-Container {
             padding: 0 30px;
+            width: 100%;
         }
     }
 
-</style>";
+</style>
+
+
+<script>
+
+    var scrolledDown = false
+
+    var bannerNode = document.querySelector('.CategoryMainBanner')
+    bannerNode.addEventListener('wheel', function (e) {
+        if (e.deltaY > 0 && scrolledDown == false) {
+            scrolledDown = true
+            scrollDown()
+        } if (e.deltaY < 0) {
+            scrolledDown = false
+        }
+    })
+</script>";
     }
 
     public function getTemplateName()
@@ -196,7 +264,7 @@ class __TwigTemplate_037814f32d65e4244f11ea9f338274eb48cef7c5277ecd794ab84aa1b38
 
     public function getDebugInfo()
     {
-        return array (  90 => 12,  86 => 11,  81 => 9,  74 => 5,  70 => 4,  65 => 2,  62 => 1,);
+        return array (  93 => 21,  88 => 19,  70 => 4,  65 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -205,20 +273,63 @@ class __TwigTemplate_037814f32d65e4244f11ea9f338274eb48cef7c5277ecd794ab84aa1b38
     <div class=\"CategoryMainBanner-Content desktop\" style=\"background: url({{ mainCategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover\">
         <div class=\"CategoryMainBanner-Content-Container\" >
             <h1 class=\"CategoryMainBanner-Title\">{{ categoryTitle }}</h1>
-            <p class=\"CategoryMainBanner-SubTitle\">{{ categorySubtitle }}</p>
+            <div class=\"CategoryMainBanner-SubTitle\">
+                <a href=\"#pads\" class=\"CategoryMainBanner-SubTitle-Item\">
+                    pads
+                </a>
+                <span class=\"js-desktop\"> /</span>
+                <span class=\"js-mobile\">
+                </span>
+
+                <a href=\"#patches\" class=\"CategoryMainBanner-SubTitle-Item\">patches</a><span class=\"js-desktop\"> /</span>
+                <a href=\"#masks\" class=\"CategoryMainBanner-SubTitle-Item\">masks</a>
+            </div>
         </div>
         <div class=\"CategoryMainBanner-Content-Background\" ></div>
     </div>
     <div class=\"CategoryMainBanner-Content mobile\" style=\"background: url({{ mainCategoryBackgroundMobile | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover\">
         <div class=\"CategoryMainBanner-Content-Container\" >
             <h1 class=\"CategoryMainBanner-Title\">{{ categoryTitle }}</h1>
-            <p class=\"CategoryMainBanner-SubTitle\">{{ categorySubtitle }}</p>
+            <div class=\"CategoryMainBanner-SubTitle\">
+                <a href=\"#pads\" class=\"CategoryMainBanner-SubTitle-Item\">
+                    pads
+                    <span class=\"js-mobile\">
+                    <svg width=\"30\" height=\"26\" viewBox=\"0 0 30 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+                        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23.0673 11.2018L14.7857 3.1106L17.2795 0.558068L30 12.9861L17.2795 25.4142L14.7857 22.8617L23.0673 14.7704L0.682477 14.7704L0.682477 11.2018L23.0673 11.2018Z\" fill=\"white\"/>
+                    </svg>
+                </span>
+                </a>
+                <a href=\"#patches\" class=\"CategoryMainBanner-SubTitle-Item\">
+                    patches
+                    <span class=\"js-mobile\">
+                    <svg width=\"30\" height=\"26\" viewBox=\"0 0 30 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+                        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23.0673 11.2018L14.7857 3.1106L17.2795 0.558068L30 12.9861L17.2795 25.4142L14.7857 22.8617L23.0673 14.7704L0.682477 14.7704L0.682477 11.2018L23.0673 11.2018Z\" fill=\"white\"/>
+                    </svg>
+                </span>
+                </a>
+                <a href=\"#masks\" class=\"CategoryMainBanner-SubTitle-Item\">
+                    masks
+                    <span class=\"js-mobile\">
+                    <svg width=\"30\" height=\"26\" viewBox=\"0 0 30 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+                        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23.0673 11.2018L14.7857 3.1106L17.2795 0.558068L30 12.9861L17.2795 25.4142L14.7857 22.8617L23.0673 14.7704L0.682477 14.7704L0.682477 11.2018L23.0673 11.2018Z\" fill=\"white\"/>
+                    </svg>
+                </span>
+                </a>
+
+
+            </div>
         </div>
         <div class=\"CategoryMainBanner-Content-Background\" ></div>
     </div>
+
+
 </div>
 
 <style>
+
+    .SubNavigationMenu-ScrollDown {
+        cursor: pointer;
+    }
 
     .CategoryMainBanner-Content.mobile {
         display: none;
@@ -235,12 +346,24 @@ class __TwigTemplate_037814f32d65e4244f11ea9f338274eb48cef7c5277ecd794ab84aa1b38
         text-transform: uppercase;
     }
 
-    p.CategoryMainBanner-SubTitle {
+    .CategoryMainBanner-SubTitle {
         font-size: 80px;
         line-height: 105px;
         font-weight: 500;
         color: #fff;
         text-transform: uppercase;
+    }
+
+    .CategoryMainBanner-SubTitle-Item {
+        color: #fff;
+        text-decoration: none;
+        transition-duration: 500ms;
+    }
+
+    .CategoryMainBanner-SubTitle-Item:hover {
+        color: #fff;
+        opacity: 0.5;
+        text-decoration: none;
     }
 
     .CategoryMainBanner {
@@ -285,9 +408,11 @@ class __TwigTemplate_037814f32d65e4244f11ea9f338274eb48cef7c5277ecd794ab84aa1b38
         }
 
 
-        p.CategoryMainBanner-SubTitle {
+        .CategoryMainBanner-SubTitle {
             font-size: 40px;
             line-height: 60px;
+            display: flex;
+            flex-direction: column;
         }
 
         h1.CategoryMainBanner-Title {
@@ -302,9 +427,26 @@ class __TwigTemplate_037814f32d65e4244f11ea9f338274eb48cef7c5277ecd794ab84aa1b38
 
         .CategoryMainBanner-Content-Container {
             padding: 0 30px;
+            width: 100%;
         }
     }
 
-</style>", "/Users/iamk/git/darling/themes/demo/partials/category/category-main-banner.htm", "");
+</style>
+
+
+<script>
+
+    var scrolledDown = false
+
+    var bannerNode = document.querySelector('.CategoryMainBanner')
+    bannerNode.addEventListener('wheel', function (e) {
+        if (e.deltaY > 0 && scrolledDown == false) {
+            scrolledDown = true
+            scrollDown()
+        } if (e.deltaY < 0) {
+            scrolledDown = false
+        }
+    })
+</script>", "/Users/iamk/git/darling/themes/demo/partials/category/category-main-banner.htm", "");
     }
 }

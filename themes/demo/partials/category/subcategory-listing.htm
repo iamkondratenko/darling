@@ -17,7 +17,7 @@ pageNumber = "{{ :page }}"
 {% set detailsUrlParameter = subcategoryListing.detailsUrlParameter %}
 
 
-<div class="SubcategoryListing" id="{{subcategorySlug}}">
+<div class="SubcategoryListing">
     <div class="SubcategoryListing-Title">{{subcategoryTitle}}<span class="SubcategoryListing-Title-Asterisk">*</span></div>
     <div class="SubcategoryListing-Items">
 
@@ -69,7 +69,20 @@ pageNumber = "{{ :page }}"
     }
 
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1919px) {
+        .SubcategoryListing-Title {
+            font-size: 90px;
+        }
+    }
+
+    @media screen and (max-width: 1365px) {
+        .SubcategoryListing-Title {
+            font-size: 80px;
+        }
+    }
+
+
+    @media screen and (max-width: 767px) {
 
         .SubcategoryListing {
             width: 72%;
