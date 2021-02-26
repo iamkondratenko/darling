@@ -1,4 +1,4 @@
-1614214708a:1:{s:20:"site/menu-drawer.htm";a:6:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:8131:"[builderList mainMenuItem]
+1614337758a:1:{s:20:"site/menu-drawer.htm";a:7:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:8703:"[builderList mainMenuItem]
 modelClass = "Iamk\Category\Models\Category"
 scope = "-"
 scopeValue = "{{ :scope }}"
@@ -9,7 +9,29 @@ detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
 sortColumn = "id"
 sortDirection = "desc"
+
+
+[builderList subcategoryListing]
+modelClass = "Iamk\Productinfo\Models\ProductInfo"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
 ==
+
+{% set records = mainMenuItem.records %}
+{% set displayColumn = mainMenuItem.displayColumn %}
+{% set noRecordsMessage = mainMenuItem.noRecordsMessage %}
+{% set detailsPage = mainMenuItem.detailsPage %}
+{% set detailsKeyColumn = mainMenuItem.detailsKeyColumn %}
+{% set detailsUrlParameter = mainMenuItem.detailsUrlParameter %}
+
+{% set recordsProducts = subcategoryListing.records %}
+
 <div class="MainMenuDrawer">
     <div class="SubNavigationMenu SubNavigationMenu-Fixed">
         <div class="SubNavigationMenu-ChangeLanguage">
@@ -28,14 +50,23 @@ sortDirection = "desc"
         </div>
     </div>
     <div class="MainMenuDrawer-Items">
-    {% set records = mainMenuItem.records %}
-{% set displayColumn = mainMenuItem.displayColumn %}
-{% set noRecordsMessage = mainMenuItem.noRecordsMessage %}
-{% set detailsPage = mainMenuItem.detailsPage %}
-{% set detailsKeyColumn = mainMenuItem.detailsKeyColumn %}
-{% set detailsUrlParameter = mainMenuItem.detailsUrlParameter %}
+    
+
+    
+
+     
 
     {% for record in records %}
+
+{% for recordProductItem in recordsProducts %}
+
+{% if recordProductItem.slug == record.slug %}
+
+        {{ recordProductItem.slug }}
+
+        {% endif %}
+     {% endfor %}
+
         <div class="MainMenuDrawer-Item">
             <div class="MainMenuDrawer-Item-Category">{{record.title}}</div>
             <div class="MainMenuDrawer-Item-Subcategories">
@@ -64,8 +95,8 @@ sortDirection = "desc"
 
     .SubNavigationMenu {
         width: 100vw;
-        padding: 0 50px;
-        height: 60px;
+        padding: 0 60px;
+        height: 70px;
         position: absolute;
         bottom: 0;
         display: flex;
@@ -96,7 +127,7 @@ sortDirection = "desc"
     }
 
     a.SubNavigationMenu-LanguageItem:hover {
-        color: #ffffff;
+        color: #EA028A;
     }
 
 
@@ -111,7 +142,7 @@ sortDirection = "desc"
     }
 
     a.SubNavigationMenu-LanguageItem.LanguageItem-dark:hover {
-        color: #000000;
+        color: #EA028A;
     }
 
     a.SubNavigationMenu-LanguageItem.LanguageItem-dark.LanguageItem-active {
@@ -136,6 +167,7 @@ sortDirection = "desc"
         font-size: 40px;
         font-weight: 500;
         text-transform: uppercase;
+        transition-duration: 500ms;
     }
 
     a.MainMenuDrawer-Item-Subcategory:hover {
@@ -147,7 +179,7 @@ sortDirection = "desc"
         flex-direction: column;
         height: 0;
         overflow: hidden;
-        transition-duration: 500ms;
+        transition-duration: 400ms;
     }
     .MainMenuDrawer-Items{
         width: 100%;
@@ -275,7 +307,16 @@ sortDirection = "desc"
             }
         )
     }
-</script>";s:5:"mtime";i:1614208661;s:6:"markup";s:7832:"<div class="MainMenuDrawer">
+</script>";s:5:"mtime";i:1614319698;s:6:"markup";s:8132:"{% set records = mainMenuItem.records %}
+{% set displayColumn = mainMenuItem.displayColumn %}
+{% set noRecordsMessage = mainMenuItem.noRecordsMessage %}
+{% set detailsPage = mainMenuItem.detailsPage %}
+{% set detailsKeyColumn = mainMenuItem.detailsKeyColumn %}
+{% set detailsUrlParameter = mainMenuItem.detailsUrlParameter %}
+
+{% set recordsProducts = subcategoryListing.records %}
+
+<div class="MainMenuDrawer">
     <div class="SubNavigationMenu SubNavigationMenu-Fixed">
         <div class="SubNavigationMenu-ChangeLanguage">
             <a href="#" class="SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active" onclick="console.log('sdfsd')">ENG</a>
@@ -293,14 +334,23 @@ sortDirection = "desc"
         </div>
     </div>
     <div class="MainMenuDrawer-Items">
-    {% set records = mainMenuItem.records %}
-{% set displayColumn = mainMenuItem.displayColumn %}
-{% set noRecordsMessage = mainMenuItem.noRecordsMessage %}
-{% set detailsPage = mainMenuItem.detailsPage %}
-{% set detailsKeyColumn = mainMenuItem.detailsKeyColumn %}
-{% set detailsUrlParameter = mainMenuItem.detailsUrlParameter %}
+    
+
+    
+
+     
 
     {% for record in records %}
+
+{% for recordProductItem in recordsProducts %}
+
+{% if recordProductItem.slug == record.slug %}
+
+        {{ recordProductItem.slug }}
+
+        {% endif %}
+     {% endfor %}
+
         <div class="MainMenuDrawer-Item">
             <div class="MainMenuDrawer-Item-Category">{{record.title}}</div>
             <div class="MainMenuDrawer-Item-Subcategories">
@@ -329,8 +379,8 @@ sortDirection = "desc"
 
     .SubNavigationMenu {
         width: 100vw;
-        padding: 0 50px;
-        height: 60px;
+        padding: 0 60px;
+        height: 70px;
         position: absolute;
         bottom: 0;
         display: flex;
@@ -361,7 +411,7 @@ sortDirection = "desc"
     }
 
     a.SubNavigationMenu-LanguageItem:hover {
-        color: #ffffff;
+        color: #EA028A;
     }
 
 
@@ -376,7 +426,7 @@ sortDirection = "desc"
     }
 
     a.SubNavigationMenu-LanguageItem.LanguageItem-dark:hover {
-        color: #000000;
+        color: #EA028A;
     }
 
     a.SubNavigationMenu-LanguageItem.LanguageItem-dark.LanguageItem-active {
@@ -401,6 +451,7 @@ sortDirection = "desc"
         font-size: 40px;
         font-weight: 500;
         text-transform: uppercase;
+        transition-duration: 500ms;
     }
 
     a.MainMenuDrawer-Item-Subcategory:hover {
@@ -412,7 +463,7 @@ sortDirection = "desc"
         flex-direction: column;
         height: 0;
         overflow: hidden;
-        transition-duration: 500ms;
+        transition-duration: 400ms;
     }
     .MainMenuDrawer-Items{
         width: 100%;
@@ -540,4 +591,4 @@ sortDirection = "desc"
             }
         )
     }
-</script>";s:4:"code";N;s:24:"builderList mainMenuItem";a:10:{s:10:"modelClass";s:29:"Iamk\Category\Models\Category";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";s:10:"sortColumn";s:2:"id";s:13:"sortDirection";s:4:"desc";}}}
+</script>";s:4:"code";N;s:24:"builderList mainMenuItem";a:10:{s:10:"modelClass";s:29:"Iamk\Category\Models\Category";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";s:10:"sortColumn";s:2:"id";s:13:"sortDirection";s:4:"desc";}s:30:"builderList subcategoryListing";a:8:{s:10:"modelClass";s:35:"Iamk\Productinfo\Models\ProductInfo";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

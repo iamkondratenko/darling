@@ -10,7 +10,7 @@ description = "Default layout"
         <meta name="author" content="OctoberCMS">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content="OctoberCMS">
-        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/192x192.png'|theme }}">
         <link href="{{ 'assets/css/vendor.css?25d22'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css?213325f3'|theme }}" rel="stylesheet">
         {% styles %}
@@ -38,7 +38,9 @@ description = "Default layout"
     <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
         <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
         <script src="{{ 'assets/javascript/app.js?15276563'|theme }}"></script>
-        {% framework extras %}
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+    {% framework extras %}
         {% scripts %}
 
     </body>

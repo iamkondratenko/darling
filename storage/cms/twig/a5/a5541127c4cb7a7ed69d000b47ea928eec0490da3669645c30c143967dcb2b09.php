@@ -164,6 +164,11 @@ class __TwigTemplate_9ffff23877adc34d4cd78a75876c86db27c37afcdcf880c8414e1aa17cc
         text-transform: uppercase;
         text-decoration: none;
         margin: 0 25px;
+        transition-duration: 400ms;
+    }
+
+    a.MainHeaderFixed-Subcategory-Item:hover {
+        color: #EA028A;
     }
 
     @media screen and (max-width: 1919px) {
@@ -296,6 +301,11 @@ class __TwigTemplate_9ffff23877adc34d4cd78a75876c86db27c37afcdcf880c8414e1aa17cc
         text-transform: uppercase;
         text-decoration: none;
         margin: 0 25px;
+        transition-duration: 400ms;
+    }
+
+    a.MainHeaderFixed-Subcategory-Item:hover {
+        color: #EA028A;
     }
 
     @media screen and (max-width: 1919px) {

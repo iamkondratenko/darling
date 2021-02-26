@@ -1,4 +1,4 @@
-1614214707a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1510:"description = "Default layout"
+1614337757a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1625:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
@@ -10,7 +10,7 @@
         <meta name="author" content="OctoberCMS">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content="OctoberCMS">
-        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/192x192.png'|theme }}">
         <link href="{{ 'assets/css/vendor.css?25d22'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css?213325f3'|theme }}" rel="stylesheet">
         {% styles %}
@@ -38,12 +38,14 @@
     <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
         <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
         <script src="{{ 'assets/javascript/app.js?15276563'|theme }}"></script>
-        {% framework extras %}
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+    {% framework extras %}
         {% scripts %}
 
     </body>
 </html>
-";s:5:"mtime";i:1614213016;s:6:"markup";s:1475:"<!DOCTYPE html>
+";s:5:"mtime";i:1614337122;s:6:"markup";s:1590:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -53,7 +55,7 @@
         <meta name="author" content="OctoberCMS">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content="OctoberCMS">
-        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/192x192.png'|theme }}">
         <link href="{{ 'assets/css/vendor.css?25d22'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css?213325f3'|theme }}" rel="stylesheet">
         {% styles %}
@@ -81,7 +83,9 @@
     <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
         <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
         <script src="{{ 'assets/javascript/app.js?15276563'|theme }}"></script>
-        {% framework extras %}
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+    {% framework extras %}
         {% scripts %}
 
     </body>

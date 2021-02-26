@@ -29,7 +29,7 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("styles" => 14, "partial" => 19, "page" => 25, "framework" => 39, "scripts" => 40);
+        $tags = array("styles" => 14, "partial" => 19, "page" => 25, "framework" => 41, "scripts" => 42);
         $filters = array("escape" => 5, "theme" => 11);
         $functions = array();
 
@@ -80,7 +80,7 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         <meta name=\"generator\" content=\"OctoberCMS\">
         <link rel=\"icon\" type=\"image/png\" href=\"";
         // line 11
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/october.png");
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/192x192.png");
         echo "\">
         <link href=\"";
         // line 12
@@ -146,8 +146,10 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         // line 38
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js?15276563");
         echo "\"></script>
-        ";
-        // line 39
+    <script src=\"https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js\"></script>
+
+    ";
+        // line 41
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -158,11 +160,11 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 40
+        // line 42
         echo "        ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 41
+        // line 43
         echo "
     </body>
 </html>";
@@ -180,7 +182,7 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
 
     public function getDebugInfo()
     {
-        return array (  166 => 41,  162 => 40,  151 => 39,  147 => 38,  143 => 37,  139 => 36,  132 => 31,  128 => 30,  122 => 26,  120 => 25,  115 => 22,  111 => 21,  108 => 20,  104 => 19,  98 => 15,  95 => 14,  91 => 13,  87 => 12,  83 => 11,  76 => 7,  72 => 6,  68 => 5,  62 => 1,);
+        return array (  168 => 43,  164 => 42,  153 => 41,  147 => 38,  143 => 37,  139 => 36,  132 => 31,  128 => 30,  122 => 26,  120 => 25,  115 => 22,  111 => 21,  108 => 20,  104 => 19,  98 => 15,  95 => 14,  91 => 13,  87 => 12,  83 => 11,  76 => 7,  72 => 6,  68 => 5,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -195,7 +197,7 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         <meta name=\"author\" content=\"OctoberCMS\">
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
         <meta name=\"generator\" content=\"OctoberCMS\">
-        <link rel=\"icon\" type=\"image/png\" href=\"{{ 'assets/images/october.png'|theme }}\">
+        <link rel=\"icon\" type=\"image/png\" href=\"{{ 'assets/images/192x192.png'|theme }}\">
         <link href=\"{{ 'assets/css/vendor.css?25d22'|theme }}\" rel=\"stylesheet\">
         <link href=\"{{ 'assets/css/theme.css?213325f3'|theme }}\" rel=\"stylesheet\">
         {% styles %}
@@ -223,7 +225,9 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
     <script src=\"{{ 'assets/vendor/jquery.js'|theme }}\"></script>
         <script src=\"{{ 'assets/vendor/bootstrap.js'|theme }}\"></script>
         <script src=\"{{ 'assets/javascript/app.js?15276563'|theme }}\"></script>
-        {% framework extras %}
+    <script src=\"https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js\"></script>
+
+    {% framework extras %}
         {% scripts %}
 
     </body>

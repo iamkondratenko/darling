@@ -1,10 +1,8 @@
-1614214707a:1:{s:21:"category/category.htm";a:5:{s:8:"fileName";s:21:"category/category.htm";s:7:"content";s:158:"
+1614333037a:1:{s:21:"category/category.htm";a:5:{s:8:"fileName";s:21:"category/category.htm";s:7:"content";s:91:"
 {% partial "category/subcategory-banner" %}
 
 
-
-{% partial "category/subcategory-listing" subcategoryTitle=subcategoryTitle subcategorySlug=subcategorySlug %}";s:5:"mtime";i:1614087851;s:6:"markup";s:157:"{% partial "category/subcategory-banner" %}
-
+{% partial "category/subcategory-listing" %}";s:5:"mtime";i:1614236348;s:6:"markup";s:90:"{% partial "category/subcategory-banner" %}
 
 
-{% partial "category/subcategory-listing" subcategoryTitle=subcategoryTitle subcategorySlug=subcategorySlug %}";s:4:"code";N;}}
+{% partial "category/subcategory-listing" %}";s:4:"code";N;}}

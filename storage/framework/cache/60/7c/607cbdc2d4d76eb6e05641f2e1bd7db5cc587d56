@@ -1,4 +1,4 @@
-1614214707a:1:{s:31:"category/subcategory-banner.htm";a:5:{s:8:"fileName";s:31:"category/subcategory-banner.htm";s:7:"content";s:4033:"
+1614333037a:1:{s:31:"category/subcategory-banner.htm";a:5:{s:8:"fileName";s:31:"category/subcategory-banner.htm";s:7:"content";s:4131:"
 <div class="SubcategoryBanner" id="{{subcategorySlug}}">
     <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainSubcategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat;">
         <p class="SubcategoryBanner-SubTitle">
@@ -52,15 +52,17 @@
     }
 
     .SubcategoryBanner-SubTitle {
-        padding: 60px;
+        padding: 0 0 50px 9%;
         font-size: 50px;
         line-height: 65px;
         text-transform: uppercase;
         color: #fff;
         font-weight: bold;
-        width: 60%;
+        width: 100%;
         max-width: 900px;
+        max-width: 930px;
         display: inline-block;
+        box-sizing: content-box;
     }
     @media screen and (max-width: 1365px) {
 
@@ -117,7 +119,7 @@
         .SubcategoryBanner-SubTitle {
             font-size: 20px;
             line-height: 26px;
-            width: 100%;
+            width: auto;
             padding: 0 30px 30px;
             text-align: center;
             min-height: auto;
@@ -129,11 +131,11 @@
             flex-direction: column;
             justify-content: flex-end;
             min-height: 120vw;
-
+            padding: 30px 45px;
         }
     }
 
-</style>";s:5:"mtime";i:1614203913;s:6:"markup";s:4032:"<div class="SubcategoryBanner" id="{{subcategorySlug}}">
+</style>";s:5:"mtime";i:1614243823;s:6:"markup";s:4130:"<div class="SubcategoryBanner" id="{{subcategorySlug}}">
     <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainSubcategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat;">
         <p class="SubcategoryBanner-SubTitle">
             {% for description in categorySubtitle %}
@@ -186,15 +188,17 @@
     }
 
     .SubcategoryBanner-SubTitle {
-        padding: 60px;
+        padding: 0 0 50px 9%;
         font-size: 50px;
         line-height: 65px;
         text-transform: uppercase;
         color: #fff;
         font-weight: bold;
-        width: 60%;
+        width: 100%;
         max-width: 900px;
+        max-width: 930px;
         display: inline-block;
+        box-sizing: content-box;
     }
     @media screen and (max-width: 1365px) {
 
@@ -251,7 +255,7 @@
         .SubcategoryBanner-SubTitle {
             font-size: 20px;
             line-height: 26px;
-            width: 100%;
+            width: auto;
             padding: 0 30px 30px;
             text-align: center;
             min-height: auto;
@@ -263,7 +267,7 @@
             flex-direction: column;
             justify-content: flex-end;
             min-height: 120vw;
-
+            padding: 30px 45px;
         }
     }
 

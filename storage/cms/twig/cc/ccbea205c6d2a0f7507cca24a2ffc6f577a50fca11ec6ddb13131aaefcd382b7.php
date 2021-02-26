@@ -129,7 +129,7 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
     }
 
     .SubcategoryListing {
-        width: 80%;
+        width: 82%;
         margin: 0 auto;
     }
 
@@ -146,7 +146,7 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
         font-weight: bold;
         text-transform: uppercase;
         line-height: 1;
-        margin: 80px 0 60px;
+        margin: 80px 0 40px;
     }
 
     .SubcategoryListing-Title-Asterisk {
@@ -237,7 +237,7 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
     }
 
     .SubcategoryListing {
-        width: 80%;
+        width: 82%;
         margin: 0 auto;
     }
 
@@ -254,7 +254,7 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
         font-weight: bold;
         text-transform: uppercase;
         line-height: 1;
-        margin: 80px 0 60px;
+        margin: 80px 0 40px;
     }
 
     .SubcategoryListing-Title-Asterisk {

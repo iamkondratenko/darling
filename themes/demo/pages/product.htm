@@ -20,7 +20,7 @@ notFoundMessage = "Record not found"
 
 
 
-    <div class="product-section__photo-block float-scroll">
+    <div class="product-section__photo-block">
 
         {% for slider in record.color_slider %}
             <div class="photo-block__product-holder {% if loop.first == true %} activedColorSlider{% endif %}" id="{{slider.product_color}}">
@@ -41,15 +41,16 @@ notFoundMessage = "Record not found"
     </div>
 
     <div class="product-section__text-block">
+        <div class="close_icon">
+            <a href="/category/{{record.category}}/#{{record.subcategory}}">
+                <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.39355 2.39355L25.6068 23.6068" stroke="#EA028A" stroke-width="4"/>
+                    <path d="M4.39355 23.6064L25.6068 2.39324" stroke="#EA028A" stroke-width="4"/>
+                </svg>
+            </a>
+        </div>
             <div class="product-section__text-block-holder">
-                <div class="close_icon">
-                    <a href="/category/{{record.category}}/#{{record.subcategory}}">
-                        <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.39355 2.39355L25.6068 23.6068" stroke="#EA028A" stroke-width="4"/>
-                            <path d="M4.39355 23.6064L25.6068 2.39324" stroke="#EA028A" stroke-width="4"/>
-                        </svg>
-                    </a>
-                </div>
+
 
                 <div class="text-block__title-section">
                     <h1 class="title-section__title">
@@ -318,10 +319,11 @@ h2.product-info-block__description__title {
 }
 
 .float-scroll {
-    transition-duration: 100ms;
-    transform: rotateX(0.01px);
+    transform: rotate3d(0, 0, 0, 0.01deg);
     position: sticky;
     bottom: 0;
+    will-change: transform;
+
 }
 
 input.radio-color-picker {
@@ -408,6 +410,77 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     </style>
 
 <script>
+
+    var browserWidth = document.body.clientWidth
+
+    var browserHeight = document.body.clientHeight
+
+
+    setScrollForProduct()
+
+    window.addEventListener('scroll', function(e) {
+        let scrolledY = window.scrollY
+
+        if (browserWidth >  1080) {
+            scrollingFloatBlock(scrolledY)
+        }
+
+
+    })
+
+
+
+    function setScrollForProduct() {
+
+
+
+        var route = 'product'
+
+        if (browserWidth >  1080) {
+
+            if (route == 'product') {
+                let textBlock = document.querySelector('.product-section__text-block-holder')
+                let photoBlock = document.querySelector('.photo-block__product-holder')
+                let textBlockHeight = textBlock.scrollHeight
+                let photoBlockHeight = photoBlock.scrollHeight
+
+                console.log(textBlockHeight >= photoBlockHeight)
+                if (textBlockHeight >= photoBlockHeight) {
+                    photoBlock.classList.add('float-scroll')
+                    floatScrollBlock = photoBlock
+                    floatScrollBlockHeight = photoBlockHeight
+                } else {
+                    textBlock.classList.add('float-scroll')
+                    floatScrollBlock = textBlock
+                    floatScrollBlockHeight = textBlockHeight
+                }
+            }
+        }
+
+    }
+
+
+
+    function scrollingFloatBlock(scrolledY) {
+        console.log(floatScrollBlock, floatScrollBlockHeight)
+        var fullBlockHeight = document.querySelector('.product-section').scrollHeight
+
+
+        console.log(scrolledY, fullBlockHeight, floatScrollBlockHeight)
+        console.log((browserHeight))
+
+        var fullScrolledState = scrolledY + browserHeight
+
+        floatScrollBlock.style.transform = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / (fullBlockHeight - floatScrollBlockHeight)))) + "px, 0.01px)"
+
+    }
+
+
+
+
+
+
+
     var colorVariantNodes = document.querySelectorAll('.radio-color-picker')
     var colorSliderProducts = document.querySelectorAll('.photo-block__product-holder')
 
@@ -468,6 +541,7 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     }
 
     function selectSliderProduct(hex) {
+
 
 
 

@@ -65,12 +65,9 @@ class __TwigTemplate_13a139569fca4b715834fa368b811a2db4e48b6f3071f7e5af6c86a51da
         // line 2
         echo "
 
-
 ";
-        // line 5
+        // line 4
         $context['__cms_partial_params'] = [];
-        $context['__cms_partial_params']['subcategoryTitle'] = ($context["subcategoryTitle"] ?? null)        ;
-        $context['__cms_partial_params']['subcategorySlug'] = ($context["subcategorySlug"] ?? null)        ;
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("category/subcategory-listing"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
     }
@@ -87,7 +84,7 @@ class __TwigTemplate_13a139569fca4b715834fa368b811a2db4e48b6f3071f7e5af6c86a51da
 
     public function getDebugInfo()
     {
-        return array (  71 => 5,  66 => 2,  62 => 1,);
+        return array (  70 => 4,  66 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -95,7 +92,6 @@ class __TwigTemplate_13a139569fca4b715834fa368b811a2db4e48b6f3071f7e5af6c86a51da
         return new Source("{% partial \"category/subcategory-banner\" %}
 
 
-
-{% partial \"category/subcategory-listing\" subcategoryTitle=subcategoryTitle subcategorySlug=subcategorySlug %}", "/Users/iamk/git/darling/themes/demo/partials/category/category.htm", "");
+{% partial \"category/subcategory-listing\" %}", "/Users/iamk/git/darling/themes/demo/partials/category/category.htm", "");
     }
 }

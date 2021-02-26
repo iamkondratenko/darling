@@ -9,7 +9,29 @@ detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
 sortColumn = "id"
 sortDirection = "desc"
+
+
+[builderList subcategoryListing]
+modelClass = "Iamk\Productinfo\Models\ProductInfo"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
 ==
+
+{% set records = mainMenuItem.records %}
+{% set displayColumn = mainMenuItem.displayColumn %}
+{% set noRecordsMessage = mainMenuItem.noRecordsMessage %}
+{% set detailsPage = mainMenuItem.detailsPage %}
+{% set detailsKeyColumn = mainMenuItem.detailsKeyColumn %}
+{% set detailsUrlParameter = mainMenuItem.detailsUrlParameter %}
+
+{% set recordsProducts = subcategoryListing.records %}
+
 <div class="MainMenuDrawer">
     <div class="SubNavigationMenu SubNavigationMenu-Fixed">
         <div class="SubNavigationMenu-ChangeLanguage">
@@ -28,14 +50,23 @@ sortDirection = "desc"
         </div>
     </div>
     <div class="MainMenuDrawer-Items">
-    {% set records = mainMenuItem.records %}
-{% set displayColumn = mainMenuItem.displayColumn %}
-{% set noRecordsMessage = mainMenuItem.noRecordsMessage %}
-{% set detailsPage = mainMenuItem.detailsPage %}
-{% set detailsKeyColumn = mainMenuItem.detailsKeyColumn %}
-{% set detailsUrlParameter = mainMenuItem.detailsUrlParameter %}
+    
+
+    
+
+     
 
     {% for record in records %}
+
+{% for recordProductItem in recordsProducts %}
+
+{% if recordProductItem.slug == record.slug %}
+
+        {{ recordProductItem.slug }}
+
+        {% endif %}
+     {% endfor %}
+
         <div class="MainMenuDrawer-Item">
             <div class="MainMenuDrawer-Item-Category">{{record.title}}</div>
             <div class="MainMenuDrawer-Item-Subcategories">
@@ -64,8 +95,8 @@ sortDirection = "desc"
 
     .SubNavigationMenu {
         width: 100vw;
-        padding: 0 50px;
-        height: 60px;
+        padding: 0 60px;
+        height: 70px;
         position: absolute;
         bottom: 0;
         display: flex;
@@ -96,7 +127,7 @@ sortDirection = "desc"
     }
 
     a.SubNavigationMenu-LanguageItem:hover {
-        color: #ffffff;
+        color: #EA028A;
     }
 
 
@@ -111,7 +142,7 @@ sortDirection = "desc"
     }
 
     a.SubNavigationMenu-LanguageItem.LanguageItem-dark:hover {
-        color: #000000;
+        color: #EA028A;
     }
 
     a.SubNavigationMenu-LanguageItem.LanguageItem-dark.LanguageItem-active {
@@ -136,6 +167,7 @@ sortDirection = "desc"
         font-size: 40px;
         font-weight: 500;
         text-transform: uppercase;
+        transition-duration: 500ms;
     }
 
     a.MainMenuDrawer-Item-Subcategory:hover {
@@ -147,7 +179,7 @@ sortDirection = "desc"
         flex-direction: column;
         height: 0;
         overflow: hidden;
-        transition-duration: 500ms;
+        transition-duration: 400ms;
     }
     .MainMenuDrawer-Items{
         width: 100%;

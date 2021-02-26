@@ -99,10 +99,6 @@
         cursor: pointer;
     }
 
-    .MainMenu-Icon:hover::before,
-    .MainMenu-Icon:hover::after{
-        opacity: 0.5;
-    }
 
     .MainMenu-Icon.MainMenu-Icon-Fixed::before {
         width: 25px;
@@ -143,7 +139,10 @@
         width: 30px;
         height: 22px;
         cursor: pointer;
+        transition-duration: 400ms;
     }
+
+
 
     .MainMenu-Icon::before {
         width: 30px;
@@ -180,6 +179,11 @@
         transition-duration: 400ms;
     }
 
+    .MainMenu-Icon:hover::before,
+    .MainMenu-Icon:hover::after{
+        background-color: #EA028A;
+    }
+
 
     .LogoSvg > path {
         fill: white;
@@ -210,14 +214,7 @@
     }
 
     @media screen and (max-width: 1365px){
-        .SubNavigationMenu-ScrollDown-mobile {
-            color: #FFFFFF;
-            opacity: 1;
-            line-height: 26px;
-            text-align: center;
-            letter-spacing: 1.25px;
-            text-transform: uppercase;
-        }
+        
     }
 
 
@@ -226,6 +223,16 @@
 
     @media screen and (max-width: 767px){
 
+.SubNavigationMenu-ScrollDown-mobile {
+            color: #FFFFFF;
+            opacity: 1;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: center;
+            letter-spacing: 1.25px;
+            text-transform: uppercase;
+        }
 
 
         .MainMenu-Icon {
@@ -321,7 +328,7 @@
 
     function scrollDown() {
         window.scroll({
-            top: window.innerHeight,
+            top: window.innerHeight - (document.querySelector('.MainHeaderFixed').clientHeight),
             behavior: "smooth"
         })
     }

@@ -163,10 +163,6 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         cursor: pointer;
     }
 
-    .MainMenu-Icon:hover::before,
-    .MainMenu-Icon:hover::after{
-        opacity: 0.5;
-    }
 
     .MainMenu-Icon.MainMenu-Icon-Fixed::before {
         width: 25px;
@@ -207,7 +203,10 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         width: 30px;
         height: 22px;
         cursor: pointer;
+        transition-duration: 400ms;
     }
+
+
 
     .MainMenu-Icon::before {
         width: 30px;
@@ -244,6 +243,11 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         transition-duration: 400ms;
     }
 
+    .MainMenu-Icon:hover::before,
+    .MainMenu-Icon:hover::after{
+        background-color: #EA028A;
+    }
+
 
     .LogoSvg > path {
         fill: white;
@@ -274,14 +278,7 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
     }
 
     @media screen and (max-width: 1365px){
-        .SubNavigationMenu-ScrollDown-mobile {
-            color: #FFFFFF;
-            opacity: 1;
-            line-height: 26px;
-            text-align: center;
-            letter-spacing: 1.25px;
-            text-transform: uppercase;
-        }
+        
     }
 
 
@@ -290,6 +287,16 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
 
     @media screen and (max-width: 767px){
 
+.SubNavigationMenu-ScrollDown-mobile {
+            color: #FFFFFF;
+            opacity: 1;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: center;
+            letter-spacing: 1.25px;
+            text-transform: uppercase;
+        }
 
 
         .MainMenu-Icon {
@@ -385,7 +392,7 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
 
     function scrollDown() {
         window.scroll({
-            top: window.innerHeight,
+            top: window.innerHeight - (document.querySelector('.MainHeaderFixed').clientHeight),
             behavior: \"smooth\"
         })
     }
@@ -540,10 +547,6 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         cursor: pointer;
     }
 
-    .MainMenu-Icon:hover::before,
-    .MainMenu-Icon:hover::after{
-        opacity: 0.5;
-    }
 
     .MainMenu-Icon.MainMenu-Icon-Fixed::before {
         width: 25px;
@@ -584,7 +587,10 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         width: 30px;
         height: 22px;
         cursor: pointer;
+        transition-duration: 400ms;
     }
+
+
 
     .MainMenu-Icon::before {
         width: 30px;
@@ -621,6 +627,11 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         transition-duration: 400ms;
     }
 
+    .MainMenu-Icon:hover::before,
+    .MainMenu-Icon:hover::after{
+        background-color: #EA028A;
+    }
+
 
     .LogoSvg > path {
         fill: white;
@@ -651,14 +662,7 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
     }
 
     @media screen and (max-width: 1365px){
-        .SubNavigationMenu-ScrollDown-mobile {
-            color: #FFFFFF;
-            opacity: 1;
-            line-height: 26px;
-            text-align: center;
-            letter-spacing: 1.25px;
-            text-transform: uppercase;
-        }
+        
     }
 
 
@@ -667,6 +671,16 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
 
     @media screen and (max-width: 767px){
 
+.SubNavigationMenu-ScrollDown-mobile {
+            color: #FFFFFF;
+            opacity: 1;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: center;
+            letter-spacing: 1.25px;
+            text-transform: uppercase;
+        }
 
 
         .MainMenu-Icon {
@@ -762,7 +776,7 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
 
     function scrollDown() {
         window.scroll({
-            top: window.innerHeight,
+            top: window.innerHeight - (document.querySelector('.MainHeaderFixed').clientHeight),
             behavior: \"smooth\"
         })
     }

@@ -1,4 +1,4 @@
-1614214902a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:9956:"<header class="MainHeader">
+1614337758a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:10128:"<header class="MainHeader">
     <div class="MainHeader-Content">
         <div class="MainLogo">
 <!--            <img src="{{ 'assets/images/logo.svg' | theme }}">-->
@@ -99,10 +99,6 @@
         cursor: pointer;
     }
 
-    .MainMenu-Icon:hover::before,
-    .MainMenu-Icon:hover::after{
-        opacity: 0.5;
-    }
 
     .MainMenu-Icon.MainMenu-Icon-Fixed::before {
         width: 25px;
@@ -143,7 +139,10 @@
         width: 30px;
         height: 22px;
         cursor: pointer;
+        transition-duration: 400ms;
     }
+
+
 
     .MainMenu-Icon::before {
         width: 30px;
@@ -180,6 +179,11 @@
         transition-duration: 400ms;
     }
 
+    .MainMenu-Icon:hover::before,
+    .MainMenu-Icon:hover::after{
+        background-color: #EA028A;
+    }
+
 
     .LogoSvg > path {
         fill: white;
@@ -210,14 +214,7 @@
     }
 
     @media screen and (max-width: 1365px){
-        .SubNavigationMenu-ScrollDown-mobile {
-            color: #FFFFFF;
-            opacity: 1;
-            line-height: 26px;
-            text-align: center;
-            letter-spacing: 1.25px;
-            text-transform: uppercase;
-        }
+        
     }
 
 
@@ -226,6 +223,16 @@
 
     @media screen and (max-width: 767px){
 
+.SubNavigationMenu-ScrollDown-mobile {
+            color: #FFFFFF;
+            opacity: 1;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: center;
+            letter-spacing: 1.25px;
+            text-transform: uppercase;
+        }
 
 
         .MainMenu-Icon {
@@ -321,7 +328,7 @@
 
     function scrollDown() {
         window.scroll({
-            top: window.innerHeight,
+            top: window.innerHeight - (document.querySelector('.MainHeaderFixed').clientHeight),
             behavior: "smooth"
         })
     }
@@ -355,7 +362,7 @@
 
 
 
-</script>";s:5:"mtime";i:1614214298;s:6:"markup";s:9956:"<header class="MainHeader">
+</script>";s:5:"mtime";i:1614319678;s:6:"markup";s:10128:"<header class="MainHeader">
     <div class="MainHeader-Content">
         <div class="MainLogo">
 <!--            <img src="{{ 'assets/images/logo.svg' | theme }}">-->
@@ -456,10 +463,6 @@
         cursor: pointer;
     }
 
-    .MainMenu-Icon:hover::before,
-    .MainMenu-Icon:hover::after{
-        opacity: 0.5;
-    }
 
     .MainMenu-Icon.MainMenu-Icon-Fixed::before {
         width: 25px;
@@ -500,7 +503,10 @@
         width: 30px;
         height: 22px;
         cursor: pointer;
+        transition-duration: 400ms;
     }
+
+
 
     .MainMenu-Icon::before {
         width: 30px;
@@ -537,6 +543,11 @@
         transition-duration: 400ms;
     }
 
+    .MainMenu-Icon:hover::before,
+    .MainMenu-Icon:hover::after{
+        background-color: #EA028A;
+    }
+
 
     .LogoSvg > path {
         fill: white;
@@ -567,14 +578,7 @@
     }
 
     @media screen and (max-width: 1365px){
-        .SubNavigationMenu-ScrollDown-mobile {
-            color: #FFFFFF;
-            opacity: 1;
-            line-height: 26px;
-            text-align: center;
-            letter-spacing: 1.25px;
-            text-transform: uppercase;
-        }
+        
     }
 
 
@@ -583,6 +587,16 @@
 
     @media screen and (max-width: 767px){
 
+.SubNavigationMenu-ScrollDown-mobile {
+            color: #FFFFFF;
+            opacity: 1;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: center;
+            letter-spacing: 1.25px;
+            text-transform: uppercase;
+        }
 
 
         .MainMenu-Icon {
@@ -678,7 +692,7 @@
 
     function scrollDown() {
         window.scroll({
-            top: window.innerHeight,
+            top: window.innerHeight - (document.querySelector('.MainHeaderFixed').clientHeight),
             behavior: "smooth"
         })
     }

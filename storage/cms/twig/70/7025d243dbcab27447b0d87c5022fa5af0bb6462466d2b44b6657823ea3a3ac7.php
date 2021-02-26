@@ -170,15 +170,17 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
     }
 
     .SubcategoryBanner-SubTitle {
-        padding: 60px;
+        padding: 0 0 50px 9%;
         font-size: 50px;
         line-height: 65px;
         text-transform: uppercase;
         color: #fff;
         font-weight: bold;
-        width: 60%;
+        width: 100%;
         max-width: 900px;
+        max-width: 930px;
         display: inline-block;
+        box-sizing: content-box;
     }
     @media screen and (max-width: 1365px) {
 
@@ -235,7 +237,7 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
         .SubcategoryBanner-SubTitle {
             font-size: 20px;
             line-height: 26px;
-            width: 100%;
+            width: auto;
             padding: 0 30px 30px;
             text-align: center;
             min-height: auto;
@@ -247,7 +249,7 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
             flex-direction: column;
             justify-content: flex-end;
             min-height: 120vw;
-
+            padding: 30px 45px;
         }
     }
 
@@ -324,15 +326,17 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
     }
 
     .SubcategoryBanner-SubTitle {
-        padding: 60px;
+        padding: 0 0 50px 9%;
         font-size: 50px;
         line-height: 65px;
         text-transform: uppercase;
         color: #fff;
         font-weight: bold;
-        width: 60%;
+        width: 100%;
         max-width: 900px;
+        max-width: 930px;
         display: inline-block;
+        box-sizing: content-box;
     }
     @media screen and (max-width: 1365px) {
 
@@ -389,7 +393,7 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
         .SubcategoryBanner-SubTitle {
             font-size: 20px;
             line-height: 26px;
-            width: 100%;
+            width: auto;
             padding: 0 30px 30px;
             text-align: center;
             min-height: auto;
@@ -401,7 +405,7 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
             flex-direction: column;
             justify-content: flex-end;
             min-height: 120vw;
-
+            padding: 30px 45px;
         }
     }
 
