@@ -1,9 +1,91 @@
-1614522847a:1:{s:8:"home.htm";a:9:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:139:"title = "Darling"
+1614615687a:1:{s:8:"home.htm";a:11:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:1988:"title = "Darling"
 url = "/"
 layout = "default"
 is_hidden = 0
+
+[builderDetails CategorySkinCare]
+modelClass = "Iamk\Category\Models\Category"
+identifierValue = "skin-care"
+modelKeyColumn = "slug"
+displayColumn = "slug"
+notFoundMessage = "Record not found"
+
+[builderDetails CategoryMakeup]
+modelClass = "Iamk\Category\Models\Category"
+identifierValue = "makeup"
+modelKeyColumn = "slug"
+displayColumn = "slug"
+notFoundMessage = "Record not found"
+
 ==
 {% partial "site/main-banner.htm" %}
 {% partial 'site/header-fixed.htm' %}
-";s:5:"mtime";i:1613592477;s:6:"markup";s:74:"{% partial "site/main-banner.htm" %}
-{% partial 'site/header-fixed.htm' %}";s:4:"code";N;s:5:"title";s:7:"Darling";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}
+
+
+
+{% set recordMakeup = CategoryMakeup.record %}
+{% set recordSkinCare = CategorySkinCare.record %}
+
+
+
+{% partial 'site/header-fixed.htm' subcategoryMenu=record.subcategory %}
+
+<div id="skin-care" class="ProductContainer" style="
+    margin-top: 100vh; display: none;
+">
+{% for subcategory in recordSkinCare.subcategory %}
+{% partial "category/category" subcategoryTitle=subcategory.subcategory_title subcategorySlug=subcategory.slug categorySubtitle=subcategory.subcategory_description mainSubcategoryBackground=subcategory.subcategory_banner mainSubcategoryBackgroundTablet=subcategory.subcategory_banner_tabet mainSubcategoryBackgroundMobile=subcategory.subcategory_banner_mobile %}
+{% endfor %}
+</div>
+
+<div id="makeup" class="ProductContainer" style="
+    margin-top: 100vh; display: none;
+">
+    {% for subcategory in recordMakeup.subcategory %}
+    {% partial "category/category" subcategoryTitle=subcategory.subcategory_title subcategorySlug=subcategory.slug categorySubtitle=subcategory.subcategory_description mainSubcategoryBackground=subcategory.subcategory_banner mainSubcategoryBackgroundTablet=subcategory.subcategory_banner_tabet mainSubcategoryBackgroundMobile=subcategory.subcategory_banner_mobile %}
+    {% endfor %}
+</div>
+
+
+<script>
+    function openCategory (slug) {
+        let categoryNode = document.getElementById(slug)
+        categoryNode.style.display = 'block'
+        history.pushState(null, null, 'category/' + slug)
+    }
+</script>";s:5:"mtime";i:1614603557;s:6:"markup";s:1540:"{% partial "site/main-banner.htm" %}
+{% partial 'site/header-fixed.htm' %}
+
+
+
+{% set recordMakeup = CategoryMakeup.record %}
+{% set recordSkinCare = CategorySkinCare.record %}
+
+
+
+{% partial 'site/header-fixed.htm' subcategoryMenu=record.subcategory %}
+
+<div id="skin-care" class="ProductContainer" style="
+    margin-top: 100vh; display: none;
+">
+{% for subcategory in recordSkinCare.subcategory %}
+{% partial "category/category" subcategoryTitle=subcategory.subcategory_title subcategorySlug=subcategory.slug categorySubtitle=subcategory.subcategory_description mainSubcategoryBackground=subcategory.subcategory_banner mainSubcategoryBackgroundTablet=subcategory.subcategory_banner_tabet mainSubcategoryBackgroundMobile=subcategory.subcategory_banner_mobile %}
+{% endfor %}
+</div>
+
+<div id="makeup" class="ProductContainer" style="
+    margin-top: 100vh; display: none;
+">
+    {% for subcategory in recordMakeup.subcategory %}
+    {% partial "category/category" subcategoryTitle=subcategory.subcategory_title subcategorySlug=subcategory.slug categorySubtitle=subcategory.subcategory_description mainSubcategoryBackground=subcategory.subcategory_banner mainSubcategoryBackgroundTablet=subcategory.subcategory_banner_tabet mainSubcategoryBackgroundMobile=subcategory.subcategory_banner_mobile %}
+    {% endfor %}
+</div>
+
+
+<script>
+    function openCategory (slug) {
+        let categoryNode = document.getElementById(slug)
+        categoryNode.style.display = 'block'
+        history.pushState(null, null, 'category/' + slug)
+    }
+</script>";s:4:"code";N;s:5:"title";s:7:"Darling";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:31:"builderDetails CategorySkinCare";a:5:{s:10:"modelClass";s:29:"Iamk\Category\Models\Category";s:15:"identifierValue";s:9:"skin-care";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:4:"slug";s:15:"notFoundMessage";s:16:"Record not found";}s:29:"builderDetails CategoryMakeup";a:5:{s:10:"modelClass";s:29:"Iamk\Category\Models\Category";s:15:"identifierValue";s:6:"makeup";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:4:"slug";s:15:"notFoundMessage";s:16:"Record not found";}}}

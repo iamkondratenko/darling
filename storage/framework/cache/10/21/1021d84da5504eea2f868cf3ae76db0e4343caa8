@@ -1,4 +1,4 @@
-1614408518a:1:{s:33:"category/category-main-banner.htm";a:5:{s:8:"fileName";s:33:"category/category-main-banner.htm";s:7:"content";s:6403:"<div class="CategoryMainBanner">
+1614615688a:1:{s:33:"category/category-main-banner.htm";a:5:{s:8:"fileName";s:33:"category/category-main-banner.htm";s:7:"content";s:4212:"<div class="CategoryMainBanner">
     <div class="CategoryMainBanner-Content desktop" style="background: url({{ mainCategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover">
         <div class="CategoryMainBanner-Content-Container" >
             <h1 class="CategoryMainBanner-Title">{{ categoryTitle }}</h1>
@@ -56,108 +56,7 @@
 
 <style>
 
-    .SubNavigationMenu-ScrollDown {
-        cursor: pointer;
-    }
 
-    .CategoryMainBanner-Content.mobile {
-        display: none;
-    }
-
-    .CategoryMainBanner-Content.desktop {
-        display: block;
-    }
-
-    h1.CategoryMainBanner-Title {
-        color: #fff;
-        font-size: 50px;
-        font-weight: 500;
-        text-transform: uppercase;
-    }
-
-    .CategoryMainBanner-SubTitle {
-        font-size: 80px;
-        line-height: 105px;
-        font-weight: 500;
-        color: #fff;
-        text-transform: uppercase;
-    }
-
-    .CategoryMainBanner-SubTitle-Item {
-        color: #fff;
-        text-decoration: none;
-        transition-duration: 500ms;
-    }
-
-    .CategoryMainBanner-SubTitle-Item:hover {
-        color: #EA028A;
-        text-decoration: none;
-    }
-
-    .CategoryMainBanner {
-        width: 100vw;
-        height: 100vh;
-    }
-
-    .CategoryMainBanner-Content {
-        width: 100%;
-        height: 100%;
-    }
-
-    .CategoryMainBanner-Content-Container {
-        width: 60%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        z-index: 99;
-        position: absolute;
-        padding: 0 60px;
-        align-items: flex-start;
-        justify-content: center;
-    }
-
-    .CategoryMainBanner-Content-Background {
-        width: 100%;
-        height: 100%;
-        background-size: contain;
-        position: absolute;
-        top: 0;
-        background-repeat: no-repeat;
-    }
-
-    @media screen and (max-width: 768px) {
-
-        .CategoryMainBanner-Content.mobile {
-            display: block;
-        }
-
-        .CategoryMainBanner-Content.desktop {
-            display: none;
-        }
-
-
-        .CategoryMainBanner-SubTitle {
-            font-size: 40px;
-            line-height: 60px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        h1.CategoryMainBanner-Title {
-            font-size: 40px;
-            writing-mode: vertical-rl;
-            transform: rotateZ(
-                    180deg
-            );
-            color: #EA028A;
-            margin: 48px 0;
-        }
-
-        .CategoryMainBanner-Content-Container {
-            padding: 0 30px;
-            width: 100%;
-        }
-    }
 
 </style>
 
@@ -194,7 +93,7 @@
             scrolledDown = false
         }
     })
-</script>";s:5:"mtime";i:1614320004;s:6:"markup";s:6403:"<div class="CategoryMainBanner">
+</script>";s:5:"mtime";i:1614613404;s:6:"markup";s:4212:"<div class="CategoryMainBanner">
     <div class="CategoryMainBanner-Content desktop" style="background: url({{ mainCategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover">
         <div class="CategoryMainBanner-Content-Container" >
             <h1 class="CategoryMainBanner-Title">{{ categoryTitle }}</h1>
@@ -252,108 +151,7 @@
 
 <style>
 
-    .SubNavigationMenu-ScrollDown {
-        cursor: pointer;
-    }
 
-    .CategoryMainBanner-Content.mobile {
-        display: none;
-    }
-
-    .CategoryMainBanner-Content.desktop {
-        display: block;
-    }
-
-    h1.CategoryMainBanner-Title {
-        color: #fff;
-        font-size: 50px;
-        font-weight: 500;
-        text-transform: uppercase;
-    }
-
-    .CategoryMainBanner-SubTitle {
-        font-size: 80px;
-        line-height: 105px;
-        font-weight: 500;
-        color: #fff;
-        text-transform: uppercase;
-    }
-
-    .CategoryMainBanner-SubTitle-Item {
-        color: #fff;
-        text-decoration: none;
-        transition-duration: 500ms;
-    }
-
-    .CategoryMainBanner-SubTitle-Item:hover {
-        color: #EA028A;
-        text-decoration: none;
-    }
-
-    .CategoryMainBanner {
-        width: 100vw;
-        height: 100vh;
-    }
-
-    .CategoryMainBanner-Content {
-        width: 100%;
-        height: 100%;
-    }
-
-    .CategoryMainBanner-Content-Container {
-        width: 60%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        z-index: 99;
-        position: absolute;
-        padding: 0 60px;
-        align-items: flex-start;
-        justify-content: center;
-    }
-
-    .CategoryMainBanner-Content-Background {
-        width: 100%;
-        height: 100%;
-        background-size: contain;
-        position: absolute;
-        top: 0;
-        background-repeat: no-repeat;
-    }
-
-    @media screen and (max-width: 768px) {
-
-        .CategoryMainBanner-Content.mobile {
-            display: block;
-        }
-
-        .CategoryMainBanner-Content.desktop {
-            display: none;
-        }
-
-
-        .CategoryMainBanner-SubTitle {
-            font-size: 40px;
-            line-height: 60px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        h1.CategoryMainBanner-Title {
-            font-size: 40px;
-            writing-mode: vertical-rl;
-            transform: rotateZ(
-                    180deg
-            );
-            color: #EA028A;
-            margin: 48px 0;
-        }
-
-        .CategoryMainBanner-Content-Container {
-            padding: 0 30px;
-            width: 100%;
-        }
-    }
 
 </style>
 

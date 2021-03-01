@@ -1,4 +1,4 @@
-1614408518a:1:{s:32:"category/subcategory-listing.htm";a:6:{s:8:"fileName";s:32:"category/subcategory-listing.htm";s:7:"content";s:2352:"[builderList subcategoryListing]
+1614615688a:1:{s:32:"category/subcategory-listing.htm";a:6:{s:8:"fileName";s:32:"category/subcategory-listing.htm";s:7:"content";s:1167:"[builderList subcategoryListing]
 modelClass = "Iamk\Productinfo\Models\ProductInfo"
 scope = "-"
 scopeValue = "{{ :scope }}"
@@ -39,65 +39,9 @@ pageNumber = "{{ :page }}"
 
 <style>
 
-    section#layout-content {
-        overflow-x: hidden;
-    }
-
-    .SubcategoryListing {
-        width: 82%;
-        margin: 0 auto;
-    }
-
-    .SubcategoryListing-Items {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding: 20px 0 120px;
-    }
-
-    .SubcategoryListing-Title {
-        font-size: 100px;
-        color: black;
-        font-weight: bold;
-        text-transform: uppercase;
-        line-height: 1;
-        margin: 80px 0 40px;
-    }
-
-    .SubcategoryListing-Title-Asterisk {
-        color: #EA028A;
-    }
 
 
-    @media screen and (max-width: 1919px) {
-        .SubcategoryListing-Title {
-            font-size: 90px;
-        }
-    }
-
-    @media screen and (max-width: 1365px) {
-        .SubcategoryListing-Title {
-            font-size: 80px;
-        }
-    }
-
-
-    @media screen and (max-width: 767px) {
-
-        .SubcategoryListing {
-            width: 72%;
-            margin: 0 auto;
-        }
-
-        .SubcategoryListing-Items {
-            padding: 20px 0 40px;
-        }
-        .SubcategoryListing-Items {
-            padding: 60px 0 40px;
-        }
-    }
-
-</style>";s:5:"mtime";i:1614243566;s:6:"markup";s:2082:"{% set records = subcategoryListing.records %}
+</style>";s:5:"mtime";i:1614613404;s:6:"markup";s:897:"{% set records = subcategoryListing.records %}
 {% set displayColumn = subcategoryListing.displayColumn %}
 {% set noRecordsMessage = subcategoryListing.noRecordsMessage %}
 {% set detailsPage = subcategoryListing.detailsPage %}
@@ -127,62 +71,6 @@ pageNumber = "{{ :page }}"
 
 <style>
 
-    section#layout-content {
-        overflow-x: hidden;
-    }
 
-    .SubcategoryListing {
-        width: 82%;
-        margin: 0 auto;
-    }
-
-    .SubcategoryListing-Items {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding: 20px 0 120px;
-    }
-
-    .SubcategoryListing-Title {
-        font-size: 100px;
-        color: black;
-        font-weight: bold;
-        text-transform: uppercase;
-        line-height: 1;
-        margin: 80px 0 40px;
-    }
-
-    .SubcategoryListing-Title-Asterisk {
-        color: #EA028A;
-    }
-
-
-    @media screen and (max-width: 1919px) {
-        .SubcategoryListing-Title {
-            font-size: 90px;
-        }
-    }
-
-    @media screen and (max-width: 1365px) {
-        .SubcategoryListing-Title {
-            font-size: 80px;
-        }
-    }
-
-
-    @media screen and (max-width: 767px) {
-
-        .SubcategoryListing {
-            width: 72%;
-            margin: 0 auto;
-        }
-
-        .SubcategoryListing-Items {
-            padding: 20px 0 40px;
-        }
-        .SubcategoryListing-Items {
-            padding: 60px 0 40px;
-        }
-    }
 
 </style>";s:4:"code";N;s:30:"builderList subcategoryListing";a:8:{s:10:"modelClass";s:35:"Iamk\Productinfo\Models\ProductInfo";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

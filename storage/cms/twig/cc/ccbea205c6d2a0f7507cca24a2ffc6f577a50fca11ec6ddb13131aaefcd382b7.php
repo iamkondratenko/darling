@@ -124,63 +124,7 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
 
 <style>
 
-    section#layout-content {
-        overflow-x: hidden;
-    }
 
-    .SubcategoryListing {
-        width: 82%;
-        margin: 0 auto;
-    }
-
-    .SubcategoryListing-Items {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding: 20px 0 120px;
-    }
-
-    .SubcategoryListing-Title {
-        font-size: 100px;
-        color: black;
-        font-weight: bold;
-        text-transform: uppercase;
-        line-height: 1;
-        margin: 80px 0 40px;
-    }
-
-    .SubcategoryListing-Title-Asterisk {
-        color: #EA028A;
-    }
-
-
-    @media screen and (max-width: 1919px) {
-        .SubcategoryListing-Title {
-            font-size: 90px;
-        }
-    }
-
-    @media screen and (max-width: 1365px) {
-        .SubcategoryListing-Title {
-            font-size: 80px;
-        }
-    }
-
-
-    @media screen and (max-width: 767px) {
-
-        .SubcategoryListing {
-            width: 72%;
-            margin: 0 auto;
-        }
-
-        .SubcategoryListing-Items {
-            padding: 20px 0 40px;
-        }
-        .SubcategoryListing-Items {
-            padding: 60px 0 40px;
-        }
-    }
 
 </style>";
     }
@@ -232,63 +176,7 @@ class __TwigTemplate_ae4f1e99046c454d2fa5fdca699c0e6090dc89e02c758465969269d1b46
 
 <style>
 
-    section#layout-content {
-        overflow-x: hidden;
-    }
 
-    .SubcategoryListing {
-        width: 82%;
-        margin: 0 auto;
-    }
-
-    .SubcategoryListing-Items {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding: 20px 0 120px;
-    }
-
-    .SubcategoryListing-Title {
-        font-size: 100px;
-        color: black;
-        font-weight: bold;
-        text-transform: uppercase;
-        line-height: 1;
-        margin: 80px 0 40px;
-    }
-
-    .SubcategoryListing-Title-Asterisk {
-        color: #EA028A;
-    }
-
-
-    @media screen and (max-width: 1919px) {
-        .SubcategoryListing-Title {
-            font-size: 90px;
-        }
-    }
-
-    @media screen and (max-width: 1365px) {
-        .SubcategoryListing-Title {
-            font-size: 80px;
-        }
-    }
-
-
-    @media screen and (max-width: 767px) {
-
-        .SubcategoryListing {
-            width: 72%;
-            margin: 0 auto;
-        }
-
-        .SubcategoryListing-Items {
-            padding: 20px 0 40px;
-        }
-        .SubcategoryListing-Items {
-            padding: 60px 0 40px;
-        }
-    }
 
 </style>", "/Users/iamk/git/darling/themes/demo/partials/category/subcategory-listing.htm", "");
     }

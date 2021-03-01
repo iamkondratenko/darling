@@ -22,7 +22,7 @@ displayColumn = "id"
 
         <div class="MainHomeBanner-Content-Links">
 
-            <a href="/category/makeup/" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left">
+            <a onclick="openCategory('makeup')" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left">
                 <span class="MainHomeBanner-Content-LinkArrow">
                     <svg width="71" height="61" viewBox="0 0 71 61"  xmlns="http://www.w3.org/2000/svg" fill="#EA028A">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M30.4535 0L2.26562 28.1878L2.28467 28.2069L0 30.4915L2.26782 32.7594L2.2655 32.7617L30.4534 60.9495L36.1102 55.2927L14.9224 34.1048H70.2656V26.1048H15.6624L36.1103 5.65686L30.4535 0Z" />
@@ -45,7 +45,7 @@ displayColumn = "id"
                 <div class="MainHomeBanner-Content-Slash">/</div>
             </div>
 
-            <a href="/category/skin-care/" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right">
+            <a onclick="openCategory('skin-care')" class="MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right">
                 <div class="MainHomeBanner-Content-LinkItem">Skin care</div>
                 <span class="MainHomeBanner-Content-LinkArrow-Right">
                     <svg version="1.1" id="LinkArrow-Left" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -83,176 +83,7 @@ displayColumn = "id"
 
 
 
-    .MainHomeBanner-Content-LinkArrow-Left {
-        display: none;
-    }
-
-	.MainHomeBanner {
-		display: block;
-		width: 100vw;
-		height: 100vh;
-		position: absolute;
-        z-index: 99;
-	}
-
-	.MainHomeBanner-Content {
-		display: flex;
-		width: 100%;
-		height: 100%;
-	}
-
-    .MainHomeBanner-Content-Links {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 500;
-        display: flex;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        color: #fff;
-        text-transform: uppercase;
-        text-decoration: none;
-        transition-duration: 500ms;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder--left > .MainHomeBanner-Content-LinkArrow {
-        opacity: 0;
-        margin-right: -40px;
-        transition-duration: 400ms;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder--right > .MainHomeBanner-Content-LinkArrow {
-        opacity: 0;
-        margin-left: -40px;
-        transition-duration: 400ms;
-    }
-
-    .MainHomeBanner-Content-LinkArrowImg {
-        width: 65px;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder--left:hover {
-        color: #EA028A;
-        transition-duration: 500ms;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder--left:hover > .MainHomeBanner-Content-LinkArrow {
-        opacity: 1;
-        margin-right: -20px;
-        transition-duration: 400ms;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder--right:hover > .MainHomeBanner-Content-LinkArrow {
-        opacity: 1;
-        margin-left: -20px;
-        transition-duration: 400ms;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder--right:hover {
-        color: #EA028A;
-        transition-duration: 500ms;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder--left:hover > .MainHomeBanner-Content-LinkArrow > svg {
-        fill: #EA028A;
-        transition: 500ms;
-    }
-
-    .MainHomeBanner-Content-LinkItem {
-        font-weight: 500;
-        font-size: 100px;
-        padding: 50px;
-    }
-
-    .MainHomeBanner-Content-Slash {
-        font-weight: 500;
-        font-size: 80px;
-    }
-
-    .MainHomeBanner-Content-SlashHolder {
-        color: #fff;
-        display: flex;
-        align-items: center;
-    }
-
-    .MainHomeBanner-Content-LinkHolder--left {
-        justify-content: flex-end;
-    }
-
-    .MainHomeBanner-Content-LinkHolder--right {
-        justify-content: flex-start;
-    }
-
-	.MainHomeBanner-Content-Background {
-		width: 100%;
-	}
-
-    @media screen and (max-width: 1919px) {
-        .MainHomeBanner-Content-LinkItem {
-            font-size: 80px;
-        }
-    }
-
-    @media screen and (max-width: 1365px){
 
 
-
-        .MainHomeBanner-Content-LinkArrow {
-            display: none;
-        }
-
-        .MainHomeBanner-Content-Links {
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-end;
-            padding-bottom: 100px;
-        }
-
-        .MainHomeBanner-Content-Slash {
-            display: none;
-        }
-
-        a.MainHomeBanner-Content-LinkHolder {
-            width: 100%;
-            justify-content: center;
-        }
-
-        .MainHomeBanner-Content-LinkItem {
-            padding: 0 12px;
-            font-size: 75px;
-        }
-
-        .MainHomeBanner-Content-LinkHolder--right {
-            padding-bottom: 50px;
-        }
-
-        .MainHomeBanner-Content-LinkArrowImg {
-            width: 36px;
-        }
-    }
-
-    @media screen and (max-width: 767px){
-
-        .MainHomeBanner-Content-LinkArrow-Left {
-            display: block;
-            width: 30px;
-            height: 30px;
-        }
-
-        .MainHomeBanner-Content-LinkArrow-Right {
-            display: block;
-            width: 30px;
-            height: 30px;
-            transform: rotate(180deg);
-        }
-
-        .MainHomeBanner-Content-LinkItem {
-            font-size: 40px;
-        }
-    }
 
 </style>
