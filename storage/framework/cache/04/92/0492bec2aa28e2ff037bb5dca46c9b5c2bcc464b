@@ -1,4 +1,4 @@
-1614333651a:1:{s:16:"product-card.htm";a:6:{s:8:"fileName";s:16:"product-card.htm";s:7:"content";s:1178:"description = "Default layout"
+1614409283a:1:{s:16:"product-card.htm";a:6:{s:8:"fileName";s:16:"product-card.htm";s:7:"content";s:1282:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
@@ -34,12 +34,14 @@
 <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
 <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
 <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+
 {% framework extras %}
 {% scripts %}
 
 </body>
 </html>
-";s:5:"mtime";i:1614320141;s:6:"markup";s:1143:"<!DOCTYPE html>
+";s:5:"mtime";i:1614407257;s:6:"markup";s:1247:"<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -73,6 +75,8 @@
 <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
 <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
 <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+
 {% framework extras %}
 {% scripts %}
 

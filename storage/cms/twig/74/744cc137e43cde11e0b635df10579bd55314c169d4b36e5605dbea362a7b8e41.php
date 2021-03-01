@@ -29,7 +29,7 @@ class __TwigTemplate_1d04b8d484afb99d57ca6aceb1d383a8390eabce0b835c99a6f27a4bf9d
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("styles" => 14, "page" => 23, "framework" => 35, "scripts" => 36);
+        $tags = array("styles" => 14, "page" => 23, "framework" => 37, "scripts" => 38);
         $filters = array("escape" => 5, "theme" => 11);
         $functions = array();
 
@@ -127,8 +127,10 @@ class __TwigTemplate_1d04b8d484afb99d57ca6aceb1d383a8390eabce0b835c99a6f27a4bf9d
         // line 34
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js");
         echo "\"></script>
+<script src=\"https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js\"></script>
+
 ";
-        // line 35
+        // line 37
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -139,10 +141,10 @@ class __TwigTemplate_1d04b8d484afb99d57ca6aceb1d383a8390eabce0b835c99a6f27a4bf9d
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 36
+        // line 38
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 37
+        // line 39
         echo "
 </body>
 </html>";
@@ -160,7 +162,7 @@ class __TwigTemplate_1d04b8d484afb99d57ca6aceb1d383a8390eabce0b835c99a6f27a4bf9d
 
     public function getDebugInfo()
     {
-        return array (  146 => 37,  143 => 36,  132 => 35,  128 => 34,  124 => 33,  120 => 32,  110 => 24,  108 => 23,  98 => 15,  95 => 14,  91 => 13,  87 => 12,  83 => 11,  76 => 7,  72 => 6,  68 => 5,  62 => 1,);
+        return array (  148 => 39,  145 => 38,  134 => 37,  128 => 34,  124 => 33,  120 => 32,  110 => 24,  108 => 23,  98 => 15,  95 => 14,  91 => 13,  87 => 12,  83 => 11,  76 => 7,  72 => 6,  68 => 5,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -199,6 +201,8 @@ class __TwigTemplate_1d04b8d484afb99d57ca6aceb1d383a8390eabce0b835c99a6f27a4bf9d
 <script src=\"{{ 'assets/vendor/jquery.js'|theme }}\"></script>
 <script src=\"{{ 'assets/vendor/bootstrap.js'|theme }}\"></script>
 <script src=\"{{ 'assets/javascript/app.js'|theme }}\"></script>
+<script src=\"https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js\"></script>
+
 {% framework extras %}
 {% scripts %}
 

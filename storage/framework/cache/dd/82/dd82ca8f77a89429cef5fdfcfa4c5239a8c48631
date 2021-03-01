@@ -1,4 +1,4 @@
-1614337758a:1:{s:21:"site/header-fixed.htm";a:5:{s:8:"fileName";s:21:"site/header-fixed.htm";s:7:"content";s:5262:"<header class="MainHeaderFixed">
+1614522847a:1:{s:21:"site/header-fixed.htm";a:5:{s:8:"fileName";s:21:"site/header-fixed.htm";s:7:"content";s:5288:"<header class="MainHeaderFixed">
     <div class="MainHeader-Content">
         <div class="MainLogo MainLogoFixed">
             <a class="LogoLink" href="/">
@@ -39,7 +39,9 @@
 
                 previousScrollState = currentScrollState
                 return 'down'
-            } else {
+            
+            }
+             else {
                 previousScrollState = currentScrollState
                 return 'up'
             }
@@ -115,7 +117,7 @@
             margin: 0 25px 0 0;
         }
     }
-</style>";s:5:"mtime";i:1614319867;s:6:"markup";s:5262:"<header class="MainHeaderFixed">
+</style>";s:5:"mtime";i:1614408322;s:6:"markup";s:5288:"<header class="MainHeaderFixed">
     <div class="MainHeader-Content">
         <div class="MainLogo MainLogoFixed">
             <a class="LogoLink" href="/">
@@ -156,7 +158,9 @@
 
                 previousScrollState = currentScrollState
                 return 'down'
-            } else {
+            
+            }
+             else {
                 previousScrollState = currentScrollState
                 return 'up'
             }

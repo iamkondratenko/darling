@@ -1,4 +1,4 @@
-1614333037a:1:{s:31:"category/subcategory-banner.htm";a:5:{s:8:"fileName";s:31:"category/subcategory-banner.htm";s:7:"content";s:4131:"
+1614408518a:1:{s:31:"category/subcategory-banner.htm";a:5:{s:8:"fileName";s:31:"category/subcategory-banner.htm";s:7:"content";s:4131:"
 <div class="SubcategoryBanner" id="{{subcategorySlug}}">
     <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainSubcategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat;">
         <p class="SubcategoryBanner-SubTitle">

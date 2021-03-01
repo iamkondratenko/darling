@@ -114,7 +114,9 @@ class __TwigTemplate_9ffff23877adc34d4cd78a75876c86db27c37afcdcf880c8414e1aa17cc
 
                 previousScrollState = currentScrollState
                 return 'down'
-            } else {
+            
+            }
+             else {
                 previousScrollState = currentScrollState
                 return 'up'
             }
@@ -251,7 +253,9 @@ class __TwigTemplate_9ffff23877adc34d4cd78a75876c86db27c37afcdcf880c8414e1aa17cc
 
                 previousScrollState = currentScrollState
                 return 'down'
-            } else {
+            
+            }
+             else {
                 previousScrollState = currentScrollState
                 return 'up'
             }

@@ -619,14 +619,24 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     var browserHeight = document.body.clientHeight
 
 
+    var state = [0, 0]
+
+
     setScrollForProduct()
 
-    window.addEventListener('scroll', function(e) {
-        let scrolledY = window.scrollY
+    window.addEventListener('scroll', function() {
 
-        if (browserWidth >  1080) {
-            scrollingFloatBlock(scrolledY)
-        }
+        state[0] += 1
+        window.requestAnimationFrame(function() {
+            state[1] += 1
+            console.log(state)
+            let scrolledY = window.scrollY
+
+            if (browserWidth >  1080) {
+                scrollingFloatBlock(scrolledY)
+            }
+        })
+
 
 
     })
@@ -647,7 +657,6 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
                 let textBlockHeight = textBlock.scrollHeight
                 let photoBlockHeight = photoBlock.scrollHeight
 
-                console.log(textBlockHeight >= photoBlockHeight)
                 if (textBlockHeight >= photoBlockHeight) {
                     photoBlock.classList.add('float-scroll')
                     floatScrollBlock = photoBlock
@@ -663,16 +672,10 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     }
 
 
+    var fullBlockHeight = document.querySelector('.product-section').scrollHeight
+
 
     function scrollingFloatBlock(scrolledY) {
-        console.log(floatScrollBlock, floatScrollBlockHeight)
-        var fullBlockHeight = document.querySelector('.product-section').scrollHeight
-
-
-        console.log(scrolledY, fullBlockHeight, floatScrollBlockHeight)
-        console.log((browserHeight))
-
-        var fullScrolledState = scrolledY + browserHeight
 
         floatScrollBlock.style.transform = \"translate3d(0.01px,\" + (Math.floor(scrolledY / (fullBlockHeight / (fullBlockHeight - floatScrollBlockHeight)))) + \"px, 0.01px)\"
 
@@ -697,10 +700,9 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
         var scrollWidth = activeNode.scrollWidth
         var sliderCount = 1
 
-        console.log((activeNode.scrollLeft + screenWidth) / screenWidth)
 
         activeNode.addEventListener('scroll', function (){
-            console.log(activeNode.scrollWidth)
+            (activeNode.scrollWidth)
             if (((activeNode.scrollLeft + screenWidth) / screenWidth).toFixed(0) != sliderCount){
                 sliderCount = ((activeNode.scrollLeft + screenWidth) / screenWidth).toFixed(0)
                 renderDots(sliderCount)
@@ -812,7 +814,6 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
                         })
                         currentSlider = currentSlider - screenWidth
 
-                        console.log(currentSlider)
                         if (currentSlider < 0) {
                             currentSlider = 0
                         }
@@ -824,7 +825,6 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
                             top: scrollHeight,
                             behavior: 'smooth'
                         })
-                        console.log('sdffsdd')
                     }
                     else{
                         /*СВАЙП ВНИЗ*/}
@@ -1264,14 +1264,24 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     var browserHeight = document.body.clientHeight
 
 
+    var state = [0, 0]
+
+
     setScrollForProduct()
 
-    window.addEventListener('scroll', function(e) {
-        let scrolledY = window.scrollY
+    window.addEventListener('scroll', function() {
 
-        if (browserWidth >  1080) {
-            scrollingFloatBlock(scrolledY)
-        }
+        state[0] += 1
+        window.requestAnimationFrame(function() {
+            state[1] += 1
+            console.log(state)
+            let scrolledY = window.scrollY
+
+            if (browserWidth >  1080) {
+                scrollingFloatBlock(scrolledY)
+            }
+        })
+
 
 
     })
@@ -1292,7 +1302,6 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
                 let textBlockHeight = textBlock.scrollHeight
                 let photoBlockHeight = photoBlock.scrollHeight
 
-                console.log(textBlockHeight >= photoBlockHeight)
                 if (textBlockHeight >= photoBlockHeight) {
                     photoBlock.classList.add('float-scroll')
                     floatScrollBlock = photoBlock
@@ -1308,16 +1317,10 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     }
 
 
+    var fullBlockHeight = document.querySelector('.product-section').scrollHeight
+
 
     function scrollingFloatBlock(scrolledY) {
-        console.log(floatScrollBlock, floatScrollBlockHeight)
-        var fullBlockHeight = document.querySelector('.product-section').scrollHeight
-
-
-        console.log(scrolledY, fullBlockHeight, floatScrollBlockHeight)
-        console.log((browserHeight))
-
-        var fullScrolledState = scrolledY + browserHeight
 
         floatScrollBlock.style.transform = \"translate3d(0.01px,\" + (Math.floor(scrolledY / (fullBlockHeight / (fullBlockHeight - floatScrollBlockHeight)))) + \"px, 0.01px)\"
 
@@ -1342,10 +1345,9 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
         var scrollWidth = activeNode.scrollWidth
         var sliderCount = 1
 
-        console.log((activeNode.scrollLeft + screenWidth) / screenWidth)
 
         activeNode.addEventListener('scroll', function (){
-            console.log(activeNode.scrollWidth)
+            (activeNode.scrollWidth)
             if (((activeNode.scrollLeft + screenWidth) / screenWidth).toFixed(0) != sliderCount){
                 sliderCount = ((activeNode.scrollLeft + screenWidth) / screenWidth).toFixed(0)
                 renderDots(sliderCount)
@@ -1457,7 +1459,6 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
                         })
                         currentSlider = currentSlider - screenWidth
 
-                        console.log(currentSlider)
                         if (currentSlider < 0) {
                             currentSlider = 0
                         }
@@ -1469,7 +1470,6 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
                             top: scrollHeight,
                             behavior: 'smooth'
                         })
-                        console.log('sdffsdd')
                     }
                     else{
                         /*СВАЙП ВНИЗ*/}
