@@ -469,6 +469,12 @@ a.MainHeaderFixed-Subcategory-Item:hover {
 
 
 /*MAIN BANNER*/
+
+
+.MainHomeBanner-categoryLeftScreen-contentItem {
+    color: white;
+}
+
 .MainHomeBanner-Content-LinkArrow-Left {
     display: none;
 }
@@ -479,6 +485,7 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     height: 100vh;
     position: absolute;
     z-index: 99;
+    overflow: hidden;
 }
 
 .MainHomeBanner-Content {
@@ -495,7 +502,7 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     display: flex;
 }
 
-a.MainHomeBanner-Content-LinkHolder {
+.MainHomeBanner-Content-LinkHolder {
     width: 50%;
     display: flex;
     align-items: center;
@@ -506,13 +513,13 @@ a.MainHomeBanner-Content-LinkHolder {
     cursor: pointer;
 }
 
-a.MainHomeBanner-Content-LinkHolder--left > .MainHomeBanner-Content-LinkArrow {
+.MainHomeBanner-Content-LinkHolder--left>.MainHomeBanner-Content-LinkArrow {
     opacity: 0;
     margin-right: -40px;
     transition-duration: 400ms;
 }
 
-a.MainHomeBanner-Content-LinkHolder--right > .MainHomeBanner-Content-LinkArrow {
+.MainHomeBanner-Content-LinkHolder--right>.MainHomeBanner-Content-LinkArrow {
     opacity: 0;
     margin-left: -40px;
     transition-duration: 400ms;
@@ -522,29 +529,29 @@ a.MainHomeBanner-Content-LinkHolder--right > .MainHomeBanner-Content-LinkArrow {
     width: 65px;
 }
 
-a.MainHomeBanner-Content-LinkHolder--left:hover {
+.MainHomeBanner-Content-LinkHolder--left:hover {
     color: #EA028A;
     transition-duration: 500ms;
 }
 
-a.MainHomeBanner-Content-LinkHolder--left:hover > .MainHomeBanner-Content-LinkArrow {
+.MainHomeBanner-Content-LinkHolder--left:hover>.MainHomeBanner-Content-LinkArrow {
     opacity: 1;
     margin-right: -20px;
     transition-duration: 400ms;
 }
 
-a.MainHomeBanner-Content-LinkHolder--right:hover > .MainHomeBanner-Content-LinkArrow {
+.MainHomeBanner-Content-LinkHolder--right:hover>.MainHomeBanner-Content-LinkArrow {
     opacity: 1;
     margin-left: -20px;
     transition-duration: 400ms;
 }
 
-a.MainHomeBanner-Content-LinkHolder--right:hover {
+.MainHomeBanner-Content-LinkHolder--right:hover {
     color: #EA028A;
     transition-duration: 500ms;
 }
 
-a.MainHomeBanner-Content-LinkHolder--left:hover > .MainHomeBanner-Content-LinkArrow > svg {
+.MainHomeBanner-Content-LinkHolder--left:hover>.MainHomeBanner-Content-LinkArrow>svg {
     fill: #EA028A;
     transition: 500ms;
 }
@@ -570,12 +577,205 @@ a.MainHomeBanner-Content-LinkHolder--left:hover > .MainHomeBanner-Content-LinkAr
     justify-content: flex-end;
 }
 
+@media(max-width:1024px) {
+    .MainHomeBanner-Content-LinkHolder--left {
+        justify-content: center;
+    }
+}
+
 .MainHomeBanner-Content-LinkHolder--right {
     justify-content: flex-start;
 }
 
+@media(max-width:1024px) {
+    .MainHomeBanner-Content-LinkHolder--right {
+        justify-content: center;
+    }
+}
+
 .MainHomeBanner-Content-Background {
     width: 100%;
+    position: relative;
+}
+
+.MainHomeBanner-Content-BackgroundMobile {
+    display: none;
+}
+
+@media(max-width:1024px) {
+    .MainHomeBanner-Content-BackgroundMobile {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.MainHomeBanner-Content-BackgroundLeftScreen {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    z-index: 2;
+}
+
+@media(max-width:1024px) {
+    .MainHomeBanner-Content-BackgroundLeftScreen {
+        display: none;
+    }
+}
+
+.MainHomeBanner-Content-BackgroundLeftScreenContent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    z-index: 3;
+}
+
+@media(max-width:1024px) {
+    .MainHomeBanner-Content-BackgroundLeftScreenContent {
+        display: none;
+    }
+}
+
+.MainHomeBanner-Content-BackgroundRightScreen {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+@media(max-width:1024px) {
+    .MainHomeBanner-Content-BackgroundRightScreen {
+        display: none;
+    }
+}
+
+.MainHomeBanner-Content-BackgroundRightScreenContent {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: 3;
+}
+
+@media(max-width:1024px) {
+    .MainHomeBanner-Content-BackgroundRightScreenContent {
+        display: none;
+    }
+}
+
+@keyframes left-bg-color-action {
+    0% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes right-bg-color-action {
+    0% {
+        left: 50%;
+        right: 0;
+    }
+
+    100% {
+        left: 0;
+        right: 0;
+    }
+}
+
+@keyframes left-content-action {
+    0% {
+        width: 50%;
+        background-size: auto 100vh;
+        background-position: 28.5vw 0;
+    }
+
+    100% {
+        width: 100%;
+        background-size: auto 110vh;
+        background-position: 3vw -9vh;
+    }
+}
+
+@keyframes right-content-action {
+    0% {
+        width: 50%;
+        left: 50%;
+        background-size: auto 100vh;
+        background-position: -22vw 0;
+    }
+
+    100% {
+        width: 100%;
+        left: 0;
+        background-size: auto 110vh;
+        background-position: 50vw -9vh;
+    }
+}
+
+.MainHomeBanner-Content-BackgroundLeftScreenAnimation {
+    animation-name: left-bg-color-action;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    z-index: 4;
+}
+
+.MainHomeBanner-Content-BackgroundLeftScreenContentAnimation {
+    animation-name: left-content-action;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    z-index: 5;
+}
+
+.MainHomeBanner-Content-BackgroundRightScreenAnimation {
+    animation-name: right-bg-color-action;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    z-index: 4;
+}
+
+.MainHomeBanner-Content-BackgroundRightScreenContentAnimation {
+    animation-name: right-content-action;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    z-index: 5;
+}
+
+.MainHomeBanner-Content-LinkHolder--delete {
+    display: none;
+}
+
+.MainHomeBanner-Content-LinkHolder--hided {
+    animation-name: hided;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hided {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 @media screen and (max-width: 1919px) {
@@ -584,34 +784,7 @@ a.MainHomeBanner-Content-LinkHolder--left:hover > .MainHomeBanner-Content-LinkAr
     }
 }
 
-@media screen and (max-width: 1365px){
-
-
-
-
-
-
-
-    /*.MainHomeBanner-Content-Slash {*/
-    /*    display: none;*/
-    /*}*/
-
-    /*a.MainHomeBanner-Content-LinkHolder {*/
-    /*    width: 100%;*/
-    /*    justify-content: center;*/
-    /*}*/
-
-
-
-
-    .MainHomeBanner-Content-LinkArrowImg {
-        width: 36px;
-    }
-}
-
-
-
-@media screen and (max-width: 414px){
+@media screen and (max-width: 1024px) {
 
 
 
@@ -640,16 +813,128 @@ a.MainHomeBanner-Content-LinkHolder--left:hover > .MainHomeBanner-Content-LinkAr
         font-size: 75px;
     }
 
-    /*.MainHomeBanner-Content-LinkHolder--right {*/
-    /*    padding-bottom: 50px;*/
-    /*}*/
+    .MainHomeBanner-Content-LinkHolder--right {
+        padding-bottom: 50px;
+    }
 
     .MainHomeBanner-Content-LinkArrowImg {
         width: 36px;
     }
 }
 
-@media screen and (max-width: 414px){
+
+
+.MainHomeBanner-categoryLeftScreen {
+    display: none;
+    opacity: 0;
+    width: 60%;
+    height: 100%;
+    z-index: 7;
+    position: absolute;
+    padding: 0 60px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.MainHomeBanner-categoryRightScreen {
+    right: 0;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    width: 40%;
+    height: 100%;
+    z-index: 7;
+    position: absolute;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+@media(max-width:1500px) {
+    .MainHomeBanner-categoryRightScreen {
+        width: 50%;
+    }
+}
+
+.MainHomeBanner-categoryLeftScreen-title {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+.MainHomeBanner-categoryLeftScreen-content {
+    color: #fff;
+    font-size: 80px;
+    line-height: 105px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.MainHomeBanner-categoryLeftScreen-contentItem {
+    text-decoration: none;
+    transition: color ease-out 0.5s;
+    cursor: pointer;
+}
+
+.MainHomeBanner-categoryLeftScreen-contentItem:hover {
+    color: #EA028A;
+}
+
+.MainHomeBanner-categoryScreenAppearance {
+    animation-name: appearance;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.MainHomeBanner-categoryScreenExisting {
+    display: flex;
+}
+
+@keyframes appearance {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media(max-width: 1366px) {
+    .MainHomeBanner-Content-LinkItem {
+        font-size: 60px;
+    }
+
+    .MainHomeBanner-Content-LinkItem {
+        font-size: 60px;
+    }
+}
+
+.MainHomeBanner-Content-LinkHolderDiv {}
+
+@media(max-width:1024px) {
+    .MainHomeBanner-Content-LinkHolderDiv {
+        display: none;
+    }
+}
+
+.MainHomeBanner-Content-LinkHolderLink {
+    display: none;
+}
+
+@media(max-width:1024px) {
+    .MainHomeBanner-Content-LinkHolderLink {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 767px) {
 
     .MainHomeBanner-Content-LinkArrow-Left {
         display: block;
@@ -1499,6 +1784,11 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
         right: 20px;
     }
 }
+
+
+
+
+
 
 
 

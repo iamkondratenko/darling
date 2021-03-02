@@ -142,11 +142,7 @@ class __TwigTemplate_9fe354c22b8057b1dce1d14bd501f7c86996719a63996941d58f211dd21
 
 
 <script>
-    function openCategory (slug) {
-        let categoryNode = document.getElementById(slug)
-        categoryNode.style.display = 'block'
-        history.pushState(null, null, 'category/' + slug)
-    }
+
 </script>";
     }
 
@@ -197,11 +193,7 @@ class __TwigTemplate_9fe354c22b8057b1dce1d14bd501f7c86996719a63996941d58f211dd21
 
 
 <script>
-    function openCategory (slug) {
-        let categoryNode = document.getElementById(slug)
-        categoryNode.style.display = 'block'
-        history.pushState(null, null, 'category/' + slug)
-    }
+
 </script>", "/Users/iamk/git/darling/themes/demo/pages/home.htm", "");
     }
 }

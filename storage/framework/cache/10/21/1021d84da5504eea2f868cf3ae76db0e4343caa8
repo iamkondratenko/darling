@@ -1,4 +1,4 @@
-1614615688a:1:{s:33:"category/category-main-banner.htm";a:5:{s:8:"fileName";s:33:"category/category-main-banner.htm";s:7:"content";s:4212:"<div class="CategoryMainBanner">
+1614673750a:1:{s:33:"category/category-main-banner.htm";a:5:{s:8:"fileName";s:33:"category/category-main-banner.htm";s:7:"content";s:3271:"<div class="CategoryMainBanner">
     <div class="CategoryMainBanner-Content desktop" style="background: url({{ mainCategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover">
         <div class="CategoryMainBanner-Content-Container" >
             <h1 class="CategoryMainBanner-Title">{{ categoryTitle }}</h1>
@@ -63,37 +63,12 @@
 
 <script>
 
-    var previousScrollState = 0
-
-    function compareScrollStateState(currentScrollState) {
-
-        if (currentScrollState > 0) {
-            if (previousScrollState < currentScrollState) {
-
-                previousScrollState = currentScrollState
-                return 'down'
-            } else {
-                previousScrollState = currentScrollState
-                return 'up'
-            }
-        }
 
 
-    }
 
-    var scrolledDown = false
 
-    var bannerNode = document.querySelector('.CategoryMainBanner')
-    document.addEventListener('wheel', function (e) {
-        var scrolled = self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop)
-        if (e.deltaY > 0 && scrolledDown == false && scrolled < window.innerHeight) {
-            scrolledDown = true
-            scrollDown()
-        } if (e.deltaY < 0) {
-            scrolledDown = false
-        }
-    })
-</script>";s:5:"mtime";i:1614613404;s:6:"markup";s:4212:"<div class="CategoryMainBanner">
+
+</script>";s:5:"mtime";i:1614666145;s:6:"markup";s:3271:"<div class="CategoryMainBanner">
     <div class="CategoryMainBanner-Content desktop" style="background: url({{ mainCategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover">
         <div class="CategoryMainBanner-Content-Container" >
             <h1 class="CategoryMainBanner-Title">{{ categoryTitle }}</h1>
@@ -158,34 +133,9 @@
 
 <script>
 
-    var previousScrollState = 0
-
-    function compareScrollStateState(currentScrollState) {
-
-        if (currentScrollState > 0) {
-            if (previousScrollState < currentScrollState) {
-
-                previousScrollState = currentScrollState
-                return 'down'
-            } else {
-                previousScrollState = currentScrollState
-                return 'up'
-            }
-        }
 
 
-    }
 
-    var scrolledDown = false
 
-    var bannerNode = document.querySelector('.CategoryMainBanner')
-    document.addEventListener('wheel', function (e) {
-        var scrolled = self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop)
-        if (e.deltaY > 0 && scrolledDown == false && scrolled < window.innerHeight) {
-            scrolledDown = true
-            scrollDown()
-        } if (e.deltaY < 0) {
-            scrolledDown = false
-        }
-    })
+
 </script>";s:4:"code";N;}}

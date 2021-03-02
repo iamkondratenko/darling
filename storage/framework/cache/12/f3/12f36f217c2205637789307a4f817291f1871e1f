@@ -1,4 +1,4 @@
-1614615688a:1:{s:12:"category.htm";a:10:{s:8:"fileName";s:12:"category.htm";s:7:"content";s:2003:"title = "Категория"
+1614673750a:1:{s:12:"category.htm";a:10:{s:8:"fileName";s:12:"category.htm";s:7:"content";s:2003:"title = "Категория"
 url = "/category/:slug"
 layout = "default"
 is_hidden = 0
@@ -48,7 +48,7 @@ mainCategoryBackgroundTablet=record.main_banner_tablet mainCategoryBackgroundMob
 <style>
 
 
-</style>";s:5:"mtime";i:1614613160;s:6:"markup";s:1726:"{% set record = Category.record %}
+</style>";s:5:"mtime";i:1614663964;s:6:"markup";s:1726:"{% set record = Category.record %}
 {% set displayColumn = Category.displayColumn %}
 {% set notFoundMessage = Category.notFoundMessage %}
 

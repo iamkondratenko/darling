@@ -1,4 +1,4 @@
-1614615688a:1:{s:32:"category/subcategory-listing.htm";a:6:{s:8:"fileName";s:32:"category/subcategory-listing.htm";s:7:"content";s:1167:"[builderList subcategoryListing]
+1614673750a:1:{s:32:"category/subcategory-listing.htm";a:6:{s:8:"fileName";s:32:"category/subcategory-listing.htm";s:7:"content";s:1124:"[builderList subcategoryListing]
 modelClass = "Iamk\Productinfo\Models\ProductInfo"
 scope = "-"
 scopeValue = "{{ :scope }}"
@@ -41,7 +41,7 @@ pageNumber = "{{ :page }}"
 
 
 
-</style>";s:5:"mtime";i:1614613404;s:6:"markup";s:897:"{% set records = subcategoryListing.records %}
+</style>";s:5:"mtime";i:1614663964;s:6:"markup";s:865:"{% set records = subcategoryListing.records %}
 {% set displayColumn = subcategoryListing.displayColumn %}
 {% set noRecordsMessage = subcategoryListing.noRecordsMessage %}
 {% set detailsPage = subcategoryListing.detailsPage %}

@@ -60,3 +60,41 @@ for (let smoothLink of smoothLinks) {
         });
     });
 };
+
+
+
+
+
+
+/* SCROLL DOWN */
+function scrollDownByWheel() {
+    var previousScrollState = 0
+
+    function compareScrollStateState(currentScrollState) {
+
+        if (currentScrollState > 0) {
+            if (previousScrollState < currentScrollState) {
+
+                previousScrollState = currentScrollState
+                return 'down'
+            } else {
+                previousScrollState = currentScrollState
+                return 'up'
+            }
+        }
+
+
+    }
+
+    var scrolledDown = false
+
+    document.addEventListener('wheel', function (e) {
+        var scrolled = self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop)
+        if (e.deltaY > 0 && scrolledDown == false && scrolled < window.innerHeight) {
+            scrolledDown = true
+            scrollDown()
+        } if (e.deltaY < 0) {
+            scrolledDown = false
+        }
+    })
+}

@@ -1,4 +1,4 @@
-1614615688a:1:{s:20:"site/menu-drawer.htm";a:7:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:4870:"[builderList mainMenuItem]
+1614673750a:1:{s:20:"site/menu-drawer.htm";a:7:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:4728:"[builderList mainMenuItem]
 modelClass = "Iamk\Category\Models\Category"
 scope = "-"
 scopeValue = "{{ :scope }}"
@@ -140,7 +140,7 @@ pageNumber = "{{ :page }}"
             }
         )
     }
-</script>";s:5:"mtime";i:1614613119;s:6:"markup";s:4299:"{% set records = mainMenuItem.records %}
+</script>";s:5:"mtime";i:1614663965;s:6:"markup";s:4182:"{% set records = mainMenuItem.records %}
 {% set displayColumn = mainMenuItem.displayColumn %}
 {% set noRecordsMessage = mainMenuItem.noRecordsMessage %}
 {% set detailsPage = mainMenuItem.detailsPage %}

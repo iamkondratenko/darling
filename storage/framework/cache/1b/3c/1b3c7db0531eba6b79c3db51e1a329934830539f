@@ -1,6 +1,6 @@
-1614615687a:1:{s:8:"home.htm";a:11:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:1988:"title = "Darling"
+1614673750a:1:{s:8:"home.htm";a:11:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:1785:"title = "Darling"
 url = "/"
-layout = "default"
+layout = "home"
 is_hidden = 0
 
 [builderDetails CategorySkinCare]
@@ -48,12 +48,8 @@ notFoundMessage = "Record not found"
 
 
 <script>
-    function openCategory (slug) {
-        let categoryNode = document.getElementById(slug)
-        categoryNode.style.display = 'block'
-        history.pushState(null, null, 'category/' + slug)
-    }
-</script>";s:5:"mtime";i:1614603557;s:6:"markup";s:1540:"{% partial "site/main-banner.htm" %}
+
+</script>";s:5:"mtime";i:1614665582;s:6:"markup";s:1340:"{% partial "site/main-banner.htm" %}
 {% partial 'site/header-fixed.htm' %}
 
 
@@ -83,9 +79,5 @@ notFoundMessage = "Record not found"
 
 
 <script>
-    function openCategory (slug) {
-        let categoryNode = document.getElementById(slug)
-        categoryNode.style.display = 'block'
-        history.pushState(null, null, 'category/' + slug)
-    }
-</script>";s:4:"code";N;s:5:"title";s:7:"Darling";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:31:"builderDetails CategorySkinCare";a:5:{s:10:"modelClass";s:29:"Iamk\Category\Models\Category";s:15:"identifierValue";s:9:"skin-care";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:4:"slug";s:15:"notFoundMessage";s:16:"Record not found";}s:29:"builderDetails CategoryMakeup";a:5:{s:10:"modelClass";s:29:"Iamk\Category\Models\Category";s:15:"identifierValue";s:6:"makeup";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:4:"slug";s:15:"notFoundMessage";s:16:"Record not found";}}}
+
+</script>";s:4:"code";N;s:5:"title";s:7:"Darling";s:3:"url";s:1:"/";s:6:"layout";s:4:"home";s:9:"is_hidden";s:1:"0";s:31:"builderDetails CategorySkinCare";a:5:{s:10:"modelClass";s:29:"Iamk\Category\Models\Category";s:15:"identifierValue";s:9:"skin-care";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:4:"slug";s:15:"notFoundMessage";s:16:"Record not found";}s:29:"builderDetails CategoryMakeup";a:5:{s:10:"modelClass";s:29:"Iamk\Category\Models\Category";s:15:"identifierValue";s:6:"makeup";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:4:"slug";s:15:"notFoundMessage";s:16:"Record not found";}}}

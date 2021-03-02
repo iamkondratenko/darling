@@ -1,4 +1,4 @@
-1614615688a:1:{s:23:"category/card-wiget.htm";a:5:{s:8:"fileName";s:23:"category/card-wiget.htm";s:7:"content";s:762:"<div class="SubcategoryListing-ItemCard">
+1614673750a:1:{s:23:"category/card-wiget.htm";a:5:{s:8:"fileName";s:23:"category/card-wiget.htm";s:7:"content";s:762:"<div class="SubcategoryListing-ItemCard">
     <a class="SubcategoryListing-ItemCard-Link" href="/product/{{data.slug}}">
         <div class="SubcategoryListing-ItemCard-Holder">
             <div class="SubcategoryListing-ItemCard-ImageHolder">
@@ -21,7 +21,7 @@
 
 
 
-</style>";s:5:"mtime";i:1614613443;s:6:"markup";s:762:"<div class="SubcategoryListing-ItemCard">
+</style>";s:5:"mtime";i:1614663964;s:6:"markup";s:762:"<div class="SubcategoryListing-ItemCard">
     <a class="SubcategoryListing-ItemCard-Link" href="/product/{{data.slug}}">
         <div class="SubcategoryListing-ItemCard-Holder">
             <div class="SubcategoryListing-ItemCard-ImageHolder">
