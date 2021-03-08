@@ -29,7 +29,7 @@ class __TwigTemplate_db5d73623d5131759a76e8e365561fab6d6dbde215f37284b3b42483978
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("set" => 1, "if" => 5, "partial" => 22, "for" => 31);
+        $tags = array("set" => 1, "if" => 5, "partial" => 22, "for" => 34);
         $filters = array();
         $functions = array();
 
@@ -95,6 +95,7 @@ class __TwigTemplate_db5d73623d5131759a76e8e365561fab6d6dbde215f37284b3b42483978
             $context['__cms_partial_params']['mainCategoryBackgroundTablet'] = twig_get_attribute($this->env, $this->source,             // line 23
 ($context["record"] ?? null), "main_banner_tablet", [], "any", false, false, true, 23)            ;
             $context['__cms_partial_params']['mainCategoryBackgroundMobile'] = twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "main_banner_mobile", [], "any", false, false, true, 23)            ;
+            $context['__cms_partial_params']['subcategoryMenu'] = twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "subcategory", [], "any", false, false, true, 23)            ;
             echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("category/category-main-banner"            , $context['__cms_partial_params']            , true            );
             unset($context['__cms_partial_params']);
             // line 24
@@ -105,35 +106,38 @@ class __TwigTemplate_db5d73623d5131759a76e8e365561fab6d6dbde215f37284b3b42483978
         echo "
 
 
+
 ";
-        // line 29
+        // line 30
         $context['__cms_partial_params'] = [];
-        $context['__cms_partial_params']['subcategoryMenu'] = twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "subcategory", [], "any", false, false, true, 29)        ;
+        $context['__cms_partial_params']['subcategoryMenu'] = twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "subcategory", [], "any", false, false, true, 30)        ;
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header-fixed.htm"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 30
-        echo "
-";
         // line 31
+        echo "
+
+
+";
+        // line 34
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "subcategory", [], "any", false, false, true, 31));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "subcategory", [], "any", false, false, true, 34));
         foreach ($context['_seq'] as $context["_key"] => $context["subcategory"]) {
-            // line 32
+            // line 35
             echo "    ";
             $context['__cms_partial_params'] = [];
-            $context['__cms_partial_params']['subcategoryTitle'] = twig_get_attribute($this->env, $this->source, $context["subcategory"], "subcategory_title", [], "any", false, false, true, 32)            ;
-            $context['__cms_partial_params']['subcategorySlug'] = twig_get_attribute($this->env, $this->source, $context["subcategory"], "slug", [], "any", false, false, true, 32)            ;
-            $context['__cms_partial_params']['categorySubtitle'] = twig_get_attribute($this->env, $this->source, $context["subcategory"], "subcategory_description", [], "any", false, false, true, 32)            ;
-            $context['__cms_partial_params']['mainSubcategoryBackground'] = twig_get_attribute($this->env, $this->source, $context["subcategory"], "subcategory_banner", [], "any", false, false, true, 32)            ;
-            $context['__cms_partial_params']['mainSubcategoryBackgroundTablet'] = twig_get_attribute($this->env, $this->source, $context["subcategory"], "subcategory_banner_tabet", [], "any", false, false, true, 32)            ;
-            $context['__cms_partial_params']['mainSubcategoryBackgroundMobile'] = twig_get_attribute($this->env, $this->source, $context["subcategory"], "subcategory_banner_mobile", [], "any", false, false, true, 32)            ;
+            $context['__cms_partial_params']['subcategoryTitle'] = twig_get_attribute($this->env, $this->source, $context["subcategory"], "subcategory_title", [], "any", false, false, true, 35)            ;
+            $context['__cms_partial_params']['subcategorySlug'] = twig_get_attribute($this->env, $this->source, $context["subcategory"], "slug", [], "any", false, false, true, 35)            ;
+            $context['__cms_partial_params']['categorySubtitle'] = twig_get_attribute($this->env, $this->source, $context["subcategory"], "subcategory_description", [], "any", false, false, true, 35)            ;
+            $context['__cms_partial_params']['mainSubcategoryBackground'] = twig_get_attribute($this->env, $this->source, $context["subcategory"], "subcategory_banner", [], "any", false, false, true, 35)            ;
+            $context['__cms_partial_params']['mainSubcategoryBackgroundTablet'] = twig_get_attribute($this->env, $this->source, $context["subcategory"], "subcategory_banner_tabet", [], "any", false, false, true, 35)            ;
+            $context['__cms_partial_params']['mainSubcategoryBackgroundMobile'] = twig_get_attribute($this->env, $this->source, $context["subcategory"], "subcategory_banner_mobile", [], "any", false, false, true, 35)            ;
             echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("category/category"            , $context['__cms_partial_params']            , true            );
             unset($context['__cms_partial_params']);
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['subcategory'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 34
+        // line 37
         echo "
 
 <style>
@@ -154,7 +158,7 @@ class __TwigTemplate_db5d73623d5131759a76e8e365561fab6d6dbde215f37284b3b42483978
 
     public function getDebugInfo()
     {
-        return array (  137 => 34,  122 => 32,  118 => 31,  115 => 30,  110 => 29,  105 => 26,  101 => 24,  96 => 23,  91 => 22,  73 => 6,  71 => 5,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
+        return array (  141 => 37,  126 => 35,  122 => 34,  117 => 31,  112 => 30,  106 => 26,  102 => 24,  96 => 23,  91 => 22,  73 => 6,  71 => 5,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -181,13 +185,16 @@ class __TwigTemplate_db5d73623d5131759a76e8e365561fab6d6dbde215f37284b3b42483978
 
 
     {% partial \"category/category-main-banner\" categoryTitle=record.title categorySubtitle='pads / patches / masks' mainCategoryBackground=record.main_banner
-mainCategoryBackgroundTablet=record.main_banner_tablet mainCategoryBackgroundMobile=record.main_banner_mobile %}
+mainCategoryBackgroundTablet=record.main_banner_tablet mainCategoryBackgroundMobile=record.main_banner_mobile subcategoryMenu=record.subcategory %}
 
 {% endif %}
 
 
 
+
 {% partial 'site/header-fixed.htm' subcategoryMenu=record.subcategory %}
+
+
 
 {% for subcategory in record.subcategory %}
     {% partial \"category/category\" subcategoryTitle=subcategory.subcategory_title subcategorySlug=subcategory.slug categorySubtitle=subcategory.subcategory_description mainSubcategoryBackground=subcategory.subcategory_banner mainSubcategoryBackgroundTablet=subcategory.subcategory_banner_tabet mainSubcategoryBackgroundMobile=subcategory.subcategory_banner_mobile %}

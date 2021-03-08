@@ -82,7 +82,7 @@ class __TwigTemplate_9ffff23877adc34d4cd78a75876c86db27c37afcdcf880c8414e1aa17cc
         $context['_seq'] = twig_ensure_traversable(($context["subcategoryMenu"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
             // line 19
-            echo "            <a href=\"#";
+            echo "                <a href=\"#";
             echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["item"], "slug", [], "any", false, false, true, 19), 19, $this->source), "html", null, true);
             echo "\" class=\"MainHeaderFixed-Subcategory-Item\">";
             echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["item"], "slug", [], "any", false, false, true, 19), 19, $this->source), "html", null, true);
@@ -94,6 +94,7 @@ class __TwigTemplate_9ffff23877adc34d4cd78a75876c86db27c37afcdcf880c8414e1aa17cc
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 21
         echo "        </div>
+
         <div class=\"MainMenu\">
             <div class=\"MainMenu-Icon MainMenu-Icon-Fixed\" data-openMenu=\"menu-icon\" onclick=\"openMenuHandler()\"></div>
         </div>
@@ -230,9 +231,10 @@ class __TwigTemplate_9ffff23877adc34d4cd78a75876c86db27c37afcdcf880c8414e1aa17cc
         </div>
         <div class=\"MainHeaderFixed-Subcategory\">
             {% for item in subcategoryMenu %}
-            <a href=\"#{{item.slug}}\" class=\"MainHeaderFixed-Subcategory-Item\">{{item.slug}}</a>
+                <a href=\"#{{item.slug}}\" class=\"MainHeaderFixed-Subcategory-Item\">{{item.slug}}</a>
             {% endfor %}
         </div>
+
         <div class=\"MainMenu\">
             <div class=\"MainMenu-Icon MainMenu-Icon-Fixed\" data-openMenu=\"menu-icon\" onclick=\"openMenuHandler()\"></div>
         </div>

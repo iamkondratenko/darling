@@ -28,24 +28,7 @@ displayColumn = "id"
     <div class="MainHomeBanner-Content">
 
         <div class="MainHomeBanner-categoryLeftScreen">
-            <div class="MainHomeBanner-categoryLeftScreen-title">MAKEUP</div>
-
-            <div>
-                <div class="MainHomeBanner-categoryLeftScreen-content">
-                    <a class="MainHomeBanner-categoryLeftScreen-contentItem">
-                        pads
-                    </a>
-                    <span> /</span>
-
-                    <a class="MainHomeBanner-categoryLeftScreen-contentItem">patches</a><br /><span>
-                        /</span>
-                    <a class="MainHomeBanner-categoryLeftScreen-contentItem">masks</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="MainHomeBanner-categoryRightScreen">
-            <div class="MainHomeBanner-categoryLeftScreen-title">MAKEUP</div>
+            <div class="MainHomeBanner-categoryLeftScreen-title">SKIN CARE</div>
 
             <div>
                 <div class="MainHomeBanner-categoryLeftScreen-content">
@@ -57,6 +40,23 @@ displayColumn = "id"
                     <a href="#patches" class="MainHomeBanner-categoryLeftScreen-contentItem">patches</a><br /><span>
                         /</span>
                     <a href="#masks" class="MainHomeBanner-categoryLeftScreen-contentItem">masks</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="MainHomeBanner-categoryRightScreen">
+            <div class="MainHomeBanner-categoryLeftScreen-title">MAKEUP</div>
+
+            <div>
+                <div class="MainHomeBanner-categoryLeftScreen-content">
+                    <a href="#eyes" class="MainHomeBanner-categoryLeftScreen-contentItem">
+                        eyes
+                    </a>
+                    <span> /</span>
+
+                    <a href="#lips" class="MainHomeBanner-categoryLeftScreen-contentItem">lips</a><br /><span>
+                        /</span>
+                    <a href="#face" class="MainHomeBanner-categoryLeftScreen-contentItem">face</a>
                 </div>
             </div>
         </div>
@@ -249,12 +249,13 @@ displayColumn = "id"
     }
 
 
-
     function openCategory (slug) {
         let categoryNode = document.getElementById(slug)
         categoryNode.style.display = 'block'
         history.pushState(null, null, 'category/' + slug)
     }
+
+
 </script>
 
 

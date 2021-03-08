@@ -86,24 +86,7 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
     <div class=\"MainHomeBanner-Content\">
 
         <div class=\"MainHomeBanner-categoryLeftScreen\">
-            <div class=\"MainHomeBanner-categoryLeftScreen-title\">MAKEUP</div>
-
-            <div>
-                <div class=\"MainHomeBanner-categoryLeftScreen-content\">
-                    <a class=\"MainHomeBanner-categoryLeftScreen-contentItem\">
-                        pads
-                    </a>
-                    <span> /</span>
-
-                    <a class=\"MainHomeBanner-categoryLeftScreen-contentItem\">patches</a><br /><span>
-                        /</span>
-                    <a class=\"MainHomeBanner-categoryLeftScreen-contentItem\">masks</a>
-                </div>
-            </div>
-        </div>
-
-        <div class=\"MainHomeBanner-categoryRightScreen\">
-            <div class=\"MainHomeBanner-categoryLeftScreen-title\">MAKEUP</div>
+            <div class=\"MainHomeBanner-categoryLeftScreen-title\">SKIN CARE</div>
 
             <div>
                 <div class=\"MainHomeBanner-categoryLeftScreen-content\">
@@ -115,6 +98,23 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
                     <a href=\"#patches\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">patches</a><br /><span>
                         /</span>
                     <a href=\"#masks\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">masks</a>
+                </div>
+            </div>
+        </div>
+
+        <div class=\"MainHomeBanner-categoryRightScreen\">
+            <div class=\"MainHomeBanner-categoryLeftScreen-title\">MAKEUP</div>
+
+            <div>
+                <div class=\"MainHomeBanner-categoryLeftScreen-content\">
+                    <a href=\"#eyes\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">
+                        eyes
+                    </a>
+                    <span> /</span>
+
+                    <a href=\"#lips\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">lips</a><br /><span>
+                        /</span>
+                    <a href=\"#face\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">face</a>
                 </div>
             </div>
         </div>
@@ -322,12 +322,13 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
     }
 
 
-
     function openCategory (slug) {
         let categoryNode = document.getElementById(slug)
         categoryNode.style.display = 'block'
         history.pushState(null, null, 'category/' + slug)
     }
+
+
 </script>
 
 
@@ -378,24 +379,7 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
     <div class=\"MainHomeBanner-Content\">
 
         <div class=\"MainHomeBanner-categoryLeftScreen\">
-            <div class=\"MainHomeBanner-categoryLeftScreen-title\">MAKEUP</div>
-
-            <div>
-                <div class=\"MainHomeBanner-categoryLeftScreen-content\">
-                    <a class=\"MainHomeBanner-categoryLeftScreen-contentItem\">
-                        pads
-                    </a>
-                    <span> /</span>
-
-                    <a class=\"MainHomeBanner-categoryLeftScreen-contentItem\">patches</a><br /><span>
-                        /</span>
-                    <a class=\"MainHomeBanner-categoryLeftScreen-contentItem\">masks</a>
-                </div>
-            </div>
-        </div>
-
-        <div class=\"MainHomeBanner-categoryRightScreen\">
-            <div class=\"MainHomeBanner-categoryLeftScreen-title\">MAKEUP</div>
+            <div class=\"MainHomeBanner-categoryLeftScreen-title\">SKIN CARE</div>
 
             <div>
                 <div class=\"MainHomeBanner-categoryLeftScreen-content\">
@@ -407,6 +391,23 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
                     <a href=\"#patches\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">patches</a><br /><span>
                         /</span>
                     <a href=\"#masks\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">masks</a>
+                </div>
+            </div>
+        </div>
+
+        <div class=\"MainHomeBanner-categoryRightScreen\">
+            <div class=\"MainHomeBanner-categoryLeftScreen-title\">MAKEUP</div>
+
+            <div>
+                <div class=\"MainHomeBanner-categoryLeftScreen-content\">
+                    <a href=\"#eyes\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">
+                        eyes
+                    </a>
+                    <span> /</span>
+
+                    <a href=\"#lips\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">lips</a><br /><span>
+                        /</span>
+                    <a href=\"#face\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">face</a>
                 </div>
             </div>
         </div>
@@ -599,12 +600,13 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
     }
 
 
-
     function openCategory (slug) {
         let categoryNode = document.getElementById(slug)
         categoryNode.style.display = 'block'
         history.pushState(null, null, 'category/' + slug)
     }
+
+
 </script>
 
 

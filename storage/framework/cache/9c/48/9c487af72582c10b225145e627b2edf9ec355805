@@ -1,4 +1,4 @@
-1614673750a:1:{s:20:"site/menu-drawer.htm";a:7:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:4728:"[builderList mainMenuItem]
+1615104260a:1:{s:20:"site/menu-drawer.htm";a:7:{s:8:"fileName";s:20:"site/menu-drawer.htm";s:7:"content";s:5786:"[builderList mainMenuItem]
 modelClass = "Iamk\Category\Models\Category"
 scope = "-"
 scopeValue = "{{ :scope }}"
@@ -10,8 +10,7 @@ pageNumber = "{{ :page }}"
 sortColumn = "id"
 sortDirection = "desc"
 
-
-[builderList subcategoryListing]
+[builderList productList]
 modelClass = "Iamk\Productinfo\Models\ProductInfo"
 scope = "-"
 scopeValue = "{{ :scope }}"
@@ -20,9 +19,7 @@ noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
-
 ==
-
 {% set records = mainMenuItem.records %}
 {% set displayColumn = mainMenuItem.displayColumn %}
 {% set noRecordsMessage = mainMenuItem.noRecordsMessage %}
@@ -30,7 +27,19 @@ pageNumber = "{{ :page }}"
 {% set detailsKeyColumn = mainMenuItem.detailsKeyColumn %}
 {% set detailsUrlParameter = mainMenuItem.detailsUrlParameter %}
 
-{% set recordsProducts = subcategoryListing.records %}
+
+
+
+{% set recordsProductList = productList.records %}
+{% set displayColumn = productList.displayColumn %}
+{% set noRecordsMessage = productList.noRecordsMessage %}
+{% set detailsPage = productList.detailsPage %}
+{% set detailsKeyColumn = productList.detailsKeyColumn %}
+{% set detailsUrlParameter = productList.detailsUrlParameter %}
+
+{% set countSubcategory = 0 %}
+
+
 
 <div class="MainMenuDrawer">
     <div class="SubNavigationMenu SubNavigationMenu-Fixed">
@@ -50,33 +59,37 @@ pageNumber = "{{ :page }}"
         </div>
     </div>
     <div class="MainMenuDrawer-Items">
-    
 
-    
-
-     
 
     {% for record in records %}
-
-{% for recordProductItem in recordsProducts %}
-
-{% if recordProductItem.slug == record.slug %}
-
-        {{ recordProductItem.slug }}
-
-        {% endif %}
-     {% endfor %}
-
+        {% set count = 0 %}
+        {% for recordProductItem in recordsProductList %}
+            {% if recordProductItem.category == record.slug %}
+                {% set count = count + 1 %}
+            {% endif %}
+        {% endfor %}
         <div class="MainMenuDrawer-Item">
             <div class="MainMenuDrawer-Item-Category">{{record.title}}</div>
             <div class="MainMenuDrawer-Item-Subcategories">
-                <a  onclick="goTo('/category/{{record.slug}}')" class="MainMenuDrawer-Item-Subcategory">All products<sup> 10</sup></a>
-                {% for menuItem in record.subcategory %} 
-                <a  onclick="goTo('/category/{{record.slug}}/#{{menuItem.slug}}')" class="MainMenuDrawer-Item-Subcategory">{{menuItem.subcategory_title}}<sup> 3</sup></a>
+                <a  onclick="goTo('/category/{{record.slug}}')" class="MainMenuDrawer-Item-Subcategory">All products
+                    <sup>
+                        {{count}}
+                    </sup></a>
+                {% for menuItem in record.subcategory %}
+                {% set countSubcategory = 0 %}
+                    <a onclick="goTo('/category/{{record.slug}}/#{{menuItem.slug}}')" class="MainMenuDrawer-Item-Subcategory">{{menuItem.subcategory_title}}
+                        <sup>
+                            {% for recordProductItem in recordsProductList %}
+                                {% if menuItem.slug == recordProductItem.subcategory %}
+                                    {% set countSubcategory = countSubcategory + 1 %}
+                                {% endif %}
+                            {% endfor %}
+
+                            {{countSubcategory}}
+                        </sup></a>
                 {% endfor %}
             </div>
         </div>
-   
     {% endfor %}
 
         
@@ -140,14 +153,26 @@ pageNumber = "{{ :page }}"
             }
         )
     }
-</script>";s:5:"mtime";i:1614663965;s:6:"markup";s:4182:"{% set records = mainMenuItem.records %}
+</script>";s:5:"mtime";i:1614921735;s:6:"markup";s:5228:"{% set records = mainMenuItem.records %}
 {% set displayColumn = mainMenuItem.displayColumn %}
 {% set noRecordsMessage = mainMenuItem.noRecordsMessage %}
 {% set detailsPage = mainMenuItem.detailsPage %}
 {% set detailsKeyColumn = mainMenuItem.detailsKeyColumn %}
 {% set detailsUrlParameter = mainMenuItem.detailsUrlParameter %}
 
-{% set recordsProducts = subcategoryListing.records %}
+
+
+
+{% set recordsProductList = productList.records %}
+{% set displayColumn = productList.displayColumn %}
+{% set noRecordsMessage = productList.noRecordsMessage %}
+{% set detailsPage = productList.detailsPage %}
+{% set detailsKeyColumn = productList.detailsKeyColumn %}
+{% set detailsUrlParameter = productList.detailsUrlParameter %}
+
+{% set countSubcategory = 0 %}
+
+
 
 <div class="MainMenuDrawer">
     <div class="SubNavigationMenu SubNavigationMenu-Fixed">
@@ -167,33 +192,37 @@ pageNumber = "{{ :page }}"
         </div>
     </div>
     <div class="MainMenuDrawer-Items">
-    
 
-    
-
-     
 
     {% for record in records %}
-
-{% for recordProductItem in recordsProducts %}
-
-{% if recordProductItem.slug == record.slug %}
-
-        {{ recordProductItem.slug }}
-
-        {% endif %}
-     {% endfor %}
-
+        {% set count = 0 %}
+        {% for recordProductItem in recordsProductList %}
+            {% if recordProductItem.category == record.slug %}
+                {% set count = count + 1 %}
+            {% endif %}
+        {% endfor %}
         <div class="MainMenuDrawer-Item">
             <div class="MainMenuDrawer-Item-Category">{{record.title}}</div>
             <div class="MainMenuDrawer-Item-Subcategories">
-                <a  onclick="goTo('/category/{{record.slug}}')" class="MainMenuDrawer-Item-Subcategory">All products<sup> 10</sup></a>
-                {% for menuItem in record.subcategory %} 
-                <a  onclick="goTo('/category/{{record.slug}}/#{{menuItem.slug}}')" class="MainMenuDrawer-Item-Subcategory">{{menuItem.subcategory_title}}<sup> 3</sup></a>
+                <a  onclick="goTo('/category/{{record.slug}}')" class="MainMenuDrawer-Item-Subcategory">All products
+                    <sup>
+                        {{count}}
+                    </sup></a>
+                {% for menuItem in record.subcategory %}
+                {% set countSubcategory = 0 %}
+                    <a onclick="goTo('/category/{{record.slug}}/#{{menuItem.slug}}')" class="MainMenuDrawer-Item-Subcategory">{{menuItem.subcategory_title}}
+                        <sup>
+                            {% for recordProductItem in recordsProductList %}
+                                {% if menuItem.slug == recordProductItem.subcategory %}
+                                    {% set countSubcategory = countSubcategory + 1 %}
+                                {% endif %}
+                            {% endfor %}
+
+                            {{countSubcategory}}
+                        </sup></a>
                 {% endfor %}
             </div>
         </div>
-   
     {% endfor %}
 
         
@@ -257,4 +286,4 @@ pageNumber = "{{ :page }}"
             }
         )
     }
-</script>";s:4:"code";N;s:24:"builderList mainMenuItem";a:10:{s:10:"modelClass";s:29:"Iamk\Category\Models\Category";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";s:10:"sortColumn";s:2:"id";s:13:"sortDirection";s:4:"desc";}s:30:"builderList subcategoryListing";a:8:{s:10:"modelClass";s:35:"Iamk\Productinfo\Models\ProductInfo";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}
+</script>";s:4:"code";N;s:24:"builderList mainMenuItem";a:10:{s:10:"modelClass";s:29:"Iamk\Category\Models\Category";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";s:10:"sortColumn";s:2:"id";s:13:"sortDirection";s:4:"desc";}s:23:"builderList productList";a:8:{s:10:"modelClass";s:35:"Iamk\Productinfo\Models\ProductInfo";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

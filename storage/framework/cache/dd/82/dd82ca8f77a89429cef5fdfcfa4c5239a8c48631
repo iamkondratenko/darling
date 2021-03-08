@@ -1,4 +1,4 @@
-1614673750a:1:{s:21:"site/header-fixed.htm";a:5:{s:8:"fileName";s:21:"site/header-fixed.htm";s:7:"content";s:5288:"<header class="MainHeaderFixed">
+1614925634a:1:{s:21:"site/header-fixed.htm";a:5:{s:8:"fileName";s:21:"site/header-fixed.htm";s:7:"content";s:5293:"<header class="MainHeaderFixed">
     <div class="MainHeader-Content">
         <div class="MainLogo MainLogoFixed">
             <a class="LogoLink" href="/">
@@ -16,9 +16,10 @@
         </div>
         <div class="MainHeaderFixed-Subcategory">
             {% for item in subcategoryMenu %}
-            <a href="#{{item.slug}}" class="MainHeaderFixed-Subcategory-Item">{{item.slug}}</a>
+                <a href="#{{item.slug}}" class="MainHeaderFixed-Subcategory-Item">{{item.slug}}</a>
             {% endfor %}
         </div>
+
         <div class="MainMenu">
             <div class="MainMenu-Icon MainMenu-Icon-Fixed" data-openMenu="menu-icon" onclick="openMenuHandler()"></div>
         </div>
@@ -117,7 +118,7 @@
             margin: 0 25px 0 0;
         }
     }
-</style>";s:5:"mtime";i:1614663965;s:6:"markup";s:5288:"<header class="MainHeaderFixed">
+</style>";s:5:"mtime";i:1614857402;s:6:"markup";s:5293:"<header class="MainHeaderFixed">
     <div class="MainHeader-Content">
         <div class="MainLogo MainLogoFixed">
             <a class="LogoLink" href="/">
@@ -135,9 +136,10 @@
         </div>
         <div class="MainHeaderFixed-Subcategory">
             {% for item in subcategoryMenu %}
-            <a href="#{{item.slug}}" class="MainHeaderFixed-Subcategory-Item">{{item.slug}}</a>
+                <a href="#{{item.slug}}" class="MainHeaderFixed-Subcategory-Item">{{item.slug}}</a>
             {% endfor %}
         </div>
+
         <div class="MainMenu">
             <div class="MainMenu-Icon MainMenu-Icon-Fixed" data-openMenu="menu-icon" onclick="openMenuHandler()"></div>
         </div>

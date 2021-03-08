@@ -63,10 +63,6 @@ class __TwigTemplate_13a139569fca4b715834fa368b811a2db4e48b6f3071f7e5af6c86a51da
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("category/subcategory-banner"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         // line 2
-        echo "
-
-";
-        // line 4
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("category/subcategory-listing"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
@@ -84,14 +80,12 @@ class __TwigTemplate_13a139569fca4b715834fa368b811a2db4e48b6f3071f7e5af6c86a51da
 
     public function getDebugInfo()
     {
-        return array (  70 => 4,  66 => 2,  62 => 1,);
+        return array (  66 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% partial \"category/subcategory-banner\" %}
-
-
 {% partial \"category/subcategory-listing\" %}", "/Users/iamk/git/darling/themes/demo/partials/category/category.htm", "");
     }
 }

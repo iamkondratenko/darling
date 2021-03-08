@@ -1,4 +1,4 @@
-1614673750a:1:{s:11:"product.htm";a:10:{s:8:"fileName";s:11:"product.htm";s:7:"content";s:11346:"title = "product"
+1615104259a:1:{s:11:"product.htm";a:10:{s:8:"fileName";s:11:"product.htm";s:7:"content";s:11631:"title = "product"
 url = "/product/:slug"
 layout = "product-card"
 is_hidden = 0
@@ -113,9 +113,16 @@ notFoundMessage = "Record not found"
 
 
 
-    
-    
-/* PRODUCT CARD */
+
+
+        .float-scroll {
+            transform: rotate3d(0, 0, 0, 0.01deg);
+            position: -webkit-sticky;
+            position: sticky;
+            bottom: 0;
+            will-change: transform;
+
+        }
 
 
 
@@ -139,7 +146,6 @@ notFoundMessage = "Record not found"
         state[0] += 1
         window.requestAnimationFrame(function() {
             state[1] += 1
-            console.log(state)
             let scrolledY = window.scrollY
 
             if (browserWidth >  1080) {
@@ -183,17 +189,17 @@ notFoundMessage = "Record not found"
 
 
     var fullBlockHeight = document.querySelector('.product-section').scrollHeight
-
+    var floatingBlockNode = document.querySelector('.product-section__text-block-holder')
 
     function scrollingFloatBlock(scrolledY) {
 
 
-        console.log(floatScrollBlock.scrollHeight, browserHeight)
+        console.log(((window.innerHeight / devicePixelRatio)))
 
             floatScrollBlock.style.transform = scrolledY
         // currentBlockPos = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / (fullBlockHeight - floatScrollBlockHeight)))) + "px, 0.01px)"
 
-        currentBlockPos = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / (fullBlockHeight - floatScrollBlockHeight)))) + "px, 0.01px)"
+        currentBlockPos = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / ((fullBlockHeight - floatScrollBlockHeight) + (window.innerHeight / devicePixelRatio))))) + "px, 0.01px)"
             floatScrollBlock.style.transform = currentBlockPos
 
 
@@ -357,7 +363,7 @@ notFoundMessage = "Record not found"
 
 
 
-</script>";s:5:"mtime";i:1614663964;s:6:"markup";s:11063:"{% set record = productDetails.record %}
+</script>";s:5:"mtime";i:1614754843;s:6:"markup";s:11348:"{% set record = productDetails.record %}
 {% set displayColumn = productDetails.displayColumn %}
 {% set notFoundMessage = productDetails.notFoundMessage %}
 
@@ -459,9 +465,16 @@ notFoundMessage = "Record not found"
 
 
 
-    
-    
-/* PRODUCT CARD */
+
+
+        .float-scroll {
+            transform: rotate3d(0, 0, 0, 0.01deg);
+            position: -webkit-sticky;
+            position: sticky;
+            bottom: 0;
+            will-change: transform;
+
+        }
 
 
 
@@ -485,7 +498,6 @@ notFoundMessage = "Record not found"
         state[0] += 1
         window.requestAnimationFrame(function() {
             state[1] += 1
-            console.log(state)
             let scrolledY = window.scrollY
 
             if (browserWidth >  1080) {
@@ -529,17 +541,17 @@ notFoundMessage = "Record not found"
 
 
     var fullBlockHeight = document.querySelector('.product-section').scrollHeight
-
+    var floatingBlockNode = document.querySelector('.product-section__text-block-holder')
 
     function scrollingFloatBlock(scrolledY) {
 
 
-        console.log(floatScrollBlock.scrollHeight, browserHeight)
+        console.log(((window.innerHeight / devicePixelRatio)))
 
             floatScrollBlock.style.transform = scrolledY
         // currentBlockPos = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / (fullBlockHeight - floatScrollBlockHeight)))) + "px, 0.01px)"
 
-        currentBlockPos = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / (fullBlockHeight - floatScrollBlockHeight)))) + "px, 0.01px)"
+        currentBlockPos = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / ((fullBlockHeight - floatScrollBlockHeight) + (window.innerHeight / devicePixelRatio))))) + "px, 0.01px)"
             floatScrollBlock.style.transform = currentBlockPos
 
 

@@ -16,9 +16,10 @@
         </div>
         <div class="MainHeaderFixed-Subcategory">
             {% for item in subcategoryMenu %}
-            <a href="#{{item.slug}}" class="MainHeaderFixed-Subcategory-Item">{{item.slug}}</a>
+                <a href="#{{item.slug}}" class="MainHeaderFixed-Subcategory-Item">{{item.slug}}</a>
             {% endfor %}
         </div>
+
         <div class="MainMenu">
             <div class="MainMenu-Icon MainMenu-Icon-Fixed" data-openMenu="menu-icon" onclick="openMenuHandler()"></div>
         </div>

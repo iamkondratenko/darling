@@ -1,0 +1,52 @@
+title = "Darling"
+url = "/"
+layout = "home"
+is_hidden = 0
+
+[builderDetails CategorySkinCare]
+modelClass = "Iamk\Category\Models\Category"
+identifierValue = "skin-care"
+modelKeyColumn = "slug"
+displayColumn = "slug"
+notFoundMessage = "Record not found"
+
+[builderDetails CategoryMakeup]
+modelClass = "Iamk\Category\Models\Category"
+identifierValue = "makeup"
+modelKeyColumn = "slug"
+displayColumn = "slug"
+notFoundMessage = "Record not found"
+
+==
+{% partial "site/main-banner.htm" %}
+{% partial 'site/header-fixed.htm' %}
+
+
+
+{% set recordMakeup = CategoryMakeup.record %}
+{% set recordSkinCare = CategorySkinCare.record %}
+
+
+
+{% partial 'site/header-fixed.htm' subcategoryMenu=record.subcategory %}
+
+<div id="skin-care" class="ProductContainer" style="
+    margin-top: 100vh; display: none;
+">
+{% for subcategory in recordSkinCare.subcategory %}
+{% partial "category/category" subcategoryTitle=subcategory.subcategory_title subcategorySlug=subcategory.slug categorySubtitle=subcategory.subcategory_description mainSubcategoryBackground=subcategory.subcategory_banner mainSubcategoryBackgroundTablet=subcategory.subcategory_banner_tabet mainSubcategoryBackgroundMobile=subcategory.subcategory_banner_mobile %}
+{% endfor %}
+</div>
+
+<div id="makeup" class="ProductContainer" style="
+    margin-top: 100vh; display: none;
+">
+    {% for subcategory in recordMakeup.subcategory %}
+    {% partial "category/category" subcategoryTitle=subcategory.subcategory_title subcategorySlug=subcategory.slug categorySubtitle=subcategory.subcategory_description mainSubcategoryBackground=subcategory.subcategory_banner mainSubcategoryBackgroundTablet=subcategory.subcategory_banner_tabet mainSubcategoryBackgroundMobile=subcategory.subcategory_banner_mobile %}
+    {% endfor %}
+</div>
+
+
+<script>
+
+</script>

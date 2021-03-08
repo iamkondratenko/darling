@@ -69,6 +69,11 @@ fields:
                         field: subcategory_title
                         type: slug
                     type: text
+                count_of_products:
+                    label: Count
+                    span: auto
+                    hidden: 0
+                    type: number
     id:
         label: id
         span: auto

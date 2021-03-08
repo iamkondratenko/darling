@@ -102,3 +102,7 @@ fields:
         mode: image
         span: auto
         type: mediafinder
+    buy_link:
+        label: 'Ссылка на товар'
+        span: auto
+        type: text
