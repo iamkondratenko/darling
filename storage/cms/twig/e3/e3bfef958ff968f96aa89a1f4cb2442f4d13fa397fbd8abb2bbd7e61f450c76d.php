@@ -29,7 +29,7 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("styles" => 14, "partial" => 19, "page" => 25, "framework" => 42, "scripts" => 43);
+        $tags = array("styles" => 14, "partial" => 19, "page" => 25, "framework" => 39, "scripts" => 40);
         $filters = array("escape" => 5, "theme" => 11);
         $functions = array();
 
@@ -84,11 +84,11 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         echo "\">
         <link href=\"";
         // line 12
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/vendor.css?25df22");
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/vendor.css?25df27");
         echo "\" rel=\"stylesheet\">
         <link href=\"";
         // line 13
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/theme.css?213325ffrff3");
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/theme.css?sffdsаffd");
         echo "\" rel=\"stylesheet\">
         ";
         // line 14
@@ -132,25 +132,22 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         echo "        </footer>
 
         <!-- Scripts -->
-    <script defer src=\"https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js\"></script>
-
+<script defer src=\"https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js\"></script>
     <script src=\"";
-        // line 36
+        // line 35
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery.js");
         echo "\"></script>
         <script src=\"";
-        // line 37
+        // line 36
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap.js");
         echo "\"></script>
         <script src=\"";
-        // line 38
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js?15276f563");
+        // line 37
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js?12fdfs3fhgfgGhhgfgdgf4");
         echo "\"></script>
-    <script src=\"https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js\"></script>
-
 
     ";
-        // line 42
+        // line 39
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -161,15 +158,40 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 43
+        // line 40
         echo "        ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 44
+        // line 41
         echo "
 
     <script>
         scrollDownByWheel()
+        
+        scrollToLastState()
+        
+            let productNodeList = document.querySelectorAll('.jsCardWigetLink')
+    
+    for (let productNodeItem of productNodeList) {
+        productNodeItem.addEventListener('touchstart', function(e){
+            this.classList.add('hoveredTarget')
+            console.log(this)
+        })
+        productNodeItem.addEventListener('touchend', function(e){
+            this.classList.remove('hoveredTarget')
+        })
+        
+    }
+    
+    
+    
+
+
+
+
+
+        
+
     </script>
 
     </body>
@@ -188,7 +210,7 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
 
     public function getDebugInfo()
     {
-        return array (  169 => 44,  165 => 43,  154 => 42,  147 => 38,  143 => 37,  139 => 36,  132 => 31,  128 => 30,  122 => 26,  120 => 25,  115 => 22,  111 => 21,  108 => 20,  104 => 19,  98 => 15,  95 => 14,  91 => 13,  87 => 12,  83 => 11,  76 => 7,  72 => 6,  68 => 5,  62 => 1,);
+        return array (  166 => 41,  162 => 40,  151 => 39,  146 => 37,  142 => 36,  138 => 35,  132 => 31,  128 => 30,  122 => 26,  120 => 25,  115 => 22,  111 => 21,  108 => 20,  104 => 19,  98 => 15,  95 => 14,  91 => 13,  87 => 12,  83 => 11,  76 => 7,  72 => 6,  68 => 5,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -204,8 +226,8 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
         <meta name=\"generator\" content=\"OctoberCMS\">
         <link rel=\"icon\" type=\"image/png\" href=\"{{ 'assets/images/192x192.png'|theme }}\">
-        <link href=\"{{ 'assets/css/vendor.css?25df22'|theme }}\" rel=\"stylesheet\">
-        <link href=\"{{ 'assets/css/theme.css?213325ffrff3'|theme }}\" rel=\"stylesheet\">
+        <link href=\"{{ 'assets/css/vendor.css?25df27'|theme }}\" rel=\"stylesheet\">
+        <link href=\"{{ 'assets/css/theme.css?sffdsаffd'|theme }}\" rel=\"stylesheet\">
         {% styles %}
     </head>
     <body>
@@ -226,13 +248,10 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
         </footer>
 
         <!-- Scripts -->
-    <script defer src=\"https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js\"></script>
-
+<script defer src=\"https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js\"></script>
     <script src=\"{{ 'assets/vendor/jquery.js'|theme }}\"></script>
         <script src=\"{{ 'assets/vendor/bootstrap.js'|theme }}\"></script>
-        <script src=\"{{ 'assets/javascript/app.js?15276f563'|theme }}\"></script>
-    <script src=\"https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js\"></script>
-
+        <script src=\"{{ 'assets/javascript/app.js?12fdfs3fhgfgGhhgfgdgf4'|theme }}\"></script>
 
     {% framework extras %}
         {% scripts %}
@@ -240,6 +259,31 @@ class __TwigTemplate_137ac797823e1e2c202a34710baa4387f80bcc51f8dc64864b4bf0f3f62
 
     <script>
         scrollDownByWheel()
+        
+        scrollToLastState()
+        
+            let productNodeList = document.querySelectorAll('.jsCardWigetLink')
+    
+    for (let productNodeItem of productNodeList) {
+        productNodeItem.addEventListener('touchstart', function(e){
+            this.classList.add('hoveredTarget')
+            console.log(this)
+        })
+        productNodeItem.addEventListener('touchend', function(e){
+            this.classList.remove('hoveredTarget')
+        })
+        
+    }
+    
+    
+    
+
+
+
+
+
+        
+
     </script>
 
     </body>

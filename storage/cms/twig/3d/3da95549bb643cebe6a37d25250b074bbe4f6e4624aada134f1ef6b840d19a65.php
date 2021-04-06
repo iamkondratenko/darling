@@ -66,21 +66,15 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         // line 4
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/logo.svg");
         echo "\">-->
-        <a class=\"LogoLink\" href=\"/\">
-            <svg class=\"LogoSvg\" viewBox=\"0 0 187 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
-                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.5781 23.3445C14.0901 23.3445 15.8653 21.2676 15.8653 18.9165V10.0613C15.8653 7.71016 14.0901 5.63324 10.5781 5.63324H6.25503V23.3445H10.5781ZM0.774414 0.773438H10.5779C17.1775 0.773438 21.3458 4.14328 21.3458 10.217V18.7589C21.3458 24.8322 17.1775 28.202 10.5779 28.202H0.774414V0.773438Z\" fill=\"white\"/>
-                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M65.3227 13.196C67.7114 13.196 69.0982 12.1768 69.0982 9.39486C69.0982 6.65195 67.7114 5.63324 65.3227 5.63324H60.1222V13.196H65.3227ZM54.6523 0.773438H66.3246C71.8335 0.773438 74.6842 3.98665 74.6842 9.31584C74.6842 13.195 72.9123 15.8984 70.254 17.2309L75.2238 26.3607V28.202H69.9072L64.2831 17.8968H60.1225V28.202H54.6523V0.773438Z\" fill=\"white\"/>
-                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M81.1016 0.773438H86.8221V23.3436H99.7138V28.202H81.1016V0.773438Z\" fill=\"white\"/>
-                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M104.611 28.202H110.489V0.773438H104.611V28.202Z\" fill=\"white\"/>
-                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M117.347 0.773438H122.535L133.23 17.8578V0.773438H138.898V28.202H133.709L123.014 11.1181V28.202H117.347V0.773438Z\" fill=\"white\"/>
-                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M144.774 19.4916V10.5802C144.774 4.39254 148.847 0.773438 155.807 0.773438C161.778 0.773438 166.325 4.00344 166.325 10.2299H160.71C160.71 7.46699 158.575 5.8326 155.491 5.8326C152.051 5.8326 150.389 7.58377 150.389 10.3467V19.4528C150.389 22.4105 152.169 24.1224 155.412 24.1224C157.547 24.1224 159.643 23.0719 160.71 21.4375V18.4798H155.807V13.8878H166.325V28.5977H163.32L161.778 26.3407C160.078 28.2086 157.666 29.1816 154.898 29.1816C148.531 29.1816 144.774 25.5237 144.774 19.4916Z\" fill=\"white\"/>
-                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M40.3758 17.1517L37.3928 8.218L34.3312 17.1517H40.3758ZM25.2646 26.361L34.7618 0.773438H40.2169L49.7544 26.361V28.202H44.2593L42.0622 21.7764H32.6815L30.4061 28.202H25.2646V26.361Z\" fill=\"white\"/>
-                <path fill-rule=\"evenodd\" class=\"LogoAsterisk\" clip-rule=\"evenodd\" d=\"M186.897 5.91835L185.166 2.97546L181.281 5.17749V0.773438H177.819V5.17749L173.934 2.97546L172.203 5.91835L176.089 8.12038L172.203 10.3224L173.934 13.2649L177.819 11.0628V15.4673H181.281V11.0628L185.166 13.2649L186.897 10.3224L183.012 8.12038L186.897 5.91835Z\"/>
+        <a class=\"LogoLink\" onclick=\"goTo('/', false)\">
+            <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 205.1 32\" class=\"LogoSvg\">
+                <path d=\"M20.5 24.7c3.5 0 5.2-2 5.2-4.4v-8.7c0-2.3-1.7-4.4-5.2-4.4h-4.3v17.5h4.3zM10.8 2.5h9.7c6.5 0 10.6 3.3 10.6 9.3v8.4c0 6-4.1 9.3-10.6 9.3h-9.7v-27zM74.4 14.7c2.4 0 3.7-1 3.7-3.7s-1.4-3.7-3.7-3.7h-5.1v7.5h5.1zM63.9 2.5h11.5c5.4 0 8.2 3.2 8.2 8.4 0 3.8-1.7 6.5-4.4 7.8l4.9 9v1.8H79l-5.5-10.2h-4.1v10.2H64v-27zM90 2.5h5.6v22.2h12.7v4.8H90v-27zM113.2 29.5h5.8v-27h-5.8v27zM125.7 2.5h5.1l10.5 16.8V2.5h5.6v27h-5.1l-10.5-16.8v16.8h-5.6v-27zM152.8 20.9v-8.8c0-6.1 4-9.7 10.9-9.7 5.9 0 10.4 3.2 10.4 9.3h-5.5c0-2.7-2.1-4.3-5.1-4.3-3.4 0-5 1.7-5 4.4v9c0 2.9 1.8 4.6 4.9 4.6 2.1 0 4.2-1 5.2-2.6V20h-4.8v-4.5H174V30h-3l-1.5-2.2c-1.7 1.8-4.1 2.8-6.8 2.8-6.2-.1-9.9-3.7-9.9-9.7zM49.9 18.6L47 9.8l-3 8.8h5.9zM35 27.7l9.4-25.2h5.4l9.4 25.2v1.8h-5.4l-2.2-6.3h-9.2L40 29.5h-5v-1.8z\"/>
+                <path d=\"M194.3 7.6l-1.7-2.9-3.8 2.2V2.5h-3.4v4.3l-3.8-2.2-1.7 2.9 3.8 2.2-3.8 2.2 1.7 2.9 3.8-2.2V17h3.4v-4.3l3.8 2.2 1.7-2.9-3.8-2.2 3.8-2.2z\" fill=\"#E6007D\"/>
             </svg>
         </a>
         </div>
-        <div class=\"MainMenu\">
-            <div class=\"MainMenu-Icon\" data-openMenu=\"menu-icon\" onclick=\"openMenuHandler()\"></div>
+        <div class=\"MainMenu\" onclick=\"openMenuHandler()\">
+            <div class=\"MainMenu-Icon\" data-openMenu=\"menu-icon\"></div>
         </div>
     </div>
 
@@ -103,6 +97,18 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
 
 <script>
 
+let div = document.createElement('div');
+
+div.style.overflowY = 'scroll';
+div.style.width = '50px';
+div.style.height = '50px';
+
+// мы должны вставить элемент в документ, иначе размеры будут равны 0
+document.body.append(div);
+let scrollWidth = div.offsetWidth - div.clientWidth;
+
+div.remove();
+
 
 
     function scrollDown() {
@@ -114,19 +120,26 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
 
 
     function openMenuHandler() {
+        
+        
 
         let bodyNode = document.querySelector('body')
 
         let menuButton = document.querySelectorAll('[data-openMenu=\"menu-icon\"]')[0];
         let menuButtonFixed = document.querySelectorAll('[data-openMenu=\"menu-icon\"]')[1];
 
-        let logo = document.querySelector('.LogoSvg')
+        let logo = document.querySelector('.LogoLink')
         let menuDrawer = document.querySelector('.MainMenuDrawer')
         let menuItems = document.querySelector('.MainHeaderFixed-Subcategory')
         let logoHolder = document.querySelector('.MainLogo.MainLogoFixed')
 
 
-
+        
+        
+        
+        
+        
+        
         logoHolder.classList.toggle('js-OpenedMenu')
         menuItems.classList.toggle('js-OpenedMenu')
         bodyNode.classList.toggle('js-bodyMenuIsOpened')
@@ -134,9 +147,41 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         menuButtonFixed.classList.toggle('js-menuIsOpened')
         logo.classList.toggle('js-menuIsOpened')
         menuDrawer.classList.toggle('js-menuIsOpened')
+        
+        
+        
+        let scrollbarWidth = Number(
+                                window.getComputedStyle(
+                                document.querySelectorAll('.MainMenu-Icon')[0]).width.replace('px', '')) + scrollWidth - 7
+        
+        
+        if(logoHolder.classList.contains('js-OpenedMenu')) {
+            menuButton.style.width = scrollbarWidth + 'px'
+            menuButtonFixed.style.width = scrollbarWidth + 'px'
+        } else {
+            menuButton.style.width = ''
+            menuButtonFixed.style.width = ''
+        }
+        
+        
+
+        
     }
+    
+    
+    window.addEventListener('load', function(){
+  
+        if (localStorage.getItem('menuIsOpened') == 'true') {
+            console.log('true')
+            openMenuHandler()
+            localStorage.setItem('menuIsOpened', false)
+        }
+        
+    })
 
 
+
+    
 
 
 
@@ -165,21 +210,15 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
     <div class=\"MainHeader-Content\">
         <div class=\"MainLogo\">
 <!--            <img src=\"{{ 'assets/images/logo.svg' | theme }}\">-->
-        <a class=\"LogoLink\" href=\"/\">
-            <svg class=\"LogoSvg\" viewBox=\"0 0 187 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
-                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.5781 23.3445C14.0901 23.3445 15.8653 21.2676 15.8653 18.9165V10.0613C15.8653 7.71016 14.0901 5.63324 10.5781 5.63324H6.25503V23.3445H10.5781ZM0.774414 0.773438H10.5779C17.1775 0.773438 21.3458 4.14328 21.3458 10.217V18.7589C21.3458 24.8322 17.1775 28.202 10.5779 28.202H0.774414V0.773438Z\" fill=\"white\"/>
-                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M65.3227 13.196C67.7114 13.196 69.0982 12.1768 69.0982 9.39486C69.0982 6.65195 67.7114 5.63324 65.3227 5.63324H60.1222V13.196H65.3227ZM54.6523 0.773438H66.3246C71.8335 0.773438 74.6842 3.98665 74.6842 9.31584C74.6842 13.195 72.9123 15.8984 70.254 17.2309L75.2238 26.3607V28.202H69.9072L64.2831 17.8968H60.1225V28.202H54.6523V0.773438Z\" fill=\"white\"/>
-                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M81.1016 0.773438H86.8221V23.3436H99.7138V28.202H81.1016V0.773438Z\" fill=\"white\"/>
-                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M104.611 28.202H110.489V0.773438H104.611V28.202Z\" fill=\"white\"/>
-                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M117.347 0.773438H122.535L133.23 17.8578V0.773438H138.898V28.202H133.709L123.014 11.1181V28.202H117.347V0.773438Z\" fill=\"white\"/>
-                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M144.774 19.4916V10.5802C144.774 4.39254 148.847 0.773438 155.807 0.773438C161.778 0.773438 166.325 4.00344 166.325 10.2299H160.71C160.71 7.46699 158.575 5.8326 155.491 5.8326C152.051 5.8326 150.389 7.58377 150.389 10.3467V19.4528C150.389 22.4105 152.169 24.1224 155.412 24.1224C157.547 24.1224 159.643 23.0719 160.71 21.4375V18.4798H155.807V13.8878H166.325V28.5977H163.32L161.778 26.3407C160.078 28.2086 157.666 29.1816 154.898 29.1816C148.531 29.1816 144.774 25.5237 144.774 19.4916Z\" fill=\"white\"/>
-                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M40.3758 17.1517L37.3928 8.218L34.3312 17.1517H40.3758ZM25.2646 26.361L34.7618 0.773438H40.2169L49.7544 26.361V28.202H44.2593L42.0622 21.7764H32.6815L30.4061 28.202H25.2646V26.361Z\" fill=\"white\"/>
-                <path fill-rule=\"evenodd\" class=\"LogoAsterisk\" clip-rule=\"evenodd\" d=\"M186.897 5.91835L185.166 2.97546L181.281 5.17749V0.773438H177.819V5.17749L173.934 2.97546L172.203 5.91835L176.089 8.12038L172.203 10.3224L173.934 13.2649L177.819 11.0628V15.4673H181.281V11.0628L185.166 13.2649L186.897 10.3224L183.012 8.12038L186.897 5.91835Z\"/>
+        <a class=\"LogoLink\" onclick=\"goTo('/', false)\">
+            <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 205.1 32\" class=\"LogoSvg\">
+                <path d=\"M20.5 24.7c3.5 0 5.2-2 5.2-4.4v-8.7c0-2.3-1.7-4.4-5.2-4.4h-4.3v17.5h4.3zM10.8 2.5h9.7c6.5 0 10.6 3.3 10.6 9.3v8.4c0 6-4.1 9.3-10.6 9.3h-9.7v-27zM74.4 14.7c2.4 0 3.7-1 3.7-3.7s-1.4-3.7-3.7-3.7h-5.1v7.5h5.1zM63.9 2.5h11.5c5.4 0 8.2 3.2 8.2 8.4 0 3.8-1.7 6.5-4.4 7.8l4.9 9v1.8H79l-5.5-10.2h-4.1v10.2H64v-27zM90 2.5h5.6v22.2h12.7v4.8H90v-27zM113.2 29.5h5.8v-27h-5.8v27zM125.7 2.5h5.1l10.5 16.8V2.5h5.6v27h-5.1l-10.5-16.8v16.8h-5.6v-27zM152.8 20.9v-8.8c0-6.1 4-9.7 10.9-9.7 5.9 0 10.4 3.2 10.4 9.3h-5.5c0-2.7-2.1-4.3-5.1-4.3-3.4 0-5 1.7-5 4.4v9c0 2.9 1.8 4.6 4.9 4.6 2.1 0 4.2-1 5.2-2.6V20h-4.8v-4.5H174V30h-3l-1.5-2.2c-1.7 1.8-4.1 2.8-6.8 2.8-6.2-.1-9.9-3.7-9.9-9.7zM49.9 18.6L47 9.8l-3 8.8h5.9zM35 27.7l9.4-25.2h5.4l9.4 25.2v1.8h-5.4l-2.2-6.3h-9.2L40 29.5h-5v-1.8z\"/>
+                <path d=\"M194.3 7.6l-1.7-2.9-3.8 2.2V2.5h-3.4v4.3l-3.8-2.2-1.7 2.9 3.8 2.2-3.8 2.2 1.7 2.9 3.8-2.2V17h3.4v-4.3l3.8 2.2 1.7-2.9-3.8-2.2 3.8-2.2z\" fill=\"#E6007D\"/>
             </svg>
         </a>
         </div>
-        <div class=\"MainMenu\">
-            <div class=\"MainMenu-Icon\" data-openMenu=\"menu-icon\" onclick=\"openMenuHandler()\"></div>
+        <div class=\"MainMenu\" onclick=\"openMenuHandler()\">
+            <div class=\"MainMenu-Icon\" data-openMenu=\"menu-icon\"></div>
         </div>
     </div>
 
@@ -202,6 +241,18 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
 
 <script>
 
+let div = document.createElement('div');
+
+div.style.overflowY = 'scroll';
+div.style.width = '50px';
+div.style.height = '50px';
+
+// мы должны вставить элемент в документ, иначе размеры будут равны 0
+document.body.append(div);
+let scrollWidth = div.offsetWidth - div.clientWidth;
+
+div.remove();
+
 
 
     function scrollDown() {
@@ -213,19 +264,26 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
 
 
     function openMenuHandler() {
+        
+        
 
         let bodyNode = document.querySelector('body')
 
         let menuButton = document.querySelectorAll('[data-openMenu=\"menu-icon\"]')[0];
         let menuButtonFixed = document.querySelectorAll('[data-openMenu=\"menu-icon\"]')[1];
 
-        let logo = document.querySelector('.LogoSvg')
+        let logo = document.querySelector('.LogoLink')
         let menuDrawer = document.querySelector('.MainMenuDrawer')
         let menuItems = document.querySelector('.MainHeaderFixed-Subcategory')
         let logoHolder = document.querySelector('.MainLogo.MainLogoFixed')
 
 
-
+        
+        
+        
+        
+        
+        
         logoHolder.classList.toggle('js-OpenedMenu')
         menuItems.classList.toggle('js-OpenedMenu')
         bodyNode.classList.toggle('js-bodyMenuIsOpened')
@@ -233,9 +291,41 @@ class __TwigTemplate_23dfba34ee6a7900a6ae8913929c0f239850fd0ce0b931ae7e0b19838a8
         menuButtonFixed.classList.toggle('js-menuIsOpened')
         logo.classList.toggle('js-menuIsOpened')
         menuDrawer.classList.toggle('js-menuIsOpened')
+        
+        
+        
+        let scrollbarWidth = Number(
+                                window.getComputedStyle(
+                                document.querySelectorAll('.MainMenu-Icon')[0]).width.replace('px', '')) + scrollWidth - 7
+        
+        
+        if(logoHolder.classList.contains('js-OpenedMenu')) {
+            menuButton.style.width = scrollbarWidth + 'px'
+            menuButtonFixed.style.width = scrollbarWidth + 'px'
+        } else {
+            menuButton.style.width = ''
+            menuButtonFixed.style.width = ''
+        }
+        
+        
+
+        
     }
+    
+    
+    window.addEventListener('load', function(){
+  
+        if (localStorage.getItem('menuIsOpened') == 'true') {
+            console.log('true')
+            openMenuHandler()
+            localStorage.setItem('menuIsOpened', false)
+        }
+        
+    })
 
 
+
+    
 
 
 

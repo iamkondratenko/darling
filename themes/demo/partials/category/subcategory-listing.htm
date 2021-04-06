@@ -7,8 +7,8 @@ noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
+sortColumn = "sort"
 ==
-
 {% set records = subcategoryListing.records %}
 {% set displayColumn = subcategoryListing.displayColumn %}
 {% set noRecordsMessage = subcategoryListing.noRecordsMessage %}
@@ -26,7 +26,11 @@ pageNumber = "{{ :page }}"
 
         {% for record in records %}
         {% if record.subcategory == subcategorySlug %}
-        {% partial "category/card-wiget" data=record %}
+            {% if record.is_banner == false %}
+                {% partial "category/card-wiget" data=record %}
+            {% else %}
+                {% partial "category/banner-wiget" data=record %}
+            {% endif %}
         {% endif %}
     {% else %}
         <li class="no-data">{{ noRecordsMessage }}</li>
@@ -42,3 +46,9 @@ pageNumber = "{{ :page }}"
 
 
 </style>
+
+
+<script>
+
+
+</script>

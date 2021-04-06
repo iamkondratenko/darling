@@ -1,0 +1,158 @@
+==
+<div id="footer">
+    <div class="social_networks_title">let’s be friends</div>
+            
+    <div class="footer-content">
+        <div class="social_networks">
+            <div class="social_networks_links">
+                <a href="https://www.instagram.com/hi_darling_official/" class="social_networks_link social_networks_link--official" target="_blank">@hi_darling_official</a>
+                <a href="https://www.instagram.com/hi_darling_ru/" class="social_networks_link social_networks_link--ru" target="_blank">@hi_darling_ru</a>
+                <a href="#" class="social_networks_link social_networks_link--hashtag">#youredarling</a>
+            </div>
+        </div>
+        <div class="footer_links">
+            <div class="footer_links">
+                <a href="https://goldapple.ru/brands/darling#144082" class="footer_link" target="_blank">Buy now</a>
+                <a href={{'privacy/privacy.pdf' | media }} class="footer_link" target="_blank">Privacy policy</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+
+
+    a.footer_link {
+        color: white;
+        text-decoration: underline;
+        margin: 0 0 0 50px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .footer_links {
+        text-align: right;
+        display: flex;
+        align-items: flex-end;
+    }
+    .social_networks {
+        width: 450px;
+        max-width: 90vw;
+    }
+    
+    .social_networks_links {
+    display: flex;
+    flex-wrap: wrap;
+    }
+        
+        
+    a.social_networks_link {
+        color: white;
+        text-decoration: none;
+        margin: 0 50px 0 0;
+        line-height: 50px;
+        font-size: 20px;
+    }
+    .social_networks_title {
+        font-size: 50px;
+        text-transform: uppercase;
+        color: white;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+    #footer {
+        width: 100%;
+        padding: 60px;
+        background-color: #EA028A; 
+    }
+    
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .social_networks_link--official{
+        order: 0;    
+    }
+    
+     .social_networks_link--hashtag{
+        order: 1;    
+    }
+    
+     .social_networks_link--ru{
+        order: 2;    
+    }
+
+    @media screen and (max-width: 1080px) {
+
+        #footer {
+            padding: 60px 45px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        
+       
+
+        .social_networks_title {
+            font-size: 50px;
+            line-height: 50px;
+            margin-bottom: 24px;
+        }
+
+        .footer_links {
+            flex: 1 1 auto;
+            justify-content: flex-end;
+            text-align: left;
+        }
+
+        a.footer_link {
+            margin: 11px;
+        }
+
+    }
+    
+    @media screen and (max-width: 981px) {
+         .social_networks {
+            flex: 1 1 60%;
+        }
+    }
+    
+    @media screen and (max-width: 642px) {
+
+        #footer {
+            padding: 60px 30px;
+        }
+        
+        .footer-content{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        
+        .social_networks{
+            margin-bottom: 8px;    
+        }
+        
+        .footer_links {
+            justify-content: space-between;
+        }
+        
+        .social_networks_title {
+            font-size: 30px;
+            line-height: 30px;
+        }
+        
+        .social_networks_links {
+            flex-direction: column;
+        }
+        
+        .social_networks_link{
+            order: 0;    
+        }
+        
+         a.footer_link {
+            margin: 0;
+        }
+
+    }
+</style>

@@ -29,8 +29,8 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("for" => 4, "if" => 5);
-        $filters = array("escape" => 1, "media" => 2);
+        $tags = array("for" => 5, "if" => 6);
+        $filters = array("escape" => 2, "media" => 3);
         $functions = array();
 
         try {
@@ -59,85 +59,87 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
     {
         $macros = $this->macros;
         // line 1
-        echo "<div class=\"SubcategoryBanner\" id=\"";
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["subcategorySlug"] ?? null), 1, $this->source), "html", null, true);
-        echo "\">
-    <div class=\"SubcategoryBanner-Content-Container\" style=\"background: url(";
+        echo "<div class=\"SubcategoryBanner\">
+    <div class=\"SubcategoryBanner-idLink\" id=\"";
         // line 2
-        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(($context["mainSubcategoryBackground"] ?? null), 2, $this->source));
-        echo "); background-size: 100%; background-repeat: no-repeat;\">
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["subcategorySlug"] ?? null), 2, $this->source), "html", null, true);
+        echo "\"></div>
+    <div class=\"SubcategoryBanner-Content-Container\" style=\"background: url(";
+        // line 3
+        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(($context["mainSubcategoryBackground"] ?? null), 3, $this->source));
+        echo "); background-size: cover; background-repeat: no-repeat;\">
         <p class=\"SubcategoryBanner-SubTitle\">
             ";
-        // line 4
+        // line 5
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["categorySubtitle"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["description"]) {
-            // line 5
+            // line 6
             echo "            <span class=\"";
-            if ((twig_get_attribute($this->env, $this->source, $context["description"], "subcategory_description_marked", [], "any", false, false, true, 5) == true)) {
+            if ((twig_get_attribute($this->env, $this->source, $context["description"], "subcategory_description_marked", [], "any", false, false, true, 6) == true)) {
                 echo " SubcategoryBanner-SubTitle-Marked ";
             }
             echo "\">";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["description"], "subcategory_description", [], "any", false, false, true, 5), 5, $this->source), "html", null, true);
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["description"], "subcategory_description", [], "any", false, false, true, 6), 6, $this->source), "html", null, true);
             echo "</span>
             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['description'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 7
+        // line 8
         echo "        </p>
     </div>
     <div class=\"SubcategoryBanner-Content-ContainerTablet\" style=\"background: url(";
-        // line 9
-        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(($context["mainSubcategoryBackgroundTablet"] ?? null), 9, $this->source));
-        echo "); background-size: 100%; background-repeat: no-repeat;\">
+        // line 10
+        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(($context["mainSubcategoryBackgroundTablet"] ?? null), 10, $this->source));
+        echo "); background-size: cover; background-repeat: no-repeat;\">
         <p class=\"SubcategoryBanner-SubTitle\">
             ";
-        // line 11
+        // line 12
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["categorySubtitle"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["description"]) {
-            // line 12
+            // line 13
             echo "            <span class=\"";
-            if ((twig_get_attribute($this->env, $this->source, $context["description"], "subcategory_description_marked", [], "any", false, false, true, 12) == true)) {
+            if ((twig_get_attribute($this->env, $this->source, $context["description"], "subcategory_description_marked", [], "any", false, false, true, 13) == true)) {
                 echo " SubcategoryBanner-SubTitle-Marked ";
             }
             echo "\">";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["description"], "subcategory_description", [], "any", false, false, true, 12), 12, $this->source), "html", null, true);
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["description"], "subcategory_description", [], "any", false, false, true, 13), 13, $this->source), "html", null, true);
             echo "</span>
             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['description'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 14
+        // line 15
         echo "        </p>
     </div>
     <div class=\"SubcategoryBanner-Content-ContainerMobile\" style=\"background: url(";
-        // line 16
-        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(($context["mainSubcategoryBackgroundMobile"] ?? null), 16, $this->source));
-        echo "); background-size: 100%; background-repeat: no-repeat;\">
-        <h3 class=\"SubcategoryBanner-Title\">";
         // line 17
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["subcategoryTitle"] ?? null), 17, $this->source), "html", null, true);
+        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(($context["mainSubcategoryBackgroundMobile"] ?? null), 17, $this->source));
+        echo "); background-size: cover; background-repeat: no-repeat;\">
+        <h3 class=\"SubcategoryBanner-Title\">";
+        // line 18
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["subcategoryTitle"] ?? null), 18, $this->source), "html", null, true);
         echo "</h3>
         <p class=\"SubcategoryBanner-SubTitle\">
             ";
-        // line 19
+        // line 20
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["categorySubtitle"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["description"]) {
-            // line 20
+            // line 21
             echo "            <span>";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["description"], "subcategory_description", [], "any", false, false, true, 20), 20, $this->source), "html", null, true);
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["description"], "subcategory_description", [], "any", false, false, true, 21), 21, $this->source), "html", null, true);
             echo "</span>
             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['description'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 22
+        // line 23
         echo "        </p>
     </div>
 </div>
@@ -163,27 +165,28 @@ class __TwigTemplate_98098765d533c21676e7cd6767c030c87f3aced979b36a472c5ec8f0c1e
 
     public function getDebugInfo()
     {
-        return array (  141 => 22,  132 => 20,  128 => 19,  123 => 17,  119 => 16,  115 => 14,  102 => 12,  98 => 11,  93 => 9,  89 => 7,  76 => 5,  72 => 4,  67 => 2,  62 => 1,);
+        return array (  143 => 23,  134 => 21,  130 => 20,  125 => 18,  121 => 17,  117 => 15,  104 => 13,  100 => 12,  95 => 10,  91 => 8,  78 => 6,  74 => 5,  69 => 3,  65 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"SubcategoryBanner\" id=\"{{subcategorySlug}}\">
-    <div class=\"SubcategoryBanner-Content-Container\" style=\"background: url({{ mainSubcategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat;\">
+        return new Source("<div class=\"SubcategoryBanner\">
+    <div class=\"SubcategoryBanner-idLink\" id=\"{{subcategorySlug}}\"></div>
+    <div class=\"SubcategoryBanner-Content-Container\" style=\"background: url({{ mainSubcategoryBackground | media }}); background-size: cover; background-repeat: no-repeat;\">
         <p class=\"SubcategoryBanner-SubTitle\">
             {% for description in categorySubtitle %}
             <span class=\"{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}\">{{ description.subcategory_description }}</span>
             {% endfor %}
         </p>
     </div>
-    <div class=\"SubcategoryBanner-Content-ContainerTablet\" style=\"background: url({{ mainSubcategoryBackgroundTablet | media }}); background-size: 100%; background-repeat: no-repeat;\">
+    <div class=\"SubcategoryBanner-Content-ContainerTablet\" style=\"background: url({{ mainSubcategoryBackgroundTablet | media }}); background-size: cover; background-repeat: no-repeat;\">
         <p class=\"SubcategoryBanner-SubTitle\">
             {% for description in categorySubtitle %}
             <span class=\"{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}\">{{ description.subcategory_description }}</span>
             {% endfor %}
         </p>
     </div>
-    <div class=\"SubcategoryBanner-Content-ContainerMobile\" style=\"background: url({{ mainSubcategoryBackgroundMobile | media }}); background-size: 100%; background-repeat: no-repeat;\">
+    <div class=\"SubcategoryBanner-Content-ContainerMobile\" style=\"background: url({{ mainSubcategoryBackgroundMobile | media }}); background-size: cover; background-repeat: no-repeat;\">
         <h3 class=\"SubcategoryBanner-Title\">{{subcategoryTitle}}</h3>
         <p class=\"SubcategoryBanner-SubTitle\">
             {% for description in categorySubtitle %}

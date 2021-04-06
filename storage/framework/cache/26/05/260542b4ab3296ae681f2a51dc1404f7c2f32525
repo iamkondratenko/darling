@@ -1,4 +1,4 @@
-1615104259a:1:{s:8:"home.htm";a:6:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:1506:"description = "Default layout"
+1617695983a:1:{s:8:"home.htm";a:6:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:1636:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="OctoberCMS">
     <link rel="icon" type="image/png" href="{{ 'assets/images/192x192.png'|theme }}">
-    <link href="{{ 'assets/css/vendor.css?25dd22'|theme }}" rel="stylesheet">
-    <link href="{{ 'assets/css/theme.css?21332fff5rff3'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/vendor.css?25dd31'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/theme.css?dfgfrwsfcxddffed'|theme }}" rel="stylesheet">
     {% styles %}
 </head>
 <body>
@@ -32,26 +32,33 @@
     {% partial 'site/footer' %}
 </footer>
 
+
+
+
 <!-- Scripts -->
 <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-
 <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
 <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
-<script src="{{ 'assets/javascript/app.js?1527f6563'|theme }}"></script>
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-
-{% framework extras %}
+<script src="{{ 'assets/javascript/app.js?123аsdsffdfdffgdFgfddffggfgfgsfа4'|theme }}"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+ -->
+ 
+ {% framework extras %}
 {% scripts %}
 
 
     <script>
+    
+    
+    
+         
+    
         scrollDownByWheel()
 </script>
 
 
 </body>
-</html>
-";s:5:"mtime";i:1614668622;s:6:"markup";s:1471:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1617692203;s:6:"markup";s:1602:"<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -62,8 +69,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="OctoberCMS">
     <link rel="icon" type="image/png" href="{{ 'assets/images/192x192.png'|theme }}">
-    <link href="{{ 'assets/css/vendor.css?25dd22'|theme }}" rel="stylesheet">
-    <link href="{{ 'assets/css/theme.css?21332fff5rff3'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/vendor.css?25dd31'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/theme.css?dfgfrwsfcxddffed'|theme }}" rel="stylesheet">
     {% styles %}
 </head>
 <body>
@@ -83,19 +90,27 @@
     {% partial 'site/footer' %}
 </footer>
 
+
+
+
 <!-- Scripts -->
 <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-
 <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
 <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
-<script src="{{ 'assets/javascript/app.js?1527f6563'|theme }}"></script>
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-
-{% framework extras %}
+<script src="{{ 'assets/javascript/app.js?123аsdsffdfdffgdFgfddffggfgfgsfа4'|theme }}"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+ -->
+ 
+ {% framework extras %}
 {% scripts %}
 
 
     <script>
+    
+    
+    
+         
+    
         scrollDownByWheel()
 </script>
 

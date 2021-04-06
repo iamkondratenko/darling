@@ -56,6 +56,10 @@ fields:
             field: title
             type: slug
         type: text
+    sort:
+        label: Сортировка
+        span: right
+        type: number
     description:
         label: Описание
         span: right
@@ -86,7 +90,7 @@ fields:
             skin-care: 'Skin care'
             makeup: Makeup
         showSearch: true
-        span: auto
+        span: right
         type: dropdown
     subcategory:
         label: Подкатегория
@@ -94,8 +98,11 @@ fields:
             masks: Masks
             patches: Patches
             pads: Pads
+            eyes: Eyes
+            lips: Lips
+            face: Face
         showSearch: true
-        span: auto
+        span: right
         type: dropdown
     picture:
         label: 'Картинка для листинга'
@@ -106,3 +113,45 @@ fields:
         label: 'Ссылка на товар'
         span: auto
         type: text
+tabs:
+    fields:
+        description_en:
+            label: Описание
+            span: auto
+            type: text
+            tab: Eng
+        additional_info_en:
+            label: 'Полное описание'
+            prompt: 'Добавить описание'
+            span: left
+            type: repeater
+            tab: Eng
+            form:
+                fields:
+                    additional_info_title:
+                        label: Заголовок
+                        span: full
+                        type: text
+                    additional_info_text:
+                        label: 'Текст описания'
+                        size: large
+                        span: full
+                        type: richeditor
+secondaryTabs:
+    fields:
+        is_banner:
+            label: Баннер
+            span: auto
+            type: checkbox
+            tab: Баннер
+        banner_picture:
+            label: 'Картинка баннера'
+            mode: file
+            span: left
+            type: mediafinder
+            tab: Баннер
+        banner_picture_text:
+            label: 'Текст для картинки'
+            span: left
+            type: text
+            tab: Баннер

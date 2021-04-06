@@ -1,20 +1,21 @@
-1615104260a:1:{s:31:"category/subcategory-banner.htm";a:5:{s:8:"fileName";s:31:"category/subcategory-banner.htm";s:7:"content";s:1579:"
-<div class="SubcategoryBanner" id="{{subcategorySlug}}">
-    <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainSubcategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat;">
+1617696624a:1:{s:31:"category/subcategory-banner.htm";a:6:{s:8:"fileName";s:31:"category/subcategory-banner.htm";s:7:"content";s:1665:"==
+<div class="SubcategoryBanner">
+    <div class="SubcategoryBanner-idLink" id="{{subcategorySlug}}"></div>
+    <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainSubcategoryBackground | media }}); background-size: cover; background-repeat: no-repeat;">
         <p class="SubcategoryBanner-SubTitle">
             {% for description in categorySubtitle %}
             <span class="{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}">{{ description.subcategory_description }}</span>
             {% endfor %}
         </p>
     </div>
-    <div class="SubcategoryBanner-Content-ContainerTablet" style="background: url({{ mainSubcategoryBackgroundTablet | media }}); background-size: 100%; background-repeat: no-repeat;">
+    <div class="SubcategoryBanner-Content-ContainerTablet" style="background: url({{ mainSubcategoryBackgroundTablet | media }}); background-size: cover; background-repeat: no-repeat;">
         <p class="SubcategoryBanner-SubTitle">
             {% for description in categorySubtitle %}
             <span class="{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}">{{ description.subcategory_description }}</span>
             {% endfor %}
         </p>
     </div>
-    <div class="SubcategoryBanner-Content-ContainerMobile" style="background: url({{ mainSubcategoryBackgroundMobile | media }}); background-size: 100%; background-repeat: no-repeat;">
+    <div class="SubcategoryBanner-Content-ContainerMobile" style="background: url({{ mainSubcategoryBackgroundMobile | media }}); background-size: cover; background-repeat: no-repeat;">
         <h3 class="SubcategoryBanner-Title">{{subcategoryTitle}}</h3>
         <p class="SubcategoryBanner-SubTitle">
             {% for description in categorySubtitle %}
@@ -30,22 +31,23 @@
 
 
 
-</style>";s:5:"mtime";i:1614663964;s:6:"markup";s:1578:"<div class="SubcategoryBanner" id="{{subcategorySlug}}">
-    <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainSubcategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat;">
+</style>";s:5:"mtime";i:1617692142;s:6:"markup";s:1662:"<div class="SubcategoryBanner">
+    <div class="SubcategoryBanner-idLink" id="{{subcategorySlug}}"></div>
+    <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainSubcategoryBackground | media }}); background-size: cover; background-repeat: no-repeat;">
         <p class="SubcategoryBanner-SubTitle">
             {% for description in categorySubtitle %}
             <span class="{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}">{{ description.subcategory_description }}</span>
             {% endfor %}
         </p>
     </div>
-    <div class="SubcategoryBanner-Content-ContainerTablet" style="background: url({{ mainSubcategoryBackgroundTablet | media }}); background-size: 100%; background-repeat: no-repeat;">
+    <div class="SubcategoryBanner-Content-ContainerTablet" style="background: url({{ mainSubcategoryBackgroundTablet | media }}); background-size: cover; background-repeat: no-repeat;">
         <p class="SubcategoryBanner-SubTitle">
             {% for description in categorySubtitle %}
             <span class="{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}">{{ description.subcategory_description }}</span>
             {% endfor %}
         </p>
     </div>
-    <div class="SubcategoryBanner-Content-ContainerMobile" style="background: url({{ mainSubcategoryBackgroundMobile | media }}); background-size: 100%; background-repeat: no-repeat;">
+    <div class="SubcategoryBanner-Content-ContainerMobile" style="background: url({{ mainSubcategoryBackgroundMobile | media }}); background-size: cover; background-repeat: no-repeat;">
         <h3 class="SubcategoryBanner-Title">{{subcategoryTitle}}</h3>
         <p class="SubcategoryBanner-SubTitle">
             {% for description in categorySubtitle %}
@@ -61,4 +63,4 @@
 
 
 
-</style>";s:4:"code";N;}}
+</style>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

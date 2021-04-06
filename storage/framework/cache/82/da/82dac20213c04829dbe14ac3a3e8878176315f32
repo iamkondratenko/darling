@@ -1,15 +1,18 @@
-1615104260a:1:{s:23:"category/card-wiget.htm";a:5:{s:8:"fileName";s:23:"category/card-wiget.htm";s:7:"content";s:762:"<div class="SubcategoryListing-ItemCard">
-    <a class="SubcategoryListing-ItemCard-Link" href="/product/{{data.slug}}">
+1617696624a:1:{s:23:"category/card-wiget.htm";a:6:{s:8:"fileName";s:23:"category/card-wiget.htm";s:7:"content";s:914:"==
+<div class="SubcategoryListing-ItemCard">
+    <a class="SubcategoryListing-ItemCard-Link jsCardWigetLink" href="/product/{{data.slug}}">
         <div class="SubcategoryListing-ItemCard-Holder">
-            <div class="SubcategoryListing-ItemCard-ImageHolder">
-                <img class="SubcategoryListing-ItemCard-Image" src="{{data.picture | media}}">
+            <div class="SubcategoryListing-ItemCard-ImageHolderWrapper">
+                <div class="SubcategoryListing-ItemCard-ImageHolder">
+                    <img class="SubcategoryListing-ItemCard-Image" src="{{data.picture | media}}">
+                </div>
             </div>
 
 
             <div class="SubcategoryListing-ItemCard-Info">
                 <h2 class="SubcategoryListing-ItemCard-Title">{{data.title}}</h2>
                 <p class="SubcategoryListing-ItemCard-Description">{{data.description}}</p>
-                <div class="SubcategoryListing-ItemCard-Price rus-currency">{{data.price}}</div>
+                <div class="SubcategoryListing-ItemCard-Price rus-currency">{{data.price}} ₽</div>
             </div>
         </div>
 
@@ -21,18 +24,20 @@
 
 
 
-</style>";s:5:"mtime";i:1614663964;s:6:"markup";s:762:"<div class="SubcategoryListing-ItemCard">
-    <a class="SubcategoryListing-ItemCard-Link" href="/product/{{data.slug}}">
+</style>";s:5:"mtime";i:1617692142;s:6:"markup";s:911:"<div class="SubcategoryListing-ItemCard">
+    <a class="SubcategoryListing-ItemCard-Link jsCardWigetLink" href="/product/{{data.slug}}">
         <div class="SubcategoryListing-ItemCard-Holder">
-            <div class="SubcategoryListing-ItemCard-ImageHolder">
-                <img class="SubcategoryListing-ItemCard-Image" src="{{data.picture | media}}">
+            <div class="SubcategoryListing-ItemCard-ImageHolderWrapper">
+                <div class="SubcategoryListing-ItemCard-ImageHolder">
+                    <img class="SubcategoryListing-ItemCard-Image" src="{{data.picture | media}}">
+                </div>
             </div>
 
 
             <div class="SubcategoryListing-ItemCard-Info">
                 <h2 class="SubcategoryListing-ItemCard-Title">{{data.title}}</h2>
                 <p class="SubcategoryListing-ItemCard-Description">{{data.description}}</p>
-                <div class="SubcategoryListing-ItemCard-Price rus-currency">{{data.price}}</div>
+                <div class="SubcategoryListing-ItemCard-Price rus-currency">{{data.price}} ₽</div>
             </div>
         </div>
 
@@ -44,4 +49,4 @@
 
 
 
-</style>";s:4:"code";N;}}
+</style>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

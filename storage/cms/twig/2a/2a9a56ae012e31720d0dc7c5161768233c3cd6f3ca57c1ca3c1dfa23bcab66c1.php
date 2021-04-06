@@ -100,8 +100,8 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 <div class=\"MainMenuDrawer\">
     <div class=\"SubNavigationMenu SubNavigationMenu-Fixed\">
         <div class=\"SubNavigationMenu-ChangeLanguage\">
-            <a href=\"#\" class=\"SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active\" onclick=\"console.log('sdfsd')\">ENG</a>
-            <a href=\"#\" class=\"SubNavigationMenu-LanguageItem LanguageItem-dark\" onclick=\"console.log('sdfsd')\">RUS</a>
+            <a onclick=\"channgeLanguage('en')\" class=\"SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-disabled\">ENG</a>
+            <a onclick=\"channgeLanguage('ru')\" class=\"SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active\">RUS</a>
         </div>
         <div class=\"SubNavigationMenu-ScrollDown\">
             <svg width=\"27\" height=\"14\" viewBox=\"0 0 27 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
@@ -236,11 +236,22 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 <script>
 
 
+    
+
 
     let menuCategoryList = document.querySelectorAll('.MainMenuDrawer-Item');
 
 
     function goTo(link) {
+        
+        console.log('scrolledState')
+        
+        localStorage.removeItem('scrolledState')
+        console.log('scrolledState')
+        localStorage.setItem('menuIsOpened', false)
+        console.log('menuIsOpened')
+        
+        
         window.location = link
         openMenuHandler()
     }
@@ -254,8 +265,13 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 
 
     for (let i = 0; i < menuCategoryList.length; i++) {
+        
+        console.log(menuCategoryList[i])
+        
         menuCategoryList[i].addEventListener(\"click\",
             function (e){
+                
+                
 
             if (e.toElement.parentNode.classList.contains('subCategoryIsActive')) {
                 let subCategoriesMenu =  document.querySelector('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories')
@@ -274,7 +290,13 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 
                 let subCategoryMenu = document.querySelectorAll('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories > .MainMenuDrawer-Item-Subcategory')
 
-                let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length
+                let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length;
+                
+                if(window.matchMedia(\"(min-width: 642px)\").matches){
+                    console.log('tt10011');
+                    subCategoryHeight = subCategoryHeight + 20
+                }
+                                
                 subCategoriesMenu.style.height = subCategoryHeight + 'px'
             }
 
@@ -326,8 +348,8 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 <div class=\"MainMenuDrawer\">
     <div class=\"SubNavigationMenu SubNavigationMenu-Fixed\">
         <div class=\"SubNavigationMenu-ChangeLanguage\">
-            <a href=\"#\" class=\"SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active\" onclick=\"console.log('sdfsd')\">ENG</a>
-            <a href=\"#\" class=\"SubNavigationMenu-LanguageItem LanguageItem-dark\" onclick=\"console.log('sdfsd')\">RUS</a>
+            <a onclick=\"channgeLanguage('en')\" class=\"SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-disabled\">ENG</a>
+            <a onclick=\"channgeLanguage('ru')\" class=\"SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active\">RUS</a>
         </div>
         <div class=\"SubNavigationMenu-ScrollDown\">
             <svg width=\"27\" height=\"14\" viewBox=\"0 0 27 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
@@ -389,11 +411,22 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 <script>
 
 
+    
+
 
     let menuCategoryList = document.querySelectorAll('.MainMenuDrawer-Item');
 
 
     function goTo(link) {
+        
+        console.log('scrolledState')
+        
+        localStorage.removeItem('scrolledState')
+        console.log('scrolledState')
+        localStorage.setItem('menuIsOpened', false)
+        console.log('menuIsOpened')
+        
+        
         window.location = link
         openMenuHandler()
     }
@@ -407,8 +440,13 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 
 
     for (let i = 0; i < menuCategoryList.length; i++) {
+        
+        console.log(menuCategoryList[i])
+        
         menuCategoryList[i].addEventListener(\"click\",
             function (e){
+                
+                
 
             if (e.toElement.parentNode.classList.contains('subCategoryIsActive')) {
                 let subCategoriesMenu =  document.querySelector('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories')
@@ -427,7 +465,13 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 
                 let subCategoryMenu = document.querySelectorAll('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories > .MainMenuDrawer-Item-Subcategory')
 
-                let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length
+                let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length;
+                
+                if(window.matchMedia(\"(min-width: 642px)\").matches){
+                    console.log('tt10011');
+                    subCategoryHeight = subCategoryHeight + 20
+                }
+                                
                 subCategoriesMenu.style.height = subCategoryHeight + 'px'
             }
 

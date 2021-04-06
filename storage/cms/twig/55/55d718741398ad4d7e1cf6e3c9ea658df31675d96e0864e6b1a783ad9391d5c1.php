@@ -30,7 +30,7 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
         $tags = array();
-        $filters = array("escape" => 2, "media" => 5);
+        $filters = array("escape" => 2, "media" => 6);
         $functions = array();
 
         try {
@@ -60,32 +60,34 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
         $macros = $this->macros;
         // line 1
         echo "<div class=\"SubcategoryListing-ItemCard\">
-    <a class=\"SubcategoryListing-ItemCard-Link\" href=\"/product/";
+    <a class=\"SubcategoryListing-ItemCard-Link jsCardWigetLink\" href=\"/product/";
         // line 2
         echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "slug", [], "any", false, false, true, 2), 2, $this->source), "html", null, true);
         echo "\">
         <div class=\"SubcategoryListing-ItemCard-Holder\">
-            <div class=\"SubcategoryListing-ItemCard-ImageHolder\">
-                <img class=\"SubcategoryListing-ItemCard-Image\" src=\"";
-        // line 5
-        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "picture", [], "any", false, false, true, 5), 5, $this->source));
+            <div class=\"SubcategoryListing-ItemCard-ImageHolderWrapper\">
+                <div class=\"SubcategoryListing-ItemCard-ImageHolder\">
+                    <img class=\"SubcategoryListing-ItemCard-Image\" src=\"";
+        // line 6
+        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "picture", [], "any", false, false, true, 6), 6, $this->source));
         echo "\">
+                </div>
             </div>
 
 
             <div class=\"SubcategoryListing-ItemCard-Info\">
                 <h2 class=\"SubcategoryListing-ItemCard-Title\">";
-        // line 10
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "title", [], "any", false, false, true, 10), 10, $this->source), "html", null, true);
+        // line 12
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "title", [], "any", false, false, true, 12), 12, $this->source), "html", null, true);
         echo "</h2>
                 <p class=\"SubcategoryListing-ItemCard-Description\">";
-        // line 11
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "description", [], "any", false, false, true, 11), 11, $this->source), "html", null, true);
+        // line 13
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "description", [], "any", false, false, true, 13), 13, $this->source), "html", null, true);
         echo "</p>
                 <div class=\"SubcategoryListing-ItemCard-Price rus-currency\">";
-        // line 12
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "price", [], "any", false, false, true, 12), 12, $this->source), "html", null, true);
-        echo "</div>
+        // line 14
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "price", [], "any", false, false, true, 14), 14, $this->source), "html", null, true);
+        echo " ₽</div>
             </div>
         </div>
 
@@ -112,23 +114,25 @@ class __TwigTemplate_06b4f972a4842fa9d3bb50feaa09867a1593232b5c5717cf7e37c68fa81
 
     public function getDebugInfo()
     {
-        return array (  87 => 12,  83 => 11,  79 => 10,  71 => 5,  65 => 2,  62 => 1,);
+        return array (  89 => 14,  85 => 13,  81 => 12,  72 => 6,  65 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<div class=\"SubcategoryListing-ItemCard\">
-    <a class=\"SubcategoryListing-ItemCard-Link\" href=\"/product/{{data.slug}}\">
+    <a class=\"SubcategoryListing-ItemCard-Link jsCardWigetLink\" href=\"/product/{{data.slug}}\">
         <div class=\"SubcategoryListing-ItemCard-Holder\">
-            <div class=\"SubcategoryListing-ItemCard-ImageHolder\">
-                <img class=\"SubcategoryListing-ItemCard-Image\" src=\"{{data.picture | media}}\">
+            <div class=\"SubcategoryListing-ItemCard-ImageHolderWrapper\">
+                <div class=\"SubcategoryListing-ItemCard-ImageHolder\">
+                    <img class=\"SubcategoryListing-ItemCard-Image\" src=\"{{data.picture | media}}\">
+                </div>
             </div>
 
 
             <div class=\"SubcategoryListing-ItemCard-Info\">
                 <h2 class=\"SubcategoryListing-ItemCard-Title\">{{data.title}}</h2>
                 <p class=\"SubcategoryListing-ItemCard-Description\">{{data.description}}</p>
-                <div class=\"SubcategoryListing-ItemCard-Price rus-currency\">{{data.price}}</div>
+                <div class=\"SubcategoryListing-ItemCard-Price rus-currency\">{{data.price}} ₽</div>
             </div>
         </div>
 

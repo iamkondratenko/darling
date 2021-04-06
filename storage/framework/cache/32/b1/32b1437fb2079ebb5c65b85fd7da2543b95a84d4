@@ -1,4 +1,4 @@
-1614925634a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1689:"description = "Default layout"
+1617696624a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:2159:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
@@ -11,8 +11,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content="OctoberCMS">
         <link rel="icon" type="image/png" href="{{ 'assets/images/192x192.png'|theme }}">
-        <link href="{{ 'assets/css/vendor.css?25df22'|theme }}" rel="stylesheet">
-        <link href="{{ 'assets/css/theme.css?213325ffrff3'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/vendor.css?25df27'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css?sffdsаffd'|theme }}" rel="stylesheet">
         {% styles %}
     </head>
     <body>
@@ -33,13 +33,10 @@
         </footer>
 
         <!-- Scripts -->
-    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-
+<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
         <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
-        <script src="{{ 'assets/javascript/app.js?15276f563'|theme }}"></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-
+        <script src="{{ 'assets/javascript/app.js?12fdfs3fhgfgGhhgfgdgf4'|theme }}"></script>
 
     {% framework extras %}
         {% scripts %}
@@ -47,11 +44,35 @@
 
     <script>
         scrollDownByWheel()
+        
+        scrollToLastState()
+        
+            let productNodeList = document.querySelectorAll('.jsCardWigetLink')
+    
+    for (let productNodeItem of productNodeList) {
+        productNodeItem.addEventListener('touchstart', function(e){
+            this.classList.add('hoveredTarget')
+            console.log(this)
+        })
+        productNodeItem.addEventListener('touchend', function(e){
+            this.classList.remove('hoveredTarget')
+        })
+        
+    }
+    
+    
+    
+
+
+
+
+
+        
+
     </script>
 
     </body>
-</html>
-";s:5:"mtime";i:1614668625;s:6:"markup";s:1654:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1617692202;s:6:"markup";s:2125:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -62,8 +83,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content="OctoberCMS">
         <link rel="icon" type="image/png" href="{{ 'assets/images/192x192.png'|theme }}">
-        <link href="{{ 'assets/css/vendor.css?25df22'|theme }}" rel="stylesheet">
-        <link href="{{ 'assets/css/theme.css?213325ffrff3'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/vendor.css?25df27'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css?sffdsаffd'|theme }}" rel="stylesheet">
         {% styles %}
     </head>
     <body>
@@ -84,13 +105,10 @@
         </footer>
 
         <!-- Scripts -->
-    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-
+<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
         <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
-        <script src="{{ 'assets/javascript/app.js?15276f563'|theme }}"></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-
+        <script src="{{ 'assets/javascript/app.js?12fdfs3fhgfgGhhgfgdgf4'|theme }}"></script>
 
     {% framework extras %}
         {% scripts %}
@@ -98,6 +116,31 @@
 
     <script>
         scrollDownByWheel()
+        
+        scrollToLastState()
+        
+            let productNodeList = document.querySelectorAll('.jsCardWigetLink')
+    
+    for (let productNodeItem of productNodeList) {
+        productNodeItem.addEventListener('touchstart', function(e){
+            this.classList.add('hoveredTarget')
+            console.log(this)
+        })
+        productNodeItem.addEventListener('touchend', function(e){
+            this.classList.remove('hoveredTarget')
+        })
+        
+    }
+    
+    
+    
+
+
+
+
+
+        
+
     </script>
 
     </body>

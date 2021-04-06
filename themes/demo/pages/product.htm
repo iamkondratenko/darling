@@ -10,13 +10,37 @@ modelKeyColumn = "slug"
 displayColumn = "slug"
 notFoundMessage = "Record not found"
 ==
-
 {% set record = productDetails.record %}
 {% set displayColumn = productDetails.displayColumn %}
 {% set notFoundMessage = productDetails.notFoundMessage %}
 
 <div class="product-section">
 
+
+    <div class="close_icon">
+            <a onclick="goBack('/category/{{record.category}}')">
+                <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.39355 2.39355L25.6068 23.6068" stroke-width="4"/>
+                    <path d="M4.39355 23.6064L25.6068 2.39324" stroke-width="4"/>
+                </svg>
+            </a>
+        </div>
+        
+        <style>
+        
+            .close_icon {
+                cursor: pointer;
+                z-index: 999;
+            }
+        
+            .close_icon > a > svg {
+                stroke: #222;
+            }
+            
+            .close_icon:hover > a > svg {
+                stroke: #EA028A;
+            }
+        </style>
 
 
 
@@ -41,14 +65,8 @@ notFoundMessage = "Record not found"
     </div>
 
     <div class="product-section__text-block">
-        <div class="close_icon">
-            <a href="/category/{{record.category}}/#{{record.subcategory}}">
-                <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.39355 2.39355L25.6068 23.6068" stroke="#EA028A" stroke-width="4"/>
-                    <path d="M4.39355 23.6064L25.6068 2.39324" stroke="#EA028A" stroke-width="4"/>
-                </svg>
-            </a>
-        </div>
+        
+                        
             <div class="product-section__text-block-holder">
 
 
@@ -65,12 +83,35 @@ notFoundMessage = "Record not found"
 </div>
                     <p></p>
                 </div>
-                <div class="text-block__basket-section">
-                    <div class="basket-section__price">{{ record.price }}</div>
+                
+                {% if record.color_slider %}
+                {% if record.color_slider.length > 1 %}
+                <div class="text-block__color-section text-block__color-section--desktop">
+                    {% for slider in record.color_slider %}
+                    {% if loop.length > 1 %}
+                    <div class="text-block__color-section__holder" >
+                        <input class="radio-color-picker" type="radio" id="color-picker-{{slider.product_color}}"
+                               name="contact" value="email" {% if loop.first == true %} checked{% endif %}  data-colorPicker="{{slider.product_color}}">
+                        <label for="color-picker-{{slider.product_color}}">
+                            <div class="text-block__color-section_item" style="background-color: {{slider.product_color}}">
+                                <span class="text-block__color-section_number">0{{loop.index}}</span>
+                            </div>
+                        </label>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
                 </div>
+                {% endif %}
+                {% endif %}
+                
+                <div class="text-block__basket-section">
+                    <div class="basket-section__price">{{ record.price }} ₽</div>
+                </div>
+                
 
-
-
+                
+                {% if record.color_slider %}
+                {% if record.color_slider.length > 1 %}
                 <div class="text-block__color-section">
                     {% for slider in record.color_slider %}
                     {% if loop.length > 1 %}
@@ -86,6 +127,8 @@ notFoundMessage = "Record not found"
                     {% endif %}
                     {% endfor %}
                 </div>
+                {% endif %}
+                {% endif %}
 
                 <div class="text-block__info-section">
                     <div class="info-section__product-info-block">
@@ -97,7 +140,7 @@ notFoundMessage = "Record not found"
                         </div>
                         {% endfor %}
 
-                        <a href="#" class="buy_now_link">buy now</a>
+                        <a href="{{ record.buy_link }}" class="buy_now_link">buy now</a>
 
 
                     </div>
@@ -113,16 +156,9 @@ notFoundMessage = "Record not found"
 
 
 
-
-
-        .float-scroll {
-            transform: rotate3d(0, 0, 0, 0.01deg);
-            position: -webkit-sticky;
-            position: sticky;
-            bottom: 0;
-            will-change: transform;
-
-        }
+    
+    
+/* PRODUCT CARD */
 
 
 
@@ -130,7 +166,6 @@ notFoundMessage = "Record not found"
     </style>
 
 <script>
-
     var browserWidth = document.body.clientWidth
 
     var browserHeight = document.body.clientHeight
@@ -146,6 +181,7 @@ notFoundMessage = "Record not found"
         state[0] += 1
         window.requestAnimationFrame(function() {
             state[1] += 1
+            console.log(state)
             let scrolledY = window.scrollY
 
             if (browserWidth >  1080) {
@@ -189,17 +225,17 @@ notFoundMessage = "Record not found"
 
 
     var fullBlockHeight = document.querySelector('.product-section').scrollHeight
-    var floatingBlockNode = document.querySelector('.product-section__text-block-holder')
+
 
     function scrollingFloatBlock(scrolledY) {
 
 
-        console.log(((window.innerHeight / devicePixelRatio)))
+        console.log(floatScrollBlock.scrollHeight, browserHeight)
 
             floatScrollBlock.style.transform = scrolledY
-        // currentBlockPos = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / (fullBlockHeight - floatScrollBlockHeight)))) + "px, 0.01px)"
+        currentBlockPos = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / (fullBlockHeight - floatScrollBlockHeight)))) + "px, 0.01px)"
 
-        currentBlockPos = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / ((fullBlockHeight - floatScrollBlockHeight) + (window.innerHeight / devicePixelRatio))))) + "px, 0.01px)"
+        // currentBlockPos = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / ((fullBlockHeight - floatScrollBlockHeight) + (window.innerHeight / devicePixelRatio))))) + "px, 0.01px)"
             floatScrollBlock.style.transform = currentBlockPos
 
 
@@ -345,10 +381,16 @@ notFoundMessage = "Record not found"
                 }
                 else {
                     if (finalPoint.pageY < initialPoint.pageY){
-                        window.scroll({
+                        /* Проверяем, если на странице продукта то не работает скролл даун */
+                        var pattern = /product/;
+                        
+                        if (!pattern.test(window.location.href)) {
+                            window.scroll({
                             top: scrollHeight,
                             behavior: 'smooth'
                         })
+                        }
+                        
                     }
                     else{
                         /*СВАЙП ВНИЗ*/}
@@ -360,6 +402,10 @@ notFoundMessage = "Record not found"
     }
 
 
+    function goBack(link) {
+        localStorage.setItem('scrollToLastState', true)
+        window.location = link
+    }
 
 
 

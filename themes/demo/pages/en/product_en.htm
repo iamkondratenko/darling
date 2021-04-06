@@ -1,0 +1,410 @@
+title = "product"
+url = "/en/product/:slug"
+layout = "product-card_en"
+is_hidden = 0
+
+[builderDetails productDetails]
+modelClass = "Iamk\Productinfo\Models\ProductInfo"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "slug"
+notFoundMessage = "Record not found"
+==
+{% set record = productDetails.record %}
+{% set displayColumn = productDetails.displayColumn %}
+{% set notFoundMessage = productDetails.notFoundMessage %}
+
+<div class="product-section">
+
+
+     <div class="close_icon">
+            <a onclick="goBack('/category/{{record.category}}')">
+                <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.39355 2.39355L25.6068 23.6068" stroke-width="4"/>
+                    <path d="M4.39355 23.6064L25.6068 2.39324" stroke-width="4"/>
+                </svg>
+            </a>
+        </div>
+
+
+    <div class="product-section__photo-block">
+
+        {% for slider in record.color_slider %}
+            <div class="photo-block__product-holder {% if loop.first == true %} activedColorSlider{% endif %}" id="{{slider.product_color}}">
+                {% for sliderPicture in slider.gallery %}
+                <div style="display: block; width: 100%; height: 100vh">
+                    <img src="{{sliderPicture.picture | media}}" alt="{{sliderPicture.alt_text }}" class="photo-block__product">
+                </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+        <div class="dots-pic">
+<!--            <div class="dot active-dot"></div>-->
+<!--            <div class="dot"></div>-->
+<!--            <div class="dot"></div>-->
+        </div>
+
+    </div>
+
+    <div class="product-section__text-block">
+       
+        
+        <script>
+            
+        </script>
+        
+        <style>
+        
+            .close_icon {
+                cursor: pointer;
+                z-index: 999;
+            }
+            .close_icon > a > svg {
+                stroke: #222;
+            }
+            
+            .close_icon:hover > a > svg {
+                stroke: #EA028A;
+            }
+        </style>
+                        
+            <div class="product-section__text-block-holder">
+
+
+                <div class="text-block__title-section">
+                    <h1 class="title-section__title">
+                        {% for title in record.product_title %}
+                        <span class="{% if title.product_title_marked == true %}title-section__title_marked{% endif %}">{{title.product_title_construct}}{% if title.break_subcategory_title == true %}</br>{% endif %}</span>
+                        {% endfor %}
+                    </h1>
+                    <p class="title-section__description">
+                        </p><div title="Page 1">
+
+	<p>{{record.description_en}}</p>
+</div>
+                    <p></p>
+                </div>
+                
+                {% if record.color_slider %}
+                {% if record.color_slider.length > 1 %}
+                <div class="text-block__color-section text-block__color-section--desktop">
+                    {% for slider in record.color_slider %}
+                    {% if loop.length > 1 %}
+                    <div class="text-block__color-section__holder" >
+                        <input class="radio-color-picker" type="radio" id="color-picker-{{slider.product_color}}"
+                               name="contact" value="email" {% if loop.first == true %} checked{% endif %}  data-colorPicker="{{slider.product_color}}">
+                        <label for="color-picker-{{slider.product_color}}">
+                            <div class="text-block__color-section_item" style="background-color: {{slider.product_color}}">
+                                <span class="text-block__color-section_number">0{{loop.index}}</span>
+                            </div>
+                        </label>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% endif %}
+                
+                <div class="text-block__basket-section">
+                    <div class="basket-section__price basket-section__price_en">{{ record.price }} ₽</div>
+                </div>
+                
+
+                
+                {% if record.color_slider %}
+                {% if record.color_slider.length > 1 %}
+                <div class="text-block__color-section">
+                    {% for slider in record.color_slider %}
+                    {% if loop.length > 1 %}
+                    <div class="text-block__color-section__holder" >
+                        <input class="radio-color-picker" type="radio" id="color-picker-{{slider.product_color}}"
+                               name="contact" value="email" {% if loop.first == true %} checked{% endif %}  data-colorPicker="{{slider.product_color}}">
+                        <label for="color-picker-{{slider.product_color}}">
+                            <div class="text-block__color-section_item" style="background-color: {{slider.product_color}}">
+                                <span class="text-block__color-section_number">0{{loop.index}}</span>
+                            </div>
+                        </label>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% endif %}
+
+                <div class="text-block__info-section">
+                    <div class="info-section__product-info-block">
+                        {% for addittionalInfo in record.additional_info_en %}
+                        <div class="product-info-block__description">
+                            <h2 class="product-info-block__description__title">{{addittionalInfo.additional_info_title}}</h2>
+                            <p>{{addittionalInfo.additional_info_text | raw}}
+                            </p>
+                        </div>
+                        {% endfor %}
+
+                        <a href="{{ record.buy_link }}" class="buy_now_link">buy now</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    
+    
+    <style>
+
+
+
+    
+    
+/* PRODUCT CARD */
+
+
+
+    
+    </style>
+
+<script>
+    var browserWidth = document.body.clientWidth
+
+    var browserHeight = document.body.clientHeight
+
+
+    var state = [0, 0]
+
+
+    setScrollForProduct()
+
+    window.addEventListener('scroll', function() {
+
+        state[0] += 1
+        window.requestAnimationFrame(function() {
+            state[1] += 1
+            console.log(state)
+            let scrolledY = window.scrollY
+
+            if (browserWidth >  1080) {
+                scrollingFloatBlock(scrolledY)
+            }
+        })
+
+
+
+    })
+
+
+
+    function setScrollForProduct() {
+
+
+
+        var route = 'product'
+
+        if (browserWidth >  1080) {
+
+            if (route == 'product') {
+                let textBlock = document.querySelector('.product-section__text-block-holder')
+                let photoBlock = document.querySelector('.photo-block__product-holder')
+                let textBlockHeight = textBlock.scrollHeight
+                let photoBlockHeight = photoBlock.scrollHeight
+
+                if (textBlockHeight >= photoBlockHeight) {
+                    photoBlock.classList.add('float-scroll')
+                    floatScrollBlock = photoBlock
+                    floatScrollBlockHeight = photoBlockHeight
+                } else {
+                    textBlock.classList.add('float-scroll')
+                    floatScrollBlock = textBlock
+                    floatScrollBlockHeight = textBlockHeight
+                }
+            }
+        }
+
+    }
+
+
+    var fullBlockHeight = document.querySelector('.product-section').scrollHeight
+
+
+    function scrollingFloatBlock(scrolledY) {
+
+
+        console.log(floatScrollBlock.scrollHeight, browserHeight)
+
+            floatScrollBlock.style.transform = scrolledY
+        currentBlockPos = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / (fullBlockHeight - floatScrollBlockHeight)))) + "px, 0.01px)"
+
+        // currentBlockPos = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / ((fullBlockHeight - floatScrollBlockHeight) + (window.innerHeight / devicePixelRatio))))) + "px, 0.01px)"
+            floatScrollBlock.style.transform = currentBlockPos
+
+
+    }
+
+
+
+
+
+
+
+    var colorVariantNodes = document.querySelectorAll('.radio-color-picker')
+    var colorSliderProducts = document.querySelectorAll('.photo-block__product-holder')
+
+
+
+
+
+    function setDots() {
+        var activeNode = document.querySelector('.activedColorSlider')
+        var screenWidth = window.innerWidth
+        var scrollWidth = activeNode.scrollWidth
+        var sliderCount = 1
+
+
+        activeNode.addEventListener('scroll', function (){
+            (activeNode.scrollWidth)
+            if (((activeNode.scrollLeft + screenWidth) / screenWidth).toFixed(0) != sliderCount){
+                sliderCount = ((activeNode.scrollLeft + screenWidth) / screenWidth).toFixed(0)
+                renderDots(sliderCount)
+            }
+
+        })
+
+
+
+
+
+        function renderDots(count) {
+            document.querySelector('.dots-pic').innerHTML = null
+            var isActiveNode = document.querySelectorAll('.activedColorSlider > div')
+             if (isActiveNode.length > 1) {
+                for (let i = 0; i < isActiveNode.length; i++) {
+                    let dotNode = document.createElement('div');
+                    dotNode.classList.add('dot')
+                    dotNode.classList.add('dot-item-' + '' + i)
+                    if (i == count - 1) {
+                        dotNode.classList.add('active-dot')
+                    }
+                    var dotsNode = document.querySelector('.dots-pic')
+                    dotsNode.append(dotNode)
+                }
+            }
+        }
+        renderDots(1)
+    }
+
+    setDots()
+
+
+
+    for (let i = 0; i < colorVariantNodes.length; i++) {
+        colorVariantNodes[i].addEventListener('change', function(e) {
+            var currentPickerColorNode = e.target
+            var currentPickedColor = currentPickerColorNode.dataset.colorpicker
+            selectSliderProduct(currentPickedColor)
+        })
+    }
+
+    function selectSliderProduct(hex) {
+
+
+
+
+        for (let i = 0; i < colorSliderProducts.length; i++) {
+
+            var currentNodeId = colorSliderProducts[i].id
+            if (hex == currentNodeId) {
+                colorSliderProducts[i].classList.add('activedColorSlider')
+                mobileSlider()
+            } else {
+                colorSliderProducts[i].classList.remove('activedColorSlider')
+            }
+        }
+        setDots()
+    }
+
+
+    mobileSlider()
+
+    function mobileSlider() {
+
+
+        var activeNode = document.querySelector('.activedColorSlider')
+        var screenWidth = window.innerWidth
+        var scrollWidth = activeNode.scrollWidth
+        var scrollHeight = activeNode.scrollHeight
+        var sliderCount = scrollWidth / screenWidth
+        var currentSlider = 0
+        var nextSlider = screenWidth
+
+
+
+
+        var initialPoint;
+        var finalPoint;
+        activeNode.addEventListener('touchstart', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            initialPoint=event.changedTouches[0];
+        }, false);
+        activeNode.addEventListener('touchend', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            finalPoint=event.changedTouches[0];
+            var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
+            var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
+            if (xAbs > 20 || yAbs > 20) {
+                if (xAbs > yAbs) {
+                    if (finalPoint.pageX < initialPoint.pageX) {
+
+                        activeNode.scroll({
+                            left: currentSlider + screenWidth,
+                            behavior: 'smooth'
+                        })
+                        currentSlider = currentSlider + screenWidth
+
+                        if ((scrollWidth / 2) + (screenWidth / 2) < currentSlider) {
+                            currentSlider = (scrollWidth / 2) + (screenWidth / 2)
+                        }
+                    }
+                    else{
+                        activeNode.scroll({
+                            left: currentSlider - screenWidth,
+                            behavior: 'smooth'
+                        })
+                        currentSlider = currentSlider - screenWidth
+
+                        if (currentSlider < 0) {
+                            currentSlider = 0
+                        }
+                    }
+                }
+                else {
+                    if (finalPoint.pageY < initialPoint.pageY){
+                        window.scroll({
+                            top: scrollHeight,
+                            behavior: 'smooth'
+                        })
+                    }
+                    else{
+                        /*СВАЙП ВНИЗ*/}
+                }
+            }
+
+        }, false);
+
+    }
+
+
+function goBack(link) {
+        localStorage.setItem('scrollToLastState', true)
+        window.location = link
+    }
+
+
+
+
+
+</script>

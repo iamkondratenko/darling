@@ -1,4 +1,4 @@
-1615104260a:1:{s:32:"category/subcategory-listing.htm";a:6:{s:8:"fileName";s:32:"category/subcategory-listing.htm";s:7:"content";s:1124:"[builderList subcategoryListing]
+1617696624a:1:{s:32:"category/subcategory-listing.htm";a:6:{s:8:"fileName";s:32:"category/subcategory-listing.htm";s:7:"content";s:1376:"[builderList subcategoryListing]
 modelClass = "Iamk\Productinfo\Models\ProductInfo"
 scope = "-"
 scopeValue = "{{ :scope }}"
@@ -7,8 +7,8 @@ noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
+sortColumn = "sort"
 ==
-
 {% set records = subcategoryListing.records %}
 {% set displayColumn = subcategoryListing.displayColumn %}
 {% set noRecordsMessage = subcategoryListing.noRecordsMessage %}
@@ -26,7 +26,11 @@ pageNumber = "{{ :page }}"
 
         {% for record in records %}
         {% if record.subcategory == subcategorySlug %}
-        {% partial "category/card-wiget" data=record %}
+            {% if record.is_banner == false %}
+                {% partial "category/card-wiget" data=record %}
+            {% else %}
+                {% partial "category/banner-wiget" data=record %}
+            {% endif %}
         {% endif %}
     {% else %}
         <li class="no-data">{{ noRecordsMessage }}</li>
@@ -41,7 +45,13 @@ pageNumber = "{{ :page }}"
 
 
 
-</style>";s:5:"mtime";i:1614663964;s:6:"markup";s:865:"{% set records = subcategoryListing.records %}
+</style>
+
+
+<script>
+
+
+</script>";s:5:"mtime";i:1617692142;s:6:"markup";s:1098:"{% set records = subcategoryListing.records %}
 {% set displayColumn = subcategoryListing.displayColumn %}
 {% set noRecordsMessage = subcategoryListing.noRecordsMessage %}
 {% set detailsPage = subcategoryListing.detailsPage %}
@@ -58,7 +68,11 @@ pageNumber = "{{ :page }}"
 
         {% for record in records %}
         {% if record.subcategory == subcategorySlug %}
-        {% partial "category/card-wiget" data=record %}
+            {% if record.is_banner == false %}
+                {% partial "category/card-wiget" data=record %}
+            {% else %}
+                {% partial "category/banner-wiget" data=record %}
+            {% endif %}
         {% endif %}
     {% else %}
         <li class="no-data">{{ noRecordsMessage }}</li>
@@ -73,4 +87,10 @@ pageNumber = "{{ :page }}"
 
 
 
-</style>";s:4:"code";N;s:30:"builderList subcategoryListing";a:8:{s:10:"modelClass";s:35:"Iamk\Productinfo\Models\ProductInfo";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}
+</style>
+
+
+<script>
+
+
+</script>";s:4:"code";N;s:30:"builderList subcategoryListing";a:9:{s:10:"modelClass";s:35:"Iamk\Productinfo\Models\ProductInfo";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";s:10:"sortColumn";s:4:"sort";}}}

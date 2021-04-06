@@ -1,4 +1,4 @@
-1615104259a:1:{s:8:"home.htm";a:11:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:11284:"title = "Darling"
+1617696612a:1:{s:8:"home.htm";a:11:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:11310:"title = "Darling"
 url = "/"
 layout = "home"
 is_hidden = 0
@@ -16,14 +16,14 @@ identifierValue = "makeup"
 modelKeyColumn = "slug"
 displayColumn = "slug"
 notFoundMessage = "Record not found"
-
 ==
 {% partial "site/main-banner.htm" %}
+{% partial 'site/header-fixed.htm' %}
+
+
+
 {% set recordMakeup = CategoryMakeup.record %}
 {% set recordSkinCare = CategorySkinCare.record %}
-
-
-
 
 
 
@@ -111,7 +111,6 @@ notFoundMessage = "Record not found"
 
 <script>
 
-
     var previousScrollState = 0
 
     function compareScrollStateState(currentScrollState) {
@@ -142,6 +141,7 @@ notFoundMessage = "Record not found"
         getBodyScrollTop(e)
     })
     function getBodyScrollTop(e) {
+        
         var scrolled = self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop)
         if (scrolled > 100) {
             fixedMenuNode.classList.add('jsScrolled')
@@ -205,12 +205,13 @@ notFoundMessage = "Record not found"
             margin: 0 25px 0 0;
         }
     }
-</style>";s:5:"mtime";i:1614857791;s:6:"markup";s:10819:"{% partial "site/main-banner.htm" %}
+</style>";s:5:"mtime";i:1617692145;s:6:"markup";s:10866:"{% partial "site/main-banner.htm" %}
+{% partial 'site/header-fixed.htm' %}
+
+
+
 {% set recordMakeup = CategoryMakeup.record %}
 {% set recordSkinCare = CategorySkinCare.record %}
-
-
-
 
 
 
@@ -298,7 +299,6 @@ notFoundMessage = "Record not found"
 
 <script>
 
-
     var previousScrollState = 0
 
     function compareScrollStateState(currentScrollState) {
@@ -329,6 +329,7 @@ notFoundMessage = "Record not found"
         getBodyScrollTop(e)
     })
     function getBodyScrollTop(e) {
+        
         var scrolled = self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop)
         if (scrolled > 100) {
             fixedMenuNode.classList.add('jsScrolled')

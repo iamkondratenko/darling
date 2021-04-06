@@ -103,6 +103,13 @@
 
 body {
     margin: 0 auto !important;
+    min-height: -webkit-fill-available;
+}
+
+@media(min-width: 768px){
+    body {
+    overflow-x: hidden;
+}
 }
 
 p {
@@ -127,29 +134,82 @@ body.js-bodyMenuIsOpened {
 }
 
 
-.LogoSvg {
-    width: 187px;
-    height: 30px;
-}
-
-
 
 a.LogoLink {
+    display: inline-block;
+    width: 190px;
+    color: #fff;
     margin: 0;
     padding: 0;
     line-height: 0;
     transition-duration: 400ms;
+    cursor: pointer;
 }
 
-a.LogoLink:hover > svg > path {
-    fill: #EA028A;
+.LogoLink.js-menuIsOpened {
+    color: #222;
+    transition-duration: 400ms;
 }
+
+a.LogoLink:hover {
+    color: #EA028A;
+}
+
+.LogoSvg{
+    display: inline-block;
+    fill: currentColor;
+    vertical-align: top;
+    width: 100%;   
+}
+
+@media(max-width:642px){
+    a.LogoLink {
+        width: 141px;
+    }  
+}
+
+.MainLogoFixed a.LogoLink{
+    width: 141px;
+    color: #222;
+}
+
+@media(max-width:1336px){
+   .MainLogoFixed a.LogoLink{
+    width: 131px;
+    } 
+}
+
+/* .LogoSvgFixed > path {
+    fill: #222;
+    transition-duration: 400ms;
+} */
 
 header.MainHeader {
     position: absolute;
     width: 100%;
+    box-sizing: border-box;
+    padding: 0 30px;
     height: 150px;
     z-index: 999;
+}
+
+.LogoLink-svg{
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: top;
+  width: 100%;   
+}
+
+@media(max-width:1180px){
+    header.MainHeader {
+    padding: 15px;
+    }    
+}
+
+@media(max-width:642px){
+    header.MainHeader {
+    padding: 0;
+}    
 }
 
 header.MainHeaderFixed {
@@ -160,6 +220,12 @@ header.MainHeaderFixed {
     z-index: 999;
     background-color: white;
     transition-duration: 400ms;
+}
+
+@media(max-width:1366px){
+    header.MainHeaderFixed {
+        height: 60px;
+    }    
 }
 
 header.MainHeaderFixed.jsScrolled {
@@ -173,7 +239,7 @@ header.MainHeaderFixed.jsScrolled {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 60px;
+    padding: 0 30px;
 }
 
 .MainLogo {
@@ -188,7 +254,14 @@ header.MainHeaderFixed.jsScrolled {
     background: none;
     border: none;
     z-index: 999;
-    padding-left: 157px;
+    padding: 0 0  0 32px;
+    cursor: pointer;
+}
+
+@media(max-width:1180px){
+   .MainMenu {
+    padding-left: 0;
+    }     
 }
 
 .MainMenu-Icon.MainMenu-Icon-Fixed {
@@ -217,6 +290,12 @@ header.MainHeaderFixed.jsScrolled {
     transition-duration: 400ms;
 }
 
+@media(max-width:1366px){
+    .MainMenu-Icon.MainMenu-Icon-Fixed::after {
+    top: 37.5px;
+    }    
+}
+
 .MainMenu-Icon.MainMenu-Icon-Fixed.js-menuIsOpened::before {
     background-color: black;
     transform: rotate(
@@ -228,7 +307,7 @@ header.MainHeaderFixed.jsScrolled {
 .MainMenu-Icon.MainMenu-Icon-Fixed.js-menuIsOpened::after {
     background-color: black;
     transform: rotate(
-            -45deg
+            -43deg
     ) translate(2px, -9px);
     transition-duration: 400ms;
 }
@@ -282,22 +361,16 @@ header.MainHeaderFixed.jsScrolled {
     background-color: #EA028A;
 }
 
-
-.LogoSvg > path {
-    fill: white;
-    transition-duration: 400ms;
-}
-
-.LogoSvgFixed > path {
-    fill: #222;
-    transition-duration: 400ms;
-}
-
-
-
-.LogoSvg.js-menuIsOpened > path {
-    fill: black;
-    transition-duration: 400ms;
+@media(max-width:642px){
+    .MainMenu-Icon:hover::before,
+    .MainMenu-Icon:hover::after{
+        background-color: #fff;
+    }
+    
+    .MainMenu-Icon:active::before,
+    .MainMenu-Icon:active::after{
+        background-color: #EA028A;
+    } 
 }
 
 .LogoAsterisk {
@@ -311,8 +384,23 @@ header.MainHeaderFixed.jsScrolled {
     }
 }
 
-@media screen and (max-width: 1365px){
-
+@media screen and (max-width: 1180px){
+    .SubNavigationMenu-ScrollDown {
+    display: none;
+    cursor: pointer;
+    }
+    
+    .SubNavigationMenu-ScrollDown-mobile {
+    color: #FFFFFF;
+    opacity: 1;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    cursor: pointer;
+    }
 }
 
 
@@ -320,17 +408,6 @@ header.MainHeaderFixed.jsScrolled {
 
 
 @media screen and (max-width: 767px){
-
-    .SubNavigationMenu-ScrollDown-mobile {
-        color: #FFFFFF;
-        opacity: 1;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 26px;
-        text-align: center;
-        letter-spacing: 1.25px;
-        text-transform: uppercase;
-    }
 
 
     .MainMenu-Icon {
@@ -379,12 +456,6 @@ header.MainHeaderFixed.jsScrolled {
         height: 72px;
     }
 
-    .LogoSvg {
-        height: 21px;
-        width: 140px;
-
-    }
-
     .MainMenu-Icon.MainMenu-Icon-Fixed::after {
         top: 30px;
     }
@@ -402,16 +473,27 @@ header.MainHeaderFixed.jsScrolled {
         top: -70px;
     }
 
-    .SubNavigationMenu-ScrollDown {
-        display: none;
-        cursor: pointer;
-    }
     .MainMenu {
-        padding: 0;
+        padding: 0 0  0 32px;
     }
     .MainHeader-Content {
         padding: 0 30px;
     }
+}
+
+@media(max-width:642px){
+    .SubNavigationMenu-ScrollDown-mobile {
+        font-size: 12px;
+    }
+    
+    .MainMenu-Icon::after {
+        top: 37px;
+    }
+    
+    .MainMenu-Icon.MainMenu-Icon-Fixed:hover::before, .MainMenu-Icon.MainMenu-Icon-Fixed:hover::after {
+    background-color: #222
+    }
+    
 }
 
 
@@ -422,6 +504,17 @@ header.MainHeaderFixed.jsScrolled {
 .MainHeaderFixed-Subcategory {
     display: flex;
     align-items: center;
+    flex: 1 1 auto;
+    justify-content: center;
+}
+
+@media(max-width:1180px){
+     .MainHeaderFixed-Subcategory {
+        display: flex;
+        align-items: center;
+        flex: 1 1 auto;
+        justify-content: flex-start;
+    }   
 }
 
 .MainHeaderFixed-Subcategory.js-OpenedMenu {
@@ -452,6 +545,12 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     }
 }
 
+@media screen and (max-width: 1180px) {
+    .MainLogo.MainLogoFixed {
+        margin-right: 42px;
+    }
+}
+
 
 @media screen and (max-width: 767px) {
     .MainLogo.MainLogoFixed {
@@ -464,8 +563,21 @@ a.MainHeaderFixed-Subcategory-Item:hover {
         text-decoration: none;
         margin: 0 25px 0 0;
     }
+    
+    a.MainHeaderFixed-Subcategory-Item:hover {
+    color: #000 !important;
+    }
+    
+    a.MainHeaderFixed-Subcategory-Item:active {
+    color: #EA028A !important;
+    }
 }
 
+@media screen and (max-width: 642px) {
+    a.MainHeaderFixed-Subcategory-Item {
+        font-weight: 700 !important;
+    }
+}
 
 
 /*MAIN BANNER*/
@@ -480,9 +592,10 @@ a.MainHeaderFixed-Subcategory-Item:hover {
 }
 
 .MainHomeBanner {
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
     display: block;
     width: 100vw;
-    height: 100vh;
     position: absolute;
     z-index: 99;
     overflow: hidden;
@@ -513,16 +626,25 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     cursor: pointer;
 }
 
-.MainHomeBanner-Content-LinkHolder--left>.MainHomeBanner-Content-LinkArrow {
-    opacity: 0;
+.MainHomeBanner-Content-LinkHolder--left .MainHomeBanner-Content-LinkArrow {
+    display: inline-block;
+    /* opacity: 0; */
+    height: 72px;
+    width: auto;
     margin-right: -40px;
     transition-duration: 400ms;
-}
+/*     margin-bottom: 7px;
+ */}
 
-.MainHomeBanner-Content-LinkHolder--right>.MainHomeBanner-Content-LinkArrow {
-    opacity: 0;
+.MainHomeBanner-Content-LinkHolder--right .MainHomeBanner-Content-LinkArrow {
+    display: inline-block;
+   /*  opacity: 0; */
+    height: 72px;
+    width: auto;
     margin-left: -40px;
     transition-duration: 400ms;
+    transform: rotate(180deg);
+    margin-bottom: 7px;
 }
 
 .MainHomeBanner-Content-LinkArrowImg {
@@ -531,29 +653,51 @@ a.MainHeaderFixed-Subcategory-Item:hover {
 
 .MainHomeBanner-Content-LinkHolder--left:hover {
     color: #EA028A;
-    transition-duration: 500ms;
+    transition-duration: 800ms;
 }
 
-.MainHomeBanner-Content-LinkHolder--left:hover>.MainHomeBanner-Content-LinkArrow {
+.MainHomeBanner-Content-LinkHolder--left:hover .MainHomeBanner-Content-LinkArrow {
     opacity: 1;
-    margin-right: -20px;
-    transition-duration: 400ms;
+    margin-right: -28px;
+    transition-duration: 800ms;
 }
 
-.MainHomeBanner-Content-LinkHolder--right:hover>.MainHomeBanner-Content-LinkArrow {
+.MainHomeBanner-Content-LinkHolder--right:hover .MainHomeBanner-Content-LinkArrow {
     opacity: 1;
-    margin-left: -20px;
-    transition-duration: 400ms;
+    margin-left: -28px;
+    transition-duration: 800ms;
 }
 
 .MainHomeBanner-Content-LinkHolder--right:hover {
     color: #EA028A;
-    transition-duration: 500ms;
+    transition-duration: 800ms;
 }
 
-.MainHomeBanner-Content-LinkHolder--left:hover>.MainHomeBanner-Content-LinkArrow>svg {
+/* .MainHomeBanner-Content-LinkHolder--left:hover .MainHomeBanner-Content-LinkArrow {
+    color: #EA028A;
+    transition: 400ms;
+} */
+
+
+.MainHomeBanner-arrowIcon {
+    fill-opacity: 0;
+    display: inline-block;
+    fill: #fff;
+    color: inherit;
+    height: 100%;
+    vertical-align: top;
+    transition:all ease 800ms;
+}
+
+.MainHomeBanner-Content-LinkHolder--right:hover > .MainHomeBanner-Content-LinkArrow > .MainHomeBanner-arrowIcon {
+    fill-opacity: 1;
     fill: #EA028A;
-    transition: 500ms;
+    
+}
+
+.MainHomeBanner-Content-LinkHolder--left:hover > .MainHomeBanner-Content-LinkArrow > .MainHomeBanner-arrowIcon {
+    fill-opacity: 1;
+    fill: #EA028A;
 }
 
 .MainHomeBanner-Content-LinkItem {
@@ -577,7 +721,7 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     justify-content: flex-end;
 }
 
-@media(max-width:1024px) {
+@media(max-width:1180px) {
     .MainHomeBanner-Content-LinkHolder--left {
         justify-content: center;
     }
@@ -587,7 +731,7 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     justify-content: flex-start;
 }
 
-@media(max-width:1024px) {
+@media(max-width:1180px) {
     .MainHomeBanner-Content-LinkHolder--right {
         justify-content: center;
     }
@@ -602,7 +746,7 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     display: none;
 }
 
-@media(max-width:1024px) {
+@media(max-width:1180px) {
     .MainHomeBanner-Content-BackgroundMobile {
         display: block;
         position: absolute;
@@ -610,6 +754,13 @@ a.MainHeaderFixed-Subcategory-Item:hover {
         left: 0;
         right: 0;
         bottom: 0;
+    }
+}
+
+@media(max-width:642px) {
+    .MainHomeBanner-Content-BackgroundMobile {
+        background-size: auto 280vw !important;
+        background-position: 246.5vw -70vw !important;
     }
 }
 
@@ -622,7 +773,7 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     z-index: 2;
 }
 
-@media(max-width:1024px) {
+@media(max-width:1180px) {
     .MainHomeBanner-Content-BackgroundLeftScreen {
         display: none;
     }
@@ -637,7 +788,7 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     z-index: 3;
 }
 
-@media(max-width:1024px) {
+@media(max-width:1180px) {
     .MainHomeBanner-Content-BackgroundLeftScreenContent {
         display: none;
     }
@@ -652,7 +803,7 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     z-index: 2;
 }
 
-@media(max-width:1024px) {
+@media(max-width:1180px) {
     .MainHomeBanner-Content-BackgroundRightScreen {
         display: none;
     }
@@ -667,7 +818,7 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     z-index: 3;
 }
 
-@media(max-width:1024px) {
+@media(max-width:1180px) {
     .MainHomeBanner-Content-BackgroundRightScreenContent {
         display: none;
     }
@@ -698,14 +849,14 @@ a.MainHeaderFixed-Subcategory-Item:hover {
 @keyframes left-content-action {
     0% {
         width: 50%;
-        background-size: auto 100vh;
-        background-position: 28.5vw 0;
+        background-size: auto 80vw;
+        background-position: 11.8vw -12vw;
     }
 
     100% {
         width: 100%;
-        background-size: auto 110vh;
-        background-position: 3vw -9vh;
+        background-size: auto 100vh;
+        background-position: 3vw 0vh;
     }
 }
 
@@ -713,15 +864,15 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     0% {
         width: 50%;
         left: 50%;
-        background-size: auto 100vh;
-        background-position: -22vw 0;
+        background-size: auto 80vw;
+        background-position: -38.2vw -12vw;
     }
 
     100% {
         width: 100%;
         left: 0;
-        background-size: auto 110vh;
-        background-position: 50vw -9vh;
+        background-size: auto 100vh;
+        background-position: 45vw 0vh;
     }
 }
 
@@ -731,6 +882,7 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
     z-index: 4;
+    transform: translateZ(0);
 }
 
 .MainHomeBanner-Content-BackgroundLeftScreenContentAnimation {
@@ -739,6 +891,7 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
     z-index: 5;
+    transform: translateZ(0);
 }
 
 .MainHomeBanner-Content-BackgroundRightScreenAnimation {
@@ -747,6 +900,7 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
     z-index: 4;
+    transform: translateZ(0);
 }
 
 .MainHomeBanner-Content-BackgroundRightScreenContentAnimation {
@@ -755,6 +909,7 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
     z-index: 5;
+    transform: translateZ(0);
 }
 
 .MainHomeBanner-Content-LinkHolder--delete {
@@ -778,25 +933,28 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     }
 }
 
-@media screen and (max-width: 1919px) {
+@media screen and (max-width: 1366px) {
     .MainHomeBanner-Content-LinkItem {
         font-size: 80px;
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1180px) {
 
-
+    .MainHomeBanner-Content-LinkItem {
+        display: flex;
+        align-items: center;
+    }
 
     .MainHomeBanner-Content-LinkArrow {
-        display: none;
+        display: none !important;
     }
 
     .MainHomeBanner-Content-Links {
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-        padding-bottom: 100px;
+        padding-bottom: 4vh;
     }
 
     .MainHomeBanner-Content-Slash {
@@ -814,11 +972,21 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     }
 
     .MainHomeBanner-Content-LinkHolder--right {
-        padding-bottom: 50px;
+        padding-bottom: 1vh;
     }
 
     .MainHomeBanner-Content-LinkArrowImg {
         width: 36px;
+    }
+}
+
+@media(max-width:642px){
+    .MainHomeBanner-Content-LinkHolder--right {
+        padding-bottom: 5vh;
+    }
+    
+    .MainHomeBanner-Content-Links {
+        padding-bottom: 1vh;
     }
 }
 
@@ -830,11 +998,21 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     width: 60%;
     height: 100%;
     z-index: 7;
+    margin-left: 200px;
     position: absolute;
-    padding: 0 60px;
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
+}
+
+@media(max-width:1366px){
+    .MainHomeBanner-categoryLeftScreen {
+        margin-left: 60px;
+    }
+    
+    .MainHomeBanner-categoryRightScreen{
+       margin-right: 70px !important;     
+    }
 }
 
 .MainHomeBanner-categoryRightScreen {
@@ -842,36 +1020,50 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     height: 100%;
     display: none;
     opacity: 0;
-    width: 40%;
+    width: 60%;
     height: 100%;
     z-index: 7;
     position: absolute;
     justify-content: center;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
+    margin-right: 210px;
 }
+    
 
 
-@media(max-width:1500px) {
-    .MainHomeBanner-categoryRightScreen {
-        width: 50%;
-    }
-}
 
 .MainHomeBanner-categoryLeftScreen-title {
     color: #fff;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 500;
     text-transform: uppercase;
 }
+
+@media(max-width:1366px){
+   .MainHomeBanner-categoryLeftScreen-title {
+    font-size: 50px;
+    }
+}     
 
 
 .MainHomeBanner-categoryLeftScreen-content {
     color: #fff;
-    font-size: 80px;
-    line-height: 105px;
+    font-size: 100px;
+    line-height: 110px;
     font-weight: 500;
     text-transform: uppercase;
+}
+
+.MainHomeBanner-categoryRightScreen .MainHomeBanner-categoryLeftScreen-content{
+    text-align: right;    
+}
+
+@media(max-width:1366px){
+   .MainHomeBanner-categoryLeftScreen-content {
+    font-size: 80px;
+    line-height: 90px;
+}     
 }
 
 .MainHomeBanner-categoryLeftScreen-contentItem {
@@ -882,6 +1074,10 @@ a.MainHeaderFixed-Subcategory-Item:hover {
 
 .MainHomeBanner-categoryLeftScreen-contentItem:hover {
     color: #EA028A;
+}
+
+.MainHomeBanner-categoryLeftScreen-contentItem:focus {
+    color: #FFF;
 }
 
 .MainHomeBanner-categoryScreenAppearance {
@@ -906,7 +1102,7 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     }
 }
 
-@media(max-width: 1366px) {
+@media(max-width: 1180px) {
     .MainHomeBanner-Content-LinkItem {
         font-size: 60px;
     }
@@ -918,7 +1114,7 @@ a.MainHeaderFixed-Subcategory-Item:hover {
 
 .MainHomeBanner-Content-LinkHolderDiv {}
 
-@media(max-width:1024px) {
+@media(max-width:1180px) {
     .MainHomeBanner-Content-LinkHolderDiv {
         display: none;
     }
@@ -928,29 +1124,54 @@ a.MainHeaderFixed-Subcategory-Item:hover {
     display: none;
 }
 
-@media(max-width:1024px) {
+@media(max-width:1180px) {
     .MainHomeBanner-Content-LinkHolderLink {
         display: flex;
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1180px) {
+
+    .MainHomeBanner-Content-LinkArrow-Left {
+        display: block;
+        width: 56px;
+        height: 48px;
+        margin-bottom: 6px;
+    }
+
+    .MainHomeBanner-Content-LinkArrow-Right {
+        display: block;
+        width: 56px;
+        height: 48px;
+        transform: rotate(180deg);
+        margin-bottom: 6px;
+    }
+
+    .MainHomeBanner-Content-LinkItem {
+        font-size: 75px;
+        line-height: 110px;
+    }
+}
+
+@media screen and (max-width: 642px) {
 
     .MainHomeBanner-Content-LinkArrow-Left {
         display: block;
         width: 30px;
         height: 30px;
+        margin-bottom: 4px;
     }
 
     .MainHomeBanner-Content-LinkArrow-Right {
         display: block;
         width: 30px;
         height: 30px;
-        transform: rotate(180deg);
+        margin-bottom: 4px;
     }
-
+    
     .MainHomeBanner-Content-LinkItem {
         font-size: 40px;
+        line-height: 58px;
     }
 }
 
@@ -959,14 +1180,15 @@ a.MainHeaderFixed-Subcategory-Item:hover {
 
 sup {
     font-weight: 500;
-    font-size: 22px;
+    font-size: 25px;
     top: -1em;
+    left: -2px;
 }
 
 
 .SubNavigationMenu {
     width: 100vw;
-    padding: 0 60px;
+    padding: 0 70px;
     height: 70px;
     position: absolute;
     bottom: 0;
@@ -975,17 +1197,74 @@ sup {
     z-index: 900;
 }
 
+@media(max-width:1366px){
+    .SubNavigationMenu {
+        padding: 0 70px;
+    }    
+}
+
+@media(max-width:1180px){
+    .SubNavigationMenu {
+    padding: 0 48px;
+    }    
+}
+
 .SubNavigationMenu.SubNavigationMenu-Fixed {
     position: fixed;
     z-index: 1300;
+    padding: 0 35px;
+}
+
+@media(max-width:1180px){
+    .SubNavigationMenu.SubNavigationMenu-Fixed {
+        display: flex;
+        justify-content: center;
+    }    
+}
+
+@media(max-width:642px){
+    .SubNavigationMenu.SubNavigationMenu-Fixed {
+        display: flex;
+        justify-content: flex-start;
+    }    
 }
 
 
 .SubNavigationMenu-ChangeLanguage {
+/*     min-width: 75px; */
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+@media(max-width:1180px){
+    .SubNavigationMenu-ChangeLanguage {
+        display: none;
+    }
+    
+    .MainMenuDrawer .SubNavigationMenu-ChangeLanguage {
+        display: flex;
+    }
+}
+
+@media(max-width:642px){
+    .SubNavigationMenu {
+    padding: 0 42px;
+}
+
+    .SubNavigationMenu-ChangeLanguage {
     min-width: 75px;
     display: flex;
     justify-content: space-around;
     cursor: pointer;
+    }
+   
+}
+
+@media(max-width: 642px){
+    .jsDesktop {
+        display: none;
+    }    
 }
 
 a.SubNavigationMenu-LanguageItem {
@@ -997,6 +1276,10 @@ a.SubNavigationMenu-LanguageItem {
     transition-duration: 500ms;
 }
 
+a.SubNavigationMenu-LanguageItem:last-child {
+    margin-right: 0;
+}
+
 a.SubNavigationMenu-LanguageItem:hover {
     color: #EA028A;
 }
@@ -1005,6 +1288,10 @@ a.SubNavigationMenu-LanguageItem:hover {
 a.SubNavigationMenu-LanguageItem.LanguageItem-active {
     color: #ffffff;
     text-decoration: none;
+}
+
+.LanguageItem-disabled:hover {
+    color: #EA028A !important;
 }
 
 a.SubNavigationMenu-LanguageItem.LanguageItem-dark {
@@ -1034,11 +1321,16 @@ a.SubNavigationMenu-LanguageItem.LanguageItem-dark.LanguageItem-active {
 
 a.MainMenuDrawer-Item-Subcategory {
     text-decoration: none;
-    color: black;
+    color: #222;
     font-size: 40px;
     font-weight: 500;
     text-transform: uppercase;
     transition-duration: 500ms;
+    
+}
+
+a.MainMenuDrawer-Item-Subcategory:last-child{
+    margin-bottom: 20px;    
 }
 
 a.MainMenuDrawer-Item-Subcategory:hover {
@@ -1051,6 +1343,7 @@ a.MainMenuDrawer-Item-Subcategory:hover {
     height: 0;
     overflow: hidden;
     transition-duration: 400ms;
+    margin-bottom: 30px;
 }
 .MainMenuDrawer-Items{
     width: 100%;
@@ -1060,7 +1353,7 @@ a.MainMenuDrawer-Item-Subcategory:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: black;
+    color: #222;
 }
 
 .MainMenuDrawer-Item {
@@ -1101,10 +1394,16 @@ a.MainMenuDrawer-Item-Subcategory:hover {
         font-size: 30px;
         line-height: 68px;
     }
+    
+    a.MainMenuDrawer-Item-Subcategory:first-child {
+        margin-top: 20px;
+        /* font-size: 30px;
+        line-height: 68px; */
+    }
 }
 
 
-@media screen and (max-width: 414px) {
+@media(max-width: 414px) {
 
     sup {
         font-size: 18px;
@@ -1113,16 +1412,13 @@ a.MainMenuDrawer-Item-Subcategory:hover {
 
     .SubNavigationMenu {
         padding: 30px;
-        height: 90px;
-    }
-
-    .jsDesktop {
-        display: none;
+        height: 58px;
+        padding-left: 37px;
     }
 
     .MainMenuDrawer-Item-Category {
         font-size: 50px;
-        line-height: 70px;
+        line-height: 42px;
         font-weight: 500;
         text-transform: uppercase;
     }
@@ -1138,14 +1434,19 @@ a.MainMenuDrawer-Item-Subcategory:hover {
     }
     .MainMenuDrawer-Items{
         width: 100%;
-        padding: 30px;
-        height: 100%;
+        padding: 45px 30px 30px;
+        height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+        height: calc(var(--vh, 1vh) * 100);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
         text-align: left;
         color: black;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: 0 auto;
     }
 }
 
@@ -1166,17 +1467,30 @@ a.MainMenuDrawer-Item-Subcategory:hover {
 
 h1.CategoryMainBanner-Title {
     color: #fff;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 500;
     text-transform: uppercase;
 }
 
+@media(max-width:1366px){
+    h1.CategoryMainBanner-Title {
+        font-size: 50px;
+    }    
+}
+
 .CategoryMainBanner-SubTitle {
-    font-size: 80px;
-    line-height: 105px;
+    font-size: 100px;
+    line-height: 110px;
     font-weight: 500;
     color: #fff;
     text-transform: uppercase;
+}
+
+@media(max-width:1366px){
+    .CategoryMainBanner-SubTitle {
+    font-size: 80px;
+    line-height: 90px;
+}    
 }
 
 .CategoryMainBanner-SubTitle-Item {
@@ -1185,9 +1499,36 @@ h1.CategoryMainBanner-Title {
     transition-duration: 500ms;
 }
 
-.CategoryMainBanner-SubTitle-Item:hover {
-    color: #EA028A;
+a.CategoryMainBanner-SubTitle-Item:visited{
+    color: #fff !important;
+}
+
+a.CategoryMainBanner-SubTitle-Item:focus{
+    color: #fff !important;
+}
+
+.CategoryMainBanner-SubTitle-Item:visited{
+    color: #fff;
+}
+
+a.CategoryMainBanner-SubTitle-Item:hover {
+    color: #EA028A !important;
     text-decoration: none;
+}
+
+@media(max-width:1180px){
+    .CategoryMainBanner-SubTitle-Item {
+        display: flex;
+        align-items: center;
+        }
+        
+    .CategoryMainBanner-SubTitle-Item:hover {
+        color: #fff;
+    }
+    
+    .CategoryMainBanner-SubTitle-Item:active {
+        color: #EA028A;
+    }
 }
 
 .CategoryMainBanner {
@@ -1195,33 +1536,64 @@ h1.CategoryMainBanner-Title {
     height: 100vh;
 }
 
+@media(max-width:642px){
+   .CategoryMainBanner {
+        height: calc(var(--vh, 1vh) * 100);
+    }     
+}
+
 .CategoryMainBanner-Content {
+    position: relative;
     width: 100%;
     height: 100%;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .CategoryMainBanner-Content-Container {
     width: 60%;
+    box-sizing: border-box;
     height: 100%;
     display: flex;
     flex-direction: column;
     z-index: 99;
+    padding-left: 200px;
     position: absolute;
-    padding: 0 60px;
     align-items: flex-start;
     justify-content: center;
 }
 
-.CategoryMainBanner-Content-Background {
-    width: 100%;
-    height: 100%;
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    background-repeat: no-repeat;
+@media(max-width:1646px){
+    .CategoryMainBanner-Content-Container {
+        width: 78%;
+    }
 }
 
-@media screen and (max-width: 768px) {
+@media(max-width:1366px){
+    .CategoryMainBanner-Content-Container {
+        padding-left: 68px;
+    }
+}
+
+.CategoryMainBanner-Content-Background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.CategoryMainBanner-Content-BackgroundContent{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;    
+}
+
+@media screen and (max-width: 1180px) {
 
     .CategoryMainBanner-Content.mobile {
         display: block;
@@ -1233,14 +1605,14 @@ h1.CategoryMainBanner-Title {
 
 
     .CategoryMainBanner-SubTitle {
-        font-size: 40px;
-        line-height: 60px;
         display: flex;
         flex-direction: column;
+        margin-left: 6px;
     }
 
     h1.CategoryMainBanner-Title {
-        font-size: 40px;
+        font-size: 70px;
+        line-height: 70px;
         writing-mode: vertical-rl;
         transform: rotateZ(
                 180deg
@@ -1250,12 +1622,30 @@ h1.CategoryMainBanner-Title {
     }
 
     .CategoryMainBanner-Content-Container {
-        padding: 0 30px;
+        padding: 0 35px;
+/*         padding-left: 60px; */
         width: 100%;
     }
 }
 
-
+@media(max-width:642px){
+    .CategoryMainBanner-SubTitle {
+        font-size: 40px;
+        line-height: 60px;
+        margin-left: 10px;
+    }
+    
+    .CategoryMainBanner-Content-Container {
+        padding-left: 24px;
+    }
+    
+    h1.CategoryMainBanner-Title {
+        font-size: 40px;
+        line-height: 40px;
+        margin: 20px 0;
+        padding-right: 6px;
+    }
+}
 
 
 
@@ -1272,9 +1662,35 @@ h1.CategoryMainBanner-Title {
 }
 
 .SubcategoryBanner {
+    position: relative;
     width: 100%;
-    min-height: 30vw;
 }
+
+.SubcategoryBanner-idLink {
+    top: -60px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+@media(max-width:642px){
+     .SubcategoryBanner-idLink {
+        top: -50px;
+    }  
+}
+
+
+/* @media(max-width:1366px){
+  .SubcategoryBanner {
+    min-height: 420px;
+}      
+}
+
+@media(max-width:1280px){
+  .SubcategoryBanner {
+    min-height: 315px;
+}      
+} */
 
 .SubcategoryBanner-Content-Container {
     width: 100%;
@@ -1282,59 +1698,77 @@ h1.CategoryMainBanner-Title {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    min-height: 30vw;
+    min-height: 30.74889vw;
 }
 
 .SubcategoryBanner-SubTitle {
     padding: 0 0 50px 9%;
-    font-size: 50px;
-    line-height: 65px;
+    font-size: 60px;
+    line-height: 78px;
     text-transform: uppercase;
     color: #fff;
     font-weight: bold;
     width: 100%;
-    max-width: 900px;
-    max-width: 930px;
+    max-width: 650px;
     display: inline-block;
     box-sizing: content-box;
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1366px) {
 
-    .SubcategoryBanner {
-        width: 100%;
-        /* height: 420px; */
-        min-height: 65vw;
+    .SubcategoryBanner-Content-Container {
+    min-height: 30.75vw;
     }
 
+    .SubcategoryBanner-SubTitle {
+        padding: 0 0 50px 9%;
+    }
+}
+
+@media(max-width: 1180px) {
+    .SubcategoryBanner-Content-Container {
+        min-height: 65.1vw;
+        background-size: cover  !important;
+    }
+
+    .SubcategoryBanner-SubTitle {
+        font-size: 38px;
+        line-height: 49px;
+        max-width: 425px
+    }
+}
+
+@media(max-width: 1180px) {
 
     .SubcategoryBanner-Content-Container {
         display: none;
     }
 
     .SubcategoryBanner-Content-ContainerTablet {
-        display: block;
-        min-height: 65vw;
+        min-height:  65.1vw;
         align-items: flex-end;
         display: flex;
+        background-size: cover  !important;
     }
 
     .SubcategoryBanner-SubTitle {
+        padding: 0 0 70px 92px;
         font-size: 35px;
         line-height: 45px;
-        width: 65%;
+        max-width: 400px;
         display: inline-block;
+        margin: 0;
     }
 }
 
-@media screen and (max-width: 767px) {
-    .SubcategoryBanner-Content-Container,
-    .SubcategoryBanner-Content-ContainerTablet{
-        display: none !important;
-    }
+@media(max-width: 642px) {
+.SubcategoryBanner-Content-Container,
+.SubcategoryBanner-Content-ContainerTablet{
+    display: none !important;
+}
 
-    .SubcategoryListing-Title {
-        display: none;
-    }
+.SubcategoryListing-Title {
+    display: none;
+}
 
     h3.SubcategoryBanner-Title {
         font-size: 55px;
@@ -1353,20 +1787,23 @@ h1.CategoryMainBanner-Title {
     .SubcategoryBanner-SubTitle {
         font-size: 20px;
         line-height: 26px;
-        width: auto;
-        padding: 0 30px 30px;
+        max-width: 315px;
+        width: 315px;
         text-align: center;
         min-height: auto;
-        display: inline-block;
+        padding: 0 16px;
     }
+}
 
-    .SubcategoryBanner-Content-ContainerMobile {
+@media(max-width:642px){
+        .SubcategoryBanner-Content-ContainerMobile {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        align-items: center;
         min-height: 120vw;
-        padding: 30px 45px;
-    }
+        padding: 30px 0;
+    }    
 }
 
 
@@ -1380,13 +1817,35 @@ section#layout-content {
 .SubcategoryListing {
     width: 82%;
     margin: 0 auto;
+    overflow: hidden;
+}
+
+@media(max-width:1080px){
+    .SubcategoryListing {
+    width: calc(100vw - 180px);
+    }
 }
 
 .SubcategoryListing-Items {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 20px 0 120px;
+    padding-bottom: 250px;
+    margin: -70px 0;
+}
+
+@media(max-width:1366px){
+   .SubcategoryListing-Items {
+    padding-bottom: 195px;
+    margin: -35px 0;
+}     
+}
+
+@media(max-width:1180px){
+   .SubcategoryListing-Items {
+    padding-bottom: 170px;
+    margin: -30px 0;
+}     
 }
 
 .SubcategoryListing-Title {
@@ -1395,7 +1854,7 @@ section#layout-content {
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1;
-    margin: 80px 0 40px;
+    margin: 80px 0;
 }
 
 .SubcategoryListing-Title-Asterisk {
@@ -1403,20 +1862,38 @@ section#layout-content {
 }
 
 
-@media screen and (max-width: 1919px) {
+/* @media screen and (max-width: 1919px) {
     .SubcategoryListing-Title {
         font-size: 90px;
     }
+} */
+
+@media screen and (max-width: 1366px) {
+    .SubcategoryListing-Title {
+        font-size: 90px;
+         margin: 60px 0;
+    }
 }
 
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1180px) {
     .SubcategoryListing-Title {
         font-size: 80px;
+         margin: 60px 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .SubcategoryListing-Title {
+        font-size: 80px;
+         margin: 60px 0 80px;
     }
 }
 
 
 @media screen and (max-width: 767px) {
+    .SubcategoryListing-Title {
+         margin: 60px 0 80px;
+    }
 
     .SubcategoryListing {
         width: 72%;
@@ -1424,42 +1901,76 @@ section#layout-content {
     }
 
     .SubcategoryListing-Items {
-        padding: 20px 0 40px;
+        padding: 60px 0 100px;
     }
-    .SubcategoryListing-Items {
-        padding: 60px 0 40px;
-    }
+}
+
+@media(max-width:642px){
+   .SubcategoryListing-Items {
+    padding-bottom: 165px;
+    margin: -25px 0;
+    }     
 }
 
 
 /* CARD WIGET */
-.rus-currency::after {
+/* .rus-currency::after {
     content: ' ₽';
     white-space: pre;
     position: absolute;
-}
+} */
 
 
 .SubcategoryListing-ItemCard {
-    width: 23%;
+    width: 26%;
     text-align: center;
     color: #222;
     text-transform: uppercase;
+    padding: 70px 0;
+}
+
+@media(max-width:1366px){
+    .SubcategoryListing-ItemCard {
+    padding: 35px 0;
+    }
+}
+
+@media(max-width:1180px){
+    .SubcategoryListing-ItemCard {
+    padding: 30px 0;
+    }
 }
 
 h2.SubcategoryListing-ItemCard-Title {
     color: inherit;
-    font-size: 25px;
+    font-size: 30px;
+    line-height: 35px;
     font-weight: 500;
     color: #222;
 }
 
+@media(max-width:1366px){
+    h2.SubcategoryListing-ItemCard-Title {
+    font-size: 25px;
+    line-height: 32px;
+}
+    
+}
+
+
 p.SubcategoryListing-ItemCard-Description {
     color: #222;
     text-transform: none;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 22px;
+}
+
+@media(max-width:1366px){
+    p.SubcategoryListing-ItemCard-Description {
+    font-size: 14px;
+    line-height: 19px;
+}
 }
 
 .SubcategoryListing-ItemCard-Price {
@@ -1468,8 +1979,27 @@ p.SubcategoryListing-ItemCard-Description {
     font-weight: 500;
 }
 
-.SubcategoryListing-ItemCard-ImageHolder {
+.SubcategoryListing-ItemCard-ImageHolderWrapper{
+    display: flex;
     width: 100%;
+    justify-content: center;
+}
+
+.SubcategoryListing-ItemCard-ImageHolder {
+    max-width: 350px;
+}
+
+@media(max-width:1366px){
+    .SubcategoryListing-ItemCard-ImageHolder {
+    max-width: 250px;
+}    
+}
+
+@media(max-width:642px){
+    .SubcategoryListing-ItemCard-ImageHolder {
+    width: 215px;
+    max-width: 300px;
+}    
 }
 
 img.SubcategoryListing-ItemCard-Image {
@@ -1477,7 +2007,13 @@ img.SubcategoryListing-ItemCard-Image {
 }
 
 a.SubcategoryListing-ItemCard-Link {
+    display: block;
     text-decoration: none;
+    transition-duration: 400ms;
+}
+
+a.SubcategoryListing-ItemCard-Link:hover {
+    color: #EA028A;    
 }
 
 @media screen and (max-width: 1365px) {
@@ -1489,21 +2025,53 @@ a.SubcategoryListing-ItemCard-Link {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 642px) {
     .SubcategoryListing-ItemCard {
         width: 100%;
         text-align: center;
         color: #222;
         text-transform: uppercase;
-        margin-bottom: 50px;
+        padding: 25px 0;
     }
 
 }
+
+.SubcategoryListing-ItemCard-Info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a.SubcategoryListing-ItemCard-Link:hover > .SubcategoryListing-ItemCard-Holder > .SubcategoryListing-ItemCard-Info > * {
+    color: #EA028A;
+    transition-duration: 400ms;
+    }
+    
+
+.SubcategoryListing-ItemCard-Description{
+        max-width: 350px;
+}
+
+@media(max-width:1366px){
+     .SubcategoryListing-ItemCard-Description{
+        width: 250px;
+        max-width: 250px;
+    }   
+}
+
+@media(max-width:642px){
+     .SubcategoryListing-ItemCard-Description{
+        width: 270px;
+        max-width: 270px;
+    }   
+}
+
 
 
 /* PRODUCT */
 html {
     scroll-behavior: smooth;
+    height: -webkit-fill-available;
 }
 
 .close_icon {
@@ -1524,6 +2092,7 @@ html {
 
 .text-block__color-section {
     display: flex;
+    padding-bottom: 20px;
 }
 
 .text-block__color-section__holder {
@@ -1580,10 +2149,35 @@ html {
 a.buy_now_link {
     font-size: 20px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 25px;
     color: #EA028A;
     text-decoration: underline;
+}
+
+/* a.buy_now_link.buy_now_link--desktop {
+    display: block;
+    position: absolute;
+    left: 6.25vw;
+    bottom: 160px;
+} */
+
+@media(max-width:1180px){
+    a.buy_now_link {
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 32px;
+    }
+    
+/*     a.buy_now_link.buy_now_link--desktop {
+display: none;
+} */
+}
+
+@media(max-width:642px){
+   a.buy_now_link {
+        margin-top: 10px;
+    }     
 }
 
 .product-section {
@@ -1595,12 +2189,37 @@ a.buy_now_link {
 }
 
 .product-section__text-block {
+    position: relative;
     color: #222;
-    padding: 120px;
+    padding: 100px 6.25vw;
     margin: 0;
     width: 50%;
     background-color: #fff;
 }
+
+.product-section__text-block {
+    color: #222;
+    padding: 100px 6.25vw;
+    margin: 0;
+    width: 50%;
+    background-color: #fff;
+}
+
+/* .product-section__text-block {
+    width: 42%;
+}
+
+@media(max-width:1366px){
+    .product-section__text-block {
+    width: 47%;
+    }
+} */
+
+/* @media(max-width:1360px){
+  .product-section__text-block {
+    padding: 100px 80px;
+}  
+} */
 
 h1.title-section__title {
     font-size: 50px;
@@ -1609,6 +2228,21 @@ h1.title-section__title {
     margin-bottom: 3%;
     color: #222;
     font-weight: 700;
+}
+
+@media(max-width:1180px){
+    h1.title-section__title {
+    margin-bottom: 10px;
+}    
+}
+
+
+
+@media(max-width:642px){
+    h1.title-section__title {
+    font-size: 35px;
+    line-height: 38px;
+}    
 }
 
 .title-section__title_marked {
@@ -1620,23 +2254,45 @@ h1.title-section__title {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10%;
+    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
+
 .basket-section__price {
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 700;
     color: #EA028A;
 }
 
-.basket-section__price::after {
-    content: ' ₽';
-    white-space: pre;
-    position: absolute;
+@media(max-width:1180px){
+    .basket-section__price {
+    margin-bottom: 10px;
+}    
 }
 
+@media(max-width:642px){
+    .basket-section__price {
+    margin-bottom: 25px;
+}    
+}
+
+
+@media(max-width:1180px){
+    .basket-section__price {
+    font-size: 35px;
+    }
+}
+
+@media(max-width:642px){
+    .basket-section__price {
+    font-size: 32px;
+    }
+}
+
+
 .text-block__title-section {
-    margin-bottom: 5%;
+    margin-bottom: 10px;
 }
 
 .title-section__description {
@@ -1644,13 +2300,29 @@ h1.title-section__title {
     font-size: 1.2em;
 }
 
+p.title-section__description {
+    margin: 0;
+}
+
 .product-info-block__title {
     margin: 0 auto 2%;
 }
 
 .product-info-block__description {
-    margin: 0 0 5%;
+    margin: 0 0 40px;
     line-height: 1.8;
+}
+
+@media(max-width:1180px){
+    .product-info-block__description {
+    margin: 0 0 30px;
+}
+}
+
+@media(max-width:642px){
+    .product-info-block__description {
+    margin: 0 0 40px;
+}
 }
 
 h2.product-info-block__description__title {
@@ -1665,6 +2337,19 @@ h2.product-info-block__description__title {
     width: 50%;
     margin: 0 auto;
 }
+
+/* .product-section__photo-block {
+    width: 57%;
+    margin: 0 auto;
+}
+
+@media(max-width:1366px){
+    .product-section__photo-block {
+    width: 53%;
+    margin: 0 auto;
+}
+
+} */
 
 .photo-block__product-holder {
     width: 100%;
@@ -1712,22 +2397,26 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     height: 70px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1180px) {
 
     .photo-block__product {
-
         width: 100vw;
-        height: 80vw;
+        height: 67vw;
         margin: 0 auto;
         display: block;
         object-fit: cover;
+    }
+    
+    .photo-block__product-holder div{
+        height: auto !important;    
     }
 
     .dots-pic {
         height: 8px;
         position: absolute;
         width: 86%;
-        margin-left: 7%;
+        margin-left: 45px;
+        bottom: 25px;
         display: flex;
     }
 
@@ -1744,20 +2433,20 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     }
 
     .photo-block__product-holder.activedColorSlider {
-        -webkit-overflow-scrolling: touch;
         width: 100%;
         display: flex;
         flex-direction: row;
         overflow-y: auto;
         transition-duration: 400ms;
-        height: 80vw;
+        height: 67vw;
+        background-color: #fff
     }
-
+    
     .photo-block__product-holder {
         height: 80vw;
     }
 
-    ::-webkit-scrollbar { /* chrome based */
+    .photo-block__product-holder.activedColorSlider::-webkit-scrollbar { /* chrome based */
         width: 0px;  /* ширина scrollbar'a */
         background: transparent;  /* опционально */
     }
@@ -1769,11 +2458,13 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
 
     .product-section__photo-block {
         width: 100%;
+        position: relative;
     }
 
     .product-section__text-block {
         width: 100%;
-        padding: 30px;
+        padding: 45px;
+        padding-top: 35px;
     }
     .close_icon {
         display: flex;
@@ -1785,6 +2476,24 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     }
 }
 
+@media(max-width:642px){
+    .photo-block__product-holder.activedColorSlider {
+        height: 120vw;
+    }
+    
+    .photo-block__product {
+        height: 120vw;
+    }
+    
+    .dots-pic {
+        margin-left: 30px;
+    }
+    
+    .product-section__text-block {
+        padding: 30px;
+        padding-top: 5px;
+    }
+}
 
 
 
@@ -1867,4 +2576,260 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
         -o-transform: translateY(0);
         transform:translateY(0)
     }
+}
+
+.CategoryMainBanner-iconArrow{
+    display: inline-block;
+  fill: currentColor;
+  color: inherit;
+  height: 100%;
+  vertical-align: top;
+}
+
+.CategoryMainBanner-iconContainer{
+    height: 65px;
+    margin-left: 28px;
+}
+
+@media(max-width:642px){
+    .CategoryMainBanner-iconContainer{
+    height: 30px;
+    margin-left: 10px;
+    }
+    
+    .MainHomeBanner .SubNavigationMenu{
+        display: none;
+    } 
+}
+
+.js-menuIsOpened .SubNavigationMenu-ScrollDown{
+    display: none;    
+}
+
+.js-menuIsOpened .SubNavigationMenu-ChangeLanguage:last-child{
+    display: none    
+}
+
+
+
+.SubNavigationMenu-existing{
+    display: flex !important;
+    opacity: 0;
+}
+
+
+.SubNavigationMenu-appearance{
+    animation: appearanceSubNavigationMenu;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;  
+}
+
+@keyframes appearanceSubNavigationMenu {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.SubNavigationMenu.SubNavigationMenu--onFixedHeader{
+    padding: 0 36px;    
+}
+
+.SubNavigationMenu-LanguageItem.LanguageItem-disabled:hover{
+    color: #ffffff82;
+    cursor: pointer;
+}
+
+.SubNavigationMenu-LanguageItem.LanguageItem-dark.LanguageItem-disabled:hover{
+    color: #00000082;
+    cursor: pointer;
+}
+
+
+
+.CategoryMainBanner-Content-BackgroundContent:last-child{
+    display: none;    
+}
+
+.CategoryMainBanner.CategoryMainBanner--rightAlign .CategoryMainBanner-Content-BackgroundContent{
+    display: none;    
+}
+
+.CategoryMainBanner.CategoryMainBanner--rightAlign .CategoryMainBanner-Content-BackgroundContent:last-child{
+    display: block;    
+}
+
+
+
+.CategoryMainBanner-Content-Background:last-child{
+    display: none;    
+}
+
+.CategoryMainBanner.CategoryMainBanner--leftAlign .CategoryMainBanner-Content-Background{
+    display: none;    
+}
+
+.CategoryMainBanner.CategoryMainBanner--leftAlign .CategoryMainBanner-Content-Background:nth-child(2){
+    display: block;    
+}
+
+
+@media(min-width:1181px){
+    .CategoryMainBanner.CategoryMainBanner--rightAlign .CategoryMainBanner-Content-Container{
+    padding-left: 0;
+    right: 0;
+    padding-right: 210px;
+    align-items: flex-end;
+    }
+}
+
+@media(max-width:1366px){
+     .CategoryMainBanner.CategoryMainBanner--rightAlign .CategoryMainBanner-Content-Container{
+        padding-right: 80px;
+    }   
+}
+
+.CategoryMainBanner.CategoryMainBanner--rightAlign .CategoryMainBanner-SubTitle{
+    text-align: right;
+}
+
+@media(max-width:1180px){
+    .CategoryMainBanner-Content-BackgroundContent{
+        background-size: auto 250vw !important;
+        background-position: -21.5vw -43vh !important;
+    }
+}
+
+@media(max-width:642px){
+    .CategoryMainBanner-Content-BackgroundContent{
+        background-size: auto 300vw !important;
+        background-position: -45.5vw -28.5vh !important;
+    }
+}
+
+@media(min-width:1181px){
+     .text-block__color-section{
+         display: none;
+    }   
+}
+
+.text-block__color-section.text-block__color-section--desktop{
+        display: flex;
+        margin-bottom: 62px;
+}
+
+@media(max-width:1180px){
+    
+    a.CategoryMainBanner-SubTitle-Item:hover {
+        color:#fff !important;
+        }
+        
+        a.CategoryMainBanner-SubTitle-Item:active {
+            color:#EA028A !important;
+        }
+        
+        .CategoryMainBanner-SubTitle-Item {
+            transition-duration: 0ms;
+        }
+        
+        
+        .CategoryMainBanner-SubTitle-Item:active > span > .arrowIcon {
+            fill: #EA028A;
+        }
+        
+        
+      .text-block__color-section.text-block__color-section--desktop{
+        display: none;
+    }  
+    
+    
+}
+
+
+
+a.CategoryMainBanner-SubTitle-Item > span > svg {
+    fill: #fff;
+}
+
+a.CategoryMainBanner-SubTitle-Item:hover > span > svg {
+    fill: #EA028A;
+}
+
+@media(max-width: 374px) {
+    .SubcategoryListing {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+
+
+@media(max-width:1180px){ 
+    
+    .MainHomeBanner-arrowIcon {
+        fill-opacity: 1;
+        display: inline-block;
+        fill: #fff;
+        color: inherit;
+        height: 100%;
+        vertical-align: top;
+        transition:all ease 800ms;
+    }
+
+
+    .MainHomeBanner-Content-LinkHolder--left:hover,
+    .MainHomeBanner-Content-LinkHolder--left:hover .MainHomeBanner-Content-LinkArrow,
+    .MainHomeBanner-Content-LinkHolder--right:hover .MainHomeBanner-Content-LinkArrow,
+    .MainHomeBanner-Content-LinkHolder--right:hover,
+    .MainHomeBanner-Content-LinkHolder--left:hover .MainHomeBanner-Content-LinkArrow,
+    a.CategoryMainBanner-SubTitle-Item:hover,
+    {
+        color: #fff !important;
+        
+    }
+    
+    a.CategoryMainBanner-SubTitle-Item:hover > span > svg
+    {
+        fill: #fff;
+    }
+
+    
+    .MainHomeBanner-Content-LinkHolder--left:active,
+    .MainHomeBanner-Content-LinkHolder--left:active .MainHomeBanner-Content-LinkArrow,
+    .MainHomeBanner-Content-LinkHolder--right:active .MainHomeBanner-Content-LinkArrow,
+    .MainHomeBanner-Content-LinkHolder--right:active,
+    .MainHomeBanner-Content-LinkHolder--left:active .MainHomeBanner-Content-LinkArrow,
+     a.CategoryMainBanner-SubTitle-Item:active
+    {
+        color: #EA028A;
+        transition-duration: 0ms;
+    }
+    
+   
+    a.MainHomeBanner-Content-LinkHolder:active > span > .MainHomeBanner-arrowIcon
+    {
+        fill: #EA028A;
+        transition-duration: 0ms;
+    }
+    
+    
+    a.SubcategoryListing-ItemCard-Link:hover > .SubcategoryListing-ItemCard-Holder > .SubcategoryListing-ItemCard-Info > * {
+    color: #222;
+    transition-duration: 0ms;
+    }
+    
+    a.SubcategoryListing-ItemCard-Link:active > .SubcategoryListing-ItemCard-Holder > .SubcategoryListing-ItemCard-Info > * {
+    color: #EA028A;
+    transition-duration: 0ms;
+    }
+    
+    
+
+
 }
