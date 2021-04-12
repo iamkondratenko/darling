@@ -57,9 +57,7 @@ notFoundMessage = "Record not found"
         {% endfor %}
 
         <div class="dots-pic">
-<!--            <div class="dot active-dot"></div>-->
-<!--            <div class="dot"></div>-->
-<!--            <div class="dot"></div>-->
+
         </div>
 
     </div>
@@ -243,10 +241,6 @@ notFoundMessage = "Record not found"
 
 
 
-
-
-
-
     var colorVariantNodes = document.querySelectorAll('.radio-color-picker')
     var colorSliderProducts = document.querySelectorAll('.photo-block__product-holder')
 
@@ -346,6 +340,7 @@ notFoundMessage = "Record not found"
             event.preventDefault();
             event.stopPropagation();
             initialPoint=event.changedTouches[0];
+            console.log(initialPoint.clientX)
         }, false);
         activeNode.addEventListener('touchend', function(event) {
             event.preventDefault();
@@ -355,6 +350,7 @@ notFoundMessage = "Record not found"
             var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
             if (xAbs > 20 || yAbs > 20) {
                 if (xAbs > yAbs) {
+                    console.log('')
                     if (finalPoint.pageX < initialPoint.pageX) {
 
                         activeNode.scroll({

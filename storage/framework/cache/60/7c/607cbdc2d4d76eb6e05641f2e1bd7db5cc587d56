@@ -1,4 +1,4 @@
-1617696624a:1:{s:31:"category/subcategory-banner.htm";a:6:{s:8:"fileName";s:31:"category/subcategory-banner.htm";s:7:"content";s:1665:"==
+1617969499a:1:{s:31:"category/subcategory-banner.htm";a:6:{s:8:"fileName";s:31:"category/subcategory-banner.htm";s:7:"content";s:1665:"==
 <div class="SubcategoryBanner">
     <div class="SubcategoryBanner-idLink" id="{{subcategorySlug}}"></div>
     <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainSubcategoryBackground | media }}); background-size: cover; background-repeat: no-repeat;">

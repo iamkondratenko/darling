@@ -1,4 +1,4 @@
-1617696612a:1:{s:14:"product_en.htm";a:10:{s:8:"fileName";s:14:"product_en.htm";s:7:"content";s:13201:"title = "product"
+1617696966a:1:{s:14:"product_en.htm";a:10:{s:8:"fileName";s:14:"product_en.htm";s:7:"content";s:13213:"title = "product"
 url = "/product/:slug"
 layout = "product-card"
 is_hidden = 0
@@ -381,7 +381,7 @@ notFoundMessage = "Record not found"
 
 
 
-</script>";s:5:"mtime";i:1615442990;s:6:"markup";s:12919:"{% set record = productDetails.record %}
+</script>";s:5:"mtime";i:1617696320;s:6:"markup";s:12919:"{% set record = productDetails.record %}
 {% set displayColumn = productDetails.displayColumn %}
 {% set notFoundMessage = productDetails.notFoundMessage %}
 
