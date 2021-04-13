@@ -30,13 +30,13 @@ class __TwigTemplate_7469baec3f1fd5f9f1836e4f2d75feb6299cc04852433dfa9c7e33c6897
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
         $tags = array();
-        $filters = array();
+        $filters = array("media" => 15);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
                 [],
-                [],
+                ['media'],
                 []
             );
         } catch (SecurityError $e) {
@@ -59,19 +59,25 @@ class __TwigTemplate_7469baec3f1fd5f9f1836e4f2d75feb6299cc04852433dfa9c7e33c6897
     {
         $macros = $this->macros;
         // line 1
-        echo "<div id=\"footer\">
-    <div class=\"social_networks\">
-        <div class=\"social_networks_title\">let’s be friends</div>
-        <div class=\"social_networks_links\">
-            <a href=\"#\" class=\"social_networks_link\">@hi_darling_official</a>
-            <a href=\"#\" class=\"social_networks_link\">#youredarling</a>
-            <a href=\"#\" class=\"social_networks_link\">@hi_darling_ru</a>
+        echo "<div id=\"footer\" class=\"jsHideScrollDown\">
+    <div class=\"social_networks_title\">let’s be friends</div>
+            
+    <div class=\"footer-content\">
+        <div class=\"social_networks\">
+            <div class=\"social_networks_links\">
+                <a href=\"https://www.instagram.com/hi_darling_official/\" class=\"social_networks_link social_networks_link--official\" target=\"_blank\">@hi_darling_official</a>
+                <a href=\"https://www.instagram.com/hi_darling_ru/\" class=\"social_networks_link social_networks_link--ru\" target=\"_blank\">@hi_darling_ru</a>
+                <a href=\"#\" class=\"social_networks_link social_networks_link--hashtag\">#youredarling</a>
+            </div>
         </div>
-    </div>
-    <div class=\"footer_links\">
         <div class=\"footer_links\">
-            <a href=\"#\" class=\"footer_link\">Buy now</a>
-            <a href=\"#\" class=\"footer_link\">Privacy policy</a>
+            <div class=\"footer_links\">
+                <a href=\"https://goldapple.ru/brands/darling#144082\" class=\"footer_link\" target=\"_blank\">Buy now</a>
+                <a href=";
+        // line 15
+        echo $this->extensions['System\Twig\Extension']->mediaFilter("privacy/privacy.pdf");
+        echo " class=\"footer_link\" target=\"_blank\">Privacy policy</a>
+            </div>
         </div>
     </div>
 </div>
@@ -83,24 +89,31 @@ class __TwigTemplate_7469baec3f1fd5f9f1836e4f2d75feb6299cc04852433dfa9c7e33c6897
         color: white;
         text-decoration: underline;
         margin: 0 0 0 50px;
-        line-height: 2;
         font-size: 20px;
+        margin-bottom: 10px;
     }
+    
     .footer_links {
         text-align: right;
         display: flex;
         align-items: flex-end;
-        margin: 0 0 5px;
     }
     .social_networks {
         width: 450px;
         max-width: 90vw;
     }
+    
+    .social_networks_links {
+    display: flex;
+    flex-wrap: wrap;
+    }
+        
+        
     a.social_networks_link {
         color: white;
         text-decoration: none;
         margin: 0 50px 0 0;
-        line-height: 2;
+        line-height: 50px;
         font-size: 20px;
     }
     .social_networks_title {
@@ -108,43 +121,99 @@ class __TwigTemplate_7469baec3f1fd5f9f1836e4f2d75feb6299cc04852433dfa9c7e33c6897
         text-transform: uppercase;
         color: white;
         font-weight: 700;
+        margin-bottom: 16px;
     }
     #footer {
         width: 100%;
-        padding: 60px 60px 0;
-        height: 230px;
+        padding: 60px;
+        background-color: #EA028A; 
+    }
+    
+    .footer-content{
         display: flex;
-        background-color: #EA028A;
         justify-content: space-between;
     }
+    
+    .social_networks_link--official{
+        order: 0;    
+    }
+    
+     .social_networks_link--hashtag{
+        order: 1;    
+    }
+    
+     .social_networks_link--ru{
+        order: 2;    
+    }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1080px) {
 
         #footer {
-            flex-direction: column;
-            padding: 30px 30px 0;
-            box-sizing: content-box;
+            padding: 60px 45px;
+            box-sizing: border-box;
             overflow: hidden;
-            max-width: calc(100vw - 60px);
         }
+        
+       
 
         .social_networks_title {
-            font-size: 30px;
-
-        }
-
-        .social_networks_links {
-            display: flex;
-            flex-direction: column;
+            font-size: 50px;
+            line-height: 50px;
+            margin-bottom: 24px;
         }
 
         .footer_links {
-            width: 100%;
-            justify-content: space-between;
+            flex: 1 1 auto;
+            justify-content: flex-end;
             text-align: left;
         }
 
         a.footer_link {
+            margin: 11px;
+        }
+
+    }
+    
+    @media screen and (max-width: 981px) {
+         .social_networks {
+            flex: 1 1 60%;
+        }
+    }
+    
+    @media screen and (max-width: 642px) {
+
+        #footer {
+            padding: 60px 30px;
+        }
+        
+        .footer-content{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        
+        .social_networks{
+            margin-bottom: 8px;    
+        }
+        
+        .footer_links {
+            justify-content: space-between;
+        }
+        
+        .social_networks_title {
+            font-size: 30px;
+            line-height: 30px;
+        }
+        
+        .social_networks_links {
+            flex-direction: column;
+        }
+        
+        .social_networks_link{
+            order: 0;    
+        }
+        
+         a.footer_link {
             margin: 0;
         }
 
@@ -157,26 +226,34 @@ class __TwigTemplate_7469baec3f1fd5f9f1836e4f2d75feb6299cc04852433dfa9c7e33c6897
         return "/Users/iamk/git/darling/themes/demo/partials/site/footer.htm";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  62 => 1,);
+        return array (  78 => 15,  62 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<div id=\"footer\">
-    <div class=\"social_networks\">
-        <div class=\"social_networks_title\">let’s be friends</div>
-        <div class=\"social_networks_links\">
-            <a href=\"#\" class=\"social_networks_link\">@hi_darling_official</a>
-            <a href=\"#\" class=\"social_networks_link\">#youredarling</a>
-            <a href=\"#\" class=\"social_networks_link\">@hi_darling_ru</a>
+        return new Source("<div id=\"footer\" class=\"jsHideScrollDown\">
+    <div class=\"social_networks_title\">let’s be friends</div>
+            
+    <div class=\"footer-content\">
+        <div class=\"social_networks\">
+            <div class=\"social_networks_links\">
+                <a href=\"https://www.instagram.com/hi_darling_official/\" class=\"social_networks_link social_networks_link--official\" target=\"_blank\">@hi_darling_official</a>
+                <a href=\"https://www.instagram.com/hi_darling_ru/\" class=\"social_networks_link social_networks_link--ru\" target=\"_blank\">@hi_darling_ru</a>
+                <a href=\"#\" class=\"social_networks_link social_networks_link--hashtag\">#youredarling</a>
+            </div>
         </div>
-    </div>
-    <div class=\"footer_links\">
         <div class=\"footer_links\">
-            <a href=\"#\" class=\"footer_link\">Buy now</a>
-            <a href=\"#\" class=\"footer_link\">Privacy policy</a>
+            <div class=\"footer_links\">
+                <a href=\"https://goldapple.ru/brands/darling#144082\" class=\"footer_link\" target=\"_blank\">Buy now</a>
+                <a href={{'privacy/privacy.pdf' | media }} class=\"footer_link\" target=\"_blank\">Privacy policy</a>
+            </div>
         </div>
     </div>
 </div>
@@ -188,24 +265,31 @@ class __TwigTemplate_7469baec3f1fd5f9f1836e4f2d75feb6299cc04852433dfa9c7e33c6897
         color: white;
         text-decoration: underline;
         margin: 0 0 0 50px;
-        line-height: 2;
         font-size: 20px;
+        margin-bottom: 10px;
     }
+    
     .footer_links {
         text-align: right;
         display: flex;
         align-items: flex-end;
-        margin: 0 0 5px;
     }
     .social_networks {
         width: 450px;
         max-width: 90vw;
     }
+    
+    .social_networks_links {
+    display: flex;
+    flex-wrap: wrap;
+    }
+        
+        
     a.social_networks_link {
         color: white;
         text-decoration: none;
         margin: 0 50px 0 0;
-        line-height: 2;
+        line-height: 50px;
         font-size: 20px;
     }
     .social_networks_title {
@@ -213,43 +297,99 @@ class __TwigTemplate_7469baec3f1fd5f9f1836e4f2d75feb6299cc04852433dfa9c7e33c6897
         text-transform: uppercase;
         color: white;
         font-weight: 700;
+        margin-bottom: 16px;
     }
     #footer {
         width: 100%;
-        padding: 60px 60px 0;
-        height: 230px;
+        padding: 60px;
+        background-color: #EA028A; 
+    }
+    
+    .footer-content{
         display: flex;
-        background-color: #EA028A;
         justify-content: space-between;
     }
+    
+    .social_networks_link--official{
+        order: 0;    
+    }
+    
+     .social_networks_link--hashtag{
+        order: 1;    
+    }
+    
+     .social_networks_link--ru{
+        order: 2;    
+    }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1080px) {
 
         #footer {
-            flex-direction: column;
-            padding: 30px 30px 0;
-            box-sizing: content-box;
+            padding: 60px 45px;
+            box-sizing: border-box;
             overflow: hidden;
-            max-width: calc(100vw - 60px);
         }
+        
+       
 
         .social_networks_title {
-            font-size: 30px;
-
-        }
-
-        .social_networks_links {
-            display: flex;
-            flex-direction: column;
+            font-size: 50px;
+            line-height: 50px;
+            margin-bottom: 24px;
         }
 
         .footer_links {
-            width: 100%;
-            justify-content: space-between;
+            flex: 1 1 auto;
+            justify-content: flex-end;
             text-align: left;
         }
 
         a.footer_link {
+            margin: 11px;
+        }
+
+    }
+    
+    @media screen and (max-width: 981px) {
+         .social_networks {
+            flex: 1 1 60%;
+        }
+    }
+    
+    @media screen and (max-width: 642px) {
+
+        #footer {
+            padding: 60px 30px;
+        }
+        
+        .footer-content{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        
+        .social_networks{
+            margin-bottom: 8px;    
+        }
+        
+        .footer_links {
+            justify-content: space-between;
+        }
+        
+        .social_networks_title {
+            font-size: 30px;
+            line-height: 30px;
+        }
+        
+        .social_networks_links {
+            flex-direction: column;
+        }
+        
+        .social_networks_link{
+            order: 0;    
+        }
+        
+         a.footer_link {
             margin: 0;
         }
 

@@ -1,0 +1,30 @@
+1618268332a:1:{s:25:"category/banner-wiget.htm";a:6:{s:8:"fileName";s:25:"category/banner-wiget.htm";s:7:"content";s:458:"==
+<div class="SubcategoryListing-ItemCard">
+        <div class="SubcategoryListing-ItemCard-Holder">
+            <div class="SubcategoryListing-ItemCard-ImageHolderWrapper">
+                <div class="SubcategoryListing-ItemCard-ImageHolder">
+                    <img style="padding: 20px;" class="SubcategoryListing-ItemCard-Image" src="{{data.banner_picture | media}}">
+                </div>
+            </div>
+        </div>
+</div>
+
+<style>
+
+
+
+</style>";s:5:"mtime";i:1618212027;s:6:"markup";s:455:"<div class="SubcategoryListing-ItemCard">
+        <div class="SubcategoryListing-ItemCard-Holder">
+            <div class="SubcategoryListing-ItemCard-ImageHolderWrapper">
+                <div class="SubcategoryListing-ItemCard-ImageHolder">
+                    <img style="padding: 20px;" class="SubcategoryListing-ItemCard-Image" src="{{data.banner_picture | media}}">
+                </div>
+            </div>
+        </div>
+</div>
+
+<style>
+
+
+
+</style>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

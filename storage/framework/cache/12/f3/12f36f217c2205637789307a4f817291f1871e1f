@@ -1,4 +1,4 @@
-1614153421a:1:{s:12:"category.htm";a:10:{s:8:"fileName";s:12:"category.htm";s:7:"content";s:1218:"title = "Категория"
+1617969499a:1:{s:12:"category.htm";a:10:{s:8:"fileName";s:12:"category.htm";s:7:"content";s:2181:"title = "Категория"
 url = "/category/:slug"
 layout = "default"
 is_hidden = 0
@@ -16,10 +16,23 @@ notFoundMessage = "Record not found"
 
 {% if record %}
 
+<div class="SubNavigationMenu">
+    <div class="SubNavigationMenu-ChangeLanguage jsDesktop">
+        <a class="SubNavigationMenu-LanguageItem LanguageItem-disabled" onclick="channgeLanguage('en', false)">ENG</a>
+        <a class="SubNavigationMenu-LanguageItem LanguageItem-active" onclick="channgeLanguage('ru', false)">RUS</a>
+    </div>
+    <div class="SubNavigationMenu-ScrollDown t-cover__arrow-wrapper_animated" onclick="scrollDown()">
+        <svg width="27" height="14" viewBox="0 0 27 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z" fill="white"/>
+        </svg>
+
+    </div>
+    <div class="SubNavigationMenu-ScrollDown-mobile t-cover__arrow-wrapper_animated" onclick="scrollDown()">Scroll down</div>
+</div>
 
 
     {% partial "category/category-main-banner" categoryTitle=record.title categorySubtitle='pads / patches / masks' mainCategoryBackground=record.main_banner
-mainCategoryBackgroundTablet=record.main_banner_tablet mainCategoryBackgroundMobile=record.main_banner_mobile %}
+mainCategoryBackgroundTablet=record.main_banner_tablet mainCategoryBackgroundMobile=record.main_banner_mobile subcategoryMenu=record.subcategory %}
 
 {% endif %}
 
@@ -29,16 +42,35 @@ mainCategoryBackgroundTablet=record.main_banner_tablet mainCategoryBackgroundMob
 
 {% for subcategory in record.subcategory %}
     {% partial "category/category" subcategoryTitle=subcategory.subcategory_title subcategorySlug=subcategory.slug categorySubtitle=subcategory.subcategory_description mainSubcategoryBackground=subcategory.subcategory_banner mainSubcategoryBackgroundTablet=subcategory.subcategory_banner_tabet mainSubcategoryBackgroundMobile=subcategory.subcategory_banner_mobile %}
-{% endfor %}";s:5:"mtime";i:1614087900;s:6:"markup";s:941:"{% set record = Category.record %}
+{% endfor %}
+
+
+<style>
+
+
+</style>";s:5:"mtime";i:1617692145;s:6:"markup";s:1904:"{% set record = Category.record %}
 {% set displayColumn = Category.displayColumn %}
 {% set notFoundMessage = Category.notFoundMessage %}
 
 {% if record %}
 
+<div class="SubNavigationMenu">
+    <div class="SubNavigationMenu-ChangeLanguage jsDesktop">
+        <a class="SubNavigationMenu-LanguageItem LanguageItem-disabled" onclick="channgeLanguage('en', false)">ENG</a>
+        <a class="SubNavigationMenu-LanguageItem LanguageItem-active" onclick="channgeLanguage('ru', false)">RUS</a>
+    </div>
+    <div class="SubNavigationMenu-ScrollDown t-cover__arrow-wrapper_animated" onclick="scrollDown()">
+        <svg width="27" height="14" viewBox="0 0 27 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z" fill="white"/>
+        </svg>
+
+    </div>
+    <div class="SubNavigationMenu-ScrollDown-mobile t-cover__arrow-wrapper_animated" onclick="scrollDown()">Scroll down</div>
+</div>
 
 
     {% partial "category/category-main-banner" categoryTitle=record.title categorySubtitle='pads / patches / masks' mainCategoryBackground=record.main_banner
-mainCategoryBackgroundTablet=record.main_banner_tablet mainCategoryBackgroundMobile=record.main_banner_mobile %}
+mainCategoryBackgroundTablet=record.main_banner_tablet mainCategoryBackgroundMobile=record.main_banner_mobile subcategoryMenu=record.subcategory %}
 
 {% endif %}
 
@@ -48,4 +80,10 @@ mainCategoryBackgroundTablet=record.main_banner_tablet mainCategoryBackgroundMob
 
 {% for subcategory in record.subcategory %}
     {% partial "category/category" subcategoryTitle=subcategory.subcategory_title subcategorySlug=subcategory.slug categorySubtitle=subcategory.subcategory_description mainSubcategoryBackground=subcategory.subcategory_banner mainSubcategoryBackgroundTablet=subcategory.subcategory_banner_tabet mainSubcategoryBackgroundMobile=subcategory.subcategory_banner_mobile %}
-{% endfor %}";s:4:"code";N;s:5:"title";s:18:"Категория";s:3:"url";s:15:"/category/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:23:"builderDetails Category";a:5:{s:10:"modelClass";s:29:"Iamk\Category\Models\Category";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:4:"slug";s:15:"notFoundMessage";s:16:"Record not found";}}}
+{% endfor %}
+
+
+<style>
+
+
+</style>";s:4:"code";N;s:5:"title";s:18:"Категория";s:3:"url";s:15:"/category/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:23:"builderDetails Category";a:5:{s:10:"modelClass";s:29:"Iamk\Category\Models\Category";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:4:"slug";s:15:"notFoundMessage";s:16:"Record not found";}}}

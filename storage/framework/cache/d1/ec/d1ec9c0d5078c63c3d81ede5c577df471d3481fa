@@ -1,0 +1,89 @@
+1618289586a:1:{s:16:"product-card.htm";a:6:{s:8:"fileName";s:16:"product-card.htm";s:7:"content";s:1502:"description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>October CMS - {{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="OctoberCMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="OctoberCMS">
+    <link rel="icon" type="image/png" href="{{ 'assets/images/192x192.png'|theme }}">
+    <link href="{{ 'assets/css/vendor.css?26'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/theme.css?23c3fffffvffffcffffffffff18'|theme }}" rel="stylesheet">
+    {% styles %}
+</head>
+<body>
+
+
+
+
+<!-- Content -->
+<section id="layout-content">
+    {% page %}
+</section>
+
+<!-- Footer -->
+
+
+<!-- Scripts -->
+<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+
+<script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+<script src="{{ 'assets/javascript/app.js?fgfdfrfff'|theme }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+{% framework extras %}
+{% scripts %}
+
+</body>
+</html>";s:5:"mtime";i:1618263406;s:6:"markup";s:1468:"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>October CMS - {{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="OctoberCMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="OctoberCMS">
+    <link rel="icon" type="image/png" href="{{ 'assets/images/192x192.png'|theme }}">
+    <link href="{{ 'assets/css/vendor.css?26'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/theme.css?23c3fffffvffffcffffffffff18'|theme }}" rel="stylesheet">
+    {% styles %}
+</head>
+<body>
+
+
+
+
+<!-- Content -->
+<section id="layout-content">
+    {% page %}
+</section>
+
+<!-- Footer -->
+
+
+<!-- Scripts -->
+<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+
+<script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+<script src="{{ 'assets/javascript/app.js?fgfdfrfff'|theme }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+{% framework extras %}
+{% scripts %}
+
+</body>
+</html>";s:4:"code";N;s:11:"description";s:14:"Default layout";}}

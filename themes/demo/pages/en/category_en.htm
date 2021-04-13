@@ -1,0 +1,51 @@
+title = "Категория"
+url = "/en/category/:slug"
+layout = "default_en"
+is_hidden = 0
+
+[builderDetails Category]
+modelClass = "Iamk\Category\Models\Category"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "slug"
+notFoundMessage = "Record not found"
+==
+{% set record = Category.record %}
+{% set displayColumn = Category.displayColumn %}
+{% set notFoundMessage = Category.notFoundMessage %}
+
+{% if record %}
+
+<div class="SubNavigationMenu">
+    <div class="SubNavigationMenu-ChangeLanguage jsDesktop">
+        <a class="SubNavigationMenu-LanguageItem LanguageItem-active" onclick="channgeLanguage('en', false)">ENG</a>
+        <a class="SubNavigationMenu-LanguageItem LanguageItem-disabled" onclick="channgeLanguage('ru', false)">RUS</a>
+    </div>
+    <div class="SubNavigationMenu-ScrollDown t-cover__arrow-wrapper_animated" onclick="scrollDown()">
+        <svg width="27" height="14" viewBox="0 0 27 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z" fill="white"/>
+        </svg>
+
+    </div>
+    <div class="SubNavigationMenu-ScrollDown-mobile t-cover__arrow-wrapper_animated" onclick="scrollDown()">Scroll down</div>
+</div>
+
+
+    {% partial "en/category/category-main-banner" categoryTitle=record.title categorySubtitle='pads / patches / masks' mainCategoryBackground=record.main_banner
+mainCategoryBackgroundTablet=record.main_banner_tablet mainCategoryBackgroundMobile=record.main_banner_mobile subcategoryMenu=record.subcategory %}
+
+{% endif %}
+
+
+
+{% partial 'en/site/header-fixed.htm' subcategoryMenu=record.subcategory %}
+
+{% for subcategory in record.subcategory %}
+    {% partial "en/category/category" subcategoryTitle=subcategory.subcategory_title subcategorySlug=subcategory.slug categorySubtitle=subcategory.subcategory_description mainSubcategoryBackground=subcategory.subcategory_banner mainSubcategoryBackgroundTablet=subcategory.subcategory_banner_tabet mainSubcategoryBackgroundMobile=subcategory.subcategory_banner_mobile %}
+{% endfor %}
+
+
+<style>
+
+
+</style>

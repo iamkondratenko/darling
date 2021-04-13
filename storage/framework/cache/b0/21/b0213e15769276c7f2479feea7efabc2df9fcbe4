@@ -1,0 +1,52 @@
+1618268332a:1:{s:23:"category/card-wiget.htm";a:6:{s:8:"fileName";s:23:"category/card-wiget.htm";s:7:"content";s:889:"==
+<div class="SubcategoryListing-ItemCard">
+    <a class="SubcategoryListing-ItemCard-Link jsCardWigetLink" href="/product/{{data.slug}}">
+        <div class="SubcategoryListing-ItemCard-Holder">
+            <div class="SubcategoryListing-ItemCard-ImageHolderWrapper">
+                <div class="SubcategoryListing-ItemCard-ImageHolder">
+                    <img class="SubcategoryListing-ItemCard-Image" src="{{data.picture | media}}">
+                </div>
+            </div>
+
+
+            <div class="SubcategoryListing-ItemCard-Info">
+                <h2 class="SubcategoryListing-ItemCard-Title">{{data.title}}</h2>
+                <p class="SubcategoryListing-ItemCard-Description">{{data.description}}</p>
+                <div class="SubcategoryListing-ItemCard-Price rus-currency">{{data.price}} ₽</div>
+            </div>
+        </div>
+
+
+    </a>
+</div>
+
+<style>
+
+
+
+</style>";s:5:"mtime";i:1618212027;s:6:"markup";s:886:"<div class="SubcategoryListing-ItemCard">
+    <a class="SubcategoryListing-ItemCard-Link jsCardWigetLink" href="/product/{{data.slug}}">
+        <div class="SubcategoryListing-ItemCard-Holder">
+            <div class="SubcategoryListing-ItemCard-ImageHolderWrapper">
+                <div class="SubcategoryListing-ItemCard-ImageHolder">
+                    <img class="SubcategoryListing-ItemCard-Image" src="{{data.picture | media}}">
+                </div>
+            </div>
+
+
+            <div class="SubcategoryListing-ItemCard-Info">
+                <h2 class="SubcategoryListing-ItemCard-Title">{{data.title}}</h2>
+                <p class="SubcategoryListing-ItemCard-Description">{{data.description}}</p>
+                <div class="SubcategoryListing-ItemCard-Price rus-currency">{{data.price}} ₽</div>
+            </div>
+        </div>
+
+
+    </a>
+</div>
+
+<style>
+
+
+
+</style>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

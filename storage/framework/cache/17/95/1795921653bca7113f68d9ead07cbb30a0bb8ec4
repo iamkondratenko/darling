@@ -1,0 +1,282 @@
+1618268338a:1:{s:33:"category/category-main-banner.htm";a:6:{s:8:"fileName";s:33:"category/category-main-banner.htm";s:7:"content";s:7712:"==
+<div class="CategoryMainBanner">
+    <div class="CategoryMainBanner-Content desktop">
+        <div class="CategoryMainBanner-Content-Container" >
+            <h1 class="CategoryMainBanner-Title">{{ categoryTitle }}</h1>
+            <div class="CategoryMainBanner-SubTitle">
+                {% if subcategoryMenu[0].subcategory_title %}
+                <a href="#{{ subcategoryMenu[0].slug  | lower }}" class="CategoryMainBanner-SubTitle-Item">
+                    {{ subcategoryMenu[0].subcategory_title }}
+                </a>
+
+                <span class="js-desktop"> /</span>
+                <span class="js-mobile">
+                </span>
+                {% endif %}
+
+                {% if subcategoryMenu[1].subcategory_title %}
+                <a href="#{{ subcategoryMenu[1].slug | lower }}" class="CategoryMainBanner-SubTitle-Item"> {{ subcategoryMenu[1].subcategory_title }}</a><br/><span class="js-desktop"> /</span>
+                {% endif %}
+                {% if subcategoryMenu[2].subcategory_title %}
+                <a href="#{{ subcategoryMenu[2].slug  | lower }}" class="CategoryMainBanner-SubTitle-Item"> {{ subcategoryMenu[2].subcategory_title }}</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="CategoryMainBanner-Content-Background" style="background-color: #A5A8AF; background-size: 100%; background-repeat: no-repeat; background-size: cover"></div>
+        
+        <div class="CategoryMainBanner-Content-Background" style="background-color: #93969D; background-size: 100%; background-repeat: no-repeat; background-size: cover"></div>
+        
+        <div class="CategoryMainBanner-Content-BackgroundContent" style="background-image: url({{'main-banner/right.jpg' | media }});
+                background-size: auto 100vh; background-repeat: no-repeat; background-position: 45vw 0vh"></div>
+                
+        <div class="CategoryMainBanner-Content-BackgroundContent" style="background-image: url({{'main-banner/left.jpg' | media }});
+                background-size: auto 100vh; background-repeat: no-repeat; background-position: 3vw 0vh"></div>
+                
+    </div>
+    <div class="CategoryMainBanner-Content mobile">
+        <div class="CategoryMainBanner-Content-Container" >
+            <h1 class="CategoryMainBanner-Title">{{ categoryTitle }}</h1>
+            <div class="CategoryMainBanner-SubTitle">
+                {% if subcategoryMenu[0].subcategory_title %}
+                <a href="#{{ subcategoryMenu[0].slug  | lower }}" class="CategoryMainBanner-SubTitle-Item">
+                    {{ subcategoryMenu[0].subcategory_title }}
+                    <span class="js-mobile">
+                    <svg class="arrowIcon" width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0673 11.2018L14.7857 3.1106L17.2795 0.558068L30 12.9861L17.2795 25.4142L14.7857 22.8617L23.0673 14.7704L0.682477 14.7704L0.682477 11.2018L23.0673 11.2018Z"/>
+                    </svg>
+                </span>
+                </a>
+                {% endif %}
+                {% if subcategoryMenu[1].subcategory_title %}
+                <a href="#{{subcategoryMenu[1].slug | lower }}" class="CategoryMainBanner-SubTitle-Item">
+                    {{subcategoryMenu[1].subcategory_title}}
+                    <span class="js-mobile">
+                    <svg class="arrowIcon"  viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0673 11.2018L14.7857 3.1106L17.2795 0.558068L30 12.9861L17.2795 25.4142L14.7857 22.8617L23.0673 14.7704L0.682477 14.7704L0.682477 11.2018L23.0673 11.2018Z"/>
+                    </svg>
+                </span>
+                </a>
+                {% endif %}
+
+                {% if subcategoryMenu[2].subcategory_title %}
+                <a href="#{{subcategoryMenu[2].slug | lower }}" class="CategoryMainBanner-SubTitle-Item">
+                    {{subcategoryMenu[2].subcategory_title}}
+                    <span class="js-mobile">
+                    <svg class="arrowIcon" width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0673 11.2018L14.7857 3.1106L17.2795 0.558068L30 12.9861L17.2795 25.4142L14.7857 22.8617L23.0673 14.7704L0.682477 14.7704L0.682477 11.2018L23.0673 11.2018Z"/>
+                    </svg>
+                </span>
+                </a>
+                {% endif %}
+
+
+            </div>
+        </div>
+        <div class="CategoryMainBanner-Content-Background" style="background: url({{'main-banner/new-right-bg-color.png' | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover"></div>
+        
+        <div class="CategoryMainBanner-Content-Background" style="background: url({{'main-banner/new-left-bg-color.png' | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover"></div>
+        
+        <div class="CategoryMainBanner-Content-BackgroundContent" style="background-image: url({{'main-banner/new-right-content.png' | media }});
+                background-size: auto 110vh; background-repeat: no-repeat; background-position: 50vw -9vh"></div>
+                
+        <div class="CategoryMainBanner-Content-BackgroundContent" style="background-image: url({{'main-banner/new-left-content.png' | media }});
+                background-size: auto 110vh; background-repeat: no-repeat; background-position: 3vw -9vh"></div>
+                
+    </div>
+
+
+</div>
+
+<style>
+                    
+                     
+                    
+                    @media (max-width: 1180px) {
+                        .arrowIcon {
+                            width: auto;
+                            height: 54px;
+                            padding-left: 32px;
+  
+                        }
+                    }
+                    
+                    @media (max-width: 642px) {
+                        .arrowIcon {
+                            width: auto;
+                            height: 26px;
+                            padding-left: 12px;     
+                        }
+                    }
+                    </style>
+
+<script>
+// const vhForCategoryBanner = window.innerHeight * 0.01;
+//      document.documentElement.style.setProperty('--vh', `${vhForCategoryBanner}px`);
+//      const categoryMainBanner = document.querySelector(".CategoryMainBanner");
+
+//      if(window.location.search.replace( '?', '') === 'rigth-side'){
+//          categoryMainBanner.classList.remove('CategoryMainBanner--leftAlign');
+//          categoryMainBanner.classList.add('CategoryMainBanner--rightAlign');
+//     }
+    
+//     if(window.location.search.replace( '?', '') === 'left-side'){
+//          categoryMainBanner.classList.remove('CategoryMainBanner--rightAlign');
+//          categoryMainBanner.classList.add('CategoryMainBanner--leftAlign');
+//     }
+
+
+const vhForCategoryBanner = window.innerHeight * 0.01;
+     document.documentElement.style.setProperty('--vh', `${vhForCategoryBanner}px`);
+     const categoryMainBanner = document.querySelector(".CategoryMainBanner");
+
+     if(window.location.pathname.match('makeup')){
+         categoryMainBanner.classList.remove('CategoryMainBanner--leftAlign');
+         categoryMainBanner.classList.add('CategoryMainBanner--rightAlign');
+    }
+    
+    if(window.location.pathname.match('skin-care')){
+         categoryMainBanner.classList.remove('CategoryMainBanner--rightAlign');
+         categoryMainBanner.classList.add('CategoryMainBanner--leftAlign');
+    }
+
+</script>";s:5:"mtime";i:1618212027;s:6:"markup";s:7709:"<div class="CategoryMainBanner">
+    <div class="CategoryMainBanner-Content desktop">
+        <div class="CategoryMainBanner-Content-Container" >
+            <h1 class="CategoryMainBanner-Title">{{ categoryTitle }}</h1>
+            <div class="CategoryMainBanner-SubTitle">
+                {% if subcategoryMenu[0].subcategory_title %}
+                <a href="#{{ subcategoryMenu[0].slug  | lower }}" class="CategoryMainBanner-SubTitle-Item">
+                    {{ subcategoryMenu[0].subcategory_title }}
+                </a>
+
+                <span class="js-desktop"> /</span>
+                <span class="js-mobile">
+                </span>
+                {% endif %}
+
+                {% if subcategoryMenu[1].subcategory_title %}
+                <a href="#{{ subcategoryMenu[1].slug | lower }}" class="CategoryMainBanner-SubTitle-Item"> {{ subcategoryMenu[1].subcategory_title }}</a><br/><span class="js-desktop"> /</span>
+                {% endif %}
+                {% if subcategoryMenu[2].subcategory_title %}
+                <a href="#{{ subcategoryMenu[2].slug  | lower }}" class="CategoryMainBanner-SubTitle-Item"> {{ subcategoryMenu[2].subcategory_title }}</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="CategoryMainBanner-Content-Background" style="background-color: #A5A8AF; background-size: 100%; background-repeat: no-repeat; background-size: cover"></div>
+        
+        <div class="CategoryMainBanner-Content-Background" style="background-color: #93969D; background-size: 100%; background-repeat: no-repeat; background-size: cover"></div>
+        
+        <div class="CategoryMainBanner-Content-BackgroundContent" style="background-image: url({{'main-banner/right.jpg' | media }});
+                background-size: auto 100vh; background-repeat: no-repeat; background-position: 45vw 0vh"></div>
+                
+        <div class="CategoryMainBanner-Content-BackgroundContent" style="background-image: url({{'main-banner/left.jpg' | media }});
+                background-size: auto 100vh; background-repeat: no-repeat; background-position: 3vw 0vh"></div>
+                
+    </div>
+    <div class="CategoryMainBanner-Content mobile">
+        <div class="CategoryMainBanner-Content-Container" >
+            <h1 class="CategoryMainBanner-Title">{{ categoryTitle }}</h1>
+            <div class="CategoryMainBanner-SubTitle">
+                {% if subcategoryMenu[0].subcategory_title %}
+                <a href="#{{ subcategoryMenu[0].slug  | lower }}" class="CategoryMainBanner-SubTitle-Item">
+                    {{ subcategoryMenu[0].subcategory_title }}
+                    <span class="js-mobile">
+                    <svg class="arrowIcon" width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0673 11.2018L14.7857 3.1106L17.2795 0.558068L30 12.9861L17.2795 25.4142L14.7857 22.8617L23.0673 14.7704L0.682477 14.7704L0.682477 11.2018L23.0673 11.2018Z"/>
+                    </svg>
+                </span>
+                </a>
+                {% endif %}
+                {% if subcategoryMenu[1].subcategory_title %}
+                <a href="#{{subcategoryMenu[1].slug | lower }}" class="CategoryMainBanner-SubTitle-Item">
+                    {{subcategoryMenu[1].subcategory_title}}
+                    <span class="js-mobile">
+                    <svg class="arrowIcon"  viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0673 11.2018L14.7857 3.1106L17.2795 0.558068L30 12.9861L17.2795 25.4142L14.7857 22.8617L23.0673 14.7704L0.682477 14.7704L0.682477 11.2018L23.0673 11.2018Z"/>
+                    </svg>
+                </span>
+                </a>
+                {% endif %}
+
+                {% if subcategoryMenu[2].subcategory_title %}
+                <a href="#{{subcategoryMenu[2].slug | lower }}" class="CategoryMainBanner-SubTitle-Item">
+                    {{subcategoryMenu[2].subcategory_title}}
+                    <span class="js-mobile">
+                    <svg class="arrowIcon" width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0673 11.2018L14.7857 3.1106L17.2795 0.558068L30 12.9861L17.2795 25.4142L14.7857 22.8617L23.0673 14.7704L0.682477 14.7704L0.682477 11.2018L23.0673 11.2018Z"/>
+                    </svg>
+                </span>
+                </a>
+                {% endif %}
+
+
+            </div>
+        </div>
+        <div class="CategoryMainBanner-Content-Background" style="background: url({{'main-banner/new-right-bg-color.png' | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover"></div>
+        
+        <div class="CategoryMainBanner-Content-Background" style="background: url({{'main-banner/new-left-bg-color.png' | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover"></div>
+        
+        <div class="CategoryMainBanner-Content-BackgroundContent" style="background-image: url({{'main-banner/new-right-content.png' | media }});
+                background-size: auto 110vh; background-repeat: no-repeat; background-position: 50vw -9vh"></div>
+                
+        <div class="CategoryMainBanner-Content-BackgroundContent" style="background-image: url({{'main-banner/new-left-content.png' | media }});
+                background-size: auto 110vh; background-repeat: no-repeat; background-position: 3vw -9vh"></div>
+                
+    </div>
+
+
+</div>
+
+<style>
+                    
+                     
+                    
+                    @media (max-width: 1180px) {
+                        .arrowIcon {
+                            width: auto;
+                            height: 54px;
+                            padding-left: 32px;
+  
+                        }
+                    }
+                    
+                    @media (max-width: 642px) {
+                        .arrowIcon {
+                            width: auto;
+                            height: 26px;
+                            padding-left: 12px;     
+                        }
+                    }
+                    </style>
+
+<script>
+// const vhForCategoryBanner = window.innerHeight * 0.01;
+//      document.documentElement.style.setProperty('--vh', `${vhForCategoryBanner}px`);
+//      const categoryMainBanner = document.querySelector(".CategoryMainBanner");
+
+//      if(window.location.search.replace( '?', '') === 'rigth-side'){
+//          categoryMainBanner.classList.remove('CategoryMainBanner--leftAlign');
+//          categoryMainBanner.classList.add('CategoryMainBanner--rightAlign');
+//     }
+    
+//     if(window.location.search.replace( '?', '') === 'left-side'){
+//          categoryMainBanner.classList.remove('CategoryMainBanner--rightAlign');
+//          categoryMainBanner.classList.add('CategoryMainBanner--leftAlign');
+//     }
+
+
+const vhForCategoryBanner = window.innerHeight * 0.01;
+     document.documentElement.style.setProperty('--vh', `${vhForCategoryBanner}px`);
+     const categoryMainBanner = document.querySelector(".CategoryMainBanner");
+
+     if(window.location.pathname.match('makeup')){
+         categoryMainBanner.classList.remove('CategoryMainBanner--leftAlign');
+         categoryMainBanner.classList.add('CategoryMainBanner--rightAlign');
+    }
+    
+    if(window.location.pathname.match('skin-care')){
+         categoryMainBanner.classList.remove('CategoryMainBanner--rightAlign');
+         categoryMainBanner.classList.add('CategoryMainBanner--leftAlign');
+    }
+
+</script>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

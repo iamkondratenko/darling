@@ -1,0 +1,96 @@
+1618268332a:1:{s:32:"category/subcategory-listing.htm";a:6:{s:8:"fileName";s:32:"category/subcategory-listing.htm";s:7:"content";s:1334:"[builderList subcategoryListing]
+modelClass = "Iamk\Productinfo\Models\ProductInfo"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "sort"
+==
+{% set records = subcategoryListing.records %}
+{% set displayColumn = subcategoryListing.displayColumn %}
+{% set noRecordsMessage = subcategoryListing.noRecordsMessage %}
+{% set detailsPage = subcategoryListing.detailsPage %}
+{% set detailsKeyColumn = subcategoryListing.detailsKeyColumn %}
+{% set detailsUrlParameter = subcategoryListing.detailsUrlParameter %}
+
+
+<div class="SubcategoryListing">
+    <div class="SubcategoryListing-Title">{{subcategoryTitle}}<span class="SubcategoryListing-Title-Asterisk">*</span></div>
+    <div class="SubcategoryListing-Items">
+
+
+
+
+        {% for record in records %}
+        {% if record.subcategory == subcategorySlug %}
+            {% if record.is_banner == false %}
+                {% partial "category/card-wiget" data=record %}
+            {% else %}
+                {% partial "category/banner-wiget" data=record %}
+            {% endif %}
+        {% endif %}
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+
+
+
+    </div>
+</div>
+
+<style>
+
+
+
+</style>
+
+
+<script>
+
+
+</script>";s:5:"mtime";i:1618212027;s:6:"markup";s:1056:"{% set records = subcategoryListing.records %}
+{% set displayColumn = subcategoryListing.displayColumn %}
+{% set noRecordsMessage = subcategoryListing.noRecordsMessage %}
+{% set detailsPage = subcategoryListing.detailsPage %}
+{% set detailsKeyColumn = subcategoryListing.detailsKeyColumn %}
+{% set detailsUrlParameter = subcategoryListing.detailsUrlParameter %}
+
+
+<div class="SubcategoryListing">
+    <div class="SubcategoryListing-Title">{{subcategoryTitle}}<span class="SubcategoryListing-Title-Asterisk">*</span></div>
+    <div class="SubcategoryListing-Items">
+
+
+
+
+        {% for record in records %}
+        {% if record.subcategory == subcategorySlug %}
+            {% if record.is_banner == false %}
+                {% partial "category/card-wiget" data=record %}
+            {% else %}
+                {% partial "category/banner-wiget" data=record %}
+            {% endif %}
+        {% endif %}
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+
+
+
+    </div>
+</div>
+
+<style>
+
+
+
+</style>
+
+
+<script>
+
+
+</script>";s:4:"code";N;s:30:"builderList subcategoryListing";a:9:{s:10:"modelClass";s:35:"Iamk\Productinfo\Models\ProductInfo";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";s:10:"sortColumn";s:4:"sort";}}}

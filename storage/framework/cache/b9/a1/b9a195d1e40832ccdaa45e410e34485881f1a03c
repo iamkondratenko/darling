@@ -1,4 +1,4 @@
-1614153421a:1:{s:11:"product.htm";a:10:{s:8:"fileName";s:11:"product.htm";s:7:"content";s:15441:"title = "product"
+1617969499a:1:{s:11:"product.htm";a:10:{s:8:"fileName";s:11:"product.htm";s:7:"content";s:13950:"title = "product"
 url = "/product/:slug"
 layout = "product-card"
 is_hidden = 0
@@ -10,7 +10,6 @@ modelKeyColumn = "slug"
 displayColumn = "slug"
 notFoundMessage = "Record not found"
 ==
-
 {% set record = productDetails.record %}
 {% set displayColumn = productDetails.displayColumn %}
 {% set notFoundMessage = productDetails.notFoundMessage %}
@@ -18,14 +17,39 @@ notFoundMessage = "Record not found"
 <div class="product-section">
 
 
+    <div class="close_icon">
+            <a onclick="goBack('/category/{{record.category}}')">
+                <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.39355 2.39355L25.6068 23.6068" stroke-width="4"/>
+                    <path d="M4.39355 23.6064L25.6068 2.39324" stroke-width="4"/>
+                </svg>
+            </a>
+        </div>
+        
+        <style>
+        
+            .close_icon {
+                cursor: pointer;
+                z-index: 999;
+            }
+        
+            .close_icon > a > svg {
+                stroke: #222;
+            }
+            
+            .close_icon:hover > a > svg {
+                stroke: #EA028A;
+            }
+        </style>
 
 
-    <div class="product-section__photo-block float-scroll">
+
+    <div class="product-section__photo-block">
 
         {% for slider in record.color_slider %}
             <div class="photo-block__product-holder {% if loop.first == true %} activedColorSlider{% endif %}" id="{{slider.product_color}}">
                 {% for sliderPicture in slider.gallery %}
-                <div style="display: block; min-width: 100%;">
+                <div style="display: block; width: 100%; height: 100vh">
                     <img src="{{sliderPicture.picture | media}}" alt="{{sliderPicture.alt_text }}" class="photo-block__product">
                 </div>
                 {% endfor %}
@@ -33,23 +57,16 @@ notFoundMessage = "Record not found"
         {% endfor %}
 
         <div class="dots-pic">
-<!--            <div class="dot active-dot"></div>-->
-<!--            <div class="dot"></div>-->
-<!--            <div class="dot"></div>-->
+
         </div>
 
     </div>
 
     <div class="product-section__text-block">
+        
+                        
             <div class="product-section__text-block-holder">
-                <div class="close_icon">
-                    <a href="/category/{{record.category}}/#{{record.subcategory}}">
-                        <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.39355 2.39355L25.6068 23.6068" stroke="#EA028A" stroke-width="4"/>
-                            <path d="M4.39355 23.6064L25.6068 2.39324" stroke="#EA028A" stroke-width="4"/>
-                        </svg>
-                    </a>
-                </div>
+
 
                 <div class="text-block__title-section">
                     <h1 class="title-section__title">
@@ -64,12 +81,35 @@ notFoundMessage = "Record not found"
 </div>
                     <p></p>
                 </div>
-                <div class="text-block__basket-section">
-                    <div class="basket-section__price">{{ record.price }}</div>
+                
+                {% if record.color_slider %}
+                {% if record.color_slider.length > 1 %}
+                <div class="text-block__color-section text-block__color-section--desktop">
+                    {% for slider in record.color_slider %}
+                    {% if loop.length > 1 %}
+                    <div class="text-block__color-section__holder" >
+                        <input class="radio-color-picker" type="radio" id="color-picker-{{slider.product_color}}"
+                               name="contact" value="email" {% if loop.first == true %} checked{% endif %}  data-colorPicker="{{slider.product_color}}">
+                        <label for="color-picker-{{slider.product_color}}">
+                            <div class="text-block__color-section_item" style="background-color: {{slider.product_color}}">
+                                <span class="text-block__color-section_number">0{{loop.index}}</span>
+                            </div>
+                        </label>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
                 </div>
+                {% endif %}
+                {% endif %}
+                
+                <div class="text-block__basket-section">
+                    <div class="basket-section__price">{{ record.price }} ₽</div>
+                </div>
+                
 
-
-
+                
+                {% if record.color_slider %}
+                {% if record.color_slider.length > 1 %}
                 <div class="text-block__color-section">
                     {% for slider in record.color_slider %}
                     {% if loop.length > 1 %}
@@ -85,6 +125,8 @@ notFoundMessage = "Record not found"
                     {% endif %}
                     {% endfor %}
                 </div>
+                {% endif %}
+                {% endif %}
 
                 <div class="text-block__info-section">
                     <div class="info-section__product-info-block">
@@ -96,7 +138,7 @@ notFoundMessage = "Record not found"
                         </div>
                         {% endfor %}
 
-                        <a href="#" class="buy_now_link">buy now</a>
+                        <a href="{{ record.buy_link }}" class="buy_now_link">buy now</a>
 
 
                     </div>
@@ -116,298 +158,89 @@ notFoundMessage = "Record not found"
     
 /* PRODUCT CARD */
 
-html {
-    scroll-behavior: smooth;
-}
 
-.close_icon {
-    display: block;
-    position: absolute;
-    right: 60px;
-    top: 60px;
-}
-
-.MainMenu-Icon {
-    width: 30px;
-    height: 22px;
-    cursor: pointer;
-}
-
-.MainMenu-Icon::before {
-    width: 30px;
-    height: 4px;
-    content: '';
-    background-color: black;
-    transform: rotate(
-            45deg
-    ) translate(4px, 10px);
-    position: absolute;
-}
-
-.MainMenu-Icon::after {
-    width: 30px;
-    height: 4px;
-    content: '';
-    background-color: black;
-    transform: rotate(
-            -45deg
-    ) translate(3px, -9px);
-    position: absolute;
-    top: 82px;
-}
-
-
-.text-block__color-section {
-    display: flex;
-}
-
-.text-block__color-section__holder {
-    width: 85px;
-    height: 85px;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.text-block__color-section_item {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    transition-duration: 400ms;
-    cursor: pointer;
-}
-
-.text-block__color-section_number {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.text-block__color-section__holder.active-color > .text-block__color-section_item > .text-block__color-section_number {
-    border: 3px solid #fff;
-    border-radius: 50%;
-}
-
-.text-block__color-section__holder.active-color > .text-block__color-section_item {
-    width: 85px;
-    height: 85px;
-}
-
-.text-block__color-section_item:hover {
-    width: 85px;
-    height: 85px;
-    transition-duration: 400ms;
-}
-
-.text-block__color-section_item:hover > .text-block__color-section_number {
-    width: 85px;
-    height: 85px;
-}
-
-a.buy_now_link {
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
-    color: #EA028A;
-    text-decoration: underline;
-}
-
-.product-section {
-    width: 100vw;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    background-color: #EEEEEE;
-}
-
-.product-section__text-block {
-    color: #222;
-    padding: 120px;
-    margin: 0;
-    width: 50%;
-    background-color: #fff;
-}
-
-h1.title-section__title {
-    font-size: 50px;
-    line-height: 1;
-    text-transform: uppercase;
-    margin-bottom: 3%;
-    color: #222;
-    font-weight: 700;
-}
-
-.title-section__title_marked {
-    color: #EA028A;
-}
-
-.text-block__basket-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10%;
-}
-
-.basket-section__price {
-    font-size: 35px;
-    font-weight: 700;
-    color: #EA028A;
-}
-
-.basket-section__price::after {
-    content: ' ₽';
-    white-space: pre;
-    position: absolute;
-}
-
-.text-block__title-section {
-    margin-bottom: 5%;
-}
-
-.title-section__description {
-    line-height: 1.8;
-    font-size: 1.2em;
-}
-
-.product-info-block__title {
-    margin: 0 auto 2%;
-}
-
-.product-info-block__description {
-    margin: 0 0 5%;
-    line-height: 1.8;
-}
-
-h2.product-info-block__description__title {
-    color: #222;
-    font-size: 25px;
-    font-weight: 500;
-    line-height: 28px;
-    margin-bottom: 10px;
-}
-
-.product-section__photo-block {
-    width: 50%;
-    margin: 30px 0;
-}
-
-.photo-block__product-holder {
-    width: 100%;
-    display: none;
-}
-
-.photo-block__product-holder.activedColorSlider {
-    width: 100%;
-    display: block;
-}
-
-.photo-block__product {
-    width: 100%;
-    margin: 0 auto;
-    display: block;
-}
-
-.float-scroll {
-    transition-duration: 100ms;
-    transform: rotateX(0.01px);
-    position: sticky;
-    bottom: 0;
-}
-
-input.radio-color-picker {
-    display: none;
-}
-
-input.radio-color-picker:checked+label > .text-block__color-section_item {
-    width: 85px;
-    height: 85px;
-}
-
-input.radio-color-picker:checked+label > .text-block__color-section_item > .text-block__color-section_number {
-    border: 3px solid #fff;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-}
-
-@media screen and (max-width: 768px) {
-
-    .dots-pic {
-        height: 8px;
-        position: absolute;
-        width: 86%;
-        margin-left: 7%;
-        display: flex;
-    }
-
-    .dot {
-        width: 8px;
-        height: 8px;
-        margin-right: 15px;
-        background: #22222247;
-        border-radius: 4px;
-    }
-
-    .dot.active-dot {
-        background: #222222;
-    }
-
-    .photo-block__product-holder.activedColorSlider {
-        -webkit-overflow-scrolling: touch;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        overflow-y: auto;
-        transition-duration: 400ms;
-        height: 80vw;
-    }
-
-    .photo-block__product-holder {
-        height: 80vw;
-    }
-
-    ::-webkit-scrollbar { /* chrome based */
-        width: 0px;  /* ширина scrollbar'a */
-        background: transparent;  /* опционально */
-    }
-
-    .product-section {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .product-section__photo-block {
-        width: 100%;
-    }
-
-    .product-section__text-block {
-        width: 100%;
-    }
-    .close_icon {
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
-}
 
     
     </style>
 
-<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 <script>
+    var browserWidth = document.body.clientWidth
+
+    var browserHeight = document.body.clientHeight
+
+
+    var state = [0, 0]
+
+
+    setScrollForProduct()
+
+    window.addEventListener('scroll', function() {
+
+        state[0] += 1
+        window.requestAnimationFrame(function() {
+            state[1] += 1
+            console.log(state)
+            let scrolledY = window.scrollY
+
+            if (browserWidth >  1080) {
+                scrollingFloatBlock(scrolledY)
+            }
+        })
+
+
+
+    })
+
+
+
+    function setScrollForProduct() {
+
+
+
+        var route = 'product'
+
+        if (browserWidth >  1080) {
+
+            if (route == 'product') {
+                let textBlock = document.querySelector('.product-section__text-block-holder')
+                let photoBlock = document.querySelector('.photo-block__product-holder')
+                let textBlockHeight = textBlock.scrollHeight
+                let photoBlockHeight = photoBlock.scrollHeight
+
+                if (textBlockHeight >= photoBlockHeight) {
+                    photoBlock.classList.add('float-scroll')
+                    floatScrollBlock = photoBlock
+                    floatScrollBlockHeight = photoBlockHeight
+                } else {
+                    textBlock.classList.add('float-scroll')
+                    floatScrollBlock = textBlock
+                    floatScrollBlockHeight = textBlockHeight
+                }
+            }
+        }
+
+    }
+
+
+    var fullBlockHeight = document.querySelector('.product-section').scrollHeight
+
+
+    function scrollingFloatBlock(scrolledY) {
+
+
+        console.log(floatScrollBlock.scrollHeight, browserHeight)
+
+            floatScrollBlock.style.transform = scrolledY
+        currentBlockPos = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / (fullBlockHeight - floatScrollBlockHeight)))) + "px, 0.01px)"
+
+        // currentBlockPos = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / ((fullBlockHeight - floatScrollBlockHeight) + (window.innerHeight / devicePixelRatio))))) + "px, 0.01px)"
+            floatScrollBlock.style.transform = currentBlockPos
+
+
+    }
+
+
+
     var colorVariantNodes = document.querySelectorAll('.radio-color-picker')
     var colorSliderProducts = document.querySelectorAll('.photo-block__product-holder')
 
@@ -421,10 +254,9 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
         var scrollWidth = activeNode.scrollWidth
         var sliderCount = 1
 
-        console.log((activeNode.scrollLeft + screenWidth) / screenWidth)
 
         activeNode.addEventListener('scroll', function (){
-            console.log(activeNode.scrollWidth)
+            (activeNode.scrollWidth)
             if (((activeNode.scrollLeft + screenWidth) / screenWidth).toFixed(0) != sliderCount){
                 sliderCount = ((activeNode.scrollLeft + screenWidth) / screenWidth).toFixed(0)
                 renderDots(sliderCount)
@@ -471,6 +303,7 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
 
 
 
+
         for (let i = 0; i < colorSliderProducts.length; i++) {
 
             var currentNodeId = colorSliderProducts[i].id
@@ -507,6 +340,7 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
             event.preventDefault();
             event.stopPropagation();
             initialPoint=event.changedTouches[0];
+            console.log(initialPoint.clientX)
         }, false);
         activeNode.addEventListener('touchend', function(event) {
             event.preventDefault();
@@ -516,6 +350,7 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
             var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
             if (xAbs > 20 || yAbs > 20) {
                 if (xAbs > yAbs) {
+                    console.log('')
                     if (finalPoint.pageX < initialPoint.pageX) {
 
                         activeNode.scroll({
@@ -535,7 +370,6 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
                         })
                         currentSlider = currentSlider - screenWidth
 
-                        console.log(currentSlider)
                         if (currentSlider < 0) {
                             currentSlider = 0
                         }
@@ -543,11 +377,16 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
                 }
                 else {
                     if (finalPoint.pageY < initialPoint.pageY){
-                        window.scroll({
+                        /* Проверяем, если на странице продукта то не работает скролл даун */
+                        var pattern = /product/;
+                        
+                        if (!pattern.test(window.location.href)) {
+                            window.scroll({
                             top: scrollHeight,
                             behavior: 'smooth'
                         })
-                        console.log('sdffsdd')
+                        }
+                        
                     }
                     else{
                         /*СВАЙП ВНИЗ*/}
@@ -559,24 +398,53 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     }
 
 
+    function goBack(link) {
+        localStorage.setItem('scrollToLastState', true)
+        window.location = link
+    }
 
 
 
-</script>";s:5:"mtime";i:1614077511;s:6:"markup";s:15145:"{% set record = productDetails.record %}
+</script>";s:5:"mtime";i:1617875361;s:6:"markup";s:13656:"{% set record = productDetails.record %}
 {% set displayColumn = productDetails.displayColumn %}
 {% set notFoundMessage = productDetails.notFoundMessage %}
 
 <div class="product-section">
 
 
+    <div class="close_icon">
+            <a onclick="goBack('/category/{{record.category}}')">
+                <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.39355 2.39355L25.6068 23.6068" stroke-width="4"/>
+                    <path d="M4.39355 23.6064L25.6068 2.39324" stroke-width="4"/>
+                </svg>
+            </a>
+        </div>
+        
+        <style>
+        
+            .close_icon {
+                cursor: pointer;
+                z-index: 999;
+            }
+        
+            .close_icon > a > svg {
+                stroke: #222;
+            }
+            
+            .close_icon:hover > a > svg {
+                stroke: #EA028A;
+            }
+        </style>
 
 
-    <div class="product-section__photo-block float-scroll">
+
+    <div class="product-section__photo-block">
 
         {% for slider in record.color_slider %}
             <div class="photo-block__product-holder {% if loop.first == true %} activedColorSlider{% endif %}" id="{{slider.product_color}}">
                 {% for sliderPicture in slider.gallery %}
-                <div style="display: block; min-width: 100%;">
+                <div style="display: block; width: 100%; height: 100vh">
                     <img src="{{sliderPicture.picture | media}}" alt="{{sliderPicture.alt_text }}" class="photo-block__product">
                 </div>
                 {% endfor %}
@@ -584,23 +452,16 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
         {% endfor %}
 
         <div class="dots-pic">
-<!--            <div class="dot active-dot"></div>-->
-<!--            <div class="dot"></div>-->
-<!--            <div class="dot"></div>-->
+
         </div>
 
     </div>
 
     <div class="product-section__text-block">
+        
+                        
             <div class="product-section__text-block-holder">
-                <div class="close_icon">
-                    <a href="/category/{{record.category}}/#{{record.subcategory}}">
-                        <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.39355 2.39355L25.6068 23.6068" stroke="#EA028A" stroke-width="4"/>
-                            <path d="M4.39355 23.6064L25.6068 2.39324" stroke="#EA028A" stroke-width="4"/>
-                        </svg>
-                    </a>
-                </div>
+
 
                 <div class="text-block__title-section">
                     <h1 class="title-section__title">
@@ -615,12 +476,35 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
 </div>
                     <p></p>
                 </div>
-                <div class="text-block__basket-section">
-                    <div class="basket-section__price">{{ record.price }}</div>
+                
+                {% if record.color_slider %}
+                {% if record.color_slider.length > 1 %}
+                <div class="text-block__color-section text-block__color-section--desktop">
+                    {% for slider in record.color_slider %}
+                    {% if loop.length > 1 %}
+                    <div class="text-block__color-section__holder" >
+                        <input class="radio-color-picker" type="radio" id="color-picker-{{slider.product_color}}"
+                               name="contact" value="email" {% if loop.first == true %} checked{% endif %}  data-colorPicker="{{slider.product_color}}">
+                        <label for="color-picker-{{slider.product_color}}">
+                            <div class="text-block__color-section_item" style="background-color: {{slider.product_color}}">
+                                <span class="text-block__color-section_number">0{{loop.index}}</span>
+                            </div>
+                        </label>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
                 </div>
+                {% endif %}
+                {% endif %}
+                
+                <div class="text-block__basket-section">
+                    <div class="basket-section__price">{{ record.price }} ₽</div>
+                </div>
+                
 
-
-
+                
+                {% if record.color_slider %}
+                {% if record.color_slider.length > 1 %}
                 <div class="text-block__color-section">
                     {% for slider in record.color_slider %}
                     {% if loop.length > 1 %}
@@ -636,6 +520,8 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
                     {% endif %}
                     {% endfor %}
                 </div>
+                {% endif %}
+                {% endif %}
 
                 <div class="text-block__info-section">
                     <div class="info-section__product-info-block">
@@ -647,7 +533,7 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
                         </div>
                         {% endfor %}
 
-                        <a href="#" class="buy_now_link">buy now</a>
+                        <a href="{{ record.buy_link }}" class="buy_now_link">buy now</a>
 
 
                     </div>
@@ -667,298 +553,89 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     
 /* PRODUCT CARD */
 
-html {
-    scroll-behavior: smooth;
-}
 
-.close_icon {
-    display: block;
-    position: absolute;
-    right: 60px;
-    top: 60px;
-}
-
-.MainMenu-Icon {
-    width: 30px;
-    height: 22px;
-    cursor: pointer;
-}
-
-.MainMenu-Icon::before {
-    width: 30px;
-    height: 4px;
-    content: '';
-    background-color: black;
-    transform: rotate(
-            45deg
-    ) translate(4px, 10px);
-    position: absolute;
-}
-
-.MainMenu-Icon::after {
-    width: 30px;
-    height: 4px;
-    content: '';
-    background-color: black;
-    transform: rotate(
-            -45deg
-    ) translate(3px, -9px);
-    position: absolute;
-    top: 82px;
-}
-
-
-.text-block__color-section {
-    display: flex;
-}
-
-.text-block__color-section__holder {
-    width: 85px;
-    height: 85px;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.text-block__color-section_item {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    transition-duration: 400ms;
-    cursor: pointer;
-}
-
-.text-block__color-section_number {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.text-block__color-section__holder.active-color > .text-block__color-section_item > .text-block__color-section_number {
-    border: 3px solid #fff;
-    border-radius: 50%;
-}
-
-.text-block__color-section__holder.active-color > .text-block__color-section_item {
-    width: 85px;
-    height: 85px;
-}
-
-.text-block__color-section_item:hover {
-    width: 85px;
-    height: 85px;
-    transition-duration: 400ms;
-}
-
-.text-block__color-section_item:hover > .text-block__color-section_number {
-    width: 85px;
-    height: 85px;
-}
-
-a.buy_now_link {
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
-    color: #EA028A;
-    text-decoration: underline;
-}
-
-.product-section {
-    width: 100vw;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    background-color: #EEEEEE;
-}
-
-.product-section__text-block {
-    color: #222;
-    padding: 120px;
-    margin: 0;
-    width: 50%;
-    background-color: #fff;
-}
-
-h1.title-section__title {
-    font-size: 50px;
-    line-height: 1;
-    text-transform: uppercase;
-    margin-bottom: 3%;
-    color: #222;
-    font-weight: 700;
-}
-
-.title-section__title_marked {
-    color: #EA028A;
-}
-
-.text-block__basket-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10%;
-}
-
-.basket-section__price {
-    font-size: 35px;
-    font-weight: 700;
-    color: #EA028A;
-}
-
-.basket-section__price::after {
-    content: ' ₽';
-    white-space: pre;
-    position: absolute;
-}
-
-.text-block__title-section {
-    margin-bottom: 5%;
-}
-
-.title-section__description {
-    line-height: 1.8;
-    font-size: 1.2em;
-}
-
-.product-info-block__title {
-    margin: 0 auto 2%;
-}
-
-.product-info-block__description {
-    margin: 0 0 5%;
-    line-height: 1.8;
-}
-
-h2.product-info-block__description__title {
-    color: #222;
-    font-size: 25px;
-    font-weight: 500;
-    line-height: 28px;
-    margin-bottom: 10px;
-}
-
-.product-section__photo-block {
-    width: 50%;
-    margin: 30px 0;
-}
-
-.photo-block__product-holder {
-    width: 100%;
-    display: none;
-}
-
-.photo-block__product-holder.activedColorSlider {
-    width: 100%;
-    display: block;
-}
-
-.photo-block__product {
-    width: 100%;
-    margin: 0 auto;
-    display: block;
-}
-
-.float-scroll {
-    transition-duration: 100ms;
-    transform: rotateX(0.01px);
-    position: sticky;
-    bottom: 0;
-}
-
-input.radio-color-picker {
-    display: none;
-}
-
-input.radio-color-picker:checked+label > .text-block__color-section_item {
-    width: 85px;
-    height: 85px;
-}
-
-input.radio-color-picker:checked+label > .text-block__color-section_item > .text-block__color-section_number {
-    border: 3px solid #fff;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-}
-
-@media screen and (max-width: 768px) {
-
-    .dots-pic {
-        height: 8px;
-        position: absolute;
-        width: 86%;
-        margin-left: 7%;
-        display: flex;
-    }
-
-    .dot {
-        width: 8px;
-        height: 8px;
-        margin-right: 15px;
-        background: #22222247;
-        border-radius: 4px;
-    }
-
-    .dot.active-dot {
-        background: #222222;
-    }
-
-    .photo-block__product-holder.activedColorSlider {
-        -webkit-overflow-scrolling: touch;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        overflow-y: auto;
-        transition-duration: 400ms;
-        height: 80vw;
-    }
-
-    .photo-block__product-holder {
-        height: 80vw;
-    }
-
-    ::-webkit-scrollbar { /* chrome based */
-        width: 0px;  /* ширина scrollbar'a */
-        background: transparent;  /* опционально */
-    }
-
-    .product-section {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .product-section__photo-block {
-        width: 100%;
-    }
-
-    .product-section__text-block {
-        width: 100%;
-    }
-    .close_icon {
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
-}
 
     
     </style>
 
-<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 <script>
+    var browserWidth = document.body.clientWidth
+
+    var browserHeight = document.body.clientHeight
+
+
+    var state = [0, 0]
+
+
+    setScrollForProduct()
+
+    window.addEventListener('scroll', function() {
+
+        state[0] += 1
+        window.requestAnimationFrame(function() {
+            state[1] += 1
+            console.log(state)
+            let scrolledY = window.scrollY
+
+            if (browserWidth >  1080) {
+                scrollingFloatBlock(scrolledY)
+            }
+        })
+
+
+
+    })
+
+
+
+    function setScrollForProduct() {
+
+
+
+        var route = 'product'
+
+        if (browserWidth >  1080) {
+
+            if (route == 'product') {
+                let textBlock = document.querySelector('.product-section__text-block-holder')
+                let photoBlock = document.querySelector('.photo-block__product-holder')
+                let textBlockHeight = textBlock.scrollHeight
+                let photoBlockHeight = photoBlock.scrollHeight
+
+                if (textBlockHeight >= photoBlockHeight) {
+                    photoBlock.classList.add('float-scroll')
+                    floatScrollBlock = photoBlock
+                    floatScrollBlockHeight = photoBlockHeight
+                } else {
+                    textBlock.classList.add('float-scroll')
+                    floatScrollBlock = textBlock
+                    floatScrollBlockHeight = textBlockHeight
+                }
+            }
+        }
+
+    }
+
+
+    var fullBlockHeight = document.querySelector('.product-section').scrollHeight
+
+
+    function scrollingFloatBlock(scrolledY) {
+
+
+        console.log(floatScrollBlock.scrollHeight, browserHeight)
+
+            floatScrollBlock.style.transform = scrolledY
+        currentBlockPos = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / (fullBlockHeight - floatScrollBlockHeight)))) + "px, 0.01px)"
+
+        // currentBlockPos = "translate3d(0.01px," + (Math.floor(scrolledY / (fullBlockHeight / ((fullBlockHeight - floatScrollBlockHeight) + (window.innerHeight / devicePixelRatio))))) + "px, 0.01px)"
+            floatScrollBlock.style.transform = currentBlockPos
+
+
+    }
+
+
+
     var colorVariantNodes = document.querySelectorAll('.radio-color-picker')
     var colorSliderProducts = document.querySelectorAll('.photo-block__product-holder')
 
@@ -972,10 +649,9 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
         var scrollWidth = activeNode.scrollWidth
         var sliderCount = 1
 
-        console.log((activeNode.scrollLeft + screenWidth) / screenWidth)
 
         activeNode.addEventListener('scroll', function (){
-            console.log(activeNode.scrollWidth)
+            (activeNode.scrollWidth)
             if (((activeNode.scrollLeft + screenWidth) / screenWidth).toFixed(0) != sliderCount){
                 sliderCount = ((activeNode.scrollLeft + screenWidth) / screenWidth).toFixed(0)
                 renderDots(sliderCount)
@@ -1022,6 +698,7 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
 
 
 
+
         for (let i = 0; i < colorSliderProducts.length; i++) {
 
             var currentNodeId = colorSliderProducts[i].id
@@ -1058,6 +735,7 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
             event.preventDefault();
             event.stopPropagation();
             initialPoint=event.changedTouches[0];
+            console.log(initialPoint.clientX)
         }, false);
         activeNode.addEventListener('touchend', function(event) {
             event.preventDefault();
@@ -1067,6 +745,7 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
             var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
             if (xAbs > 20 || yAbs > 20) {
                 if (xAbs > yAbs) {
+                    console.log('')
                     if (finalPoint.pageX < initialPoint.pageX) {
 
                         activeNode.scroll({
@@ -1086,7 +765,6 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
                         })
                         currentSlider = currentSlider - screenWidth
 
-                        console.log(currentSlider)
                         if (currentSlider < 0) {
                             currentSlider = 0
                         }
@@ -1094,11 +772,16 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
                 }
                 else {
                     if (finalPoint.pageY < initialPoint.pageY){
-                        window.scroll({
+                        /* Проверяем, если на странице продукта то не работает скролл даун */
+                        var pattern = /product/;
+                        
+                        if (!pattern.test(window.location.href)) {
+                            window.scroll({
                             top: scrollHeight,
                             behavior: 'smooth'
                         })
-                        console.log('sdffsdd')
+                        }
+                        
                     }
                     else{
                         /*СВАЙП ВНИЗ*/}
@@ -1110,6 +793,10 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
     }
 
 
+    function goBack(link) {
+        localStorage.setItem('scrollToLastState', true)
+        window.location = link
+    }
 
 
 

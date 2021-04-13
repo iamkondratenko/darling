@@ -29,13 +29,13 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("set" => 19, "for" => 26);
-        $filters = array("escape" => 28);
+        $tags = array("set" => 1, "for" => 42, "if" => 45);
+        $filters = array("escape" => 50);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                ['set', 'for'],
+                ['set', 'for', 'if'],
                 ['escape'],
                 []
             );
@@ -59,11 +59,49 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
     {
         $macros = $this->macros;
         // line 1
-        echo "<div class=\"MainMenuDrawer\">
+        $context["records"] = twig_get_attribute($this->env, $this->source, ($context["mainMenuItem"] ?? null), "records", [], "any", false, false, true, 1);
+        // line 2
+        $context["displayColumn"] = twig_get_attribute($this->env, $this->source, ($context["mainMenuItem"] ?? null), "displayColumn", [], "any", false, false, true, 2);
+        // line 3
+        $context["noRecordsMessage"] = twig_get_attribute($this->env, $this->source, ($context["mainMenuItem"] ?? null), "noRecordsMessage", [], "any", false, false, true, 3);
+        // line 4
+        $context["detailsPage"] = twig_get_attribute($this->env, $this->source, ($context["mainMenuItem"] ?? null), "detailsPage", [], "any", false, false, true, 4);
+        // line 5
+        $context["detailsKeyColumn"] = twig_get_attribute($this->env, $this->source, ($context["mainMenuItem"] ?? null), "detailsKeyColumn", [], "any", false, false, true, 5);
+        // line 6
+        $context["detailsUrlParameter"] = twig_get_attribute($this->env, $this->source, ($context["mainMenuItem"] ?? null), "detailsUrlParameter", [], "any", false, false, true, 6);
+        // line 7
+        echo "
+
+
+
+";
+        // line 11
+        $context["recordsProductList"] = twig_get_attribute($this->env, $this->source, ($context["productList"] ?? null), "records", [], "any", false, false, true, 11);
+        // line 12
+        $context["displayColumn"] = twig_get_attribute($this->env, $this->source, ($context["productList"] ?? null), "displayColumn", [], "any", false, false, true, 12);
+        // line 13
+        $context["noRecordsMessage"] = twig_get_attribute($this->env, $this->source, ($context["productList"] ?? null), "noRecordsMessage", [], "any", false, false, true, 13);
+        // line 14
+        $context["detailsPage"] = twig_get_attribute($this->env, $this->source, ($context["productList"] ?? null), "detailsPage", [], "any", false, false, true, 14);
+        // line 15
+        $context["detailsKeyColumn"] = twig_get_attribute($this->env, $this->source, ($context["productList"] ?? null), "detailsKeyColumn", [], "any", false, false, true, 15);
+        // line 16
+        $context["detailsUrlParameter"] = twig_get_attribute($this->env, $this->source, ($context["productList"] ?? null), "detailsUrlParameter", [], "any", false, false, true, 16);
+        // line 17
+        echo "
+";
+        // line 18
+        $context["countSubcategory"] = 0;
+        // line 19
+        echo "
+
+
+<div class=\"MainMenuDrawer\">
     <div class=\"SubNavigationMenu SubNavigationMenu-Fixed\">
         <div class=\"SubNavigationMenu-ChangeLanguage\">
-            <a class=\"SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active\" href=\"#\">ENG</a>
-            <a class=\"SubNavigationMenu-LanguageItem LanguageItem-dark\" href=\"#\">RUS</a>
+            <a onclick=\"channgeLanguage('en')\" class=\"SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-disabled\">ENG</a>
+            <a onclick=\"channgeLanguage('ru')\" class=\"SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active\">RUS</a>
         </div>
         <div class=\"SubNavigationMenu-ScrollDown\">
             <svg width=\"27\" height=\"14\" viewBox=\"0 0 27 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
@@ -72,71 +110,116 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 
         </div>
         <div class=\"SubNavigationMenu-ChangeLanguage\">
-            <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\"></a>
+            <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\"></a>
             <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\"></a>
         </div>
     </div>
     <div class=\"MainMenuDrawer-Items\">
+
+
     ";
-        // line 19
-        $context["records"] = twig_get_attribute($this->env, $this->source, ($context["mainMenuItem"] ?? null), "records", [], "any", false, false, true, 19);
-        // line 20
-        $context["displayColumn"] = twig_get_attribute($this->env, $this->source, ($context["mainMenuItem"] ?? null), "displayColumn", [], "any", false, false, true, 20);
-        // line 21
-        $context["noRecordsMessage"] = twig_get_attribute($this->env, $this->source, ($context["mainMenuItem"] ?? null), "noRecordsMessage", [], "any", false, false, true, 21);
-        // line 22
-        $context["detailsPage"] = twig_get_attribute($this->env, $this->source, ($context["mainMenuItem"] ?? null), "detailsPage", [], "any", false, false, true, 22);
-        // line 23
-        $context["detailsKeyColumn"] = twig_get_attribute($this->env, $this->source, ($context["mainMenuItem"] ?? null), "detailsKeyColumn", [], "any", false, false, true, 23);
-        // line 24
-        $context["detailsUrlParameter"] = twig_get_attribute($this->env, $this->source, ($context["mainMenuItem"] ?? null), "detailsUrlParameter", [], "any", false, false, true, 24);
-        // line 25
-        echo "
-    ";
-        // line 26
+        // line 42
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["records"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["record"]) {
-            // line 27
+            // line 43
+            echo "        ";
+            $context["count"] = 0;
+            // line 44
+            echo "        ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(($context["recordsProductList"] ?? null));
+            foreach ($context['_seq'] as $context["_key"] => $context["recordProductItem"]) {
+                // line 45
+                echo "            ";
+                if ((twig_get_attribute($this->env, $this->source, $context["recordProductItem"], "category", [], "any", false, false, true, 45) == twig_get_attribute($this->env, $this->source, $context["record"], "slug", [], "any", false, false, true, 45))) {
+                    // line 46
+                    echo "                ";
+                    $context["count"] = (($context["count"] ?? null) + 1);
+                    // line 47
+                    echo "            ";
+                }
+                // line 48
+                echo "        ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['recordProductItem'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 49
             echo "        <div class=\"MainMenuDrawer-Item\">
             <div class=\"MainMenuDrawer-Item-Category\">";
-            // line 28
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["record"], "title", [], "any", false, false, true, 28), 28, $this->source), "html", null, true);
+            // line 50
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["record"], "title", [], "any", false, false, true, 50), 50, $this->source), "html", null, true);
             echo "</div>
             <div class=\"MainMenuDrawer-Item-Subcategories\">
                 <a  onclick=\"goTo('/category/";
-            // line 30
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["record"], "slug", [], "any", false, false, true, 30), 30, $this->source), "html", null, true);
-            echo "')\" class=\"MainMenuDrawer-Item-Subcategory\">All products</a>
+            // line 52
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["record"], "slug", [], "any", false, false, true, 52), 52, $this->source), "html", null, true);
+            echo "')\" class=\"MainMenuDrawer-Item-Subcategory\">All products
+                    <sup>
+                        ";
+            // line 54
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["count"] ?? null), 54, $this->source), "html", null, true);
+            echo "
+                    </sup></a>
                 ";
-            // line 31
+            // line 56
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["record"], "subcategory", [], "any", false, false, true, 31));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["record"], "subcategory", [], "any", false, false, true, 56));
             foreach ($context['_seq'] as $context["_key"] => $context["menuItem"]) {
-                echo " 
-                <a  onclick=\"goTo('/category/";
-                // line 32
-                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["record"], "slug", [], "any", false, false, true, 32), 32, $this->source), "html", null, true);
+                // line 57
+                echo "                ";
+                $context["countSubcategory"] = 0;
+                // line 58
+                echo "                    <a onclick=\"goTo('/category/";
+                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["record"], "slug", [], "any", false, false, true, 58), 58, $this->source), "html", null, true);
                 echo "/#";
-                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["menuItem"], "slug", [], "any", false, false, true, 32), 32, $this->source), "html", null, true);
+                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["menuItem"], "slug", [], "any", false, false, true, 58), 58, $this->source), "html", null, true);
                 echo "')\" class=\"MainMenuDrawer-Item-Subcategory\">";
-                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["menuItem"], "subcategory_title", [], "any", false, false, true, 32), 32, $this->source), "html", null, true);
-                echo "</a>
+                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["menuItem"], "subcategory_title", [], "any", false, false, true, 58), 58, $this->source), "html", null, true);
+                echo "
+                        <sup>
+                            ";
+                // line 60
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(($context["recordsProductList"] ?? null));
+                foreach ($context['_seq'] as $context["_key"] => $context["recordProductItem"]) {
+                    // line 61
+                    echo "                                ";
+                    if ((twig_get_attribute($this->env, $this->source, $context["menuItem"], "slug", [], "any", false, false, true, 61) == twig_get_attribute($this->env, $this->source, $context["recordProductItem"], "subcategory", [], "any", false, false, true, 61))) {
+                        // line 62
+                        echo "                                    ";
+                        $context["countSubcategory"] = (($context["countSubcategory"] ?? null) + 1);
+                        // line 63
+                        echo "                                ";
+                    }
+                    // line 64
+                    echo "                            ";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['recordProductItem'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 65
+                echo "
+                            ";
+                // line 66
+                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["countSubcategory"] ?? null), 66, $this->source), "html", null, true);
+                echo "
+                        </sup></a>
                 ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['menuItem'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 34
+            // line 69
             echo "            </div>
         </div>
-   
     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['record'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 38
+        // line 72
         echo "
         
     </div>
@@ -145,139 +228,7 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 <style>
 
 
-    .SubNavigationMenu {
-        width: 100vw;
-        padding: 0 50px;
-        height: 60px;
-        position: absolute;
-        bottom: 0;
-        display: flex;
-        justify-content: space-between;
-        z-index: 950;
-    }
 
-    .SubNavigationMenu.SubNavigationMenu-Fixed {
-        position: fixed;
-        z-index: 1300;
-    }
-
-
-    .SubNavigationMenu-ChangeLanguage {
-        min-width: 75px;
-        display: flex;
-        justify-content: space-around;
-        cursor: pointer;
-    }
-
-    a.SubNavigationMenu-LanguageItem {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-
-    a.SubNavigationMenu-LanguageItem.LanguageItem-active {
-        color: #ffffff82;
-        text-decoration: none;
-    }
-
-    a.SubNavigationMenu-LanguageItem.LanguageItem-dark {
-        color: #000;
-        text-decoration: none;
-    }
-
-    a.SubNavigationMenu-LanguageItem.LanguageItem-dark.LanguageItem-active {
-        color: #00000082;
-        text-decoration: none;
-    }
-
-
-    .MainMenuDrawer-Item-Category {
-        font-size: 70px;
-        font-weight: 500;
-        text-transform: uppercase;
-    }
-
-    .MainMenuDrawer-Item-Category:hover {
-        color: #EA028A;
-    }
-
-    a.MainMenuDrawer-Item-Subcategory {
-        text-decoration: none;
-        color: black;
-        font-size: 40px;
-        font-weight: 500;
-        text-transform: uppercase;
-
-    }
-    .MainMenuDrawer-Item-Subcategories{
-        display: flex;
-        flex-direction: column;
-        height: 0;
-        overflow: hidden;
-        transition-duration: 500ms;
-    }
-    .MainMenuDrawer-Items{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: black;
-    }
-    
-    .MainMenuDrawer-Item {
-        cursor: pointer;
-    }
-
-    .MainMenuDrawer {
-        width: 100vw;
-        height: 100vh;
-        background-color: #fff;
-        opacity: 0;
-        z-index: -555;
-        transition-duration: 400ms;
-        position: fixed;
-    }
-    .MainMenuDrawer.js-menuIsOpened {
-        z-index: 990;
-        opacity: 1;
-        transition-duration: 400ms;
-    }
-
-
-    @media screen and (max-width: 375px) {
-        .jsDesktop {
-            display: none;
-        }
-
-        .MainMenuDrawer-Item-Category {
-            font-size: 50px;
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-        a.MainMenuDrawer-Item-Subcategory {
-            text-decoration: none;
-            color: black;
-            font-size: 25px;
-            font-weight: 500;
-            text-transform: uppercase;
-
-        }
-        .MainMenuDrawer-Items{
-            width: 100%;
-            padding: 30px;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            text-align: left;
-            color: black;
-        }
-    }
 
 </style>
 
@@ -285,11 +236,22 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 <script>
 
 
+    
+
 
     let menuCategoryList = document.querySelectorAll('.MainMenuDrawer-Item');
 
 
     function goTo(link) {
+        
+        console.log('scrolledState')
+        
+        localStorage.removeItem('scrolledState')
+        console.log('scrolledState')
+        localStorage.setItem('menuIsOpened', false)
+        console.log('menuIsOpened')
+        
+        
         window.location = link
         openMenuHandler()
     }
@@ -303,19 +265,42 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 
 
     for (let i = 0; i < menuCategoryList.length; i++) {
+        
+        console.log(menuCategoryList[i])
+        
         menuCategoryList[i].addEventListener(\"click\",
             function (e){
+                
+                
 
-                clearActiveSubmenu()
-
-                e.toElement.parentNode.classList.toggle('subCategoryIsActive')
-
+            if (e.toElement.parentNode.classList.contains('subCategoryIsActive')) {
                 let subCategoriesMenu =  document.querySelector('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories')
 
                 let subCategoryMenu = document.querySelectorAll('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories > .MainMenuDrawer-Item-Subcategory')
 
                 let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length
+                subCategoriesMenu.style.height = '0'
+                e.toElement.parentNode.classList.remove('subCategoryIsActive')
+            } else {
+                clearActiveSubmenu()
+
+                e.toElement.parentNode.classList.add('subCategoryIsActive')
+
+                let subCategoriesMenu =  document.querySelector('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories')
+
+                let subCategoryMenu = document.querySelectorAll('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories > .MainMenuDrawer-Item-Subcategory')
+
+                let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length;
+                
+                if(window.matchMedia(\"(min-width: 642px)\").matches){
+                    console.log('tt10011');
+                    subCategoryHeight = subCategoryHeight + 20
+                }
+                                
                 subCategoriesMenu.style.height = subCategoryHeight + 'px'
+            }
+
+
             }
         )
     }
@@ -334,16 +319,37 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 
     public function getDebugInfo()
     {
-        return array (  140 => 38,  131 => 34,  119 => 32,  113 => 31,  109 => 30,  104 => 28,  101 => 27,  97 => 26,  94 => 25,  92 => 24,  90 => 23,  88 => 22,  86 => 21,  84 => 20,  82 => 19,  62 => 1,);
+        return array (  223 => 72,  215 => 69,  206 => 66,  203 => 65,  197 => 64,  194 => 63,  191 => 62,  188 => 61,  184 => 60,  174 => 58,  171 => 57,  167 => 56,  162 => 54,  157 => 52,  152 => 50,  149 => 49,  143 => 48,  140 => 47,  137 => 46,  134 => 45,  129 => 44,  126 => 43,  122 => 42,  97 => 19,  95 => 18,  92 => 17,  90 => 16,  88 => 15,  86 => 14,  84 => 13,  82 => 12,  80 => 11,  74 => 7,  72 => 6,  70 => 5,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"MainMenuDrawer\">
+        return new Source("{% set records = mainMenuItem.records %}
+{% set displayColumn = mainMenuItem.displayColumn %}
+{% set noRecordsMessage = mainMenuItem.noRecordsMessage %}
+{% set detailsPage = mainMenuItem.detailsPage %}
+{% set detailsKeyColumn = mainMenuItem.detailsKeyColumn %}
+{% set detailsUrlParameter = mainMenuItem.detailsUrlParameter %}
+
+
+
+
+{% set recordsProductList = productList.records %}
+{% set displayColumn = productList.displayColumn %}
+{% set noRecordsMessage = productList.noRecordsMessage %}
+{% set detailsPage = productList.detailsPage %}
+{% set detailsKeyColumn = productList.detailsKeyColumn %}
+{% set detailsUrlParameter = productList.detailsUrlParameter %}
+
+{% set countSubcategory = 0 %}
+
+
+
+<div class=\"MainMenuDrawer\">
     <div class=\"SubNavigationMenu SubNavigationMenu-Fixed\">
         <div class=\"SubNavigationMenu-ChangeLanguage\">
-            <a class=\"SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active\" href=\"#\">ENG</a>
-            <a class=\"SubNavigationMenu-LanguageItem LanguageItem-dark\" href=\"#\">RUS</a>
+            <a onclick=\"channgeLanguage('en')\" class=\"SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-disabled\">ENG</a>
+            <a onclick=\"channgeLanguage('ru')\" class=\"SubNavigationMenu-LanguageItem LanguageItem-dark LanguageItem-active\">RUS</a>
         </div>
         <div class=\"SubNavigationMenu-ScrollDown\">
             <svg width=\"27\" height=\"14\" viewBox=\"0 0 27 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
@@ -352,29 +358,42 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 
         </div>
         <div class=\"SubNavigationMenu-ChangeLanguage\">
-            <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\"></a>
+            <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\"></a>
             <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\"></a>
         </div>
     </div>
     <div class=\"MainMenuDrawer-Items\">
-    {% set records = mainMenuItem.records %}
-{% set displayColumn = mainMenuItem.displayColumn %}
-{% set noRecordsMessage = mainMenuItem.noRecordsMessage %}
-{% set detailsPage = mainMenuItem.detailsPage %}
-{% set detailsKeyColumn = mainMenuItem.detailsKeyColumn %}
-{% set detailsUrlParameter = mainMenuItem.detailsUrlParameter %}
+
 
     {% for record in records %}
+        {% set count = 0 %}
+        {% for recordProductItem in recordsProductList %}
+            {% if recordProductItem.category == record.slug %}
+                {% set count = count + 1 %}
+            {% endif %}
+        {% endfor %}
         <div class=\"MainMenuDrawer-Item\">
             <div class=\"MainMenuDrawer-Item-Category\">{{record.title}}</div>
             <div class=\"MainMenuDrawer-Item-Subcategories\">
-                <a  onclick=\"goTo('/category/{{record.slug}}')\" class=\"MainMenuDrawer-Item-Subcategory\">All products</a>
-                {% for menuItem in record.subcategory %} 
-                <a  onclick=\"goTo('/category/{{record.slug}}/#{{menuItem.slug}}')\" class=\"MainMenuDrawer-Item-Subcategory\">{{menuItem.subcategory_title}}</a>
+                <a  onclick=\"goTo('/category/{{record.slug}}')\" class=\"MainMenuDrawer-Item-Subcategory\">All products
+                    <sup>
+                        {{count}}
+                    </sup></a>
+                {% for menuItem in record.subcategory %}
+                {% set countSubcategory = 0 %}
+                    <a onclick=\"goTo('/category/{{record.slug}}/#{{menuItem.slug}}')\" class=\"MainMenuDrawer-Item-Subcategory\">{{menuItem.subcategory_title}}
+                        <sup>
+                            {% for recordProductItem in recordsProductList %}
+                                {% if menuItem.slug == recordProductItem.subcategory %}
+                                    {% set countSubcategory = countSubcategory + 1 %}
+                                {% endif %}
+                            {% endfor %}
+
+                            {{countSubcategory}}
+                        </sup></a>
                 {% endfor %}
             </div>
         </div>
-   
     {% endfor %}
 
         
@@ -384,139 +403,7 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 <style>
 
 
-    .SubNavigationMenu {
-        width: 100vw;
-        padding: 0 50px;
-        height: 60px;
-        position: absolute;
-        bottom: 0;
-        display: flex;
-        justify-content: space-between;
-        z-index: 950;
-    }
 
-    .SubNavigationMenu.SubNavigationMenu-Fixed {
-        position: fixed;
-        z-index: 1300;
-    }
-
-
-    .SubNavigationMenu-ChangeLanguage {
-        min-width: 75px;
-        display: flex;
-        justify-content: space-around;
-        cursor: pointer;
-    }
-
-    a.SubNavigationMenu-LanguageItem {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-
-    a.SubNavigationMenu-LanguageItem.LanguageItem-active {
-        color: #ffffff82;
-        text-decoration: none;
-    }
-
-    a.SubNavigationMenu-LanguageItem.LanguageItem-dark {
-        color: #000;
-        text-decoration: none;
-    }
-
-    a.SubNavigationMenu-LanguageItem.LanguageItem-dark.LanguageItem-active {
-        color: #00000082;
-        text-decoration: none;
-    }
-
-
-    .MainMenuDrawer-Item-Category {
-        font-size: 70px;
-        font-weight: 500;
-        text-transform: uppercase;
-    }
-
-    .MainMenuDrawer-Item-Category:hover {
-        color: #EA028A;
-    }
-
-    a.MainMenuDrawer-Item-Subcategory {
-        text-decoration: none;
-        color: black;
-        font-size: 40px;
-        font-weight: 500;
-        text-transform: uppercase;
-
-    }
-    .MainMenuDrawer-Item-Subcategories{
-        display: flex;
-        flex-direction: column;
-        height: 0;
-        overflow: hidden;
-        transition-duration: 500ms;
-    }
-    .MainMenuDrawer-Items{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: black;
-    }
-    
-    .MainMenuDrawer-Item {
-        cursor: pointer;
-    }
-
-    .MainMenuDrawer {
-        width: 100vw;
-        height: 100vh;
-        background-color: #fff;
-        opacity: 0;
-        z-index: -555;
-        transition-duration: 400ms;
-        position: fixed;
-    }
-    .MainMenuDrawer.js-menuIsOpened {
-        z-index: 990;
-        opacity: 1;
-        transition-duration: 400ms;
-    }
-
-
-    @media screen and (max-width: 375px) {
-        .jsDesktop {
-            display: none;
-        }
-
-        .MainMenuDrawer-Item-Category {
-            font-size: 50px;
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-        a.MainMenuDrawer-Item-Subcategory {
-            text-decoration: none;
-            color: black;
-            font-size: 25px;
-            font-weight: 500;
-            text-transform: uppercase;
-
-        }
-        .MainMenuDrawer-Items{
-            width: 100%;
-            padding: 30px;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            text-align: left;
-            color: black;
-        }
-    }
 
 </style>
 
@@ -524,11 +411,22 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 <script>
 
 
+    
+
 
     let menuCategoryList = document.querySelectorAll('.MainMenuDrawer-Item');
 
 
     function goTo(link) {
+        
+        console.log('scrolledState')
+        
+        localStorage.removeItem('scrolledState')
+        console.log('scrolledState')
+        localStorage.setItem('menuIsOpened', false)
+        console.log('menuIsOpened')
+        
+        
         window.location = link
         openMenuHandler()
     }
@@ -542,19 +440,42 @@ class __TwigTemplate_41361ef4339a78a9c3208c3d6f5c62d7242e6045a626e6ca30a0958dc63
 
 
     for (let i = 0; i < menuCategoryList.length; i++) {
+        
+        console.log(menuCategoryList[i])
+        
         menuCategoryList[i].addEventListener(\"click\",
             function (e){
+                
+                
 
-                clearActiveSubmenu()
-
-                e.toElement.parentNode.classList.toggle('subCategoryIsActive')
-
+            if (e.toElement.parentNode.classList.contains('subCategoryIsActive')) {
                 let subCategoriesMenu =  document.querySelector('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories')
 
                 let subCategoryMenu = document.querySelectorAll('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories > .MainMenuDrawer-Item-Subcategory')
 
                 let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length
+                subCategoriesMenu.style.height = '0'
+                e.toElement.parentNode.classList.remove('subCategoryIsActive')
+            } else {
+                clearActiveSubmenu()
+
+                e.toElement.parentNode.classList.add('subCategoryIsActive')
+
+                let subCategoriesMenu =  document.querySelector('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories')
+
+                let subCategoryMenu = document.querySelectorAll('.subCategoryIsActive > .MainMenuDrawer-Item-Subcategories > .MainMenuDrawer-Item-Subcategory')
+
+                let subCategoryHeight = subCategoryMenu[0].clientHeight * subCategoryMenu.length;
+                
+                if(window.matchMedia(\"(min-width: 642px)\").matches){
+                    console.log('tt10011');
+                    subCategoryHeight = subCategoryHeight + 20
+                }
+                                
                 subCategoriesMenu.style.height = subCategoryHeight + 'px'
+            }
+
+
             }
         )
     }

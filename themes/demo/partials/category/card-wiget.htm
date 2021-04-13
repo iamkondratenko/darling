@@ -1,15 +1,18 @@
+==
 <div class="SubcategoryListing-ItemCard">
-    <a class="SubcategoryListing-ItemCard-Link" href="/product/{{data.slug}}">
+    <a class="SubcategoryListing-ItemCard-Link jsCardWigetLink" href="/product/{{data.slug}}">
         <div class="SubcategoryListing-ItemCard-Holder">
-            <div class="SubcategoryListing-ItemCard-ImageHolder">
-                <img class="SubcategoryListing-ItemCard-Image" src="{{data.picture | media}}">
+            <div class="SubcategoryListing-ItemCard-ImageHolderWrapper">
+                <div class="SubcategoryListing-ItemCard-ImageHolder">
+                    <img class="SubcategoryListing-ItemCard-Image" src="{{data.picture | media}}">
+                </div>
             </div>
 
 
             <div class="SubcategoryListing-ItemCard-Info">
                 <h2 class="SubcategoryListing-ItemCard-Title">{{data.title}}</h2>
                 <p class="SubcategoryListing-ItemCard-Description">{{data.description}}</p>
-                <div class="SubcategoryListing-ItemCard-Price rus-currency">{{data.price}}</div>
+                <div class="SubcategoryListing-ItemCard-Price rus-currency">{{data.price}} ₽</div>
             </div>
         </div>
 
@@ -19,72 +22,6 @@
 
 <style>
 
-    .rus-currency::after {
-        content: ' ₽';
-        white-space: pre;
-        position: absolute;
-    }
-
-
-    .SubcategoryListing-ItemCard {
-        width: 23%;
-        text-align: center;
-        color: #222;
-        text-transform: uppercase;
-    }
-
-    h2.SubcategoryListing-ItemCard-Title {
-        color: inherit;
-        font-size: 25px;
-        font-weight: 500;
-        color: #222;
-    }
-
-    p.SubcategoryListing-ItemCard-Description {
-        color: #222;
-        text-transform: none;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-    }
-
-    .SubcategoryListing-ItemCard-Price {
-        color: #222;
-        font-size: 25px;
-        font-weight: 400;
-    }
-
-    .SubcategoryListing-ItemCard-ImageHolder {
-        width: 100%;
-    }
-
-    img.SubcategoryListing-ItemCard-Image {
-        width: 100%;
-    }
-
-    a.SubcategoryListing-ItemCard-Link {
-        text-decoration: none;
-    }
-
-    @media screen and (max-width: 768px) {
-        .SubcategoryListing-ItemCard {
-            width: 42%;
-            text-align: center;
-            color: #222;
-            text-transform: uppercase;
-        }
-    }
-
-    @media screen and (max-width: 375px) {
-        .SubcategoryListing-ItemCard {
-            width: 100%;
-            text-align: center;
-            color: #222;
-            text-transform: uppercase;
-            margin-bottom: 50px;
-        }
-
-    }
 
 
 </style>

@@ -30,13 +30,13 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
         $tags = array("set" => 1);
-        $filters = array("theme" => 30, "media" => 43);
+        $filters = array("media" => 168);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
                 ['set'],
-                ['theme', 'media'],
+                ['media'],
                 []
             );
         } catch (SecurityError $e) {
@@ -69,58 +69,322 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
 
 <div class=\"MainHomeBanner\">
 
-\t<div class=\"MainHomeBanner-Content\">
+    <div class=\"SubNavigationMenu\">
+        <div class=\"SubNavigationMenu-ChangeLanguage jsDesktop\">
+            <a class=\"SubNavigationMenu-LanguageItem LanguageItem-disabled\" onclick=\"channgeLanguage('en', false)\">ENG</a>
+            <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" onclick=\"channgeLanguage('ru', false)\">RUS</a>
+        </div>
+        <div class=\"SubNavigationMenu-ScrollDown t-cover__arrow-wrapper_animated jsHideScrollDown\" onclick=\"scrollDown()\">
+            <svg width=\"27\" height=\"14\" viewBox=\"0 0 27 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z\" fill=\"white\"/>
+            </svg>
 
-<!--        <div class=\"SubNavigationMenu\">-->
-<!--            <div class=\"SubNavigationMenu-ChangeLanguage\">-->
-<!--                <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\">ENG</a>-->
-<!--                <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\">RUS</a>-->
-<!--            </div>-->
-<!--            <div class=\"SubNavigationMenu-ChangeLanguage\">-->
-<!--                <svg width=\"27\" height=\"14\" viewBox=\"0 0 27 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">-->
-<!--                    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z\" fill=\"white\"/>-->
-<!--                </svg>-->
+        </div>
+        <div class=\"SubNavigationMenu-ScrollDown-mobile t-cover__arrow-wrapper_animated\">Scroll down</div> 
+    </div>
 
-<!--            </div>-->
-<!--            <div class=\"SubNavigationMenu-ChangeLanguage\">-->
-<!--                <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\"></a>-->
-<!--                <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\"></a>-->
-<!--            </div>-->
-<!--        </div>-->
+    <div class=\"MainHomeBanner-Content\">
+
+        <div class=\"MainHomeBanner-categoryLeftScreen\">
+            <h1 class=\"MainHomeBanner-categoryLeftScreen-title\">SKIN CARE</h1>
+
+            <div>
+                <div class=\"MainHomeBanner-categoryLeftScreen-content\">
+                    <a href=\"#pads\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">
+                       pads
+                    </a>
+                    <span> /</span>
+
+                    <a href=\"#patches\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">patches</a><br /><span>
+                        /</span>
+                    <a href=\"#masks\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">masks</a>
+                </div>
+            </div>
+        </div>
+
+        <div class=\"MainHomeBanner-categoryRightScreen\">
+            <h1 class=\"MainHomeBanner-categoryLeftScreen-title\">MAKEUP</h1>
+
+            <div>
+                <div class=\"MainHomeBanner-categoryLeftScreen-content\">
+                    <a href=\"#eyes\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">
+                     eyes
+                    </a>
+                    <span> /</span>
+
+                    <a href=\"#lips\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">lips</a><br /><span>
+                        /</span>
+                    <a href=\"#face\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">face</a>
+                </div>
+            </div>
+        </div>
 
         <div class=\"MainHomeBanner-Content-Links\">
 
-            <a href=\"/category/makeup/\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left\">
-                <span class=\"MainHomeBanner-Content-LinkArrow\"><img class=\"MainHomeBanner-Content-LinkArrowImg\" src=\"";
-        // line 30
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/main-banner/arrow-left.png");
-        echo "\"></span> <div class=\"MainHomeBanner-Content-LinkItem\">makeup</div>
+            <div
+                    class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left MainHomeBanner-Content-LinkHolderDiv\">
+                <span class=\"MainHomeBanner-Content-LinkArrow\">
+                    <svg version=\"1.1\" id=\"LinkArrow-Left\" xmlns=\"http://www.w3.org/2000/svg\"
+                         xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 62 55\"
+                         style=\"enable-background:new 0 0 62 55;\" xml:space=\"preserve\" class=\"MainHomeBanner-arrowIcon\">
+                        <polygon points=\"62,23.5 15.3,23.5 32.9,5.9 27.3,0.2 5.7,21.8 5.7,21.8 0,27.5 27.3,54.8 32.9,49.1 15.3,31.5 62,31.5
+                            \"/>
+                    </svg>
+                </span>
+                <span class=\"MainHomeBanner-Content-LinkArrow-Left\">
+                    <svg version=\"1.1\" id=\"LinkArrow-Left\" xmlns=\"http://www.w3.org/2000/svg\"
+                         xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 62 55\"
+                         style=\"enable-background:new 0 0 62 55;\" xml:space=\"preserve\" class=\"MainHomeBanner-arrowIcon\">
+                        <style type=\"text/css\">
+                        </style>
+                        <polygon points=\"62,23.5 15.3,23.5 32.9,5.9 27.3,0.2 5.7,21.8 5.7,21.8 0,27.5 27.3,54.8 32.9,49.1 15.3,31.5 62,31.5
+                            \"/>
+                    </svg>
+                </span>
+                <div class=\"MainHomeBanner-Content-LinkItem\">makeup</div>
+            </div>
+
+            <a ontouchend=\"goTo('/category/makeup')\"
+               class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left MainHomeBanner-Content-LinkHolderLink\">
+                <span class=\"MainHomeBanner-Content-LinkArrow\">
+                    <svg version=\"1.1\" id=\"LinkArrow-Left\" xmlns=\"http://www.w3.org/2000/svg\"
+                         xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 62 55\"
+                         style=\"enable-background:new 0 0 62 55;\" xml:space=\"preserve\" class=\"MainHomeBanner-arrowIcon\">
+                        <style type=\"text/css\">
+                        </style>
+                        <polygon points=\"62,23.5 15.3,23.5 32.9,5.9 27.3,0.2 5.7,21.8 5.7,21.8 0,27.5 27.3,54.8 32.9,49.1 15.3,31.5 62,31.5
+                            \"/>
+                    </svg>
+                </span>
+                <span class=\"MainHomeBanner-Content-LinkArrow-Left\">
+                    <svg version=\"1.1\" id=\"LinkArrow-Left\" xmlns=\"http://www.w3.org/2000/svg\"
+                         xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 62 55\"
+                         style=\"enable-background:new 0 0 62 55;\" xml:space=\"preserve\" class=\"MainHomeBanner-arrowIcon\">
+                        <style type=\"text/css\">
+                        </style>
+                        <polygon points=\"62,23.5 15.3,23.5 32.9,5.9 27.3,0.2 5.7,21.8 5.7,21.8 0,27.5 27.3,54.8 32.9,49.1 15.3,31.5 62,31.5
+                            \" />
+                    </svg>
+                </span>
+                <div class=\"MainHomeBanner-Content-LinkItem\">makeup</div>
             </a>
 
             <div href=\"#\" class=\"MainHomeBanner-Content-SlashHolder\">
                 <div class=\"MainHomeBanner-Content-Slash\">/</div>
             </div>
 
-            <a href=\"/category/skin-care/\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right\">
-                <div class=\"MainHomeBanner-Content-LinkItem\">Skin care</div><span class=\"MainHomeBanner-Content-LinkArrow\"><img class=\"MainHomeBanner-Content-LinkArrowImg\" src=\"";
-        // line 38
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/main-banner/arrow-right.png");
-        echo "\"></span>
+            <div
+                    class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right MainHomeBanner-Content-LinkHolderDiv\">
+                <div class=\"MainHomeBanner-Content-LinkItem\">SKIN CARE</div>
+                <!-- <span class=\"MainHomeBanner-Content-LinkArrow-Right\">
+                    <svg version=\"1.1\" id=\"LinkArrow-Left\" xmlns=\"http://www.w3.org/2000/svg\"
+                         xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 62 55\"
+                         style=\"enable-background:new 0 0 62 55;\" xml:space=\"preserve\" class=\"MainHomeBanner-arrowIcon\">
+                        <style type=\"text/css\">
+                        </style>
+                        <polygon points=\"62,23.5 15.3,23.5 32.9,5.9 27.3,0.2 5.7,21.8 5.7,21.8 0,27.5 27.3,54.8 32.9,49.1 15.3,31.5 62,31.5
+                            \" />
+                    </svg>
+                </span> -->
+                <span class=\"MainHomeBanner-Content-LinkArrow\">
+                    <svg version=\"1.1\" id=\"LinkArrow-Left\" xmlns=\"http://www.w3.org/2000/svg\"
+                         xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 62 55\"
+                         style=\"enable-background:new 0 0 62 55;\" xml:space=\"preserve\" class=\"MainHomeBanner-arrowIcon\">
+                        <style type=\"text/css\">
+                        </style>
+                        <polygon points=\"62,23.5 15.3,23.5 32.9,5.9 27.3,0.2 5.7,21.8 5.7,21.8 0,27.5 27.3,54.8 32.9,49.1 15.3,31.5 62,31.5
+                            \"/>
+                    </svg>
+
+                </span>
+            </div>
+
+            <a ontouchend=\"goTo('/category/skin-care')\"
+               class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right MainHomeBanner-Content-LinkHolderLink\">
+                <div class=\"MainHomeBanner-Content-LinkItem\">Skin care</div>
+                <span class=\"MainHomeBanner-Content-LinkArrow-Right\">
+                    <svg version=\"1.1\" id=\"LinkArrow-Left\" xmlns=\"http://www.w3.org/2000/svg\"
+                         xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 62 55\"
+                         style=\"enable-background:new 0 0 62 55;\" xml:space=\"preserve\" class=\"MainHomeBanner-arrowIcon\">
+                        <style type=\"text/css\">
+                        </style>
+                        <polygon points=\"62,23.5 15.3,23.5 32.9,5.9 27.3,0.2 5.7,21.8 5.7,21.8 0,27.5 27.3,54.8 32.9,49.1 15.3,31.5 62,31.5
+                            \"/>
+                    </svg>
+                </span>
+                <span class=\"MainHomeBanner-Content-LinkArrow\">
+                    <svg version=\"1.1\" id=\"LinkArrow-Left\" xmlns=\"http://www.w3.org/2000/svg\"
+                         xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 62 55\"
+                         style=\"enable-background:new 0 0 62 55;\" xml:space=\"preserve\" class=\"MainHomeBanner-arrowIcon\">
+                        <style type=\"text/css\">
+                        </style>
+                        <polygon points=\"62,23.5 15.3,23.5 32.9,5.9 27.3,0.2 5.7,21.8 5.7,21.8 0,27.5 27.3,54.8 32.9,49.1 15.3,31.5 62,31.5
+                            \"/>
+                    </svg>
+
+                </span>
             </a>
 
         </div>
-\t    
-        <div class=\"MainHomeBanner-Content-Background\" style=\"background: url(";
-        // line 43
-        echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "first_slider_picture", [], "any", false, false, true, 43), 43, $this->source));
-        echo "); background-size: cover; background-repeat: no-repeat; background-position: center\">
 
+        <div class=\"MainHomeBanner-Content-Background\">
+            <div class=\"MainHomeBanner-Content-BackgroundMobile\"
+                 style=\"background-image: url(";
+        // line 168
+        echo $this->extensions['System\Twig\Extension']->mediaFilter("main-banner/2800px.jpg");
+        echo "); background-size: auto 200vh; background-position: center -48vh;\">
+            </div>
+
+            <div class=\"MainHomeBanner-Content-BackgroundLeftScreen\"
+                 style=\"background-color: #93969D; background-size: cover;\"></div>
+
+            <div class=\"MainHomeBanner-Content-BackgroundLeftScreenContent\" style=\"background-image: url(";
+        // line 174
+        echo $this->extensions['System\Twig\Extension']->mediaFilter("main-banner/left.jpg");
+        echo ");
+            background-size: auto 80vw; background-repeat: no-repeat; background-position: 11.8vw -12vw;\"></div>
+
+            <div class=\"MainHomeBanner-Content-BackgroundRightScreen\"
+                 style=\"background-color: #A5A8AF; background-size: cover;\"></div>
+
+            <div class=\"MainHomeBanner-Content-BackgroundRightScreenContent\" style=\"background-image: url(";
+        // line 180
+        echo $this->extensions['System\Twig\Extension']->mediaFilter("main-banner/right.jpg");
+        echo ");
+                background-size: auto 80vw; background-repeat: no-repeat; background-position: -38.2vw -12vw\"></div>
         </div>
 
-\t\t
-\t</div>
+
+    </div>
 
 </div>
+
+<style>
+    .jsHideScrollDown {
+        display: none;
+    }
+</style>
+
+<script>
+
+
+     
+
+    
+    
+    const vh = window.innerHeight * 0.01;
+     document.documentElement.style.setProperty('--vh', `\${vh}px`);
+
+    const leftLink = document.querySelector(\".MainHomeBanner-Content-LinkHolder--left\");
+    const rightLink = document.querySelector(\".MainHomeBanner-Content-LinkHolder--right\");
+    const leftScreen = document.querySelector(\".MainHomeBanner-Content-BackgroundLeftScreen\");
+    const leftScreenContent = document.querySelector(\".MainHomeBanner-Content-BackgroundLeftScreenContent\");
+    const rightScreen = document.querySelector(\".MainHomeBanner-Content-BackgroundRightScreen\");
+    const rightScreenContent = document.querySelector(\".MainHomeBanner-Content-BackgroundRightScreenContent\");
+    const textContent = document.querySelector(\".MainHomeBanner-Content-Links\");
+    const leftCategoryContent = document.querySelector(\".MainHomeBanner-categoryLeftScreen\");
+    const rightCategoryContent = document.querySelector(\".MainHomeBanner-categoryRightScreen\")
+    const SubNavigationMenuByMainHomeBanner = document.querySelector(\".MainHomeBanner .SubNavigationMenu\");
+
+    const deleteLink = () => {
+        textContent.classList.add('MainHomeBanner-Content-LinkHolder--delete');
+    }
+
+    const hideLink = () => {
+        textContent.classList.add('MainHomeBanner-Content-LinkHolder--hided');
+    }
+
+    const onLeftLinkAction = () => {
+        clearCategory()
+
+        leftScreen.classList.add('MainHomeBanner-Content-BackgroundLeftScreenAnimation');
+        leftScreenContent.classList.add('MainHomeBanner-Content-BackgroundLeftScreenContentAnimation');
+        hideLink();
+        setTimeout(deleteLink, 1000);
+        rightCategoryContent.classList.add('MainHomeBanner-categoryScreenExisting')
+        rightCategoryContent.classList.add('MainHomeBanner-categoryScreenAppearance')
+        SubNavigationMenuByMainHomeBanner.classList.add('SubNavigationMenu-existing')
+        SubNavigationMenuByMainHomeBanner.classList.add('SubNavigationMenu-appearance')
+        openCategory('makeup','rigth')
+        let scrollDownNode = document.querySelector('.jsHideScrollDown')
+        scrollDownNode.classList.remove('jsHideScrollDown')
+        document.getElementById('footer').classList.remove('jsHideScrollDown')
+    }
+
+    const onRightLinkAction = () => {
+        clearCategory()
+
+        rightScreen.classList.add('MainHomeBanner-Content-BackgroundRightScreenAnimation');
+        rightScreenContent.classList.add('MainHomeBanner-Content-BackgroundRightScreenContentAnimation');
+        hideLink()
+        setTimeout(deleteLink, 1000);
+        leftCategoryContent.classList.add('MainHomeBanner-categoryScreenExisting')
+        leftCategoryContent.classList.add('MainHomeBanner-categoryScreenAppearance')
+        SubNavigationMenuByMainHomeBanner.classList.add('SubNavigationMenu-existing')
+        SubNavigationMenuByMainHomeBanner.classList.add('SubNavigationMenu-appearance')
+        openCategory('skin-care','left')
+        let scrollDownNode = document.querySelector('.jsHideScrollDown')
+        scrollDownNode.classList.remove('jsHideScrollDown')
+        document.getElementById('footer').classList.remove('jsHideScrollDown')
+    }
+    const isDesktop = window.matchMedia(\"(min-width: 1024px)\");
+
+
+    if (isDesktop) {
+        leftLink.addEventListener(\"click\", onLeftLinkAction);
+        rightLink.addEventListener(\"click\", onRightLinkAction);
+    }
+
+
+
+    function openCategory (slug, side) {
+        let categoryNodeMakeUp = document.getElementById('makeup')
+        let categoryNodeSkinCare = document.getElementById('skin-care')
+
+        if (slug == 'makeup') {
+            categoryNodeMakeUp.style.display = 'block'
+            categoryNodeSkinCare.style.display = 'none'
+            history.pushState(null, null, window.location.origin + '/category/' + slug)
+        } if (slug == 'skin-care') {
+            categoryNodeMakeUp.style.display = 'none'
+            categoryNodeSkinCare.style.display = 'block'
+            history.pushState(null, null, window.location.origin + '/category/' + slug)
+        }
+        
+        
+    }
+
+
+    function clearCategory()
+    {
+        leftScreen.classList.remove('MainHomeBanner-Content-BackgroundLeftScreenAnimation');
+        leftScreenContent.classList.remove('MainHomeBanner-Content-BackgroundLeftScreenContentAnimation');
+
+        rightCategoryContent.classList.remove('MainHomeBanner-categoryScreenExisting')
+        rightCategoryContent.classList.remove('MainHomeBanner-categoryScreenAppearance')
+        SubNavigationMenuByMainHomeBanner.classList.remove('SubNavigationMenu-existing')
+        SubNavigationMenuByMainHomeBanner.classList.remove('SubNavigationMenu-appearance')
+
+
+        rightScreen.classList.remove('MainHomeBanner-Content-BackgroundRightScreenAnimation');
+        rightScreenContent.classList.remove('MainHomeBanner-Content-BackgroundRightScreenContentAnimation');
+
+        leftCategoryContent.classList.remove('MainHomeBanner-categoryScreenExisting')
+        leftCategoryContent.classList.remove('MainHomeBanner-categoryScreenAppearance')
+        SubNavigationMenuByMainHomeBanner.classList.remove('SubNavigationMenu-existing')
+        SubNavigationMenuByMainHomeBanner.classList.remove('SubNavigationMenu-appearance')
+    }
+
+
+function goTo(link) {
+        window.location = link
+        openMenuHandler()
+    }
+
+</script>
+
+
+
 
 
 
@@ -128,122 +392,9 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
 
 
 
-
-
-\t.MainHomeBanner {
-\t\tdisplay: block;
-\t\twidth: 100vw;
-\t\theight: 100vh;
-\t\tposition: absolute;
-        z-index: 99;
-\t}
-
-\t.MainHomeBanner-Content {
-\t\tdisplay: flex;
-\t\twidth: 100%;
-\t\theight: 100%;
-\t}
-
-    .MainHomeBanner-Content-Links {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 999;
-        display: flex;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        color: #fff;
-        text-transform: uppercase;
-        text-decoration: none;
-    }
-
-    .MainHomeBanner-Content-LinkArrow {
-        display: none;
-    }
-
-    .MainHomeBanner-Content-LinkArrowImg {
-        width: 65px;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder--left:hover {
-        color: #EA028A;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder--left:hover > .MainHomeBanner-Content-LinkArrow {
-        display: block;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder--right:hover > .MainHomeBanner-Content-LinkArrow {
-        display: block;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder--right:hover {
-        color: #EA028A;
-    }
-
-    .MainHomeBanner-Content-LinkItem {
-        font-weight: 500;
-        font-size: 80px;
-        padding: 50px;
-    }
-
-    .MainHomeBanner-Content-Slash {
-        font-weight: 500;
-        font-size: 80px;
-    }
-
-    .MainHomeBanner-Content-SlashHolder {
-        color: #fff;
-        display: flex;
-        align-items: center;
-    }
-
-    .MainHomeBanner-Content-LinkHolder--left {
-        justify-content: flex-end;
-    }
-
-    .MainHomeBanner-Content-LinkHolder--right {
-        justify-content: flex-start;
-    }
-
-\t.MainHomeBanner-Content-Background {
-\t\twidth: 100%;
-\t}
-
-    @media screen and (max-width: 1200px){
-
-        .MainHomeBanner-Content-Links {
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-end;
-        }
-
-        .MainHomeBanner-Content-Slash {
-            display: none;
-        }
-
-        a.MainHomeBanner-Content-LinkHolder {
-            width: 100%;
-            justify-content: center;
-        }
-
-        .MainHomeBanner-Content-LinkItem {
-            padding: 0 32px;
-            font-size: 40px;
-        }
-
-        .MainHomeBanner-Content-LinkHolder--right {
-            padding-bottom: 50px;
-        }
-
-        .MainHomeBanner-Content-LinkArrowImg {
-            width: 36px;
-        }
-    }
+.SubNavigationMenu-ScrollDown-mobile {
+    visibility: hidden    
+}
 
 </style>";
     }
@@ -260,7 +411,7 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
 
     public function getDebugInfo()
     {
-        return array (  115 => 43,  107 => 38,  96 => 30,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
+        return array (  252 => 180,  243 => 174,  234 => 168,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -272,49 +423,313 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
 
 <div class=\"MainHomeBanner\">
 
-\t<div class=\"MainHomeBanner-Content\">
+    <div class=\"SubNavigationMenu\">
+        <div class=\"SubNavigationMenu-ChangeLanguage jsDesktop\">
+            <a class=\"SubNavigationMenu-LanguageItem LanguageItem-disabled\" onclick=\"channgeLanguage('en', false)\">ENG</a>
+            <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" onclick=\"channgeLanguage('ru', false)\">RUS</a>
+        </div>
+        <div class=\"SubNavigationMenu-ScrollDown t-cover__arrow-wrapper_animated jsHideScrollDown\" onclick=\"scrollDown()\">
+            <svg width=\"27\" height=\"14\" viewBox=\"0 0 27 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z\" fill=\"white\"/>
+            </svg>
 
-<!--        <div class=\"SubNavigationMenu\">-->
-<!--            <div class=\"SubNavigationMenu-ChangeLanguage\">-->
-<!--                <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\">ENG</a>-->
-<!--                <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\">RUS</a>-->
-<!--            </div>-->
-<!--            <div class=\"SubNavigationMenu-ChangeLanguage\">-->
-<!--                <svg width=\"27\" height=\"14\" viewBox=\"0 0 27 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">-->
-<!--                    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 3.60039L2.4 0.400391L13.2 8.50039L24 0.400391L26.4 3.60039L13.2 13.5004L0 3.60039Z\" fill=\"white\"/>-->
-<!--                </svg>-->
+        </div>
+        <div class=\"SubNavigationMenu-ScrollDown-mobile t-cover__arrow-wrapper_animated\">Scroll down</div> 
+    </div>
 
-<!--            </div>-->
-<!--            <div class=\"SubNavigationMenu-ChangeLanguage\">-->
-<!--                <a class=\"SubNavigationMenu-LanguageItem LanguageItem-active\" href=\"#\"></a>-->
-<!--                <a class=\"SubNavigationMenu-LanguageItem\" href=\"#\"></a>-->
-<!--            </div>-->
-<!--        </div>-->
+    <div class=\"MainHomeBanner-Content\">
+
+        <div class=\"MainHomeBanner-categoryLeftScreen\">
+            <h1 class=\"MainHomeBanner-categoryLeftScreen-title\">SKIN CARE</h1>
+
+            <div>
+                <div class=\"MainHomeBanner-categoryLeftScreen-content\">
+                    <a href=\"#pads\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">
+                       pads
+                    </a>
+                    <span> /</span>
+
+                    <a href=\"#patches\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">patches</a><br /><span>
+                        /</span>
+                    <a href=\"#masks\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">masks</a>
+                </div>
+            </div>
+        </div>
+
+        <div class=\"MainHomeBanner-categoryRightScreen\">
+            <h1 class=\"MainHomeBanner-categoryLeftScreen-title\">MAKEUP</h1>
+
+            <div>
+                <div class=\"MainHomeBanner-categoryLeftScreen-content\">
+                    <a href=\"#eyes\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">
+                     eyes
+                    </a>
+                    <span> /</span>
+
+                    <a href=\"#lips\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">lips</a><br /><span>
+                        /</span>
+                    <a href=\"#face\" class=\"MainHomeBanner-categoryLeftScreen-contentItem\">face</a>
+                </div>
+            </div>
+        </div>
 
         <div class=\"MainHomeBanner-Content-Links\">
 
-            <a href=\"/category/makeup/\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left\">
-                <span class=\"MainHomeBanner-Content-LinkArrow\"><img class=\"MainHomeBanner-Content-LinkArrowImg\" src=\"{{ 'assets/images/main-banner/arrow-left.png' | theme }}\"></span> <div class=\"MainHomeBanner-Content-LinkItem\">makeup</div>
+            <div
+                    class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left MainHomeBanner-Content-LinkHolderDiv\">
+                <span class=\"MainHomeBanner-Content-LinkArrow\">
+                    <svg version=\"1.1\" id=\"LinkArrow-Left\" xmlns=\"http://www.w3.org/2000/svg\"
+                         xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 62 55\"
+                         style=\"enable-background:new 0 0 62 55;\" xml:space=\"preserve\" class=\"MainHomeBanner-arrowIcon\">
+                        <polygon points=\"62,23.5 15.3,23.5 32.9,5.9 27.3,0.2 5.7,21.8 5.7,21.8 0,27.5 27.3,54.8 32.9,49.1 15.3,31.5 62,31.5
+                            \"/>
+                    </svg>
+                </span>
+                <span class=\"MainHomeBanner-Content-LinkArrow-Left\">
+                    <svg version=\"1.1\" id=\"LinkArrow-Left\" xmlns=\"http://www.w3.org/2000/svg\"
+                         xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 62 55\"
+                         style=\"enable-background:new 0 0 62 55;\" xml:space=\"preserve\" class=\"MainHomeBanner-arrowIcon\">
+                        <style type=\"text/css\">
+                        </style>
+                        <polygon points=\"62,23.5 15.3,23.5 32.9,5.9 27.3,0.2 5.7,21.8 5.7,21.8 0,27.5 27.3,54.8 32.9,49.1 15.3,31.5 62,31.5
+                            \"/>
+                    </svg>
+                </span>
+                <div class=\"MainHomeBanner-Content-LinkItem\">makeup</div>
+            </div>
+
+            <a ontouchend=\"goTo('/category/makeup')\"
+               class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--left MainHomeBanner-Content-LinkHolderLink\">
+                <span class=\"MainHomeBanner-Content-LinkArrow\">
+                    <svg version=\"1.1\" id=\"LinkArrow-Left\" xmlns=\"http://www.w3.org/2000/svg\"
+                         xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 62 55\"
+                         style=\"enable-background:new 0 0 62 55;\" xml:space=\"preserve\" class=\"MainHomeBanner-arrowIcon\">
+                        <style type=\"text/css\">
+                        </style>
+                        <polygon points=\"62,23.5 15.3,23.5 32.9,5.9 27.3,0.2 5.7,21.8 5.7,21.8 0,27.5 27.3,54.8 32.9,49.1 15.3,31.5 62,31.5
+                            \"/>
+                    </svg>
+                </span>
+                <span class=\"MainHomeBanner-Content-LinkArrow-Left\">
+                    <svg version=\"1.1\" id=\"LinkArrow-Left\" xmlns=\"http://www.w3.org/2000/svg\"
+                         xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 62 55\"
+                         style=\"enable-background:new 0 0 62 55;\" xml:space=\"preserve\" class=\"MainHomeBanner-arrowIcon\">
+                        <style type=\"text/css\">
+                        </style>
+                        <polygon points=\"62,23.5 15.3,23.5 32.9,5.9 27.3,0.2 5.7,21.8 5.7,21.8 0,27.5 27.3,54.8 32.9,49.1 15.3,31.5 62,31.5
+                            \" />
+                    </svg>
+                </span>
+                <div class=\"MainHomeBanner-Content-LinkItem\">makeup</div>
             </a>
 
             <div href=\"#\" class=\"MainHomeBanner-Content-SlashHolder\">
                 <div class=\"MainHomeBanner-Content-Slash\">/</div>
             </div>
 
-            <a href=\"/category/skin-care/\" class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right\">
-                <div class=\"MainHomeBanner-Content-LinkItem\">Skin care</div><span class=\"MainHomeBanner-Content-LinkArrow\"><img class=\"MainHomeBanner-Content-LinkArrowImg\" src=\"{{ 'assets/images/main-banner/arrow-right.png' | theme }}\"></span>
+            <div
+                    class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right MainHomeBanner-Content-LinkHolderDiv\">
+                <div class=\"MainHomeBanner-Content-LinkItem\">SKIN CARE</div>
+                <!-- <span class=\"MainHomeBanner-Content-LinkArrow-Right\">
+                    <svg version=\"1.1\" id=\"LinkArrow-Left\" xmlns=\"http://www.w3.org/2000/svg\"
+                         xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 62 55\"
+                         style=\"enable-background:new 0 0 62 55;\" xml:space=\"preserve\" class=\"MainHomeBanner-arrowIcon\">
+                        <style type=\"text/css\">
+                        </style>
+                        <polygon points=\"62,23.5 15.3,23.5 32.9,5.9 27.3,0.2 5.7,21.8 5.7,21.8 0,27.5 27.3,54.8 32.9,49.1 15.3,31.5 62,31.5
+                            \" />
+                    </svg>
+                </span> -->
+                <span class=\"MainHomeBanner-Content-LinkArrow\">
+                    <svg version=\"1.1\" id=\"LinkArrow-Left\" xmlns=\"http://www.w3.org/2000/svg\"
+                         xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 62 55\"
+                         style=\"enable-background:new 0 0 62 55;\" xml:space=\"preserve\" class=\"MainHomeBanner-arrowIcon\">
+                        <style type=\"text/css\">
+                        </style>
+                        <polygon points=\"62,23.5 15.3,23.5 32.9,5.9 27.3,0.2 5.7,21.8 5.7,21.8 0,27.5 27.3,54.8 32.9,49.1 15.3,31.5 62,31.5
+                            \"/>
+                    </svg>
+
+                </span>
+            </div>
+
+            <a ontouchend=\"goTo('/category/skin-care')\"
+               class=\"MainHomeBanner-Content-LinkHolder MainHomeBanner-Content-LinkHolder--right MainHomeBanner-Content-LinkHolderLink\">
+                <div class=\"MainHomeBanner-Content-LinkItem\">Skin care</div>
+                <span class=\"MainHomeBanner-Content-LinkArrow-Right\">
+                    <svg version=\"1.1\" id=\"LinkArrow-Left\" xmlns=\"http://www.w3.org/2000/svg\"
+                         xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 62 55\"
+                         style=\"enable-background:new 0 0 62 55;\" xml:space=\"preserve\" class=\"MainHomeBanner-arrowIcon\">
+                        <style type=\"text/css\">
+                        </style>
+                        <polygon points=\"62,23.5 15.3,23.5 32.9,5.9 27.3,0.2 5.7,21.8 5.7,21.8 0,27.5 27.3,54.8 32.9,49.1 15.3,31.5 62,31.5
+                            \"/>
+                    </svg>
+                </span>
+                <span class=\"MainHomeBanner-Content-LinkArrow\">
+                    <svg version=\"1.1\" id=\"LinkArrow-Left\" xmlns=\"http://www.w3.org/2000/svg\"
+                         xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 62 55\"
+                         style=\"enable-background:new 0 0 62 55;\" xml:space=\"preserve\" class=\"MainHomeBanner-arrowIcon\">
+                        <style type=\"text/css\">
+                        </style>
+                        <polygon points=\"62,23.5 15.3,23.5 32.9,5.9 27.3,0.2 5.7,21.8 5.7,21.8 0,27.5 27.3,54.8 32.9,49.1 15.3,31.5 62,31.5
+                            \"/>
+                    </svg>
+
+                </span>
             </a>
 
         </div>
-\t    
-        <div class=\"MainHomeBanner-Content-Background\" style=\"background: url({{ record.first_slider_picture|media}}); background-size: cover; background-repeat: no-repeat; background-position: center\">
 
+        <div class=\"MainHomeBanner-Content-Background\">
+            <div class=\"MainHomeBanner-Content-BackgroundMobile\"
+                 style=\"background-image: url({{'main-banner/2800px.jpg' | media }}); background-size: auto 200vh; background-position: center -48vh;\">
+            </div>
+
+            <div class=\"MainHomeBanner-Content-BackgroundLeftScreen\"
+                 style=\"background-color: #93969D; background-size: cover;\"></div>
+
+            <div class=\"MainHomeBanner-Content-BackgroundLeftScreenContent\" style=\"background-image: url({{'main-banner/left.jpg' | media }});
+            background-size: auto 80vw; background-repeat: no-repeat; background-position: 11.8vw -12vw;\"></div>
+
+            <div class=\"MainHomeBanner-Content-BackgroundRightScreen\"
+                 style=\"background-color: #A5A8AF; background-size: cover;\"></div>
+
+            <div class=\"MainHomeBanner-Content-BackgroundRightScreenContent\" style=\"background-image: url({{'main-banner/right.jpg' | media }});
+                background-size: auto 80vw; background-repeat: no-repeat; background-position: -38.2vw -12vw\"></div>
         </div>
 
-\t\t
-\t</div>
+
+    </div>
 
 </div>
+
+<style>
+    .jsHideScrollDown {
+        display: none;
+    }
+</style>
+
+<script>
+
+
+     
+
+    
+    
+    const vh = window.innerHeight * 0.01;
+     document.documentElement.style.setProperty('--vh', `\${vh}px`);
+
+    const leftLink = document.querySelector(\".MainHomeBanner-Content-LinkHolder--left\");
+    const rightLink = document.querySelector(\".MainHomeBanner-Content-LinkHolder--right\");
+    const leftScreen = document.querySelector(\".MainHomeBanner-Content-BackgroundLeftScreen\");
+    const leftScreenContent = document.querySelector(\".MainHomeBanner-Content-BackgroundLeftScreenContent\");
+    const rightScreen = document.querySelector(\".MainHomeBanner-Content-BackgroundRightScreen\");
+    const rightScreenContent = document.querySelector(\".MainHomeBanner-Content-BackgroundRightScreenContent\");
+    const textContent = document.querySelector(\".MainHomeBanner-Content-Links\");
+    const leftCategoryContent = document.querySelector(\".MainHomeBanner-categoryLeftScreen\");
+    const rightCategoryContent = document.querySelector(\".MainHomeBanner-categoryRightScreen\")
+    const SubNavigationMenuByMainHomeBanner = document.querySelector(\".MainHomeBanner .SubNavigationMenu\");
+
+    const deleteLink = () => {
+        textContent.classList.add('MainHomeBanner-Content-LinkHolder--delete');
+    }
+
+    const hideLink = () => {
+        textContent.classList.add('MainHomeBanner-Content-LinkHolder--hided');
+    }
+
+    const onLeftLinkAction = () => {
+        clearCategory()
+
+        leftScreen.classList.add('MainHomeBanner-Content-BackgroundLeftScreenAnimation');
+        leftScreenContent.classList.add('MainHomeBanner-Content-BackgroundLeftScreenContentAnimation');
+        hideLink();
+        setTimeout(deleteLink, 1000);
+        rightCategoryContent.classList.add('MainHomeBanner-categoryScreenExisting')
+        rightCategoryContent.classList.add('MainHomeBanner-categoryScreenAppearance')
+        SubNavigationMenuByMainHomeBanner.classList.add('SubNavigationMenu-existing')
+        SubNavigationMenuByMainHomeBanner.classList.add('SubNavigationMenu-appearance')
+        openCategory('makeup','rigth')
+        let scrollDownNode = document.querySelector('.jsHideScrollDown')
+        scrollDownNode.classList.remove('jsHideScrollDown')
+        document.getElementById('footer').classList.remove('jsHideScrollDown')
+    }
+
+    const onRightLinkAction = () => {
+        clearCategory()
+
+        rightScreen.classList.add('MainHomeBanner-Content-BackgroundRightScreenAnimation');
+        rightScreenContent.classList.add('MainHomeBanner-Content-BackgroundRightScreenContentAnimation');
+        hideLink()
+        setTimeout(deleteLink, 1000);
+        leftCategoryContent.classList.add('MainHomeBanner-categoryScreenExisting')
+        leftCategoryContent.classList.add('MainHomeBanner-categoryScreenAppearance')
+        SubNavigationMenuByMainHomeBanner.classList.add('SubNavigationMenu-existing')
+        SubNavigationMenuByMainHomeBanner.classList.add('SubNavigationMenu-appearance')
+        openCategory('skin-care','left')
+        let scrollDownNode = document.querySelector('.jsHideScrollDown')
+        scrollDownNode.classList.remove('jsHideScrollDown')
+        document.getElementById('footer').classList.remove('jsHideScrollDown')
+    }
+    const isDesktop = window.matchMedia(\"(min-width: 1024px)\");
+
+
+    if (isDesktop) {
+        leftLink.addEventListener(\"click\", onLeftLinkAction);
+        rightLink.addEventListener(\"click\", onRightLinkAction);
+    }
+
+
+
+    function openCategory (slug, side) {
+        let categoryNodeMakeUp = document.getElementById('makeup')
+        let categoryNodeSkinCare = document.getElementById('skin-care')
+
+        if (slug == 'makeup') {
+            categoryNodeMakeUp.style.display = 'block'
+            categoryNodeSkinCare.style.display = 'none'
+            history.pushState(null, null, window.location.origin + '/category/' + slug)
+        } if (slug == 'skin-care') {
+            categoryNodeMakeUp.style.display = 'none'
+            categoryNodeSkinCare.style.display = 'block'
+            history.pushState(null, null, window.location.origin + '/category/' + slug)
+        }
+        
+        
+    }
+
+
+    function clearCategory()
+    {
+        leftScreen.classList.remove('MainHomeBanner-Content-BackgroundLeftScreenAnimation');
+        leftScreenContent.classList.remove('MainHomeBanner-Content-BackgroundLeftScreenContentAnimation');
+
+        rightCategoryContent.classList.remove('MainHomeBanner-categoryScreenExisting')
+        rightCategoryContent.classList.remove('MainHomeBanner-categoryScreenAppearance')
+        SubNavigationMenuByMainHomeBanner.classList.remove('SubNavigationMenu-existing')
+        SubNavigationMenuByMainHomeBanner.classList.remove('SubNavigationMenu-appearance')
+
+
+        rightScreen.classList.remove('MainHomeBanner-Content-BackgroundRightScreenAnimation');
+        rightScreenContent.classList.remove('MainHomeBanner-Content-BackgroundRightScreenContentAnimation');
+
+        leftCategoryContent.classList.remove('MainHomeBanner-categoryScreenExisting')
+        leftCategoryContent.classList.remove('MainHomeBanner-categoryScreenAppearance')
+        SubNavigationMenuByMainHomeBanner.classList.remove('SubNavigationMenu-existing')
+        SubNavigationMenuByMainHomeBanner.classList.remove('SubNavigationMenu-appearance')
+    }
+
+
+function goTo(link) {
+        window.location = link
+        openMenuHandler()
+    }
+
+</script>
+
+
+
 
 
 
@@ -322,122 +737,9 @@ class __TwigTemplate_c23ee6000f493876b9f382c842d46bebdabe8d783a8bb7cf2bcaec60dad
 
 
 
-
-
-\t.MainHomeBanner {
-\t\tdisplay: block;
-\t\twidth: 100vw;
-\t\theight: 100vh;
-\t\tposition: absolute;
-        z-index: 99;
-\t}
-
-\t.MainHomeBanner-Content {
-\t\tdisplay: flex;
-\t\twidth: 100%;
-\t\theight: 100%;
-\t}
-
-    .MainHomeBanner-Content-Links {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 999;
-        display: flex;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        color: #fff;
-        text-transform: uppercase;
-        text-decoration: none;
-    }
-
-    .MainHomeBanner-Content-LinkArrow {
-        display: none;
-    }
-
-    .MainHomeBanner-Content-LinkArrowImg {
-        width: 65px;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder--left:hover {
-        color: #EA028A;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder--left:hover > .MainHomeBanner-Content-LinkArrow {
-        display: block;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder--right:hover > .MainHomeBanner-Content-LinkArrow {
-        display: block;
-    }
-
-    a.MainHomeBanner-Content-LinkHolder--right:hover {
-        color: #EA028A;
-    }
-
-    .MainHomeBanner-Content-LinkItem {
-        font-weight: 500;
-        font-size: 80px;
-        padding: 50px;
-    }
-
-    .MainHomeBanner-Content-Slash {
-        font-weight: 500;
-        font-size: 80px;
-    }
-
-    .MainHomeBanner-Content-SlashHolder {
-        color: #fff;
-        display: flex;
-        align-items: center;
-    }
-
-    .MainHomeBanner-Content-LinkHolder--left {
-        justify-content: flex-end;
-    }
-
-    .MainHomeBanner-Content-LinkHolder--right {
-        justify-content: flex-start;
-    }
-
-\t.MainHomeBanner-Content-Background {
-\t\twidth: 100%;
-\t}
-
-    @media screen and (max-width: 1200px){
-
-        .MainHomeBanner-Content-Links {
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-end;
-        }
-
-        .MainHomeBanner-Content-Slash {
-            display: none;
-        }
-
-        a.MainHomeBanner-Content-LinkHolder {
-            width: 100%;
-            justify-content: center;
-        }
-
-        .MainHomeBanner-Content-LinkItem {
-            padding: 0 32px;
-            font-size: 40px;
-        }
-
-        .MainHomeBanner-Content-LinkHolder--right {
-            padding-bottom: 50px;
-        }
-
-        .MainHomeBanner-Content-LinkArrowImg {
-            width: 36px;
-        }
-    }
+.SubNavigationMenu-ScrollDown-mobile {
+    visibility: hidden    
+}
 
 </style>", "/Users/iamk/git/darling/themes/demo/partials/site/main-banner.htm", "");
     }

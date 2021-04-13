@@ -1,0 +1,147 @@
+1618268338a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:2087:"description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>October CMS - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="OctoberCMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="OctoberCMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/192x192.png'|theme }}">
+        <link href="{{ 'assets/css/vendor.css?25df27'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css?sffdsаffd'|theme }}" rel="stylesheet">
+        {% styles %}
+    </head>
+    <body>
+
+
+    {% partial "site/menu-drawer.htm" %}
+
+    {% partial 'site/header.htm' %}
+
+        <!-- Content -->
+        <section id="layout-content">
+            {% page %}
+        </section>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            {% partial 'site/footer' %}
+        </footer>
+
+        <!-- Scripts -->
+<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/app.js?12fdfs3fhgfgGhhgfgdgf4'|theme }}"></script>
+
+    {% framework extras %}
+        {% scripts %}
+
+
+    <script>
+        scrollDownByWheel()
+        
+        scrollToLastState()
+        
+            let productNodeList = document.querySelectorAll('.jsCardWigetLink')
+    
+    for (let productNodeItem of productNodeList) {
+        productNodeItem.addEventListener('touchstart', function(e){
+            this.classList.add('hoveredTarget')
+            console.log(this)
+        })
+        productNodeItem.addEventListener('touchend', function(e){
+            this.classList.remove('hoveredTarget')
+        })
+        
+    }
+    
+    
+    
+
+
+
+
+
+        
+
+    </script>
+
+    </body>
+</html>";s:5:"mtime";i:1618212027;s:6:"markup";s:2053:"<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>October CMS - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="OctoberCMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="OctoberCMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/192x192.png'|theme }}">
+        <link href="{{ 'assets/css/vendor.css?25df27'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css?sffdsаffd'|theme }}" rel="stylesheet">
+        {% styles %}
+    </head>
+    <body>
+
+
+    {% partial "site/menu-drawer.htm" %}
+
+    {% partial 'site/header.htm' %}
+
+        <!-- Content -->
+        <section id="layout-content">
+            {% page %}
+        </section>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            {% partial 'site/footer' %}
+        </footer>
+
+        <!-- Scripts -->
+<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/app.js?12fdfs3fhgfgGhhgfgdgf4'|theme }}"></script>
+
+    {% framework extras %}
+        {% scripts %}
+
+
+    <script>
+        scrollDownByWheel()
+        
+        scrollToLastState()
+        
+            let productNodeList = document.querySelectorAll('.jsCardWigetLink')
+    
+    for (let productNodeItem of productNodeList) {
+        productNodeItem.addEventListener('touchstart', function(e){
+            this.classList.add('hoveredTarget')
+            console.log(this)
+        })
+        productNodeItem.addEventListener('touchend', function(e){
+            this.classList.remove('hoveredTarget')
+        })
+        
+    }
+    
+    
+    
+
+
+
+
+
+        
+
+    </script>
+
+    </body>
+</html>";s:4:"code";N;s:11:"description";s:14:"Default layout";}}

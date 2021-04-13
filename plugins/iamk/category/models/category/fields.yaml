@@ -69,7 +69,3 @@ fields:
                         field: subcategory_title
                         type: slug
                     type: text
-    id:
-        label: id
-        span: auto
-        type: number

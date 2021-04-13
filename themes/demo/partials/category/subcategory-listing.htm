@@ -7,8 +7,8 @@ noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
+sortColumn = "sort"
 ==
-
 {% set records = subcategoryListing.records %}
 {% set displayColumn = subcategoryListing.displayColumn %}
 {% set noRecordsMessage = subcategoryListing.noRecordsMessage %}
@@ -17,7 +17,7 @@ pageNumber = "{{ :page }}"
 {% set detailsUrlParameter = subcategoryListing.detailsUrlParameter %}
 
 
-<div class="SubcategoryListing" id="{{subcategorySlug}}">
+<div class="SubcategoryListing">
     <div class="SubcategoryListing-Title">{{subcategoryTitle}}<span class="SubcategoryListing-Title-Asterisk">*</span></div>
     <div class="SubcategoryListing-Items">
 
@@ -26,7 +26,11 @@ pageNumber = "{{ :page }}"
 
         {% for record in records %}
         {% if record.subcategory == subcategorySlug %}
-        {% partial "category/card-wiget" data=record %}
+            {% if record.is_banner == false %}
+                {% partial "category/card-wiget" data=record %}
+            {% else %}
+                {% partial "category/banner-wiget" data=record %}
+            {% endif %}
         {% endif %}
     {% else %}
         <li class="no-data">{{ noRecordsMessage }}</li>
@@ -39,49 +43,12 @@ pageNumber = "{{ :page }}"
 
 <style>
 
-    section#layout-content {
-        overflow-x: hidden;
-    }
 
-    .SubcategoryListing {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .SubcategoryListing-Items {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding: 20px 0 120px;
-    }
-
-    .SubcategoryListing-Title {
-        font-size: 100px;
-        color: black;
-        font-weight: bold;
-        text-transform: uppercase;
-        line-height: 1;
-        margin: 80px 0 60px;
-    }
-
-    .SubcategoryListing-Title-Asterisk {
-        color: #EA028A;
-    }
-
-
-    @media screen and (max-width: 375px) {
-
-        .SubcategoryListing {
-            width: 72%;
-            margin: 0 auto;
-        }
-
-        .SubcategoryListing-Items {
-            padding: 20px 0 40px;
-        }
-        .SubcategoryListing-Items {
-            padding: 60px 0 40px;
-        }
-    }
 
 </style>
+
+
+<script>
+
+
+</script>

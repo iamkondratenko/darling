@@ -1,105 +1,142 @@
+==
 <div class="CategoryMainBanner">
-    <div class="CategoryMainBanner-Content desktop" style="background: url({{ mainCategoryBackground | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover">
+    <div class="CategoryMainBanner-Content desktop">
         <div class="CategoryMainBanner-Content-Container" >
             <h1 class="CategoryMainBanner-Title">{{ categoryTitle }}</h1>
-            <p class="CategoryMainBanner-SubTitle">{{ categorySubtitle }}</p>
+            <div class="CategoryMainBanner-SubTitle">
+                {% if subcategoryMenu[0].subcategory_title %}
+                <a href="#{{ subcategoryMenu[0].slug  | lower }}" class="CategoryMainBanner-SubTitle-Item">
+                    {{ subcategoryMenu[0].subcategory_title }}
+                </a>
+
+                <span class="js-desktop"> /</span>
+                <span class="js-mobile">
+                </span>
+                {% endif %}
+
+                {% if subcategoryMenu[1].subcategory_title %}
+                <a href="#{{ subcategoryMenu[1].slug | lower }}" class="CategoryMainBanner-SubTitle-Item"> {{ subcategoryMenu[1].subcategory_title }}</a><br/><span class="js-desktop"> /</span>
+                {% endif %}
+                {% if subcategoryMenu[2].subcategory_title %}
+                <a href="#{{ subcategoryMenu[2].slug  | lower }}" class="CategoryMainBanner-SubTitle-Item"> {{ subcategoryMenu[2].subcategory_title }}</a>
+                {% endif %}
+            </div>
         </div>
-        <div class="CategoryMainBanner-Content-Background" ></div>
+        <div class="CategoryMainBanner-Content-Background" style="background-color: #A5A8AF; background-size: 100%; background-repeat: no-repeat; background-size: cover"></div>
+        
+        <div class="CategoryMainBanner-Content-Background" style="background-color: #93969D; background-size: 100%; background-repeat: no-repeat; background-size: cover"></div>
+        
+        <div class="CategoryMainBanner-Content-BackgroundContent" style="background-image: url({{'main-banner/right.jpg' | media }});
+                background-size: auto 100vh; background-repeat: no-repeat; background-position: 45vw 0vh"></div>
+                
+        <div class="CategoryMainBanner-Content-BackgroundContent" style="background-image: url({{'main-banner/left.jpg' | media }});
+                background-size: auto 100vh; background-repeat: no-repeat; background-position: 3vw 0vh"></div>
+                
     </div>
-    <div class="CategoryMainBanner-Content mobile" style="background: url({{ mainCategoryBackgroundMobile | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover">
+    <div class="CategoryMainBanner-Content mobile">
         <div class="CategoryMainBanner-Content-Container" >
             <h1 class="CategoryMainBanner-Title">{{ categoryTitle }}</h1>
-            <p class="CategoryMainBanner-SubTitle">{{ categorySubtitle }}</p>
+            <div class="CategoryMainBanner-SubTitle">
+                {% if subcategoryMenu[0].subcategory_title %}
+                <a href="#{{ subcategoryMenu[0].slug  | lower }}" class="CategoryMainBanner-SubTitle-Item">
+                    {{ subcategoryMenu[0].subcategory_title }}
+                    <span class="js-mobile">
+                    <svg class="arrowIcon" width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0673 11.2018L14.7857 3.1106L17.2795 0.558068L30 12.9861L17.2795 25.4142L14.7857 22.8617L23.0673 14.7704L0.682477 14.7704L0.682477 11.2018L23.0673 11.2018Z"/>
+                    </svg>
+                </span>
+                </a>
+                {% endif %}
+                {% if subcategoryMenu[1].subcategory_title %}
+                <a href="#{{subcategoryMenu[1].slug | lower }}" class="CategoryMainBanner-SubTitle-Item">
+                    {{subcategoryMenu[1].subcategory_title}}
+                    <span class="js-mobile">
+                    <svg class="arrowIcon"  viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0673 11.2018L14.7857 3.1106L17.2795 0.558068L30 12.9861L17.2795 25.4142L14.7857 22.8617L23.0673 14.7704L0.682477 14.7704L0.682477 11.2018L23.0673 11.2018Z"/>
+                    </svg>
+                </span>
+                </a>
+                {% endif %}
+
+                {% if subcategoryMenu[2].subcategory_title %}
+                <a href="#{{subcategoryMenu[2].slug | lower }}" class="CategoryMainBanner-SubTitle-Item">
+                    {{subcategoryMenu[2].subcategory_title}}
+                    <span class="js-mobile">
+                    <svg class="arrowIcon" width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0673 11.2018L14.7857 3.1106L17.2795 0.558068L30 12.9861L17.2795 25.4142L14.7857 22.8617L23.0673 14.7704L0.682477 14.7704L0.682477 11.2018L23.0673 11.2018Z"/>
+                    </svg>
+                </span>
+                </a>
+                {% endif %}
+
+
+            </div>
         </div>
-        <div class="CategoryMainBanner-Content-Background" ></div>
+        <div class="CategoryMainBanner-Content-Background" style="background: url({{'main-banner/new-right-bg-color.png' | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover"></div>
+        
+        <div class="CategoryMainBanner-Content-Background" style="background: url({{'main-banner/new-left-bg-color.png' | media }}); background-size: 100%; background-repeat: no-repeat; background-size: cover"></div>
+        
+        <div class="CategoryMainBanner-Content-BackgroundContent" style="background-image: url({{'main-banner/new-right-content.png' | media }});
+                background-size: auto 110vh; background-repeat: no-repeat; background-position: 50vw -9vh"></div>
+                
+        <div class="CategoryMainBanner-Content-BackgroundContent" style="background-image: url({{'main-banner/new-left-content.png' | media }});
+                background-size: auto 110vh; background-repeat: no-repeat; background-position: 3vw -9vh"></div>
+                
     </div>
+
+
 </div>
 
 <style>
+                    
+                     
+                    
+                    @media (max-width: 1180px) {
+                        .arrowIcon {
+                            width: auto;
+                            height: 54px;
+                            padding-left: 32px;
+  
+                        }
+                    }
+                    
+                    @media (max-width: 642px) {
+                        .arrowIcon {
+                            width: auto;
+                            height: 26px;
+                            padding-left: 12px;     
+                        }
+                    }
+                    </style>
 
-    .CategoryMainBanner-Content.mobile {
-        display: none;
+<script>
+// const vhForCategoryBanner = window.innerHeight * 0.01;
+//      document.documentElement.style.setProperty('--vh', `${vhForCategoryBanner}px`);
+//      const categoryMainBanner = document.querySelector(".CategoryMainBanner");
+
+//      if(window.location.search.replace( '?', '') === 'rigth-side'){
+//          categoryMainBanner.classList.remove('CategoryMainBanner--leftAlign');
+//          categoryMainBanner.classList.add('CategoryMainBanner--rightAlign');
+//     }
+    
+//     if(window.location.search.replace( '?', '') === 'left-side'){
+//          categoryMainBanner.classList.remove('CategoryMainBanner--rightAlign');
+//          categoryMainBanner.classList.add('CategoryMainBanner--leftAlign');
+//     }
+
+
+const vhForCategoryBanner = window.innerHeight * 0.01;
+     document.documentElement.style.setProperty('--vh', `${vhForCategoryBanner}px`);
+     const categoryMainBanner = document.querySelector(".CategoryMainBanner");
+
+     if(window.location.pathname.match('makeup')){
+         categoryMainBanner.classList.remove('CategoryMainBanner--leftAlign');
+         categoryMainBanner.classList.add('CategoryMainBanner--rightAlign');
+    }
+    
+    if(window.location.pathname.match('skin-care')){
+         categoryMainBanner.classList.remove('CategoryMainBanner--rightAlign');
+         categoryMainBanner.classList.add('CategoryMainBanner--leftAlign');
     }
 
-    .CategoryMainBanner-Content.desktop {
-        display: block;
-    }
-
-    h1.CategoryMainBanner-Title {
-        color: #fff;
-        font-size: 50px;
-        font-weight: 500;
-        text-transform: uppercase;
-    }
-
-    p.CategoryMainBanner-SubTitle {
-        font-size: 80px;
-        line-height: 105px;
-        font-weight: 500;
-        color: #fff;
-        text-transform: uppercase;
-    }
-
-    .CategoryMainBanner {
-        width: 100vw;
-        height: 100vh;
-    }
-
-    .CategoryMainBanner-Content {
-        width: 100%;
-        height: 100%;
-    }
-
-    .CategoryMainBanner-Content-Container {
-        width: 60%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        z-index: 99;
-        position: absolute;
-        padding: 0 60px;
-        align-items: flex-start;
-        justify-content: center;
-    }
-
-    .CategoryMainBanner-Content-Background {
-        width: 100%;
-        height: 100%;
-        background-size: contain;
-        position: absolute;
-        top: 0;
-        background-repeat: no-repeat;
-    }
-
-    @media screen and (max-width: 768px) {
-
-        .CategoryMainBanner-Content.mobile {
-            display: block;
-        }
-
-        .CategoryMainBanner-Content.desktop {
-            display: none;
-        }
-
-
-        p.CategoryMainBanner-SubTitle {
-            font-size: 40px;
-            line-height: 60px;
-        }
-
-        h1.CategoryMainBanner-Title {
-            font-size: 40px;
-            writing-mode: vertical-rl;
-            transform: rotateZ(
-                    180deg
-            );
-            color: #EA028A;
-            margin: 48px 0;
-        }
-
-        .CategoryMainBanner-Content-Container {
-            padding: 0 30px;
-        }
-    }
-
-</style>
+</script>

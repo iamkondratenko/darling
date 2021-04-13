@@ -13,7 +13,13 @@ class ProductInfo extends Model
 
     protected $dates = ['deleted_at'];
 
-    protected $jsonable = ['color_slider', 'additional_info', 'product_title'];
+    protected $jsonable = ['color_slider', 'additional_info', 'additional_info_en', 'product_title'];
+
+
+    public $attachOne = [
+        'mp4' => 'System\Models\File',
+        'webm' => 'System\Models\File'
+    ];
 
 
     /**
