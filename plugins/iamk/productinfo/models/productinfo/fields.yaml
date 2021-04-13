@@ -26,6 +26,11 @@ fields:
                                 label: 'Текст для картинки'
                                 span: full
                                 type: text
+                            mp4:
+                                label: 'Видео mp4'
+                                mode: file
+                                span: auto
+                                type: mediafinder
     title:
         label: 'Заголовок товара в каталоге'
         span: auto

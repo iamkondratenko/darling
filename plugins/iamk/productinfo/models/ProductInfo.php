@@ -16,6 +16,12 @@ class ProductInfo extends Model
     protected $jsonable = ['color_slider', 'additional_info', 'additional_info_en', 'product_title'];
 
 
+    public $attachOne = [
+        'mp4' => 'System\Models\File',
+        'webm' => 'System\Models\File'
+    ];
+
+
     /**
      * @var string The database table used by the model.
      */

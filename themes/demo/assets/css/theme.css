@@ -2436,7 +2436,7 @@ input.radio-color-picker:checked+label > .text-block__color-section_item > .text
         width: 100%;
         display: flex;
         flex-direction: row;
-        overflow-y: auto;
+        overflow: hidden;
         transition-duration: 400ms;
         height: 67vw;
         background-color: #fff

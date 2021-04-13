@@ -1,0 +1,66 @@
+1618268332a:1:{s:31:"category/subcategory-banner.htm";a:6:{s:8:"fileName";s:31:"category/subcategory-banner.htm";s:7:"content";s:1633:"==
+<div class="SubcategoryBanner">
+    <div class="SubcategoryBanner-idLink" id="{{subcategorySlug}}"></div>
+    <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainSubcategoryBackground | media }}); background-size: cover; background-repeat: no-repeat;">
+        <p class="SubcategoryBanner-SubTitle">
+            {% for description in categorySubtitle %}
+            <span class="{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}">{{ description.subcategory_description }}</span>
+            {% endfor %}
+        </p>
+    </div>
+    <div class="SubcategoryBanner-Content-ContainerTablet" style="background: url({{ mainSubcategoryBackgroundTablet | media }}); background-size: cover; background-repeat: no-repeat;">
+        <p class="SubcategoryBanner-SubTitle">
+            {% for description in categorySubtitle %}
+            <span class="{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}">{{ description.subcategory_description }}</span>
+            {% endfor %}
+        </p>
+    </div>
+    <div class="SubcategoryBanner-Content-ContainerMobile" style="background: url({{ mainSubcategoryBackgroundMobile | media }}); background-size: cover; background-repeat: no-repeat;">
+        <h3 class="SubcategoryBanner-Title">{{subcategoryTitle}}</h3>
+        <p class="SubcategoryBanner-SubTitle">
+            {% for description in categorySubtitle %}
+            <span>{{ description.subcategory_description }}</span>
+            {% endfor %}
+        </p>
+    </div>
+</div>
+
+
+
+<style>
+
+
+
+</style>";s:5:"mtime";i:1618212027;s:6:"markup";s:1630:"<div class="SubcategoryBanner">
+    <div class="SubcategoryBanner-idLink" id="{{subcategorySlug}}"></div>
+    <div class="SubcategoryBanner-Content-Container" style="background: url({{ mainSubcategoryBackground | media }}); background-size: cover; background-repeat: no-repeat;">
+        <p class="SubcategoryBanner-SubTitle">
+            {% for description in categorySubtitle %}
+            <span class="{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}">{{ description.subcategory_description }}</span>
+            {% endfor %}
+        </p>
+    </div>
+    <div class="SubcategoryBanner-Content-ContainerTablet" style="background: url({{ mainSubcategoryBackgroundTablet | media }}); background-size: cover; background-repeat: no-repeat;">
+        <p class="SubcategoryBanner-SubTitle">
+            {% for description in categorySubtitle %}
+            <span class="{% if description.subcategory_description_marked == true %} SubcategoryBanner-SubTitle-Marked {% endif %}">{{ description.subcategory_description }}</span>
+            {% endfor %}
+        </p>
+    </div>
+    <div class="SubcategoryBanner-Content-ContainerMobile" style="background: url({{ mainSubcategoryBackgroundMobile | media }}); background-size: cover; background-repeat: no-repeat;">
+        <h3 class="SubcategoryBanner-Title">{{subcategoryTitle}}</h3>
+        <p class="SubcategoryBanner-SubTitle">
+            {% for description in categorySubtitle %}
+            <span>{{ description.subcategory_description }}</span>
+            {% endfor %}
+        </p>
+    </div>
+</div>
+
+
+
+<style>
+
+
+
+</style>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}
